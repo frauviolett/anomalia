@@ -1,0 +1,20 @@
+{
+  "name": "Anomalia - Backend",
+  "version": "2.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "description": "Radar experimental de anomalias planetárias",
+  "type": "module",
+  "packages": {},
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "update": "node update-data.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

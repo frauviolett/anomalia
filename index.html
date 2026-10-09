@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ANOMALIA — Radar Planetário</title>
+
+ <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+  <link rel="stylesheet" href="style.css?v=20261008-1">
+</head>
+
+<body>
+
+<header class="topbar">
+
+  <div class="brand">
+    <div class="brand-orbit">◎</div>
+
+    <div>
+      <strong>ANOMALIA</strong>
+      <span>RADAR PLANETÁRIO</span>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <button class="nav-btn active" data-tab="overview">Visão geral</button>
+    <button class="nav-btn" data-tab="earth">Terra</button>
+    <button class="nav-btn" data-tab="ocean">Oceanos</button>
+    <button class="nav-btn" data-tab="space">Espaço</button>
+    <button class="nav-btn" data-tab="biology">Biologia Humana</button>
+    <button class="nav-btn" data-tab="ai">IA</button>
+    <button class="nav-btn" data-tab="news">Notícias</button>
+    <button class="nav-btn" data-tab="principle">Princípio</button>
+  </nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      MONITORAMENTO MULTISSISTEMA
+    </div>
+
+    <h1>
+      Detectar mudanças.<br>
+      <span>Não inventar explicações.</span>
+    </h1>
+
+    <p>
+      O ANOMALIA acompanha sinais ambientais, geofísicos,
+      oceânicos, espaciais, biológicos e tecnológicos usando
+      dados públicos e referências apropriadas.
+    </p>
+
+    <div id="planetary-score" class="planetary-score" aria-live="polite">
+      <span class="planetary-score-label">ÍNDICE DE ANOMALIA GLOBAL</span>
+      <strong>— <small>/ 100</small></strong>
+      <b>AGUARDANDO DADOS</b>
+      <span class="planetary-score-change">Variação de 24h: —</span>
+    </div>
+
+    <button class="hero-button" data-tab-jump="overview">
+      Explorar o radar
+      <span>→</span>
+    </button>
+
+  </div>
+
+  <div class="planet">
+
+    <div class="planet-glow"></div>
+
+    <div class="planet-core">
+      <div class="continent c1"></div>
+      <div class="continent c2"></div>
+      <div class="continent c3"></div>
+      <div class="continent c4"></div>
+    </div>
+
+    <div class="orbit orbit-one"></div>
+    <div class="orbit orbit-two"></div>
+
+    <div class="signal signal-a"></div>
+    <div class="signal signal-b"></div>
+    <div class="signal signal-c"></div>
+    <div class="signal signal-d"></div>
+
+  </div>
+
+</section>
+
+
+<section class="principle-banner">
+
+  <div class="principle-title">
+    <span>◉</span>
+    PRINCÍPIO DO ANOMALIA
+  </div>
+
+  <div class="principle-text">
+    Uma anomalia só recebe essa classificação quando existe
+    evidência suficiente de que o comportamento observado
+    se desvia de uma referência adequada.
+  </div>
+
+  <div class="legend">
+
+    <span>
+      <i class="dot green"></i>
+      NORMAL
+    </span>
+
+    <span>
+      <i class="dot yellow"></i>
+      ATENÇÃO
+    </span>
+
+    <span>
+      <i class="dot orange"></i>
+      ANOMALIA
+    </span>
+
+    <span>
+      <i class="dot red"></i>
+      ALERTA
+    </span>
+
+    <span>
+      <i class="dot gray"></i>
+      SEM EVIDÊNCIA
+    </span>
+
+  </div>
+
+</section>
+
+
+<section id="overview" class="page-section active-section">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="section-kicker">RADAR GLOBAL</span>
+      <h2>O que está acontecendo?</h2>
+    </div>
+
+    <div id="last-update" class="update-time">
+      carregando...
+    </div>
+
+  </div>
+
+
+  <div id="overview-cards" class="module-grid"></div>
+
+
+  <div class="dashboard-grid">
+
+   <section class="panel map-panel">
+
+    <div class="panel-header">
+
+        <div>
+            <span class="panel-kicker">MAPA PLANETÁRIO</span>
+            <h3>Sinais detectados</h3>
+        </div>
+
+        <div class="map-controls">
+            <button class="map-filter active" data-filter="all">
+                Todos
+            </button>
+
+            <button class="map-filter" data-filter="earth">
+                Terra
+            </button>
+
+            <button class="map-filter" data-filter="ocean">
+                Oceanos
+            </button>
+
+            <button class="map-filter" data-filter="biology">
+                Biologia
+            </button>
+        </div>
+
+    </div>
+
+    <div id="global-map"></div>
+
+</section>
+
+
+    <div class="panel recent-panel">
+
+      <div class="panel-header">
+        <div>
+          <span class="panel-kicker">SINAIS</span>
+          <h3>Últimas atividades recentes</h3>
+        </div>
+      </div>
+
+         <div class="recent-signals"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="earth" class="page-section">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="section-kicker">GEODINÂMICA</span>
+      <h2>Terra</h2>
+      <p>
+        Atividade sísmica observada em comparação com
+        referências temporais apropriadas.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="earth-search-panel">
+    <div class="panel-header">
+      <div>
+        <span class="panel-kicker">VERIFICAÇÃO RÁPIDA</span>
+        <p class="earth-search-description"><strong>Verificação rápida</strong><br>Busque um local, magnitude ou termo. Os cards abaixo consultam o snapshot mais recente do USGS e organizam o resultado em fato, padrão e contexto.</p>
+        <h3>🔎 VIU UMA NOTÍCIA SOBRE?</h3>
+      </div>
+    </div>
+
+    <div class="earth-search">
+      <span class="earth-search-icon">⌕</span>
+      <input id="earth-query" type="search" autocomplete="off" placeholder="Ex.: Japão, Califórnia, magnitude 5, terremoto">
+      <button id="earth-search-button" type="button">🔍 ANALISAR</button>
+    </div>
+  </div>
+
+  <div class="earth-method" aria-labelledby="earth-method-title">
+    <div class="earth-dashboard-title">MONITORAMENTO DE ATIVIDADES SÍSMICAS</div>
+    <div id="earth-results" class="earth-method-grid" aria-live="polite">
+      <article class="earth-method-step">
+        <span class="earth-step-number">01</span>
+        <span class="earth-step-icon">◉</span>
+        <span class="section-kicker">RECONHECIMENTO DE SINAIS</span>
+        <h4>O que já foi registrado</h4>
+        <p>O Anomalia recebe dados de fontes como USGS e NASA e identifica fenômenos: terremotos, aproximações de asteroides, erupções solares e outros.</p>
+        <div class="earth-example"><strong>Exemplo</strong> Um terremoto de magnitude 6,1 foi registrado em determinada região.</div>
+      </article>
+
+      <article class="earth-method-step">
+        <span class="earth-step-number">02</span>
+        <span class="earth-step-icon">⌁</span>
+        <span class="section-kicker">DETECÇÃO DE PADRÕES</span>
+        <h4>Análise própria</h4>
+        <p>O sistema compara os dados com referências históricas, procurando concentrações, frequências ou combinações incomuns.</p>
+        <div class="earth-example"><strong>Exemplo</strong> Uma região apresenta concentração diferente do padrão histórico após considerar réplicas e qualidade dos registros.</div>
+      </article>
+
+      <article class="earth-method-step">
+        <span class="earth-step-number">03</span>
+        <span class="earth-step-icon">✦</span>
+        <span class="section-kicker">INTERPRETAÇÃO E VERIFICAÇÃO</span>
+        <h4>Contexto científico</h4>
+        <p>O Anomalia explica o que foi observado, qual referência foi usada, quais hipóteses são plausíveis e quais informações ainda faltam.</p>
+        <div class="earth-example"><strong>Resultado</strong> A classificação mostra o grau de evidência, não uma previsão nem uma certeza sobre a causa.</div>
+      </article>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="ocean" class="page-section">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="section-kicker">OCEANOS</span>
+      <h2>Estado dos oceanos</h2>
+
+      <p>
+        Temperatura da superfície do mar apresentada como
+        anomalia em relação à referência do conjunto de dados,
+        e não como temperatura absoluta isolada.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div id="ocean-summary" class="module-grid"></div>
+
+  <div class="ocean-dashboard-title">MONITORAMENTO OCEANOGRÁFICO GLOBAL &amp; REGIONAL</div>
+
+
+  <div class="dashboard-grid">
+
+    <div class="panel map-panel">
+
+      <div class="panel-header">
+        <div>
+          <span class="panel-kicker">TEMPERATURA DA SUPERFÍCIE DO MAR</span>
+          <h3>Anomalia térmica marinha</h3>
+        </div>
+      </div>
+
+      <div id="ocean-sst-content" class="ocean-sst-content"></div>
+      <div class="ocean-card-placeholder">Dados de temperatura da superfície do mar (SST) e desvios em relação à referência climatológica NOAA OISST.</div>
+
+      <div class="map-note">
+        Os valores representam desvio em relação à referência
+        climatológica do produto NOAA OISST.
+      </div>
+
+    </div>
+
+
+    <div class="panel">
+
+      <div class="panel-header">
+        <div>
+          <span class="panel-kicker">ENSO</span>
+          <h3>El Niño / La Niña</h3>
+        </div>
+      </div>
+
+      <div id="enso-card"></div>
+
+    </div>
+
+    <div class="ocean-risk-card panel">
+      <div class="panel-header"><div><span class="panel-kicker">RISCO &amp; ANOMALIAS</span><h3>Ondas de calor &amp; tendência</h3></div></div>
+      <div id="ocean-risk-content" class="ocean-risk-content"><strong>Aguardando dados oceânicos</strong><p>A análise será atualizada a partir das anomalias SST disponíveis.</p></div>
+    </div>
+
+  </div>
+
+
+  <div class="climate-context">
+
+    <div class="context-icon">◎</div>
+
+    <div>
+
+      <strong>
+        🌡️ MUDANÇAS CLIMÁTICAS GLOBAIS
+      </strong>
+
+      <p>
+        Esta etiqueta identifica sinais que possuem contexto
+        climático de longo prazo documentado. Ela não significa
+        que o ANOMALIA atribuiu automaticamente uma causa
+        climática a um evento individual.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="space" class="page-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-kicker">
+                AMBIENTE ESPACIAL
+            </span>
+
+            <h2>
+                Espaço
+            </h2>
+
+            <p>
+                Monitoramento de objetos próximos da Terra e
+                atividade solar. A sinalização indica a natureza
+                e o nível do evento observado, sem transformar
+                automaticamente um evento espacial em anomalia.
+            </p>
+
+        </div>
+
+        <div id="space-update" class="update-time">
+            carregando...
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         RESUMO
+         ===================================================== -->
+
+    <div id="space-summary" class="space-summary-grid"></div>
+
+
+    <!-- =====================================================
+         CLIMA ESPACIAL
+         ===================================================== -->
+
+    <div class="space-section-title">
+
+        <div>
+
+            <span class="section-kicker">
+                CLIMA ESPACIAL
+            </span>
+
+            <h3>
+                Atividade solar recente
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <div class="space-dashboard">
+
+        <div class="panel space-weather-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-kicker">
+                        NASA DONKI
+                    </span>
+
+                    <h3>
+                        Sinais solares
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div id="space-weather-list"
+                 class="space-event-list">
+
+                <div class="space-loading">
+                    Consultando dados...
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="panel space-status-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-kicker">
+                        CLASSIFICAÇÃO
+                    </span>
+
+                    <h3>
+                        Estado do ambiente espacial
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div id="space-status">
+
+                <div class="space-status-main">
+
+                    <span class="space-status-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            ANALISANDO
+                        </strong>
+
+                        <p>
+                            Aguardando os dados das fontes espaciais.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="space-method-note">
+
+                O ANOMALIA não considera uma explosão solar,
+                uma CME ou a aproximação de um asteroide,
+                isoladamente, como uma anomalia estatística.
+                A classificação depende do tipo de evento,
+                dos critérios da fonte e, quando aplicável,
+                da comparação com referências apropriadas.
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         OBJETOS PRÓXIMOS DA TERRA
+         ===================================================== -->
+
+    <div class="space-section-title">
+
+        <div>
+
+            <span class="section-kicker">
+                OBJETOS PRÓXIMOS DA TERRA
+            </span>
+
+            <h3>
+                Aproximações monitoradas
+            </h3>
+
+        </div>
+
+        <div class="space-filter-group">
+
+            <button
+                class="space-filter active"
+                data-neo-filter="all">
+                Todos
+            </button>
+
+            <button
+                class="space-filter"
+                data-neo-filter="danger">
+                Potencialmente perigosos
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel neo-panel">
+
+        <div id="neo-list"
+             class="neo-grid">
+
+            <div class="space-loading">
+                Consultando objetos próximos da Terra...
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="neo-verifier panel">
+        <div class="neo-verifier-copy">
+            <span class="panel-kicker">VERIFICAÇÃO RÁPIDA</span>
+            <h3>🔎 VIU UMA NOTÍCIA SOBRE UM ASTEROIDE?</h3>
+            <p>Cole aqui o nome ou a afirmação. O Anomalia procura nos dados da NASA.</p>
+        </div>
+        <div class="neo-verifier-form">
+            <input id="neo-query" type="text" autocomplete="off" placeholder="Ex.: 2026 QX1 passou raspando na Terra">
+            <button id="neo-verify" class="neo-action" type="button">🔍 ANALISAR</button>
+        </div>
+        <div id="neo-verification-result" class="neo-verification-result" aria-live="polite"></div>
+    </div>
+
+    <div class="neo-ranking panel">
+        <div class="neo-ranking-heading">
+            <span class="panel-kicker">🏆 MAIS PRÓXIMOS</span>
+            <h3>TOP 5 DA SEMANA</h3>
+            <p>Não significa “mais perigosos”. Significa apenas: quais objetos passarão mais perto da Terra?</p>
+        </div>
+        <div id="neo-ranking-list" class="neo-ranking-list"></div>
+    </div>
+
+
+    <!-- =====================================================
+         PRINCÍPIO
+         ===================================================== -->
+
+    <div class="space-principle">
+
+        <div class="space-principle-icon">
+            ◎
+        </div>
+
+        <div>
+
+            <strong>
+                Como o ANOMALIA interpreta o espaço
+            </strong>
+
+            <p>
+                Um objeto classificado por uma fonte oficial
+                como potencialmente perigoso recebe uma
+                sinalização própria. Isso descreve uma
+                característica orbital do objeto e não significa
+                que exista uma colisão prevista ou uma ameaça
+                iminente.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="biology" class="page-section">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="section-kicker">EPIDEMIOLOGIA / BIOLOGIA</span>
+
+      <h2>Anomalias biológicas</h2>
+
+      <p>
+        O ANOMALIA acompanha eventos epidemiológicos documentados,
+        mudanças geográficas e sinais incomuns. Um evento isolado
+        não é automaticamente classificado como surto.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="biology-verifier panel">
+    <div class="biology-verifier-copy">
+      <span class="panel-kicker">VERIFICAÇÃO RÁPIDA</span>
+      <h3>🔎 VIU UMA NOTÍCIA SOBRE?</h3>
+      <p>Cole aqui o nome ou a afirmação. O Anomalia verifica se há evidência nos dados consultados e se o comportamento está dentro dos padrões de normalidade.</p>
+    </div>
+    <div class="biology-verifier-form">
+      <input id="biology-query" type="text" autocomplete="off" placeholder="Ex.: aumento de casos de Ebola na África">
+      <button id="biology-verify" class="biology-action" type="button">🔍 ANALISAR</button>
+    </div>
+    <div id="biology-verification-result" class="biology-verification-result" aria-live="polite"></div>
+  </div>
+
+
+  <div class="biology-signal-types">
+    <article class="biology-type-card biology-type-pathogen status-sem-evidencia" data-biology-card="pathogen">
+      <div class="biology-type-head"><span class="biology-type-icon">🧬</span><span class="biology-signal-dot status-dot"></span></div>
+      <div><span>ANOMALIAS BIOLÓGICAS EM DESTAQUE</span><h3>EVOLUÇÃO DE PATÓGENOS</h3><p>Novas linhagens ou mudanças virais com evidência documentada.</p><div class="biology-oms-data">Aguardando dados da OMS.</div><strong class="biology-classification">⚪ SEM EVIDÊNCIA</strong><small class="biology-card-data">Aguardando dados</small></div>
+    </article>
+    <article class="biology-type-card biology-type-respiratory status-sem-evidencia" data-biology-card="respiratory">
+      <div class="biology-type-head"><span class="biology-type-icon">🫁</span><span class="biology-signal-dot status-dot"></span></div>
+      <div><span>SINAL RESPIRATÓRIO</span><h3>ANOMALIAS RESPIRATÓRIAS</h3><p>Estudos populacionais ou aumento incomum de síndromes respiratórias.</p><div class="biology-oms-data">Aguardando dados da OMS.</div><strong class="biology-classification">⚪ SEM EVIDÊNCIA</strong><small class="biology-card-data">Aguardando dados</small></div>
+    </article>
+    <article class="biology-type-card biology-type-vector status-sem-evidencia" data-biology-card="vector">
+      <div class="biology-type-head"><span class="biology-type-icon">🦠</span><span class="biology-signal-dot status-dot"></span></div>
+      <div><span>SINAL EM INVESTIGAÇÃO</span><h3>DETECÇÃO DE NOVOS PATÓGENOS</h3><p>Detecções incomuns, inclusive doenças transmitidas por vetores.</p><div class="biology-oms-data">Aguardando dados da OMS.</div><strong class="biology-classification">⚪ SEM EVIDÊNCIA</strong><small class="biology-card-data">Aguardando dados</small></div>
+    </article>
+  </div>
+
+
+  <div class="dashboard-grid">
+
+    <div class="panel map-panel">
+
+      <div class="panel-header">
+
+        <div>
+          <span class="panel-kicker">DISTRIBUIÇÃO MUNDIAL</span>
+          <h3>Distribuição geográfica</h3>
+        </div>
+
+      </div>
+
+      <div id="biology-map"></div>
+
+    </div>
+
+
+    <div class="panel">
+
+      <div class="panel-header">
+
+        <div>
+          <span class="panel-kicker">INTELIGÊNCIA EPIDEMIOLÓGICA</span>
+          <h3>Eventos recentes</h3>
+        </div>
+
+      </div>
+
+      <div id="biology-list"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="ai" class="page-section">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="section-kicker">SISTEMAS DE IA</span>
+
+      <h2>Incidentes envolvendo IA</h2>
+
+      <p>
+        O ANOMALIA acompanha incidentes documentados de falhas,
+        acidentes, abuso, segurança e outros eventos envolvendo
+        sistemas de inteligência artificial.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="ai-verifier panel">
+    <div>
+      <span class="panel-kicker">VERIFICAÇÃO RÁPIDA</span>
+      <h3>🔎 VIU UMA NOTÍCIA SOBRE IA?</h3>
+      <p>Cole o nome de uma empresa, sistema ou afirmação. O ANOMALIA procura sinais no conjunto de incidentes e no clipping consultado.</p>
+    </div>
+    <div class="ai-verifier-form">
+      <input id="ai-query" type="text" autocomplete="off" placeholder="Ex.: falha de reconhecimento facial">
+      <button id="ai-verify" class="ai-action" type="button">🔍 ANALISAR</button>
+    </div>
+    <div id="ai-verification-result" class="ai-verification-result" aria-live="polite"></div>
+  </div>
+
+  <div class="ai-signal-types">
+    <article class="ai-type-card"><span>⚙️</span><div><strong>FALHAS E ACIDENTES</strong><small>Erros, indisponibilidade e decisões inesperadas.</small></div></article>
+    <article class="ai-type-card"><span>🛡️</span><div><strong>SEGURANÇA E ABUSO</strong><small>Uso malicioso, fraude, manipulação e vulnerabilidades.</small></div></article>
+    <article class="ai-type-card"><span>⚖️</span><div><strong>IMPACTO SOCIAL</strong><small>Discriminação, direitos, privacidade e trabalho.</small></div></article>
+  </div>
+
+  <div class="ai-list-toolbar">
+    <span class="panel-kicker">CLASSIFICAÇÃO DOS SINAIS</span>
+    <div class="ai-filter-group" role="group" aria-label="Filtrar incidentes de inteligência artificial">
+      <button class="ai-filter active" data-ai-filter="all">Todos</button>
+      <button class="ai-filter" data-ai-filter="alerta">🔴 Alerta</button>
+      <button class="ai-filter" data-ai-filter="anomalia">🟠 Anomalia</button>
+      <button class="ai-filter" data-ai-filter="atencao">🟡 Atenção</button>
+      <button class="ai-filter" data-ai-filter="normal">🟢 Normalidade</button>
+    </div>
+  </div>
+
+  <div id="ai-list" class="news-grid"></div>
+  <div id="ai-pagination" class="ai-pagination"></div>
+
+</section>
+
+
+<section id="news" class="page-section">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="section-kicker">CLIPPING</span>
+      <h2>Sinais recentes</h2>
+
+      <p>
+        Notícias são apresentadas como sinais de mídia.
+        A existência de uma notícia não confirma uma anomalia.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="news-list" class="news-grid"></div>
+
+</section>
+
+
+<section id="principle" class="page-section">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="section-kicker">METODOLOGIA</span>
+      <h2>Princípio do ANOMALIA</h2>
+    </div>
+
+  </div>
+
+
+  <div class="principle-grid">
+
+    <div class="principle-card">
+      <span>01</span>
+      <h3>Observar</h3>
+      <p>
+        O sistema coleta dados públicos de fontes identificadas.
+      </p>
+    </div>
+
+    <div class="principle-card">
+      <span>02</span>
+      <h3>Comparar</h3>
+      <p>
+        O comportamento observado é comparado com uma
+        referência apropriada.
+      </p>
+    </div>
+
+    <div class="principle-card">
+      <span>03</span>
+      <h3>Classificar</h3>
+      <p>
+        O sistema diferencia normalidade, atenção,
+        anomalia, alerta e ausência de evidência.
+      </p>
+    </div>
+
+    <div class="principle-card">
+      <span>04</span>
+      <h3>Mostrar a evidência</h3>
+      <p>
+        Sempre que possível, o usuário pode chegar à fonte
+        original do dado.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="method-box">
+
+    <h3>
+      O ANOMALIA não prevê catástrofes.
+    </h3>
+
+    <p>
+      O objetivo é identificar mudanças observáveis e
+      estatisticamente relevantes, deixando explícito
+      quando a evidência ainda é insuficiente.
+    </p>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <strong>ANOMALIA</strong>
+
+  <span>
+    Observatório experimental de sinais planetários
+  </span>
+
+  <span>
+    Dados públicos • metodologia aberta • sem previsões
+  </span>
+
+</footer>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
