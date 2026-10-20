@@ -3,6 +3,7 @@ import http from "http";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { spawn } from "child_process";
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -11,6 +12,22 @@ const __dirname = path.dirname(__filename);
 
 
 const PORT = 3000;
+
+let atualizacaoEmAndamento = false;
+
+function atualizarDadosAutomaticamente() {
+  if (atualizacaoEmAndamento) return;
+  atualizacaoEmAndamento = true;
+  const processo = spawn(process.execPath, [path.join(__dirname, "update-data.js")], { stdio: "inherit" });
+  processo.on("close", codigo => {
+    atualizacaoEmAndamento = false;
+    if (codigo !== 0) console.error(`Atualização automática encerrada com código ${codigo}.`);
+  });
+  processo.on("error", erro => {
+    atualizacaoEmAndamento = false;
+    console.error("Falha na atualização automática:", erro.message);
+  });
+}
 
 const NASA_KEY = process.env.NASA_API_KEY || "DEMO_KEY";
 
@@ -310,3 +327,7 @@ server.listen(
 
   }
 );
+
+// Mantém o snapshot de dados atualizado sem intervenção manual.
+atualizarDadosAutomaticamente();
+setInterval(atualizarDadosAutomaticamente, 5 * 60 * 1000);

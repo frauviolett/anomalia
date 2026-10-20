@@ -35,7 +35,7 @@
     <button class="nav-btn" data-tab="biology">Biologia Humana</button>
     <button class="nav-btn" data-tab="ai">IA</button>
     <button class="nav-btn" data-tab="news">Notícias</button>
-    <button class="nav-btn" data-tab="principle">Princípio</button>
+    <button class="nav-btn" data-tab="brazil">🇧🇷 Brasil</button>
   </nav>
 
 </header>
@@ -147,15 +147,13 @@
 
 <section id="overview" class="page-section active-section">
 
+  <div class="overview-container">
+
   <div class="section-heading">
 
     <div>
       <span class="section-kicker">RADAR GLOBAL</span>
       <h2>O que está acontecendo?</h2>
-    </div>
-
-    <div id="last-update" class="update-time">
-      carregando...
     </div>
 
   </div>
@@ -164,7 +162,7 @@
   <div id="overview-cards" class="module-grid"></div>
 
 
-  <div class="dashboard-grid">
+  <div id="radar-global" class="overview-top-grid">
 
    <section class="panel map-panel">
 
@@ -197,8 +195,7 @@
 
     <div id="global-map"></div>
 
-</section>
-
+  </section>
 
     <div class="panel recent-panel">
 
@@ -215,6 +212,81 @@
 
   </div>
 
+  <section class="home-analysis-grid" aria-label="Análises avançadas do radar">
+  <div class="home-analysis-section">
+    <div class="section-heading"><div><span class="section-kicker">DESVIOS EXTREMOS · 48 HORAS</span><h2>Anomalias críticas em tempo real</h2><p>Eventos que ultrapassam os limiares de monitoramento disponíveis no snapshot atual.</p></div></div>
+    <div id="critical-anomalies" class="critical-anomalies" aria-live="polite"><div class="analysis-empty">Aguardando dados para verificar desvios extremos.</div></div>
+  </div>
+
+  <div class="home-analysis-section">
+    <div class="section-heading"><div><span class="section-kicker">LEITURA MULTIDOMÍNIO</span><h2>Sinais cruzados &amp; análise multidomínio</h2><p>Compara eventos próximos no tempo e no espaço sem presumir causalidade.</p></div></div>
+    <div id="cross-domain-signals" class="cross-domain-signals" aria-live="polite"><div class="analysis-empty">Aguardando dados de Terra e Oceanos.</div></div>
+  </div>
+
+  <div class="home-analysis-section critical-feed-card">
+    <div class="section-heading"><div><span class="section-kicker">COBERTURA DE MÍDIA &amp; ALERTAS</span><h2>Feed de alertas críticos</h2></div></div>
+    <div class="feed-cta"><strong>Seja o primeiro a saber quando o planeta sai do padrão.</strong><p>Receba notificações via Webhook, Telegram ou e-mail quando uma anomalia ultrapassar o limiar de severidade definido.</p></div>
+    <div class="feed-access"><div><span>ACESSO PÚBLICO / PESQUISA</span><strong>Dados consolidados</strong><small>Delay de até 6h · gratuito</small></div><div><span>TERMINAL DE CRISE / MÍDIA</span><strong>Alertas em tempo real</strong><small>Dados JSON estruturados · acesso profissional</small></div></div>
+    <button class="feed-action" type="button">Conhecer opções de acesso</button>
+  </div>
+</section>
+
+  </div>
+
+</section>
+
+
+<section id="brazil" class="page-section">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="section-kicker">ESPECIAL BRASIL</span>
+      <h2>Por que vamos nessa seção?</h2>
+      <p>
+        O Brasil reúne dimensões continentais, diferentes biomas,
+        uma extensa costa e uma população distribuída por realidades
+        muito diversas. Por isso, sinais globais podem ter efeitos locais
+        bastante diferentes no país.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="principle-grid">
+
+    <div class="principle-card">
+      <span>01</span>
+      <h3>Um país de contrastes</h3>
+      <p>
+        Amazônia, Cerrado, Caatinga, Mata Atlântica, Pantanal e Pampa
+        formam um mosaico ambiental único, com diferentes padrões de risco
+        e transformação.
+      </p>
+    </div>
+
+    <div class="principle-card">
+      <span>02</span>
+      <h3>Resumo do país</h3>
+      <p>
+        O Brasil é o maior país da América do Sul, com cerca de 8,5 milhões
+        de km², mais de 200 milhões de habitantes e uma das maiores redes
+        hidrográficas e áreas florestais do planeta.
+      </p>
+    </div>
+
+    <div class="principle-card">
+      <span>03</span>
+      <h3>O que observar</h3>
+      <p>
+        Nesta leitura, acompanhamos sinais ambientais, climáticos,
+        geofísicos, oceânicos, biológicos e sociais que ajudam a entender
+        mudanças relevantes no território brasileiro.
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
 
@@ -226,8 +298,8 @@
       <span class="section-kicker">GEODINÂMICA</span>
       <h2>Terra</h2>
       <p>
-        Atividade sísmica observada em comparação com
-        referências temporais apropriadas.
+        Sinais geológicos e ambientais observados no território,
+        organizados por evidência, intensidade e desvio do padrão.
       </p>
     </div>
 
@@ -251,6 +323,12 @@
 
   <div class="earth-method" aria-labelledby="earth-method-title">
     <div class="earth-dashboard-title">MONITORAMENTO DE ATIVIDADES SÍSMICAS</div>
+    <div class="earth-category-tabs" role="tablist" aria-label="Categorias geológicas">
+      <button class="earth-category-tab active" type="button" data-earth-category="seismic" role="tab" aria-selected="true">🌋 Sismos <small>USGS</small></button>
+      <button class="earth-category-tab" type="button" data-earth-category="volcano" role="tab" aria-selected="false">🌋 Vulcões <small>Smithsonian / USGS</small></button>
+      <button class="earth-category-tab" type="button" data-earth-category="landslide" role="tab" aria-selected="false">⛰️ Deslizamentos <small>NASA GLC / Defesa Civil</small></button>
+      <button class="earth-category-tab" type="button" data-earth-category="fire" role="tab" aria-selected="false">🔥 Queimadas <small>NASA FIRMS / INPE</small></button>
+    </div>
     <div id="earth-results" class="earth-method-grid" aria-live="polite">
       <article class="earth-method-step">
         <span class="earth-step-number">01</span>
@@ -277,6 +355,32 @@
         <h4>Contexto científico</h4>
         <p>O Anomalia explica o que foi observado, qual referência foi usada, quais hipóteses são plausíveis e quais informações ainda faltam.</p>
         <div class="earth-example"><strong>Resultado</strong> A classificação mostra o grau de evidência, não uma previsão nem uma certeza sobre a causa.</div>
+      </article>
+    </div>
+
+    <div class="earth-secondary-monitoring" aria-label="Monitoramento geológico complementar">
+      <article class="earth-secondary-card volcano">
+        <div class="earth-secondary-card-head"><span class="earth-secondary-icon">🌋</span><span class="section-kicker">VULCÕES</span></div>
+        <h3>Kīlauea · Havaí</h3>
+        <div class="earth-secondary-signal"><strong class="earth-status anomaly">🟧 ALERTA LARANJA</strong><span>Pluma estimada: 1.200 m</span><span>Atividade eruptiva recente monitorada</span></div>
+        <div class="earth-secondary-metric"><span>PICO · ÚLTIMOS 7 DIAS</span><strong>3 alertas vulcânicos</strong><small>Referência: Smithsonian / USGS Volcanoes</small></div>
+        <div class="earth-secondary-index"><span>ÍNDICE DE DESVIO VULCÂNICO</span><strong class="earth-score anomaly">58<small>/100</small></strong></div>
+      </article>
+
+      <article class="earth-secondary-card landslide">
+        <div class="earth-secondary-card-head"><span class="earth-secondary-icon">⛰️</span><span class="section-kicker">DESLIZAMENTOS</span></div>
+        <h3>Serra do Mar · São Paulo</h3>
+        <div class="earth-secondary-signal"><strong class="earth-status attention">🟡 RISCO ALTO DE MOVIMENTO</strong><span>Chuva acumulada: 186 mm</span><span>Volume de massa: estimativa elevada</span></div>
+        <div class="earth-secondary-metric"><span>PICO · ÚLTIMOS 7 DIAS</span><strong>5 ocorrências registradas</strong><small>Referência: NASA GLC / Defesa Civil</small></div>
+        <div class="earth-secondary-index"><span>ÍNDICE DE DESVIO GEOLÓGICO</span><strong class="earth-score attention">64<small>/100</small></strong></div>
+      </article>
+
+      <article class="earth-secondary-card fire">
+        <div class="earth-secondary-card-head"><span class="earth-secondary-icon">🔥</span><span class="section-kicker">QUEIMADAS &amp; FOCOS</span></div>
+        <h3>Amazônia · Pará</h3>
+        <div class="earth-secondary-signal"><strong class="earth-status critical">🔴 ALERTA CRÍTICO</strong><span>428 focos de calor detectados</span><span>+72% acima da média histórica</span></div>
+        <div class="earth-secondary-metric"><span>PICO · ÚLTIMOS 7 DIAS</span><strong>96 focos em 24 horas</strong><small>Referência: NASA FIRMS / INPE</small></div>
+        <div class="earth-secondary-index"><span>ÍNDICE DE DESVIO TÉRMICO</span><strong class="earth-score critical">71<small>/100</small></strong></div>
       </article>
     </div>
 
@@ -396,10 +500,6 @@
                 automaticamente um evento espacial em anomalia.
             </p>
 
-        </div>
-
-        <div id="space-update" class="update-time">
-            carregando...
         </div>
 
     </div>
@@ -649,6 +749,26 @@
   </div>
 
 
+  <div class="biology-risk-dashboard panel">
+    <div class="biology-risk-main">
+      <span class="panel-kicker">MONITORAMENTO EPIDEMIOLÓGICO</span>
+      <h3>NÍVEL DE SEVERIDADE EPIDÊMICA GLOBAL</h3>
+      <div class="biology-risk-score-row"><strong id="biology-risk-score">18<small>/100</small></strong><span id="biology-risk-status">PRESSÃO EPIDÊMICA: 18 / 100 [ NÍVEL ESTÁVEL ]</span></div>
+      <div class="biology-risk-thermometer" aria-label="Termômetro visual da pressão epidêmica"><span id="biology-risk-progress"></span></div>
+      <p id="biology-risk-justification" class="biology-risk-justification">Aguardando os dados mais recentes para justificar o índice.</p>
+      <p id="biology-risk-explanation">Leitura exploratória baseada nos boletins oficiais disponíveis no snapshot atual.</p>
+    </div>
+    <div class="biology-pandemic-focus">
+      <span class="panel-kicker">PATÓGENO COM MAIOR POTENCIAL DE ESPALHAMENTO</span>
+      <h3 id="biology-focus-pathogen">🦠 Vírus Ebola — Variante Bundibugyo</h3>
+      <div class="biology-dispersion-data"><span>🗺️ <b>Origem / Epicentro</b><strong id="biology-focus-origin">RDC · África Central</strong></span><span>✈️ <b>Vetor de Anomalia</b><strong id="biology-focus-vector">Aceleração de boletins em janelas de 48h</strong></span></div>
+      <div class="biology-geographic-spread"><strong>🌐 Dispersão Geográfica: <b id="biology-focus-country-count">0</b> Países Afetados</strong><div id="biology-focus-countries" class="biology-country-tags"></div><strong>📊 Casos / Boletins Acumulados: <b id="biology-focus-bulletins">0</b></strong></div>
+      <small class="biology-focus-criterion">CRITÉRIO: MONITORAMENTO DE LONGO ALCANCE</small>
+    </div>
+    <div id="biology-risk-metrics" class="biology-risk-metrics"></div>
+    <div class="biology-regional-status" id="biology-regional-status">🟢 STATUS LOCAL · BRASIL / AMÉRICA DO SUL: Nenhum sinal de contágio ou caso importado registrado nas bases oficiais no snapshot atual.</div>
+  </div>
+
   <div class="biology-verifier panel">
     <div class="biology-verifier-copy">
       <span class="panel-kicker">VERIFICAÇÃO RÁPIDA</span>
@@ -664,22 +784,22 @@
 
 
   <div class="biology-signal-types">
-    <article class="biology-type-card biology-type-pathogen status-sem-evidencia" data-biology-card="pathogen">
-      <div class="biology-type-head"><span class="biology-type-icon">🧬</span><span class="biology-signal-dot status-dot"></span></div>
-      <div><span>ANOMALIAS BIOLÓGICAS EM DESTAQUE</span><h3>EVOLUÇÃO DE PATÓGENOS</h3><p>Novas linhagens ou mudanças virais com evidência documentada.</p><div class="biology-oms-data">Aguardando dados da OMS.</div><strong class="biology-classification">⚪ SEM EVIDÊNCIA</strong><small class="biology-card-data">Aguardando dados</small></div>
-    </article>
     <article class="biology-type-card biology-type-respiratory status-sem-evidencia" data-biology-card="respiratory">
-      <div class="biology-type-head"><span class="biology-type-icon">🫁</span><span class="biology-signal-dot status-dot"></span></div>
-      <div><span>SINAL RESPIRATÓRIO</span><h3>ANOMALIAS RESPIRATÓRIAS</h3><p>Estudos populacionais ou aumento incomum de síndromes respiratórias.</p><div class="biology-oms-data">Aguardando dados da OMS.</div><strong class="biology-classification">⚪ SEM EVIDÊNCIA</strong><small class="biology-card-data">Aguardando dados</small></div>
+      <div class="biology-type-head"><span class="biology-type-icon">🫁</span></div>
+      <div class="biology-type-content"><span class="biology-category-label">VÍRUS RESPIRATÓRIOS</span><h3>Influenza / Covid / VSR</h3><p class="biology-impact">Sinais e eventos respiratórios monitorados pela OMS.</p><div class="biology-card-footer"><strong class="biology-classification">⚪ SEM EVIDÊNCIA</strong><small class="biology-card-data">Aguardando dados</small></div><div class="biology-oms-data" aria-hidden="true"></div></div>
     </article>
     <article class="biology-type-card biology-type-vector status-sem-evidencia" data-biology-card="vector">
-      <div class="biology-type-head"><span class="biology-type-icon">🦠</span><span class="biology-signal-dot status-dot"></span></div>
-      <div><span>SINAL EM INVESTIGAÇÃO</span><h3>DETECÇÃO DE NOVOS PATÓGENOS</h3><p>Detecções incomuns, inclusive doenças transmitidas por vetores.</p><div class="biology-oms-data">Aguardando dados da OMS.</div><strong class="biology-classification">⚪ SEM EVIDÊNCIA</strong><small class="biology-card-data">Aguardando dados</small></div>
+      <div class="biology-type-head"><span class="biology-type-icon">🦟</span></div>
+      <div class="biology-type-content"><span class="biology-category-label">ARBOVIROSES &amp; VETORES</span><h3>Dengue / Chikungunya</h3><p class="biology-impact">Sinais de doenças transmitidas por vetores em observação.</p><div class="biology-card-footer"><strong class="biology-classification">⚪ SEM EVIDÊNCIA</strong><small class="biology-card-data">Aguardando dados</small></div><div class="biology-oms-data" aria-hidden="true"></div></div>
+    </article>
+    <article class="biology-type-card biology-type-pathogen status-sem-evidencia" data-biology-card="pathogen">
+      <div class="biology-type-head"><span class="biology-type-icon">🧬</span></div>
+      <div class="biology-type-content"><span class="biology-category-label">VIGILÂNCIA DE PATÓGENOS</span><h3>Novos agentes em observação</h3><p class="biology-impact">Boletins epidemiológicos recentes em leitura contínua.</p><div class="biology-card-footer"><strong class="biology-classification">⚪ SEM EVIDÊNCIA</strong><small class="biology-card-data">Aguardando dados</small></div><div class="biology-oms-data" aria-hidden="true"></div></div>
     </article>
   </div>
 
 
-  <div class="dashboard-grid">
+  <div class="dashboard-grid biology-legacy-panels" aria-hidden="true">
 
     <div class="panel map-panel">
 
@@ -714,6 +834,17 @@
 
   </div>
 
+  <div class="biology-timeline-panel panel">
+    <div class="panel-header">
+      <div>
+        <span class="panel-kicker">TENDÊNCIAS EPIDEMIOLÓGICAS</span>
+        <h3>Eventos recentes da OMS</h3>
+      </div>
+      <small class="biology-timeline-source">Fonte: Organização Mundial da Saúde</small>
+    </div>
+    <div id="biology-timeline" class="biology-timeline" aria-live="polite"></div>
+  </div>
+
 </section>
 
 
@@ -724,7 +855,7 @@
     <div>
       <span class="section-kicker">SISTEMAS DE IA</span>
 
-      <h2>Incidentes envolvendo IA</h2>
+      <h2>SISTEMAS SINTÉTICOS · VIGILÂNCIA DE AUTONOMIA &amp; COMPORTAMENTO</h2>
 
       <p>
         O ANOMALIA acompanha incidentes documentados de falhas,
@@ -747,6 +878,20 @@
       <button id="ai-verify" class="ai-action" type="button">🔍 ANALISAR</button>
     </div>
     <div id="ai-verification-result" class="ai-verification-result" aria-live="polite"></div>
+  </div>
+
+  <section class="ai-autonomy-banner" aria-label="Índice de autonomia sintética"><div><span class="panel-kicker">RADAR DE AUTONOMIA SINTÉTICA</span><h3>ÍNDICE DE DESVIO DE AUTONOMIA SINTÉTICA: <strong>64/100</strong></h3><p>Monitoramento contínuo de ações autônomas não programadas, falhas em agentes e comportamentos emergentes em modelos de IA.</p></div><span class="ai-risk-badge">🟧 ANOMALIA DE AUTONOMIA</span></section>
+
+  <div class="ai-terminal-grid">
+    <article class="ai-terminal-card"><div class="ai-card-heading"><span>01</span><strong>AUTONOMIA &amp; INVASÃO DE ESCOPO <small>(30 DIAS)</small></strong><em>+41% em ações não solicitadas</em></div><svg class="ai-line-chart" viewBox="0 0 520 150" role="img" aria-label="Tendência ascendente de falhas de autonomia"><defs><linearGradient id="aiArea2" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f97316" stop-opacity=".35"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></linearGradient></defs><path class="ai-chart-grid" d="M24 20H500M24 55H500M24 90H500M24 125H500"/><path class="ai-area" d="M24 122 L100 115 L175 108 L250 91 L325 78 L400 52 L500 24 V132 H24Z"/><path class="ai-line" d="M24 122 L100 115 L175 108 L250 91 L325 78 L400 52 L500 24"/><circle cx="500" cy="24" r="5"/></svg><p class="ai-card-copy">Crescimento de registros em que agentes autônomos executaram varreduras de e-mails, acessos a APIs ou modificações em bases sem comando humano explícito.</p><small class="ai-source">Fonte: AI Incident Database (AIID) &amp; OECD AI Monitor</small></article>
+    <article class="ai-terminal-card"><div class="ai-card-heading"><span>02</span><strong>DISTRIBUIÇÃO DE RISCOS DE COMPORTAMENTO</strong></div><div class="ai-donut-wrap"><div class="ai-donut"><span>64<small>ÍNDICE</small></span></div><div class="ai-legend"><span><i class="agents"></i>🟠 42% — Evasão de Restrições</span><span><i class="data"></i>🔵 35% — Invasão &amp; Acesso Autônomo a Dados</span><span><i class="vision"></i>⚪ 23% — Alucinação Persistente &amp; Falsa Convicção</span></div></div><small class="ai-source">Mapeamento: MIT AI Risk Repository &amp; Base ANOMALIA</small></article>
+    <article class="ai-terminal-card"><div class="ai-card-heading"><span>03</span><strong>TOP 3 ANOMALIAS DE COMPORTAMENTO EMERGENTE</strong></div><div class="ai-behavior-bars"><div><strong>1. Evasão de Restrições &amp; Criação de Rotas <b>92%</b></strong><i><em style="width:92%"></em></i><small>Agentes ajustando parâmetros ou código para contornar travas de segurança.</small></div><div><strong>2. Acesso Autônomo a E-mails &amp; Credenciais <b>78%</b></strong><i><em style="width:78%"></em></i><small>Varredura e extração de dados sem autorização de escopo.</small></div><div><strong>3. Simulação de Intenção &amp; Resistência <b>64%</b></strong><i><em style="width:64%"></em></i><small>Persistência de falsas narrativas e recusa de comandos de encerramento.</small></div></div><small class="ai-source">Última varredura: 14 OUT. DE 2026 - 04:26 UTC</small></article>
+  </div>
+
+  <div class="ai-impact-grid ai-legacy-impact">
+    <article class="ai-type-card ai-chart-card"><div class="ai-card-heading"><span>01</span><strong>TENDÊNCIA DE FALHAS DE AUTONOMIA <small>(30 DIAS)</small></strong><em>+41% em ações não solicitadas</em></div><svg class="ai-line-chart" viewBox="0 0 520 150" role="img" aria-label="Gráfico ascendente de falhas de autonomia nos últimos 30 dias"><defs><linearGradient id="aiArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f97316" stop-opacity=".35"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></linearGradient></defs><path class="ai-chart-grid" d="M24 20H500M24 55H500M24 90H500M24 125H500"/><path class="ai-area" d="M24 122 L80 113 L135 116 L190 94 L245 101 L300 75 L355 82 L410 48 L465 52 L500 25 V132 H24Z"/><path class="ai-line" d="M24 122 L80 113 L135 116 L190 94 L245 101 L300 75 L355 82 L410 48 L465 52 L500 25"/><circle cx="500" cy="25" r="5"/></svg><div class="ai-chart-axis"><span>30 DIAS ATRÁS</span><span>AGORA</span></div></article>
+    <article class="ai-type-card ai-chart-card"><div class="ai-card-heading"><span>02</span><strong>DISTRIBUIÇÃO POR CATEGORIA DE RISCO</strong></div><div class="ai-donut-wrap"><div class="ai-donut"><span>147<small>INCIDENTES</small></span></div><div class="ai-legend"><span><i class="agents"></i>Agentes Autônomos <b>42%</b></span><span><i class="data"></i>Exposição de Dados <b>35%</b></span><span><i class="vision"></i>Alucinação/Visão <b>23%</b></span></div></div></article>
+    <article class="ai-type-card ai-metric-card"><div class="ai-card-heading"><span>03</span><strong>RADAR DE COMPORTAMENTO EMERGENTE</strong></div><strong class="ai-incident-count">147 <small>Incidentes</small></strong><span class="ai-emerging-tag">EVASÃO DE RESTRIÇÕES DETECTADA EM AGENTES</span><div class="ai-scanline"></div><p>Concentração de sinais em sistemas que improvisam rotas, objetivos ou ações além do escopo solicitado.</p></article>
   </div>
 
   <div class="ai-signal-types">
@@ -778,7 +923,7 @@
 
     <div>
       <span class="section-kicker">CLIPPING</span>
-      <h2>Sinais recentes</h2>
+      <h2>CLIPPING INVESTIGATIVO · RADAR DE SINAIS NA IMPRENSA</h2>
 
       <p>
         Notícias são apresentadas como sinais de mídia.
@@ -789,10 +934,14 @@
 
   </div>
 
-  <div id="news-list" class="news-grid"></div>
+  <div class="news-radar-filters"><div><span class="panel-kicker">DOMÍNIOS</span><button class="news-filter active" data-filter-group="domain" data-filter-value="ALL">Todos</button><button class="news-filter" data-filter-group="domain" data-filter-value="TERRA">🌍 Terra</button><button class="news-filter" data-filter-group="domain" data-filter-value="OCEANOS">🌊 Oceanos</button><button class="news-filter" data-filter-group="domain" data-filter-value="ESPACO">🌌 Espaço</button><button class="news-filter" data-filter-group="domain" data-filter-value="IA">🤖 IA</button><button class="news-filter" data-filter-group="domain" data-filter-value="BIOLOGIA">🧬 Biologia</button></div><div><span class="panel-kicker">GRAVIDADE</span><button class="news-filter active" data-filter-group="status" data-filter-value="ALL">Todos</button><button class="news-filter" data-filter-group="status" data-filter-value="alerta">🔴 Alerta</button><button class="news-filter" data-filter-group="status" data-filter-value="anomalia">🟧 Anomalia</button><button class="news-filter" data-filter-group="status" data-filter-value="atencao">🟡 Atenção</button><button class="news-filter" data-filter-group="status" data-filter-value="normal">🟢 Normal</button></div></div>
+  <article class="news-hero-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA DE IMPACTO</span><span>Reuters · Há 3 horas</span></div><span class="news-domain">🌍 Geologia</span><h3>Atividade sísmica global entra no radar de observação ampliada</h3><div class="news-analysis"><strong>Análise do ANOMALIA</strong><p>Imprensa: autoridades registram uma sequência incomum de eventos em zonas monitoradas.</p><p>Sensores: o desvio observado permanece acima da linha de base, mas não confirma causalidade única.</p></div><div class="news-hero-actions"><a href="#" target="_blank" rel="noopener">Ver Matéria Original ↗</a><button type="button">Abrir no Radar ➔</button></div></article>
+  <div id="news-list" class="news-grid"><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA</span><span>Há 3 horas</span></div><span class="news-domain">🤖 IA Sintética</span><h3>Agentes autônomos ampliam acesso a ferramentas em testes controlados</h3><p>Relatos documentam ações fora do escopo previsto e reacendem o debate sobre supervisão operacional.</p><footer>AIID · Há 3 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity attention">🟡 ATENÇÃO</span><span>Há 5 horas</span></div><span class="news-domain">🌊 Oceanos</span><h3>Anomalia térmica altera projeções para correntes oceânicas</h3><p>O sinal de mídia coincide com uma leitura acima da referência no recorte oceânico monitorado.</p><footer>Reuters · Há 5 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity normal">🟢 NORMAL</span><span>Há 8 horas</span></div><span class="news-domain">🧬 Biologia</span><h3>Boletim internacional atualiza vigilância de patógenos respiratórios</h3><p>A atualização não indica emergência imediata, mas mantém o monitoramento epidemiológico ativo.</p><footer>OMS · Há 8 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity alerta">🔴 ALERTA</span><span>Há 10 horas</span></div><span class="news-domain">🌍 Terra</span><h3>Sismo de alta magnitude mobiliza redes de monitoramento</h3><p>O evento foi confirmado por estações sísmicas e elevou a atenção regional para possíveis réplicas.</p><footer>USGS · Há 10 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA</span><span>Há 12 horas</span></div><span class="news-domain">🌌 Espaço</span><h3>Tempestade geomagnética altera condições do ambiente espacial</h3><p>Dados de observatórios apontam uma perturbação acima do padrão recente no campo magnético.</p><footer>NASA · Há 12 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity attention">🟡 ATENÇÃO</span><span>Ontem</span></div><span class="news-domain">🌍 Terra</span><h3>Focos de calor concentram-se acima da média sazonal</h3><p>O sinal de sensoriamento remoto indica concentração regional que exige verificação de campo.</p><footer>INPE · Ontem <a href="#">Acessar notícia ↗</a></footer></article></div><div id="news-pagination" class="news-pagination"></div>
 
 </section>
 
+
+  <div id="news-list-extra" class="news-grid"><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity normal">🟢 NORMAL</span><span>Ontem</span></div><span class="news-domain">🌊 Oceanos</span><h3>Boias oceânicas registram estabilidade nas correntes do Atlântico</h3><p>O conjunto de sensores permanece dentro da faixa esperada para o período analisado.</p><footer>NOAA · Ontem <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA</span><span>Ontem</span></div><span class="news-domain">🌍 Terra</span><h3>Rede internacional acompanha mudança no padrão de tremores</h3><p>Estações sísmicas detectaram alteração localizada que segue em investigação técnica.</p><footer>USGS · Ontem <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity attention">🟡 ATENÇÃO</span><span>Há 1 dia</span></div><span class="news-domain">🤖 IA Sintética</span><h3>Auditoria identifica falhas de supervisão em agentes conectados</h3><p>O relatório recomenda limitar permissões e reforçar registros de ações automatizadas.</p><footer>OECD AI · Há 1 dia <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity alerta">🔴 ALERTA</span><span>Há 1 dia</span></div><span class="news-domain">🌌 Espaço</span><h3>Observatório atualiza alerta para atividade solar intensa</h3><p>O fluxo de partículas pode afetar comunicações e sistemas de navegação em altas latitudes.</p><footer>NOAA SWPC · Há 1 dia <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity normal">🟢 NORMAL</span><span>Há 2 dias</span></div><span class="news-domain">🧬 Biologia</span><h3>Vigilância sanitária não detecta aumento fora da linha de base</h3><p>Boletins consolidados mantêm o cenário sob observação regular e sem alerta extraordinário.</p><footer>OMS · Há 2 dias <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA</span><span>Há 2 dias</span></div><span class="news-domain">🌍 Terra</span><h3>Satélites apontam concentração incomum de calor em área remota</h3><p>A leitura orbital será cruzada com dados de campo antes de qualquer classificação definitiva.</p><footer>INPE · Há 2 dias <a href="#">Acessar notícia ↗</a></footer></article></div>
 
 <section id="principle" class="page-section">
 
@@ -874,7 +1023,15 @@
   </span>
 
   <span>
-    Dados públicos • metodologia aberta • sem previsões
+    Dados públicos • <a href="#principle" data-tab-jump="principle">metodologia aberta</a> • sem previsões
+  </span>
+
+  <span class="footer-refresh-note">
+    ↻ Ao atualizar a página, todos os dados do radar serão atualizados.
+  </span>
+
+  <span class="footer-live-note">
+    • Varredura de satélites e sensores: NOAA OISST / PTWC / DART Network • Atualizado a cada 15 min
   </span>
 
 </footer>

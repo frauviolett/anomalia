@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-10-09T03:27:29.591Z",
+    "updatedAt": "2026-10-15T03:13:30.688Z",
     "version": "2.0",
     "methodology": "comparison-based"
   },
@@ -8,21 +8,21 @@
     "earth": {
       "title": "🌍 TERRA",
       "subtitle": "Eventos nas últimas 24h",
-      "value": 221,
+      "value": 193,
       "detail": "Fonte: USGS",
       "status": "normal"
     },
     "ocean": {
       "title": "🌊 OCEANOS",
-      "subtitle": "Desvio médio absoluto",
-      "value": "0.55 °C",
-      "detail": "Campo NOAA OISST — 2026-10-07",
-      "status": "alerta"
+      "subtitle": "SST",
+      "value": "—",
+      "detail": "Fonte temporariamente indisponível",
+      "status": "desconhecido"
     },
     "space": {
       "title": "☄️ ESPAÇO",
       "subtitle": "Objetos próximos",
-      "value": 7,
+      "value": 3,
       "detail": "NASA NeoWs",
       "status": "normal"
     },
@@ -36,32 +36,39 @@
   },
   "signals": [
     {
-      "title": "Sismo — 5 km WNW of The Geysers, CA",
-      "description": "Magnitude 1.1",
+      "title": "Sismo — 8 km WNW of Cobb, CA",
+      "description": "Magnitude 0.7",
       "status": "normal",
-      "lat": 38.8011665344238,
-      "lon": -122.810165405273
+      "lat": 38.8368339538574,
+      "lon": -122.811996459961
     },
     {
-      "title": "Sismo — 6 km NW of The Geysers, CA",
-      "description": "Magnitude 1.3",
+      "title": "Sismo — 7 km SE of Chickasha, Oklahoma",
+      "description": "Magnitude 2.6",
       "status": "normal",
-      "lat": 38.8190002441406,
-      "lon": -122.806831359863
+      "lat": 35.01169586,
+      "lon": -97.87024689
     },
     {
-      "title": "Sismo — 98 km SSE of Kokhanok, Alaska",
-      "description": "Magnitude 1.1",
+      "title": "Sismo — 27 km SSW of Alamo, Nevada",
+      "description": "Magnitude 2.0",
       "status": "normal",
-      "lat": 58.599,
-      "lon": -154.266
+      "lat": 37.1275,
+      "lon": -115.2704
     },
     {
-      "title": "Sismo — 32 km SE of Bodie, CA",
-      "description": "Magnitude 2.8",
+      "title": "Sismo — 6 km SSE of Pearblossom, CA",
+      "description": "Magnitude 0.8",
       "status": "normal",
-      "lat": 38.0258331298828,
-      "lon": -118.727165222168
+      "lat": 34.4581666666667,
+      "lon": -117.878333333333
+    },
+    {
+      "title": "Pneumonia of undetermined etiology - the Russian Federation",
+      "description": "On 2 October 2026, WHO became aware through media reports of the death of an employee of the Irkutsk APRI of Siberia and the Far East, Russian Federation. The individual died on 2 October following hospitalization for severe pneumonia on 29 September. On 3 October, 5 October, 6 October and 7 October, WHO contacted the ",
+      "status": "atencao",
+      "lat": null,
+      "lon": null
     },
     {
       "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
@@ -83,13 +90,6 @@
       "status": "atencao",
       "lat": -2.8,
       "lon": 23.6
-    },
-    {
-      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
-      "description": "Since the previous Disease Outbreak News was published on 14 August 2026, additional confirmed cases and deaths of BVD have been reported only in the Democratic Republic of the Congo.&nbsp;&nbsp; Cumulatively as of 26 August 2026, 5815 confirmed cases have been reported: 5794 in the Democratic Republic of the Congo (in",
-      "status": "atencao",
-      "lat": -2.8,
-      "lon": 23.6
     }
   ],
   "earth": {
@@ -97,14 +97,14 @@
       {
         "title": "🌍 TERRA",
         "subtitle": "Eventos nas últimas 24h",
-        "value": 221,
+        "value": 193,
         "detail": "Fonte: USGS",
         "status": "normal"
       },
       {
         "title": "MAGNITUDE",
         "subtitle": "Maior evento",
-        "value": "6.3",
+        "value": "5.9",
         "detail": "Maior magnitude observada",
         "status": "normal"
       },
@@ -125,2213 +125,1933 @@
     ],
     "events": [
       {
-        "id": "nc75446756",
-        "lat": 38.8011665344238,
-        "lon": -122.810165405273,
-        "depth": 1.95000004768372,
-        "magnitude": 1.06,
-        "place": "5 km WNW of The Geysers, CA",
-        "time": 1791516072850,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446751",
-        "lat": 38.8190002441406,
-        "lon": -122.806831359863,
-        "depth": 2.86999988555908,
-        "magnitude": 1.32,
-        "place": "6 km NW of The Geysers, CA",
-        "time": 1791515919670,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tzgnbw",
-        "lat": 58.599,
-        "lon": -154.266,
-        "depth": 90.9,
-        "magnitude": 1.1,
-        "place": "98 km SSE of Kokhanok, Alaska",
-        "time": 1791515440734,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446746",
-        "lat": 38.0258331298828,
-        "lon": -118.727165222168,
-        "depth": 16.1100006103516,
-        "magnitude": 2.81,
-        "place": "32 km SE of Bodie, CA",
-        "time": 1791514263920,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345343",
-        "lat": 33.2541666666667,
-        "lon": -116.2745,
-        "depth": 11.18,
-        "magnitude": 1.15,
-        "place": "9 km E of Borrego Springs, CA",
-        "time": 1791514058280,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tzfsxe",
-        "lat": 58.134,
-        "lon": -156.51,
-        "depth": 5,
-        "magnitude": 1.6,
-        "place": "51 km E of Egegik, Alaska",
-        "time": 1791514048073,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052497",
-        "lat": 19.2479991912842,
-        "lon": -155.408493041992,
-        "depth": 27.1700000762939,
-        "magnitude": 1.99,
-        "place": "8 km NE of Pāhala, Hawaii",
-        "time": 1791512917020,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446736",
-        "lat": 38.8233337402344,
-        "lon": -122.806999206543,
-        "depth": 2.71000003814697,
-        "magnitude": 2.02,
-        "place": "7 km NW of The Geysers, CA",
-        "time": 1791512681120,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446726",
-        "lat": 38.8141670227051,
-        "lon": -122.818496704102,
-        "depth": 2.85999989509583,
-        "magnitude": 0.74,
-        "place": "7 km NW of The Geysers, CA",
-        "time": 1791512226640,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tzeopg",
-        "lat": 60.028,
-        "lon": -153.326,
-        "depth": 5,
-        "magnitude": 0.6,
-        "place": "51 km ENE of Pedro Bay, Alaska",
-        "time": 1791511950134,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tzeggh",
-        "lat": 62.978,
-        "lon": -149.388,
-        "depth": 72.4,
-        "magnitude": 1.9,
-        "place": "51 km SSW of Cantwell, Alaska",
-        "time": 1791511373279,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345335",
-        "lat": 33.9631666666667,
-        "lon": -116.964,
-        "depth": 8.15,
-        "magnitude": 1.67,
-        "place": "4 km NNE of Beaumont, CA",
-        "time": 1791510660050,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446721",
-        "lat": 38.8361663818359,
-        "lon": -122.792831420898,
-        "depth": 1.75999999046326,
-        "magnitude": 0.96,
-        "place": "6 km WNW of Cobb, CA",
-        "time": 1791510626520,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tzdtlm",
-        "lat": 58.391,
-        "lon": -154.003,
-        "depth": 86.4,
-        "magnitude": 1.9,
-        "place": "74 km WNW of Aleneva, Alaska",
-        "time": 1791510486309,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345327",
-        "lat": 33.5763333333333,
-        "lon": -116.765666666667,
-        "depth": 12.3,
-        "magnitude": 1.33,
-        "place": "9 km WNW of Anza, CA",
-        "time": 1791509797000,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345319",
-        "lat": 33.5641670227051,
-        "lon": -116.764663696289,
-        "depth": 18.0100002288818,
-        "magnitude": 1.36467387341898,
-        "place": "8 km W of Anza, CA",
-        "time": 1791509793250,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345311",
-        "lat": 35.8716666666667,
-        "lon": -117.724666666667,
-        "depth": 9.08,
-        "magnitude": 0.93,
-        "place": "18 km ESE of Little Lake, CA",
-        "time": 1791509716010,
-        "status": "normal"
-      },
-      {
-        "id": "pr71536153",
-        "lat": 17.9125,
-        "lon": -66.9731666666667,
-        "depth": 13.82,
-        "magnitude": 1.86,
-        "place": "9 km SW of Guánica, Puerto Rico",
-        "time": 1791509485900,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345303",
-        "lat": 33.2936666666667,
-        "lon": -116.832,
-        "depth": 16.67,
-        "magnitude": 0.4,
-        "place": "8 km SSE of Palomar Observatory, CA",
-        "time": 1791508252640,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345295",
-        "lat": 33.6448333333333,
-        "lon": -116.706166666667,
-        "depth": 15.41,
-        "magnitude": 0.84,
-        "place": "10 km NNW of Anza, CA",
-        "time": 1791508152990,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446716",
-        "lat": 38.8141670227051,
-        "lon": -122.817497253418,
-        "depth": 2.70000004768372,
-        "magnitude": 0.75,
-        "place": "7 km NW of The Geysers, CA",
-        "time": 1791507757600,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446711",
-        "lat": 38.7765007019043,
-        "lon": -122.735496520996,
-        "depth": 2.13000011444092,
-        "magnitude": 1.05,
-        "place": "2 km E of The Geysers, CA",
-        "time": 1791507675200,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345279",
-        "lat": 35.1026666666667,
-        "lon": -119.118666666667,
-        "depth": 13.88,
-        "magnitude": 1.8,
-        "place": "25 km NW of Grapevine, CA",
-        "time": 1791507324020,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tzbvpq",
-        "lat": 60.565,
-        "lon": -152.363,
-        "depth": 18.9,
-        "magnitude": 0.9,
-        "place": "57 km W of Salamatof, Alaska",
-        "time": 1791507038402,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446686",
-        "lat": 38.8146667480469,
-        "lon": -122.816497802734,
-        "depth": 2.85999989509583,
-        "magnitude": 0.75,
-        "place": "7 km NW of The Geysers, CA",
-        "time": 1791505163880,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446681",
-        "lat": 38.8133316040039,
-        "lon": -122.81583404541,
-        "depth": 2.47000002861023,
-        "magnitude": 1.84,
-        "place": "7 km NW of The Geysers, CA",
-        "time": 1791505069020,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446676",
-        "lat": 38.8131675720215,
-        "lon": -122.816329956055,
-        "depth": 2.63000011444092,
-        "magnitude": 2.33,
-        "place": "7 km NW of The Geysers, CA",
-        "time": 1791504267840,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446671",
-        "lat": 38.8313331604004,
-        "lon": -122.817832946777,
-        "depth": 1.76999998092651,
-        "magnitude": 0.95,
-        "place": "8 km NW of The Geysers, CA",
-        "time": 1791504254710,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345271",
-        "lat": 33.5853333333333,
-        "lon": -116.757,
-        "depth": 12.48,
-        "magnitude": 0.62,
-        "place": "8 km WNW of Anza, CA",
-        "time": 1791504125360,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345263",
-        "lat": 33.1568333333333,
-        "lon": -116.517666666667,
-        "depth": 4.66,
-        "magnitude": 0.38,
-        "place": "12 km NE of Julian, CA",
-        "time": 1791504023690,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345255",
-        "lat": 33.1543333333333,
-        "lon": -116.523833333333,
-        "depth": 5.67,
-        "magnitude": 0.41,
-        "place": "11 km NE of Julian, CA",
-        "time": 1791503837630,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345239",
-        "lat": 33.293,
-        "lon": -116.833166666667,
-        "depth": 15.09,
-        "magnitude": 0.93,
-        "place": "8 km SSE of Palomar Observatory, CA",
-        "time": 1791502677690,
-        "status": "normal"
-      },
-      {
-        "id": "uw714118181",
-        "lat": 46.3506666666667,
-        "lon": -122.825333333333,
-        "depth": -0.49,
-        "magnitude": 1.65,
-        "place": "10 km S of Toledo, Washington",
-        "time": 1791502340360,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyyefm",
-        "lat": 58.216,
-        "lon": -154.864,
-        "depth": 12.5,
-        "magnitude": 0.9,
-        "place": "76 km NNW of Karluk, Alaska",
-        "time": 1791500436764,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyycjx",
-        "lat": 60.119,
-        "lon": -153.078,
-        "depth": 5,
-        "magnitude": 0.3,
-        "place": "68 km ENE of Pedro Bay, Alaska",
-        "time": 1791500312323,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446626",
-        "lat": 38.7956657409668,
-        "lon": -122.798835754395,
-        "depth": 0.430000007152557,
-        "magnitude": 0.86,
-        "place": "4 km WNW of The Geysers, CA",
-        "time": 1791500273870,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052432",
-        "lat": 19.15016746521,
-        "lon": -155.498504638672,
-        "depth": 28.9599990844727,
-        "magnitude": 1.76,
-        "place": "6 km SSW of Pāhala, Hawaii",
-        "time": 1791499998520,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052427",
-        "lat": 19.1544990539551,
-        "lon": -155.481994628906,
-        "depth": 26.7900009155273,
-        "magnitude": 1.73,
-        "place": "5 km S of Pāhala, Hawaii",
-        "time": 1791499716050,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446616",
-        "lat": 38.7986679077148,
-        "lon": -122.814002990723,
-        "depth": 3.14000010490417,
-        "magnitude": 0.78,
-        "place": "6 km WNW of The Geysers, CA",
-        "time": 1791499441840,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345223",
-        "lat": 33.3171666666667,
-        "lon": -116.108166666667,
-        "depth": 0.86,
-        "magnitude": 2.03,
-        "place": "14 km W of Salton City, CA",
-        "time": 1791499358210,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345231",
-        "lat": 33.2384986877441,
-        "lon": -116.224830627441,
-        "depth": 7.30000019073486,
-        "magnitude": 1.71194484741745,
-        "place": "14 km NW of Ocotillo Wells, CA",
-        "time": 1791499356920,
-        "status": "normal"
-      },
-      {
-        "id": "nn00925493",
-        "lat": 40.7472,
-        "lon": -119.2644,
-        "depth": 6.8683,
-        "magnitude": 2.37,
-        "place": "3 km SW of Burning Man Earth, Nevada",
-        "time": 1791497412270,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tywize",
-        "lat": 61.773,
-        "lon": -151.232,
-        "depth": 78,
-        "magnitude": 1.4,
-        "place": "25 km SSE of Skwentna, Alaska",
-        "time": 1791497168198,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tywgzn",
-        "lat": 59.429,
-        "lon": -135.909,
-        "depth": 5.9,
-        "magnitude": 2,
-        "place": "3 km NNW of Klukwan, Alaska",
-        "time": 1791497030753,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tywcxn",
-        "lat": 60.285,
-        "lon": -150.97,
-        "depth": 53.3,
-        "magnitude": 1.9,
-        "place": "17 km ESE of Kasilof, Alaska",
-        "time": 1791496749470,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446571",
-        "lat": 38.7939987182617,
-        "lon": -122.799667358398,
-        "depth": 0.109999999403954,
-        "magnitude": 0.75,
-        "place": "4 km WNW of The Geysers, CA",
-        "time": 1791495584990,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345207",
-        "lat": 34.351,
-        "lon": -116.839,
-        "depth": 9.57,
-        "magnitude": 1.16,
-        "place": "10 km N of Big Bear City, CA",
-        "time": 1791495566960,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u120",
-        "lat": 56.6924,
-        "lon": -148.9651,
-        "depth": 10,
-        "magnitude": 3.1,
-        "place": "225 km ESE of Chiniak, Alaska",
-        "time": 1791494659759,
-        "status": "normal"
-      },
-      {
-        "id": "nn00925482",
-        "lat": 38.697,
-        "lon": -117.0791,
-        "depth": 0,
-        "magnitude": 1.04,
-        "place": "56 km S of Kingston, Nevada",
-        "time": 1791494473864,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tytqsy",
-        "lat": 61.329,
-        "lon": -152.235,
-        "depth": 7.3,
-        "magnitude": 1.1,
-        "place": "65 km WNW of Beluga, Alaska",
-        "time": 1791492312752,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052372",
-        "lat": 19.0298328399658,
-        "lon": -155.339004516602,
-        "depth": 15.3999996185303,
-        "magnitude": 2.04,
-        "place": "24 km SE of Pāhala, Hawaii",
-        "time": 1791491696990,
-        "status": "normal"
-      },
-      {
-        "id": "uw714118071",
-        "lat": 45.2641666666667,
-        "lon": -123.071833333333,
-        "depth": -0.33,
-        "magnitude": 1.05,
-        "place": "4 km ENE of Lafayette, Oregon",
-        "time": 1791491643840,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tytfdj",
-        "lat": 61.192,
-        "lon": -151.91,
-        "depth": 102.5,
-        "magnitude": 1.3,
-        "place": "43 km WNW of Tyonek, Alaska",
-        "time": 1791491503214,
-        "status": "normal"
-      },
-      {
-        "id": "uw714118061",
-        "lat": 47.1701666666667,
-        "lon": -121.838666666667,
-        "depth": -1.03,
-        "magnitude": 1.69,
-        "place": "12 km ESE of Enumclaw, Washington",
-        "time": 1791491050150,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052357",
-        "lat": 19.2918338775635,
-        "lon": -155.429840087891,
-        "depth": 27.9200000762939,
-        "magnitude": 1.89,
-        "place": "11 km NNE of Pāhala, Hawaii",
-        "time": 1791490594050,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tysivc",
-        "lat": 58.931,
-        "lon": -152.25,
-        "depth": 57.7,
-        "magnitude": 1.7,
-        "place": "50 km SSW of Nanwalek, Alaska",
-        "time": 1791490029756,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345183",
-        "lat": 33.3195,
-        "lon": -116.285,
-        "depth": 8.12,
-        "magnitude": 1.15,
-        "place": "11 km NE of Borrego Springs, CA",
-        "time": 1791489086160,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052337",
-        "lat": 19.3368333333333,
-        "lon": -155.2855,
-        "depth": 28.78,
-        "magnitude": 1.94,
-        "place": "12 km SSW of Volcano, Hawaii",
-        "time": 1791488949550,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345175",
-        "lat": 34.3443333333333,
-        "lon": -116.881833333333,
-        "depth": 1.14,
-        "magnitude": 1.19,
-        "place": "10 km NNW of Big Bear City, CA",
-        "time": 1791488328040,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyrdxy",
-        "lat": 64.028,
-        "lon": -148.738,
-        "depth": 0.2,
-        "magnitude": 1.9,
-        "place": "18 km E of Ferry, Alaska",
-        "time": 1791487823474,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446521",
-        "lat": 38.8154983520508,
-        "lon": -122.796165466309,
-        "depth": 2.55999994277954,
-        "magnitude": 1.1,
-        "place": "5 km NW of The Geysers, CA",
-        "time": 1791487589960,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u11a",
-        "lat": 40.5087,
-        "lon": 142.9124,
-        "depth": 35,
-        "magnitude": 4.2,
-        "place": "103 km ENE of Noda, Japan",
-        "time": 1791487381983,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345167",
-        "lat": 33.4661666666667,
-        "lon": -116.4595,
-        "depth": 3.62,
-        "magnitude": 0.81,
-        "place": "22 km ESE of Anza, CA",
-        "time": 1791487136510,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyqteo",
-        "lat": 57.681,
-        "lon": -154.163,
-        "depth": 27.8,
-        "magnitude": 1.9,
-        "place": "19 km NW of Larsen Bay, Alaska",
-        "time": 1791487083785,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446511",
-        "lat": 38.8058319091797,
-        "lon": -122.818664550781,
-        "depth": 3.33999991416931,
+        "id": "nc75449616",
+        "lat": 38.8368339538574,
+        "lon": -122.811996459961,
+        "depth": 1.73000001907349,
         "magnitude": 0.71,
-        "place": "6 km WNW of The Geysers, CA",
-        "time": 1791486369040,
+        "place": "8 km WNW of Cobb, CA",
+        "time": 1792033418430,
         "status": "normal"
       },
       {
-        "id": "aka2026typggm",
-        "lat": 59.688,
-        "lon": -151.635,
-        "depth": 55.6,
-        "magnitude": 2.4,
-        "place": "4 km WNW of Diamond Ridge, Alaska",
-        "time": 1791484394142,
+        "id": "ok2026uepk",
+        "lat": 35.01169586,
+        "lon": -97.87024689,
+        "depth": 1.011545539,
+        "magnitude": 2.61,
+        "place": "7 km SE of Chickasha, Oklahoma",
+        "time": 1792033345990,
         "status": "normal"
       },
       {
-        "id": "us6000u10v",
-        "lat": 30.7337,
-        "lon": 140.6005,
-        "depth": 95.608,
-        "magnitude": 4.6,
-        "place": "Izu Islands, Japan region",
-        "time": 1791484323544,
+        "id": "nn00925779",
+        "lat": 37.1275,
+        "lon": -115.2704,
+        "depth": 9.1093,
+        "magnitude": 1.99,
+        "place": "27 km SSW of Alamo, Nevada",
+        "time": 1792032016065,
         "status": "normal"
       },
       {
-        "id": "ci41345159",
-        "lat": 35.0603333333333,
-        "lon": -118.3385,
-        "depth": -0.91,
-        "magnitude": 1.1,
-        "place": "13 km SE of Tehachapi, CA",
-        "time": 1791483095500,
+        "id": "ci41347727",
+        "lat": 34.4581666666667,
+        "lon": -117.878333333333,
+        "depth": 7.61,
+        "magnitude": 0.78,
+        "place": "6 km SSE of Pearblossom, CA",
+        "time": 1792031711440,
         "status": "normal"
       },
       {
-        "id": "aka2026tyojsd",
-        "lat": 55.784,
-        "lon": -157.67,
-        "depth": 14.7,
-        "magnitude": 3.2,
-        "place": "72 km SE of Chignik, Alaska",
-        "time": 1791482823770,
+        "id": "nc75449596",
+        "lat": 38.7723350524902,
+        "lon": -122.94450378418,
+        "depth": 5.6399998664856,
+        "magnitude": 1.37,
+        "place": "7 km ESE of Cloverdale, CA",
+        "time": 1792031710800,
         "status": "normal"
       },
       {
-        "id": "us6000u10n",
-        "lat": -9.2392,
-        "lon": 120.3127,
-        "depth": 91.156,
-        "magnitude": 4.8,
-        "place": "46 km N of Waingapu, Indonesia",
-        "time": 1791482760577,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345151",
-        "lat": 34.6363333333333,
-        "lon": -117.3025,
-        "depth": -0.87,
-        "magnitude": 1.03,
-        "place": "11 km N of Victorville, CA",
-        "time": 1791482508210,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345143",
-        "lat": 36.0306666666667,
-        "lon": -117.762166666667,
-        "depth": 0.97,
-        "magnitude": 1.32,
-        "place": "17 km NE of Little Lake, CA",
-        "time": 1791482434430,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446491",
-        "lat": 38.804500579834,
-        "lon": -122.779663085938,
-        "depth": 3.59999990463257,
-        "magnitude": 0.89,
-        "place": "4 km NNW of The Geysers, CA",
-        "time": 1791482297240,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446486",
-        "lat": 38.8305015563965,
-        "lon": -122.814331054688,
-        "depth": 1.96000003814697,
-        "magnitude": 0.74,
-        "place": "8 km NW of The Geysers, CA",
-        "time": 1791482064060,
-        "status": "normal"
-      },
-      {
-        "id": "uw714117981",
-        "lat": 46.2008333333333,
-        "lon": -122.190833333333,
-        "depth": 2.96,
-        "magnitude": 0.14,
-        "place": "37 km NNE of Amboy, Washington",
-        "time": 1791480662000,
-        "status": "normal"
-      },
-      {
-        "id": "av94438783",
-        "lat": 60.0396666666667,
-        "lon": -153.080166666667,
-        "depth": -0.61,
-        "magnitude": -0.86,
-        "place": "63 km ENE of Pedro Bay, Alaska",
-        "time": 1791479752510,
-        "status": "normal"
-      },
-      {
-        "id": "av94438753",
-        "lat": 60.0421666666667,
-        "lon": -153.048666666667,
-        "depth": 0.9,
-        "magnitude": -0.44,
-        "place": "65 km ENE of Pedro Bay, Alaska",
-        "time": 1791478620890,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tylznw",
-        "lat": 62.097,
-        "lon": -151.253,
-        "depth": 85.4,
-        "magnitude": 1.9,
-        "place": "14 km NNE of Skwentna, Alaska",
-        "time": 1791478523765,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tvgyrj",
-        "lat": 31.948,
-        "lon": -103.835,
-        "depth": 7.843,
-        "magnitude": 0.9,
-        "place": "34 km NW of Mentone, Texas",
-        "time": 1791478474341,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tylwcd",
-        "lat": 61.234,
-        "lon": -149.607,
-        "depth": 28.4,
-        "magnitude": 1.5,
-        "place": "2 km SSE of Elmendorf Air Force Base, Alaska",
-        "time": 1791478289776,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345111",
-        "lat": 34.0993333333333,
-        "lon": -117.483666666667,
-        "depth": 6.69,
-        "magnitude": 0.76,
-        "place": "2 km W of Fontana, CA",
-        "time": 1791477598180,
-        "status": "normal"
-      },
-      {
-        "id": "av93067994",
-        "lat": 58.188,
-        "lon": -155.277333333333,
-        "depth": 0.82,
-        "magnitude": -0.58,
-        "place": "84 km NW of Karluk, Alaska",
-        "time": 1791477188410,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345095",
-        "lat": 34.1011666666667,
-        "lon": -117.483166666667,
-        "depth": 6.6,
-        "magnitude": 0.93,
-        "place": "2 km W of Fontana, CA",
-        "time": 1791477020930,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345087",
-        "lat": 34.1011666666667,
-        "lon": -117.4725,
-        "depth": 5.21,
-        "magnitude": 0.51,
-        "place": "1 km WNW of Fontana, CA",
-        "time": 1791476867160,
-        "status": "normal"
-      },
-      {
-        "id": "av94465561",
-        "lat": 52.0511666666667,
-        "lon": -175.879166666667,
-        "depth": 14.91,
-        "magnitude": 1.01,
-        "place": "55 km ENE of Adak, Alaska",
-        "time": 1791476399450,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tykjuc",
-        "lat": 60.237,
-        "lon": -151.903,
-        "depth": 77.1,
-        "magnitude": 1.2,
-        "place": "24 km NNW of Ninilchik, Alaska",
-        "time": 1791475633633,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tvfiby",
-        "lat": 32.353,
-        "lon": -102.092,
-        "depth": 7.959,
-        "magnitude": 1.1,
-        "place": "37 km NW of Stanton, Texas",
-        "time": 1791475595672,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tvewps",
-        "lat": 32.173,
-        "lon": -101.796,
-        "depth": 7.7881,
-        "magnitude": 0.6,
-        "place": "4 km N of Stanton, Texas",
-        "time": 1791474705325,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345079",
-        "lat": 34.0871666666667,
-        "lon": -117.2975,
-        "depth": 15.88,
-        "magnitude": 1.76,
-        "place": "2 km NE of Colton, CA",
-        "time": 1791474556880,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tveprn",
-        "lat": 31.383,
-        "lon": -103.7,
-        "depth": 8.2532,
-        "magnitude": 0.8,
-        "place": "11 km NE of Toyah, Texas",
-        "time": 1791474228994,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tvebps",
-        "lat": 32.002,
-        "lon": -103.839,
-        "depth": 7.1252,
-        "magnitude": 0.9,
-        "place": "33 km SE of Malaga, New Mexico",
-        "time": 1791473281528,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345071",
-        "lat": 34.0975,
-        "lon": -117.490166666667,
-        "depth": 6.04,
-        "magnitude": 0.67,
-        "place": "3 km W of Fontana, CA",
-        "time": 1791473039510,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u0yy",
-        "lat": -3.4591,
-        "lon": 101.5886,
-        "depth": 50.572,
-        "magnitude": 4.7,
-        "place": "84 km WNW of Bengkulu, Indonesia",
-        "time": 1791473027618,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyiptd",
-        "lat": 63.098,
-        "lon": -150.846,
-        "depth": 129.1,
-        "magnitude": 2.2,
-        "place": "66 km SE of Denali National Park, Alaska",
-        "time": 1791472450260,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052242",
-        "lat": 19.2453327178955,
-        "lon": -155.524826049805,
-        "depth": 2.0699999332428,
-        "magnitude": 1.83,
-        "place": "6 km NW of Pāhala, Hawaii",
-        "time": 1791472062670,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446441",
-        "lat": 38.8153343200684,
-        "lon": -122.794998168945,
-        "depth": 2.54999995231628,
-        "magnitude": 1.38,
-        "place": "5 km NW of The Geysers, CA",
-        "time": 1791471837790,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052232",
-        "lat": 19.2171669006348,
-        "lon": -155.314834594727,
-        "depth": 49.6599998474121,
-        "magnitude": 1.9,
-        "place": "17 km E of Pāhala, Hawaii",
-        "time": 1791471780230,
-        "status": "normal"
-      },
-      {
-        "id": "uu80158811",
-        "lat": 38.9881666666667,
-        "lon": -111.416333333333,
-        "depth": -3.37,
-        "magnitude": 1.34,
-        "place": "16 km WNW of Emery, Utah",
-        "time": 1791471622300,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052227",
-        "lat": 19.2063331604004,
-        "lon": -155.321502685547,
-        "depth": 47.5699996948242,
-        "magnitude": 1.85,
-        "place": "16 km E of Pāhala, Hawaii",
-        "time": 1791471483060,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446436",
-        "lat": 38.7621650695801,
-        "lon": -122.929664611816,
-        "depth": 5.94999980926514,
-        "magnitude": 1.23,
-        "place": "9 km ESE of Cloverdale, CA",
-        "time": 1791471462340,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345063",
-        "lat": 33.4155,
-        "lon": -118.298,
-        "depth": 12.22,
-        "magnitude": 1.48,
-        "place": "9 km NNE of Avalon, CA",
-        "time": 1791471332330,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyhfes",
-        "lat": 65.11,
-        "lon": -145.247,
-        "depth": 0.3,
-        "magnitude": 1.9,
-        "place": "55 km SSW of Central, Alaska",
-        "time": 1791469918003,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345047",
-        "lat": 34.101,
-        "lon": -117.482666666667,
-        "depth": 6.48,
-        "magnitude": 1.06,
-        "place": "2 km W of Fontana, CA",
-        "time": 1791469804990,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyhbak",
-        "lat": 60.42,
-        "lon": -147.443,
-        "depth": 17.8,
-        "magnitude": 1.7,
-        "place": "50 km NE of Chenega, Alaska",
-        "time": 1791469630365,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446421",
-        "lat": 38.8066673278809,
-        "lon": -122.81233215332,
-        "depth": 2.60999989509583,
-        "magnitude": 0.75,
-        "place": "6 km NW of The Geysers, CA",
-        "time": 1791469608570,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tygzmw",
-        "lat": 59.983,
-        "lon": -152.933,
-        "depth": 17.5,
-        "magnitude": 0.1,
-        "place": "65 km WNW of Anchor Point, Alaska",
-        "time": 1791469573388,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446416",
-        "lat": 38.8183326721191,
-        "lon": -122.790496826172,
-        "depth": 2.64000010490417,
-        "magnitude": 1.31,
-        "place": "5 km NNW of The Geysers, CA",
-        "time": 1791469200910,
-        "status": "normal"
-      },
-      {
-        "id": "av94465501",
-        "lat": 58.158,
-        "lon": -155.3255,
-        "depth": 2.3,
-        "magnitude": -0.58,
-        "place": "83 km NW of Karluk, Alaska",
-        "time": 1791469007200,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tygqwi",
-        "lat": 64.679,
-        "lon": -150.903,
-        "depth": 10.5,
-        "magnitude": 1.4,
-        "place": "38 km SSW of Manley Hot Springs, Alaska",
-        "time": 1791468927266,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tygpxd",
-        "lat": 57.593,
-        "lon": -155.77,
-        "depth": 9.9,
-        "magnitude": 1.5,
-        "place": "78 km W of Karluk, Alaska",
-        "time": 1791468858981,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u0yr",
-        "lat": -10.0202,
-        "lon": 122.2936,
-        "depth": 10,
-        "magnitude": 4.9,
-        "place": "113 km NW of Baa, Indonesia",
-        "time": 1791468709678,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446406",
-        "lat": 39.4128341674805,
-        "lon": -122.974830627441,
-        "depth": 7.42000007629395,
-        "magnitude": 1.73,
-        "place": "2 km WNW of Lake Pillsbury, CA",
-        "time": 1791468416780,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345039",
-        "lat": 34.4153333333333,
-        "lon": -119.403666666667,
-        "depth": 1.57,
-        "magnitude": 1.19,
-        "place": "11 km E of Carpinteria, CA",
-        "time": 1791467318010,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446396",
-        "lat": 40.3655014038086,
-        "lon": -124.607002258301,
-        "depth": 26.7299995422363,
-        "magnitude": 2.26,
-        "place": "28 km W of Petrolia, CA",
-        "time": 1791467120830,
-        "status": "normal"
-      },
-      {
-        "id": "uw714117841",
-        "lat": 46.156,
-        "lon": -123.225,
-        "depth": 20.79,
-        "magnitude": 1.25,
-        "place": "6 km NNW of Clatskanie, Oregon",
-        "time": 1791466442850,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u106",
-        "lat": 52.2524,
-        "lon": -170.2081,
-        "depth": 35,
-        "magnitude": 3.5,
-        "place": "119 km SW of Nikolski, Alaska",
-        "time": 1791465314685,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyelyp",
-        "lat": 61.295,
-        "lon": -150.728,
-        "depth": 59.4,
-        "magnitude": 1.6,
-        "place": "25 km NE of Beluga, Alaska",
-        "time": 1791464989324,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345023",
-        "lat": 33.9423333333333,
-        "lon": -118.652166666667,
-        "depth": 13.3,
-        "magnitude": 1.39,
-        "place": "11 km SSE of Malibu Beach, CA",
-        "time": 1791464539290,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345015",
-        "lat": 33.3415,
-        "lon": -116.215833333333,
-        "depth": 9.73,
-        "magnitude": 0.6,
-        "place": "18 km SW of Oasis, CA",
-        "time": 1791463088190,
-        "status": "normal"
-      },
-      {
-        "id": "ci41345007",
-        "lat": 34.1875,
-        "lon": -117.586,
-        "depth": 6.55,
-        "magnitude": 0.61,
-        "place": "7 km N of Rancho Cucamonga, CA",
-        "time": 1791462295310,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344999",
-        "lat": 33.45,
-        "lon": -116.668,
-        "depth": 3.49,
-        "magnitude": 0.65,
-        "place": "12 km S of Anza, CA",
-        "time": 1791460973970,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tycfrs",
-        "lat": 58.381,
-        "lon": -154.639,
-        "depth": 107.4,
-        "magnitude": 1.2,
-        "place": "91 km N of Karluk, Alaska",
-        "time": 1791460957492,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344991",
-        "lat": 33.5786666666667,
-        "lon": -116.762666666667,
-        "depth": 12.19,
-        "magnitude": 0.82,
-        "place": "9 km WNW of Anza, CA",
-        "time": 1791460920770,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344983",
-        "lat": 34.0728333333333,
-        "lon": -116.7105,
-        "depth": 10.51,
-        "magnitude": 0.55,
-        "place": "12 km WNW of Morongo Valley, CA",
-        "time": 1791460678460,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344975",
-        "lat": 34.0971666666667,
-        "lon": -117.486666666667,
-        "depth": 4.95,
-        "magnitude": 1.01,
-        "place": "3 km W of Fontana, CA",
-        "time": 1791460301720,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344967",
-        "lat": 34.164,
-        "lon": -117.481833333333,
-        "depth": 6.83,
-        "magnitude": 0.39,
-        "place": "8 km NNW of Fontana, CA",
-        "time": 1791460117410,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344959",
-        "lat": 34.1046666666667,
-        "lon": -117.990666666667,
-        "depth": 10.95,
-        "magnitude": 1.54,
-        "place": "3 km NW of Baldwin Park, CA",
-        "time": 1791460073780,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tybpqw",
-        "lat": 63.093,
-        "lon": -150.953,
-        "depth": 124.3,
-        "magnitude": 2.3,
-        "place": "63 km SE of Denali National Park, Alaska",
-        "time": 1791459855689,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tybbue",
-        "lat": 59.842,
-        "lon": -152.382,
-        "depth": 87.3,
-        "magnitude": 1.5,
-        "place": "31 km WNW of Anchor Point, Alaska",
-        "time": 1791458898099,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyapxn",
-        "lat": 60.118,
-        "lon": -147.212,
-        "depth": 18.7,
-        "magnitude": 1.3,
-        "place": "44 km E of Chenega, Alaska",
-        "time": 1791458065946,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tuvrhw",
-        "lat": 31.939,
-        "lon": -103.795,
-        "depth": 7.5995,
-        "magnitude": 1.4,
-        "place": "31 km NW of Mentone, Texas",
-        "time": 1791458045047,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026tyaeal",
-        "lat": 59.075,
-        "lon": -153.731,
-        "depth": 13.5,
-        "magnitude": 1.5,
-        "place": "69 km SE of Pope-Vannoy Landing, Alaska",
-        "time": 1791457253436,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tuuxvl",
-        "lat": 32.445,
-        "lon": -101.656,
-        "depth": 7.4463,
-        "magnitude": 0.9,
-        "place": "10 km SSE of Ackerly, Texas",
-        "time": 1791456689172,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344951",
-        "lat": 34.0976666666667,
-        "lon": -117.484166666667,
-        "depth": 6.91,
-        "magnitude": 1.16,
-        "place": "2 km W of Fontana, CA",
-        "time": 1791456546580,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txzpsn",
-        "lat": 63.528,
-        "lon": -148.048,
-        "depth": 1.2,
-        "magnitude": 1.5,
-        "place": "47 km ENE of Cantwell, Alaska",
-        "time": 1791456253572,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344935",
-        "lat": 34.0998333333333,
-        "lon": -117.480333333333,
-        "depth": 6.75,
-        "magnitude": 0.81,
-        "place": "2 km W of Fontana, CA",
-        "time": 1791456005120,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txziuc",
-        "lat": 60.066,
-        "lon": -147.149,
-        "depth": 12.6,
-        "magnitude": 2.3,
-        "place": "48 km E of Chenega, Alaska",
-        "time": 1791455773440,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344927",
-        "lat": 34.0986666666667,
-        "lon": -117.484333333333,
-        "depth": 6.56,
-        "magnitude": 0.7,
-        "place": "2 km W of Fontana, CA",
-        "time": 1791455700360,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tuuiup",
-        "lat": 32.03,
-        "lon": -103.275,
-        "depth": 4.6899,
-        "magnitude": 1.1,
-        "place": "12 km SW of Jal, New Mexico",
-        "time": 1791455640847,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446371",
-        "lat": 38.7736663818359,
-        "lon": -122.750663757324,
-        "depth": 0.990000009536743,
-        "magnitude": 1.33,
-        "place": "1 km SE of The Geysers, CA",
-        "time": 1791455329340,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344919",
-        "lat": 34.0966666666667,
-        "lon": -117.4875,
-        "depth": 6.85,
+        "id": "nc75449591",
+        "lat": 38.7734985351562,
+        "lon": -122.744003295898,
+        "depth": 1.72000002861023,
         "magnitude": 1.22,
-        "place": "3 km W of Fontana, CA",
-        "time": 1791454504900,
+        "place": "1 km ESE of The Geysers, CA",
+        "time": 1792031574640,
         "status": "normal"
       },
       {
-        "id": "av94465266",
-        "lat": 60.0165,
-        "lon": -153.069666666667,
-        "depth": -0.07,
-        "magnitude": -0.79,
-        "place": "63 km ENE of Pedro Bay, Alaska",
-        "time": 1791454091150,
+        "id": "nc75449586",
+        "lat": 38.7705001831055,
+        "lon": -122.744163513184,
+        "depth": 1.62000000476837,
+        "magnitude": 1.98,
+        "place": "1 km SE of The Geysers, CA",
+        "time": 1792031421640,
         "status": "normal"
       },
       {
-        "id": "us6000u0xn",
-        "lat": -18.0147,
-        "lon": -178.4545,
-        "depth": 602.272,
-        "magnitude": 5.1,
-        "place": "236 km E of Levuka, Fiji",
-        "time": 1791454048642,
-        "status": "atencao"
-      },
-      {
-        "id": "tx2026tutlqp",
-        "lat": 32.02,
-        "lon": -103.276,
-        "depth": 9.0222,
-        "magnitude": 1.1,
-        "place": "12 km SW of Jal, New Mexico",
-        "time": 1791454026446,
+        "id": "hv75056562",
+        "lat": 19.2705001831055,
+        "lon": -155.3681640625,
+        "depth": 29.3299999237061,
+        "magnitude": 1.99,
+        "place": "13 km ENE of Pāhala, Hawaii",
+        "time": 1792030285070,
         "status": "normal"
       },
       {
-        "id": "ci41344911",
-        "lat": 34.0981666666667,
-        "lon": -117.485333333333,
-        "depth": 6.65,
-        "magnitude": 1.03,
-        "place": "2 km W of Fontana, CA",
-        "time": 1791453714550,
+        "id": "hv75056557",
+        "lat": 19.1658325195312,
+        "lon": -155.363006591797,
+        "depth": 27.9500007629395,
+        "magnitude": 2.28,
+        "place": "12 km ESE of Pāhala, Hawaii",
+        "time": 1792030215490,
         "status": "normal"
       },
       {
-        "id": "hv75052162",
-        "lat": 19.422,
-        "lon": -155.593333333333,
-        "depth": 41.53,
-        "magnitude": 1.69,
-        "place": "27 km NNW of Pāhala, Hawaii",
-        "time": 1791453421660,
+        "id": "hv75056552",
+        "lat": 19.3554992675781,
+        "lon": -155.307830810547,
+        "depth": 1.57000005245209,
+        "magnitude": 2.46,
+        "place": "12 km SW of Volcano, Hawaii",
+        "time": 1792030180550,
         "status": "normal"
       },
       {
-        "id": "hv75052157",
-        "lat": 19.9643333333333,
-        "lon": -155.083166666667,
-        "depth": 33.77,
-        "magnitude": 1.9,
-        "place": "10 km NNE of Honomu, Hawaii",
-        "time": 1791453293000,
+        "id": "pr71536768",
+        "lat": 17.9705,
+        "lon": -66.8895,
+        "depth": 14.8,
+        "magnitude": 2.3,
+        "place": "0 km S of Maria Antonia, Puerto Rico",
+        "time": 1792030149490,
         "status": "normal"
       },
       {
-        "id": "aka2026txxvlg",
-        "lat": 60.297,
-        "lon": -148.437,
-        "depth": 0,
+        "id": "ci41347703",
+        "lat": 31.7146663665771,
+        "lon": -116.242835998535,
+        "depth": -0.349999994039536,
+        "magnitude": 2.38282598830129,
+        "place": "31 km E of Maneadero, B.C., MX",
+        "time": 1792030073110,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449576",
+        "lat": 36.78466796875,
+        "lon": -121.407165527344,
+        "depth": 4.94000005722046,
+        "magnitude": 1.59,
+        "place": "5 km SW of Ridgemark, CA",
+        "time": 1792029960680,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u2dw",
+        "lat": 36.4152,
+        "lon": 141.7775,
+        "depth": 36.062,
+        "magnitude": 4.4,
+        "place": "100 km ESE of Takahagi, Japan",
+        "time": 1792029928202,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347695",
+        "lat": 33.5145,
+        "lon": -116.735166666667,
+        "depth": 4.03,
+        "magnitude": 0.44,
+        "place": "7 km SW of Anza, CA",
+        "time": 1792029874760,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ukgaxy",
+        "lat": 65.451,
+        "lon": -143.99,
+        "depth": 0.2,
+        "magnitude": 2.2,
+        "place": "40 km ESE of Central, Alaska",
+        "time": 1792029182881,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449566",
+        "lat": 38.836498260498,
+        "lon": -122.812164306641,
+        "depth": 1.75,
+        "magnitude": 1.05,
+        "place": "8 km WNW of Cobb, CA",
+        "time": 1792028798620,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ukfteh",
+        "lat": 61.534,
+        "lon": -148.346,
+        "depth": 3.6,
+        "magnitude": 2.1,
+        "place": "29 km SSE of Chickaloon, Alaska",
+        "time": 1792028634658,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347687",
+        "lat": 33.4693333333333,
+        "lon": -116.496666666667,
+        "depth": 12.54,
+        "magnitude": 0.89,
+        "place": "19 km ESE of Anza, CA",
+        "time": 1792027350170,
+        "status": "normal"
+      },
+      {
+        "id": "uw714120202",
+        "lat": 47.4208335876465,
+        "lon": -121.861503601074,
+        "depth": 16.9400005340576,
+        "magnitude": 2.72188603878021,
+        "place": "7 km WSW of Wilderness Rim, Washington",
+        "time": 1792026562750,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ukdyqx",
+        "lat": 60.168,
+        "lon": -142.649,
+        "depth": 21.1,
+        "magnitude": 2.3,
+        "place": "141 km S of McCarthy, Alaska",
+        "time": 1792025414628,
+        "status": "normal"
+      },
+      {
+        "id": "pr71536758",
+        "lat": 17.969,
+        "lon": -66.9483333333333,
+        "depth": 10.67,
+        "magnitude": 1.99,
+        "place": "4 km WSW of Fuig, Puerto Rico",
+        "time": 1792023940860,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347671",
+        "lat": 33.5863333333333,
+        "lon": -116.759,
+        "depth": 11.85,
+        "magnitude": 0.27,
+        "place": "9 km WNW of Anza, CA",
+        "time": 1792022940380,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449531",
+        "lat": 38.8033332824707,
+        "lon": -122.779998779297,
+        "depth": 1.53999996185303,
+        "magnitude": 0.82,
+        "place": "4 km NW of The Geysers, CA",
+        "time": 1792022241690,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449526",
+        "lat": 38.8418350219727,
+        "lon": -122.830665588379,
+        "depth": 1.64999997615814,
+        "magnitude": 1.48,
+        "place": "10 km WNW of Cobb, CA",
+        "time": 1792022140040,
+        "status": "normal"
+      },
+      {
+        "id": "pr71536748",
+        "lat": 18.6636666666667,
+        "lon": -66.282,
+        "depth": 73.78,
+        "magnitude": 3.1,
+        "place": "22 km NNE of Brenas, Puerto Rico",
+        "time": 1792020281550,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u2d6",
+        "lat": 54.0004,
+        "lon": 158.1848,
+        "depth": 183.497,
+        "magnitude": 4.5,
+        "place": "82 km SSW of Mil’kovo, Russia",
+        "time": 1792020059714,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449511",
+        "lat": 38.8166656494141,
+        "lon": -122.81266784668,
+        "depth": 2.8199999332428,
+        "magnitude": 0.84,
+        "place": "7 km NW of The Geysers, CA",
+        "time": 1792019770440,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ukajpu",
+        "lat": 57.877,
+        "lon": -154.595,
+        "depth": 16.4,
         "magnitude": 1.6,
-        "place": "34 km NW of Chenega, Alaska",
-        "time": 1791453051619,
+        "place": "35 km NNW of Karluk, Alaska",
+        "time": 1792018980410,
         "status": "normal"
       },
       {
-        "id": "aka2026txxtcl",
-        "lat": 59.947,
-        "lon": -148.666,
-        "depth": 1.3,
+        "id": "us6000u2cz",
+        "lat": 60.4649,
+        "lon": -139.8152,
+        "depth": 5,
+        "magnitude": 3.1,
+        "place": "102 km N of Yakutat, Alaska",
+        "time": 1792018926731,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u2cy",
+        "lat": 32.3282,
+        "lon": -104.4459,
+        "depth": 9.465,
+        "magnitude": 3.6,
+        "place": "18 km NNW of Whites City, New Mexico",
+        "time": 1792018519298,
+        "status": "normal"
+      },
+      {
+        "id": "uw714120152",
+        "lat": 47.4145,
+        "lon": -121.833,
+        "depth": 20.01,
+        "magnitude": 1.35,
+        "place": "6 km SW of Wilderness Rim, Washington",
+        "time": 1792018128560,
+        "status": "normal"
+      },
+      {
+        "id": "uw714120142",
+        "lat": 47.4186666666667,
+        "lon": -121.839,
+        "depth": 17.81,
         "magnitude": 1.8,
-        "place": "38 km WSW of Chenega, Alaska",
-        "time": 1791452898142,
+        "place": "6 km WSW of Wilderness Rim, Washington",
+        "time": 1792018098530,
         "status": "normal"
       },
       {
-        "id": "aka2026txxqap",
-        "lat": 61.151,
-        "lon": -140.027,
-        "depth": 10.4,
-        "magnitude": 1.5,
-        "place": "158 km ESE of McCarthy, Alaska",
-        "time": 1791452676759,
+        "id": "pr71536743",
+        "lat": 17.8936666666667,
+        "lon": -66.793,
+        "depth": 5.17,
+        "magnitude": 2.13,
+        "place": "11 km SSE of Indios, Puerto Rico",
+        "time": 1792016548880,
         "status": "normal"
       },
       {
-        "id": "aka2026txxfxd",
-        "lat": 61.121,
-        "lon": -140.03,
-        "depth": 1.5,
-        "magnitude": 2,
-        "place": "158 km ESE of McCarthy, Alaska",
-        "time": 1791451975310,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052127",
-        "lat": 19.111499786377,
-        "lon": -155.729995727539,
-        "depth": 61.2400016784668,
-        "magnitude": 2.24,
-        "place": "6 km NE of Hawaiian Ocean View, Hawaii",
-        "time": 1791450535180,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026turiwq",
-        "lat": 32.119,
-        "lon": -101.48,
-        "depth": 7.2021,
+        "id": "aka2026ujynxs",
+        "lat": 65.001,
+        "lon": -147.452,
+        "depth": 4.5,
         "magnitude": 1.1,
-        "place": "10 km W of Forsan, Texas",
-        "time": 1791450312577,
+        "place": "9 km ENE of Fox, Alaska",
+        "time": 1792015675201,
         "status": "normal"
       },
       {
-        "id": "us6000u0xi",
-        "lat": -15.5411,
-        "lon": 168.1889,
-        "depth": 10,
-        "magnitude": 6.3,
-        "place": "102 km NE of Norsup, Vanuatu",
-        "time": 1791450007768,
-        "status": "anomalia"
-      },
-      {
-        "id": "ci41344895",
-        "lat": 32.9173333333333,
-        "lon": -116.272833333333,
-        "depth": 9.56,
-        "magnitude": 0.93,
-        "place": "26 km ENE of Pine Valley, CA",
-        "time": 1791449988320,
+        "id": "ci41347647",
+        "lat": 33.5745,
+        "lon": -116.767166666667,
+        "depth": 11.99,
+        "magnitude": 1.93,
+        "place": "9 km WNW of Anza, CA",
+        "time": 1792015065400,
         "status": "normal"
       },
       {
-        "id": "aka2026txwaii",
-        "lat": 63.222,
-        "lon": -150.238,
-        "depth": 99.8,
-        "magnitude": 1.7,
-        "place": "67 km WSW of Cantwell, Alaska",
-        "time": 1791449785383,
+        "id": "pr71536733",
+        "lat": 17.8035,
+        "lon": -66.5405,
+        "depth": 9.32,
+        "magnitude": 2.34,
+        "place": "21 km SSW of Potala Pastillo, Puerto Rico",
+        "time": 1792013905130,
         "status": "normal"
       },
       {
-        "id": "ci41344887",
-        "lat": 35.8696666666667,
-        "lon": -117.721,
-        "depth": 8.2,
-        "magnitude": 0.76,
-        "place": "18 km ESE of Little Lake, CA",
-        "time": 1791449391630,
+        "id": "ci41347631",
+        "lat": 32.9051666666667,
+        "lon": -116.951666666667,
+        "depth": 3.71,
+        "magnitude": 1.19,
+        "place": "6 km NNW of Lakeside, CA",
+        "time": 1792013611830,
         "status": "normal"
       },
       {
-        "id": "tx2026tuqspf",
-        "lat": 31.92,
-        "lon": -102.106,
-        "depth": 9.6436,
-        "magnitude": 1.2,
-        "place": "8 km SSW of Midland, Texas",
-        "time": 1791449087662,
+        "id": "nc75449466",
+        "lat": 38.8376655578613,
+        "lon": -122.78116607666,
+        "depth": 2,
+        "magnitude": 0.59,
+        "place": "5 km WNW of Cobb, CA",
+        "time": 1792013402000,
         "status": "normal"
       },
       {
-        "id": "aka2026txvilx",
-        "lat": 59.422,
-        "lon": -152.794,
-        "depth": 78.3,
-        "magnitude": 2.8,
-        "place": "50 km W of Nanwalek, Alaska",
-        "time": 1791448568120,
+        "id": "nc75449461",
+        "lat": 38.8373336791992,
+        "lon": -122.783164978027,
+        "depth": 1.89999997615814,
+        "magnitude": 1.18,
+        "place": "5 km WNW of Cobb, CA",
+        "time": 1792013080220,
         "status": "normal"
       },
       {
-        "id": "ci41344879",
-        "lat": 32.8595,
-        "lon": -116.0615,
-        "depth": 8.19,
-        "magnitude": 0.79,
-        "place": "15 km NNW of Ocotillo, CA",
-        "time": 1791448225050,
+        "id": "uw714119882",
+        "lat": 47.4393333333333,
+        "lon": -122.811833333333,
+        "depth": 30.21,
+        "magnitude": 1.92,
+        "place": "1 km SE of Belfair, Washington",
+        "time": 1792011969020,
         "status": "normal"
       },
       {
-        "id": "ci41344871",
-        "lat": 34.4223333333333,
-        "lon": -119.404666666667,
-        "depth": 1.64,
-        "magnitude": 1.2,
-        "place": "11 km ENE of Carpinteria, CA",
-        "time": 1791447953760,
+        "id": "nc75449456",
+        "lat": 38.7451667785645,
+        "lon": -122.715835571289,
+        "depth": 1.48000001907349,
+        "magnitude": 1.41,
+        "place": "4 km SSW of Anderson Springs, CA",
+        "time": 1792011219950,
         "status": "normal"
       },
       {
-        "id": "ci41344863",
-        "lat": 34.0991666666667,
-        "lon": -117.481666666667,
-        "depth": 6.46,
+        "id": "ok2026uecw",
+        "lat": 35.90083333,
+        "lon": -97.88866667,
+        "depth": 6.04,
+        "magnitude": 1.66,
+        "place": "5 km NE of Kingfisher, Oklahoma",
+        "time": 1792010539100,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u2c6",
+        "lat": -0.3599,
+        "lon": -80.2447,
+        "depth": 49.57,
+        "magnitude": 4.1,
+        "place": "33 km NE of Bahía de Caráquez, Ecuador",
+        "time": 1792010086590,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449441",
+        "lat": 38.8208351135254,
+        "lon": -122.852668762207,
+        "depth": 2.5,
+        "magnitude": 0.84,
+        "place": "10 km WNW of The Geysers, CA",
+        "time": 1792009593820,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449431",
+        "lat": 38.7876663208008,
+        "lon": -122.764831542969,
+        "depth": 1.86000001430511,
         "magnitude": 1.07,
-        "place": "2 km W of Fontana, CA",
-        "time": 1791447893040,
+        "place": "1 km NNW of The Geysers, CA",
+        "time": 1792009214550,
         "status": "normal"
       },
       {
-        "id": "aka2026txuugo",
-        "lat": 60.688,
-        "lon": -139.524,
-        "depth": 5.9,
-        "magnitude": 1.8,
-        "place": "127 km N of Yakutat, Alaska",
-        "time": 1791447573584,
+        "id": "ci41347607",
+        "lat": 33.8403333333333,
+        "lon": -117.495833333333,
+        "depth": 1.54,
+        "magnitude": 1.79,
+        "place": "5 km SSE of Home Gardens, CA",
+        "time": 1792008621460,
         "status": "normal"
       },
       {
-        "id": "av94465136",
-        "lat": 58.2801666666667,
-        "lon": -154.993666666667,
-        "depth": 2.72,
-        "magnitude": -0.33,
-        "place": "85 km NNW of Karluk, Alaska",
-        "time": 1791446965170,
+        "id": "pr71536713",
+        "lat": 18.8555,
+        "lon": -67.4878333333333,
+        "depth": 15.52,
+        "magnitude": 3.14,
+        "place": "57 km NW of San Antonio, Puerto Rico",
+        "time": 1792008609470,
         "status": "normal"
       },
       {
-        "id": "ci41344855",
-        "lat": 34.1021666666667,
-        "lon": -117.481833333333,
-        "depth": 6.06,
-        "magnitude": 2.7,
-        "place": "2 km WNW of Fontana, CA",
-        "time": 1791446943190,
+        "id": "uw714119812",
+        "lat": 46.8851666666667,
+        "lon": -121.9215,
+        "depth": 10.56,
+        "magnitude": 0.26,
+        "place": "16 km NNE of Ashford, Washington",
+        "time": 1792008301920,
         "status": "normal"
       },
       {
-        "id": "ci41344847",
-        "lat": 34.0978333333333,
-        "lon": -117.488166666667,
-        "depth": 6.68,
-        "magnitude": 1.36,
-        "place": "3 km W of Fontana, CA",
-        "time": 1791446933090,
+        "id": "nn00925759",
+        "lat": 38.5843,
+        "lon": -119.4219,
+        "depth": 5.1165,
+        "magnitude": 1.65,
+        "place": "7 km ENE of Coleville, California",
+        "time": 1792008299658,
         "status": "normal"
       },
       {
-        "id": "us6000u0x4",
-        "lat": 5.6006,
-        "lon": 125.1521,
-        "depth": 52.054,
-        "magnitude": 5.5,
-        "place": "17 km SW of Burias, Philippines",
-        "time": 1791446879114,
-        "status": "atencao"
+        "id": "nn00925751",
+        "lat": 38.7308,
+        "lon": -118.6531,
+        "depth": 10.1811,
+        "magnitude": 3.04,
+        "place": "12 km NE of Walker Lake, Nevada",
+        "time": 1792007680223,
+        "status": "normal"
       },
       {
-        "id": "aka2026txufpf",
-        "lat": 59.459,
-        "lon": -152.606,
-        "depth": 20.9,
+        "id": "uw714119802",
+        "lat": 47.604,
+        "lon": -122.712833333333,
+        "depth": 12.87,
+        "magnitude": 0.69,
+        "place": "0 km SSW of Chico, Washington",
+        "time": 1792007451620,
+        "status": "normal"
+      },
+      {
+        "id": "hv75056302",
+        "lat": 19.0221672058105,
+        "lon": -155.456665039062,
+        "depth": 36.6399993896484,
+        "magnitude": 1.73,
+        "place": "13 km ESE of Naalehu, Hawaii",
+        "time": 1792006916340,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449406",
+        "lat": 38.7776679992676,
+        "lon": -122.936836242676,
+        "depth": 4.67999982833862,
+        "magnitude": 1.12,
+        "place": "8 km ESE of Cloverdale, CA",
+        "time": 1792006632790,
+        "status": "normal"
+      },
+      {
+        "id": "uw714119782",
+        "lat": 48.6465,
+        "lon": -121.739833333333,
+        "depth": 3.31,
+        "magnitude": 1.14,
+        "place": "11 km N of Concrete, Washington",
+        "time": 1792006301380,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347591",
+        "lat": 35.0493333333333,
+        "lon": -118.324666666667,
+        "depth": -0.94,
+        "magnitude": 0.98,
+        "place": "14 km W of Mojave, CA",
+        "time": 1792006056160,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujtcpy",
+        "lat": 64.544,
+        "lon": -149.902,
+        "depth": 2.8,
         "magnitude": 1.5,
-        "place": "40 km WNW of Nanwalek, Alaska",
-        "time": 1791446557137,
+        "place": "38 km W of Four Mile Road, Alaska",
+        "time": 1792005897234,
         "status": "normal"
       },
       {
-        "id": "nc75446356",
-        "lat": 38.8199996948242,
-        "lon": -122.811500549316,
-        "depth": 2.69000005722046,
+        "id": "ci41347583",
+        "lat": 33.5878333333333,
+        "lon": -116.7565,
+        "depth": 12.28,
+        "magnitude": 0.41,
+        "place": "9 km WNW of Anza, CA",
+        "time": 1792005644080,
+        "status": "normal"
+      },
+      {
+        "id": "ci10256998",
+        "lat": 33.9658333333333,
+        "lon": -116.7895,
+        "depth": 9.32,
+        "magnitude": 0.62,
+        "place": "5 km N of Cabazon, CA",
+        "time": 1792005619060,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujsxmc",
+        "lat": 59.686,
+        "lon": -150.743,
+        "depth": 50.7,
+        "magnitude": 2.4,
+        "place": "22 km SSE of Fox River, Alaska",
+        "time": 1792005533849,
+        "status": "normal"
+      },
+      {
+        "id": "uu80159971",
+        "lat": 39.457,
+        "lon": -111.915666666667,
+        "depth": 11.13,
+        "magnitude": 0.92,
+        "place": "12 km SSW of Levan, Utah",
+        "time": 1792002539830,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449346",
+        "lat": 38.7986679077148,
+        "lon": -122.814331054688,
+        "depth": 3.02999997138977,
+        "magnitude": 0.86,
+        "place": "6 km WNW of The Geysers, CA",
+        "time": 1792002108210,
+        "status": "normal"
+      },
+      {
+        "id": "pr71536693",
+        "lat": 18.9271666666667,
+        "lon": -66.8081666666667,
+        "depth": 35.61,
+        "magnitude": 3.1,
+        "place": "48 km N of Hatillo, Puerto Rico",
+        "time": 1792000938980,
+        "status": "normal"
+      },
+      {
+        "id": "hv75056232",
+        "lat": 19.15016746521,
+        "lon": -155.493835449219,
+        "depth": 30.9899997711182,
+        "magnitude": 2.12,
+        "place": "6 km SSW of Pāhala, Hawaii",
+        "time": 1792000908120,
+        "status": "normal"
+      },
+      {
+        "id": "hv75056222",
+        "lat": 19.212833404541,
+        "lon": -155.490829467773,
+        "depth": 27.8999996185303,
+        "magnitude": 1.71,
+        "place": "1 km NW of Pāhala, Hawaii",
+        "time": 1792000527150,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449336",
+        "lat": 38.7915000915527,
+        "lon": -122.760330200195,
+        "depth": 2.29999995231628,
+        "magnitude": 1.04,
+        "place": "2 km NNW of The Geysers, CA",
+        "time": 1792000463230,
+        "status": "normal"
+      },
+      {
+        "id": "hv75056217",
+        "lat": 19.2633333333333,
+        "lon": -155.3975,
+        "depth": 28.48,
+        "magnitude": 1.45,
+        "place": "10 km NE of Pāhala, Hawaii",
+        "time": 1792000042040,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujpvfy",
+        "lat": 63.993,
+        "lon": -148.204,
+        "depth": 13.4,
+        "magnitude": 1.2,
+        "place": "40 km ENE of Healy, Alaska",
+        "time": 1792000018233,
+        "status": "normal"
+      },
+      {
+        "id": "uu80159961",
+        "lat": 38.5185,
+        "lon": -112.908333333333,
+        "depth": 4.29,
+        "magnitude": 2.21,
+        "place": "16 km NNE of Milford, Utah",
+        "time": 1791999991370,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujondh",
+        "lat": 61.416,
+        "lon": -147.462,
+        "depth": 19.1,
+        "magnitude": 1.8,
+        "place": "44 km SSE of Glacier View, Alaska",
+        "time": 1791997629209,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449331",
+        "lat": 38.8240013122559,
+        "lon": -122.804496765137,
+        "depth": 2.5699999332428,
+        "magnitude": 0.7,
+        "place": "7 km NW of The Geysers, CA",
+        "time": 1791997553860,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347559",
+        "lat": 36.2155,
+        "lon": -118.168,
+        "depth": 8.6,
+        "magnitude": 1.01,
+        "place": "16 km WSW of Olancha, CA",
+        "time": 1791997154900,
+        "status": "normal"
+      },
+      {
+        "id": "uu80159956",
+        "lat": 38.5115,
+        "lon": -112.906,
+        "depth": 3.21,
+        "magnitude": 1.27,
+        "place": "15 km NE of Milford, Utah",
+        "time": 1791996972120,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujocvu",
+        "lat": 60.072,
+        "lon": -152.803,
+        "depth": 112,
+        "magnitude": 1.9,
+        "place": "61 km WNW of Happy Valley, Alaska",
+        "time": 1791996915827,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347551",
+        "lat": 34.0745,
+        "lon": -117.4495,
+        "depth": 4.12,
+        "magnitude": 1.03,
+        "place": "3 km SSE of Fontana, CA",
+        "time": 1791995422780,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347535",
+        "lat": 33.6408333333333,
+        "lon": -117.007666666667,
+        "depth": 13.33,
+        "magnitude": 0.9,
+        "place": "10 km SE of Winchester, CA",
+        "time": 1791994335600,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujmjdz",
+        "lat": 59.945,
+        "lon": -152.983,
+        "depth": 111.1,
+        "magnitude": 2.6,
+        "place": "65 km ENE of Pedro Bay, Alaska",
+        "time": 1791993764832,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449306",
+        "lat": 38.7763328552246,
+        "lon": -122.932830810547,
+        "depth": 4.8600001335144,
+        "magnitude": 1.48,
+        "place": "8 km ESE of Cloverdale, CA",
+        "time": 1791993633720,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujmdnb",
+        "lat": 60.35,
+        "lon": -152.646,
+        "depth": 117.8,
+        "magnitude": 2.4,
+        "place": "63 km WNW of Ninilchik, Alaska",
+        "time": 1791993364599,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449301",
+        "lat": 38.7783317565918,
+        "lon": -122.937835693359,
+        "depth": 7.34999990463257,
+        "magnitude": 1.68,
+        "place": "8 km ESE of Cloverdale, CA",
+        "time": 1791993357780,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449296",
+        "lat": 38.8428344726562,
+        "lon": -122.877334594727,
+        "depth": 2.51999998092651,
+        "magnitude": 0.79,
+        "place": "13 km NW of The Geysers, CA",
+        "time": 1791992711000,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449291",
+        "lat": 40.3678321838379,
+        "lon": -123.561164855957,
+        "depth": 22.6499996185303,
+        "magnitude": 1.33,
+        "place": "35 km NE of Redway, CA",
+        "time": 1791992594420,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujlozb",
+        "lat": 64.958,
+        "lon": -150.873,
+        "depth": 5.2,
+        "magnitude": 1.9,
+        "place": "12 km WSW of Manley Hot Springs, Alaska",
+        "time": 1791992356391,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347527",
+        "lat": 33.5101666666667,
+        "lon": -116.741666666667,
+        "depth": 4.04,
+        "magnitude": 1.38,
+        "place": "8 km SW of Anza, CA",
+        "time": 1791991833860,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujlapb",
+        "lat": 62.805,
+        "lon": -151.201,
+        "depth": 5,
+        "magnitude": 1.4,
+        "place": "41 km NNW of Petersville, Alaska",
+        "time": 1791991362676,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347519",
+        "lat": 33.8573333333333,
+        "lon": -117.824166666667,
+        "depth": 9.91,
+        "magnitude": 1.19,
+        "place": "4 km SSW of Yorba Linda, CA",
+        "time": 1791991127370,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u2ab",
+        "lat": -4.6878,
+        "lon": 101.6053,
+        "depth": 10,
+        "magnitude": 4.3,
+        "place": "122 km SW of Bengkulu, Indonesia",
+        "time": 1791990760526,
+        "status": "normal"
+      },
+      {
+        "id": "hv75056132",
+        "lat": 19.2523326873779,
+        "lon": -155.364166259766,
+        "depth": 30.2600002288818,
+        "magnitude": 1.87,
+        "place": "13 km ENE of Pāhala, Hawaii",
+        "time": 1791990693870,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujjuvm",
+        "lat": 61.573,
+        "lon": -146.265,
+        "depth": 16.5,
+        "magnitude": 2.2,
+        "place": "49 km N of Valdez, Alaska",
+        "time": 1791989165502,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u2a6",
+        "lat": -29.151,
+        "lon": -70.9776,
+        "depth": 48.371,
+        "magnitude": 4.2,
+        "place": "67 km SSW of Vallenar, Chile",
+        "time": 1791988924428,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347511",
+        "lat": 33.5898333333333,
+        "lon": -116.7575,
+        "depth": 11.16,
+        "magnitude": 0.48,
+        "place": "9 km WNW of Anza, CA",
+        "time": 1791986842950,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347503",
+        "lat": 33.5776666666667,
+        "lon": -116.7645,
+        "depth": 12.1,
+        "magnitude": 1.68,
+        "place": "9 km WNW of Anza, CA",
+        "time": 1791986714450,
+        "status": "normal"
+      },
+      {
+        "id": "tx2026ugbnoo",
+        "lat": 31.611,
+        "lon": -104.198,
+        "depth": 6.0999,
+        "magnitude": 1.7,
+        "place": "50 km NW of Toyah, Texas",
+        "time": 1791986409511,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449266",
+        "lat": 40.6769981384277,
+        "lon": -123.889335632324,
+        "depth": 4.44000005722046,
+        "magnitude": 2.99,
+        "place": "23 km NE of Hydesville, CA",
+        "time": 1791986172400,
+        "status": "normal"
+      },
+      {
+        "id": "nm60628596",
+        "lat": 36.759,
+        "lon": -91.557,
+        "depth": 1.49,
+        "magnitude": 2.45,
+        "place": "4 km SSW of Thomasville, Missouri",
+        "time": 1791984672510,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449261",
+        "lat": 38.8238334655762,
+        "lon": -122.768165588379,
+        "depth": 2,
+        "magnitude": 1.05,
+        "place": "4 km W of Cobb, CA",
+        "time": 1791984536910,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u2a0",
+        "lat": 38.6954,
+        "lon": 141.9302,
+        "depth": 56.594,
+        "magnitude": 4.4,
+        "place": "45 km SSE of Ōfunato, Japan",
+        "time": 1791983947599,
+        "status": "normal"
+      },
+      {
+        "id": "uw714119612",
+        "lat": 46.2011666666667,
+        "lon": -122.1895,
+        "depth": 3.22,
+        "magnitude": 0.36,
+        "place": "37 km NNE of Amboy, Washington",
+        "time": 1791983431610,
+        "status": "normal"
+      },
+      {
+        "id": "uu80159936",
+        "lat": 38.513,
+        "lon": -112.911,
+        "depth": 3.16,
+        "magnitude": 1.17,
+        "place": "15 km NE of Milford, Utah",
+        "time": 1791983154060,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujfpoq",
+        "lat": 64.77,
+        "lon": -149.812,
+        "depth": 5,
+        "magnitude": 1.1,
+        "place": "37 km WNW of Four Mile Road, Alaska",
+        "time": 1791981604687,
+        "status": "normal"
+      },
+      {
+        "id": "hv75056057",
+        "lat": 19.4395,
+        "lon": -155.2305,
+        "depth": 27.68,
+        "magnitude": 1.55,
+        "place": "0 km SE of Volcano, Hawaii",
+        "time": 1791981456290,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347487",
+        "lat": 33.9243333333333,
+        "lon": -116.7945,
+        "depth": 10.35,
+        "magnitude": 0.74,
+        "place": "1 km NW of Cabazon, CA",
+        "time": 1791981015770,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449256",
+        "lat": 38.8151664733887,
+        "lon": -122.81616973877,
+        "depth": 2.65000009536743,
         "magnitude": 1.04,
         "place": "7 km NW of The Geysers, CA",
-        "time": 1791446469930,
+        "time": 1791980921820,
         "status": "normal"
       },
       {
-        "id": "ci41344831",
-        "lat": 34.1031666666667,
-        "lon": -117.478666666667,
-        "depth": 6.58,
-        "magnitude": 0.89,
-        "place": "2 km WNW of Fontana, CA",
-        "time": 1791445894810,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txtsge",
-        "lat": 51.736,
-        "lon": 176.323,
-        "depth": 17.3,
-        "magnitude": 4,
-        "place": "247 km ESE of Attu Station, Alaska",
-        "time": 1791445750841,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446351",
-        "lat": 38.8143348693848,
-        "lon": -122.793663024902,
-        "depth": 3.22000002861023,
-        "magnitude": 1.07,
-        "place": "5 km NW of The Geysers, CA",
-        "time": 1791445710650,
-        "status": "normal"
-      },
-      {
-        "id": "av94465111",
-        "lat": 60.0138333333333,
-        "lon": -153.0595,
-        "depth": -1.7,
-        "magnitude": -0.93,
-        "place": "63 km ENE of Pedro Bay, Alaska",
-        "time": 1791445600220,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344823",
-        "lat": 34.0433333333333,
-        "lon": -117.247166666667,
-        "depth": 15.93,
-        "magnitude": 0.86,
-        "place": "1 km ESE of Loma Linda, CA",
-        "time": 1791445566220,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u0x2",
-        "lat": 5.4545,
-        "lon": 94.7814,
-        "depth": 97.534,
-        "magnitude": 4.6,
-        "place": "61 km W of Banda Aceh, Indonesia",
-        "time": 1791445512588,
-        "status": "normal"
-      },
-      {
-        "id": "uw714117811",
-        "lat": 48.49,
-        "lon": -122.7445,
-        "depth": 25.96,
-        "magnitude": 1.36,
-        "place": "10 km WSW of Anacortes, Washington",
-        "time": 1791444666420,
-        "status": "normal"
-      },
-      {
-        "id": "pr71536093",
-        "lat": 19.085,
-        "lon": -66.4703333333333,
-        "depth": 34.61,
-        "magnitude": 3.11,
-        "place": "68 km N of Tierras Nuevas Poniente, Puerto Rico",
-        "time": 1791444369760,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txsyod",
-        "lat": 60.624,
-        "lon": -153.173,
-        "depth": 170.8,
-        "magnitude": 2.2,
-        "place": "78 km NE of Port Alsworth, Alaska",
-        "time": 1791444267025,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tunrkp",
-        "lat": 31.642,
-        "lon": -104.454,
-        "depth": 7.1252,
-        "magnitude": 1.8,
-        "place": "59 km S of Whites City, New Mexico",
-        "time": 1791443569116,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tunqfj",
-        "lat": 31.65,
-        "lon": -104.439,
-        "depth": 6.2024,
-        "magnitude": 1.8,
-        "place": "58 km S of Whites City, New Mexico",
-        "time": 1791443486115,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tunmdx",
-        "lat": 31.568,
-        "lon": -103.949,
-        "depth": 7.9456,
-        "magnitude": 2,
-        "place": "31 km NNW of Toyah, Texas",
-        "time": 1791443203092,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344815",
-        "lat": 33.538,
-        "lon": -116.708333333333,
-        "depth": 5.9,
-        "magnitude": 1.26,
-        "place": "4 km WSW of Anza, CA",
-        "time": 1791442833370,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052082",
-        "lat": 19.415,
-        "lon": -155.235166666667,
-        "depth": 26.12,
-        "magnitude": 1.01,
-        "place": "3 km S of Volcano, Hawaii",
-        "time": 1791442267520,
-        "status": "normal"
-      },
-      {
-        "id": "hv75052077",
-        "lat": 19.1586666107178,
-        "lon": -155.505004882812,
-        "depth": 27.3500003814697,
-        "magnitude": 1.75,
-        "place": "5 km SSW of Pāhala, Hawaii",
-        "time": 1791442177510,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u0ws",
-        "lat": -52.5475,
-        "lon": 140.2121,
-        "depth": 10,
-        "magnitude": 5.5,
-        "place": "west of Macquarie Island",
-        "time": 1791442007971,
-        "status": "atencao"
-      },
-      {
-        "id": "uw714117801",
-        "lat": 47.6493333333333,
-        "lon": -121.771333333333,
-        "depth": 8.99,
-        "magnitude": 1.19,
-        "place": "10 km E of Carnation, Washington",
-        "time": 1791441838810,
-        "status": "normal"
-      },
-      {
-        "id": "av94465066",
-        "lat": 61.322,
-        "lon": -152.092333333333,
-        "depth": 1.98,
-        "magnitude": -0.56,
-        "place": "57 km WNW of Beluga, Alaska",
-        "time": 1791441023530,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txramv",
-        "lat": 59.929,
-        "lon": -149.2,
-        "depth": 10.7,
-        "magnitude": 1.8,
-        "place": "20 km SE of Lowell Point, Alaska",
-        "time": 1791440807289,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tulyxx",
-        "lat": 31.659,
-        "lon": -104.419,
-        "depth": 5.7922,
-        "magnitude": 2.4,
-        "place": "57 km S of Whites City, New Mexico",
-        "time": 1791440696760,
-        "status": "normal"
-      },
-      {
-        "id": "av94465061",
-        "lat": 56.0281666666667,
-        "lon": -159.441333333333,
-        "depth": 8.87,
-        "magnitude": 0,
-        "place": "14 km N of Ivanof Bay, Alaska",
-        "time": 1791440641340,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446341",
-        "lat": 38.836498260498,
-        "lon": -122.78800201416,
-        "depth": 1.85000002384186,
-        "magnitude": 0.47,
-        "place": "6 km WNW of Cobb, CA",
-        "time": 1791440614330,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txqset",
-        "lat": 60.37,
-        "lon": -139.523,
-        "depth": 0.6,
-        "magnitude": 1.9,
-        "place": "92 km N of Yakutat, Alaska",
-        "time": 1791440231272,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txqpoe",
-        "lat": 54.59,
-        "lon": -163.052,
-        "depth": 12.5,
-        "magnitude": 2.1,
-        "place": "37 km SE of False Pass, Alaska",
-        "time": 1791440049659,
-        "status": "normal"
-      },
-      {
-        "id": "ci41344807",
-        "lat": 34.1,
-        "lon": -117.484,
-        "depth": 6.38,
-        "magnitude": 0.93,
-        "place": "2 km W of Fontana, CA",
-        "time": 1791438887620,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txpwdv",
-        "lat": 59.223,
-        "lon": -153.678,
-        "depth": 109.8,
-        "magnitude": 1.6,
-        "place": "59 km SE of Pope-Vannoy Landing, Alaska",
-        "time": 1791438776907,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tulafg",
-        "lat": 28.904,
-        "lon": -98.283,
-        "depth": 6.909,
-        "magnitude": 1.3,
-        "place": "20 km ESE of Pleasanton, Texas",
-        "time": 1791438750207,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tukwyw",
-        "lat": 32.011,
-        "lon": -103.763,
-        "depth": 7.9456,
-        "magnitude": 1.2,
-        "place": "37 km NNW of Mentone, Texas",
-        "time": 1791438540358,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txppwb",
-        "lat": 61.653,
-        "lon": -154.063,
-        "depth": 5,
-        "magnitude": 1.9,
-        "place": "80 km ENE of Lime Village, Alaska",
-        "time": 1791438268693,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txpkwg",
-        "lat": 58.672,
-        "lon": -154.152,
-        "depth": 99.5,
+        "id": "aka2026ujfclj",
+        "lat": 62.195,
+        "lon": -150.174,
+        "depth": 7.1,
         "magnitude": 1.5,
-        "place": "92 km SSE of Kokhanok, Alaska",
-        "time": 1791437940759,
+        "place": "13 km SSE of Trapper Creek, Alaska",
+        "time": 1791980696472,
         "status": "normal"
       },
       {
-        "id": "us6000u0wh",
-        "lat": -22.1924,
-        "lon": -68.6682,
-        "depth": 121.38,
-        "magnitude": 4.5,
-        "place": "39 km NE of Calama, Chile",
-        "time": 1791437756016,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txozlq",
-        "lat": 59.64,
-        "lon": -152.88,
-        "depth": 104.4,
-        "magnitude": 1.2,
-        "place": "60 km WSW of Anchor Point, Alaska",
-        "time": 1791437127093,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txovlx",
-        "lat": 59.689,
-        "lon": -150.167,
-        "depth": 18.5,
-        "magnitude": 2.1,
-        "place": "48 km ESE of Fox River, Alaska",
-        "time": 1791436872517,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txoswx",
-        "lat": 61.163,
-        "lon": -152.221,
-        "depth": 107.8,
-        "magnitude": 1.3,
-        "place": "59 km W of Tyonek, Alaska",
-        "time": 1791436681619,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u0wb",
-        "lat": -9.421,
-        "lon": 118.8068,
-        "depth": 65.279,
-        "magnitude": 4.7,
-        "place": "47 km W of Tambolaka, Indonesia",
-        "time": 1791436012046,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u0wa",
-        "lat": -7.7761,
-        "lon": 120.5395,
-        "depth": 10,
-        "magnitude": 5,
-        "place": "92 km N of Ruteng, Indonesia",
-        "time": 1791434939943,
-        "status": "atencao"
-      },
-      {
-        "id": "aka2026txnnxy",
-        "lat": 59.964,
-        "lon": -153.187,
-        "depth": 131.8,
-        "magnitude": 3.1,
-        "place": "55 km ENE of Pedro Bay, Alaska",
-        "time": 1791434539073,
-        "status": "normal"
-      },
-      {
-        "id": "nc75446316",
-        "lat": 38.8208351135254,
-        "lon": -122.811500549316,
-        "depth": 2.88000011444092,
-        "magnitude": 1.21,
+        "id": "nc75449251",
+        "lat": 38.8146667480469,
+        "lon": -122.815498352051,
+        "depth": 2.64000010490417,
+        "magnitude": 1.27,
         "place": "7 km NW of The Geysers, CA",
-        "time": 1791434033660,
+        "time": 1791980577020,
         "status": "normal"
       },
       {
-        "id": "nc75446311",
-        "lat": 38.8264999389648,
-        "lon": -122.818496704102,
-        "depth": -0.660000026226044,
-        "magnitude": 1.68,
-        "place": "8 km NW of The Geysers, CA",
-        "time": 1791433736620,
+        "id": "aka2026ujeyit",
+        "lat": 52.151,
+        "lon": -174.306,
+        "depth": 195.4,
+        "magnitude": 3.5,
+        "place": "8 km SW of Atka, Alaska",
+        "time": 1791980410324,
         "status": "normal"
       },
       {
-        "id": "aka2026txmyro",
-        "lat": 60.692,
-        "lon": -144.158,
-        "depth": 13.6,
-        "magnitude": 1.4,
-        "place": "89 km E of Cordova, Alaska",
-        "time": 1791433486887,
+        "id": "aka2026ujebcw",
+        "lat": 61.878,
+        "lon": -147.425,
+        "depth": 16.8,
+        "magnitude": 2.9,
+        "place": "14 km ENE of Glacier View, Alaska",
+        "time": 1791978806013,
         "status": "normal"
       },
       {
-        "id": "aka2026txmxwd",
-        "lat": 58.142,
-        "lon": -155.855,
-        "depth": 131.2,
-        "magnitude": 1.3,
-        "place": "76 km SE of King Salmon, Alaska",
-        "time": 1791433427969,
+        "id": "hv75056027",
+        "lat": 19.416166305542,
+        "lon": -155.394836425781,
+        "depth": -0.100000001490116,
+        "magnitude": 1.79,
+        "place": "17 km W of Volcano, Hawaii",
+        "time": 1791978462730,
         "status": "normal"
       },
       {
-        "id": "hv75052027",
-        "lat": 19.3996666666667,
-        "lon": -155.281166666667,
-        "depth": 1.74,
-        "magnitude": 1.59,
-        "place": "6 km SW of Volcano, Hawaii",
-        "time": 1791433382690,
+        "id": "ci41347479",
+        "lat": 36.0001666666667,
+        "lon": -118.3755,
+        "depth": 14.38,
+        "magnitude": 0.75,
+        "place": "28 km N of Kernville, CA",
+        "time": 1791977636140,
         "status": "normal"
       },
       {
-        "id": "aka2026txmwdf",
-        "lat": 64.62,
-        "lon": -149.416,
-        "depth": 18.2,
-        "magnitude": 1.1,
-        "place": "14 km W of Four Mile Road, Alaska",
-        "time": 1791433307982,
+        "id": "us6000u292",
+        "lat": 36.8994,
+        "lon": -104.8335,
+        "depth": 5,
+        "magnitude": 2.6,
+        "place": "25 km S of Weston, Colorado",
+        "time": 1791977220438,
         "status": "normal"
       },
       {
-        "id": "pr2026281000",
-        "lat": 18.2653,
-        "lon": -68.0471,
-        "depth": 61,
-        "magnitude": 3.59,
-        "place": "51 km SE of Punta Cana, Dominican Republic",
-        "time": 1791432752910,
+        "id": "aka2026ujcyxy",
+        "lat": 51.418,
+        "lon": 177.029,
+        "depth": 2,
+        "magnitude": 3.8,
+        "place": "Rat Islands, Aleutian Islands, Alaska",
+        "time": 1791976855346,
         "status": "normal"
       },
       {
-        "id": "aka2026txmfsg",
-        "lat": 56.378,
-        "lon": -156.676,
-        "depth": 21.2,
-        "magnitude": 2.2,
-        "place": "107 km E of Chignik, Alaska",
-        "time": 1791432175893,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txmfjs",
-        "lat": 60.759,
-        "lon": -142.732,
-        "depth": 2.1,
-        "magnitude": 0.9,
-        "place": "75 km S of McCarthy, Alaska",
-        "time": 1791432148563,
-        "status": "normal"
-      },
-      {
-        "id": "tx2026tugvrj",
-        "lat": 32.118,
-        "lon": -101.485,
-        "depth": 8.374,
-        "magnitude": 1.1,
-        "place": "11 km W of Forsan, Texas",
-        "time": 1791431197696,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txlpsr",
-        "lat": 59.242,
-        "lon": -153.61,
-        "depth": 115.8,
-        "magnitude": 2,
-        "place": "61 km SE of Pope-Vannoy Landing, Alaska",
-        "time": 1791431066435,
-        "status": "normal"
-      },
-      {
-        "id": "us6000u0w0",
-        "lat": 39.2061,
-        "lon": 14.3516,
-        "depth": 367.078,
-        "magnitude": 4.9,
-        "place": "81 km NNW of Malfa, Italy",
-        "time": 1791430972895,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026txlizl",
-        "lat": 59.233,
-        "lon": -152.364,
-        "depth": 68.9,
+        "id": "tx2026ufvwdd",
+        "lat": 31.659,
+        "lon": -104.411,
+        "depth": 6.2537,
         "magnitude": 1.5,
-        "place": "28 km WSW of Nanwalek, Alaska",
-        "time": 1791430599617,
+        "place": "57 km S of Whites City, New Mexico",
+        "time": 1791976213342,
         "status": "normal"
       },
       {
-        "id": "aka2026txlcuk",
-        "lat": 59.998,
-        "lon": -149.005,
-        "depth": 23.8,
+        "id": "hv75056017",
+        "lat": 19.3991666666667,
+        "lon": -155.237166666667,
+        "depth": 37.8,
+        "magnitude": 1.69,
+        "place": "4 km S of Volcano, Hawaii",
+        "time": 1791975381980,
+        "status": "normal"
+      },
+      {
+        "id": "hv75056012",
+        "lat": 19.413,
+        "lon": -155.256833333333,
+        "depth": 39.29,
+        "magnitude": 1.83,
+        "place": "4 km SW of Volcano, Hawaii",
+        "time": 1791975048650,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujbyqi",
+        "lat": 60.565,
+        "lon": -143.925,
+        "depth": 23.7,
+        "magnitude": 1.8,
+        "place": "100 km E of Cordova, Alaska",
+        "time": 1791975035568,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u28y",
+        "lat": -20.9899,
+        "lon": -178.7711,
+        "depth": 585.07,
+        "magnitude": 5.9,
+        "place": "Fiji region",
+        "time": 1791974987588,
+        "status": "atencao"
+      },
+      {
+        "id": "hv75056007",
+        "lat": 19.3911666666667,
+        "lon": -155.242,
+        "depth": 36.65,
+        "magnitude": 1.25,
+        "place": "5 km S of Volcano, Hawaii",
+        "time": 1791974834240,
+        "status": "normal"
+      },
+      {
+        "id": "uw714119592",
+        "lat": 44.9963333333333,
+        "lon": -123.835333333333,
+        "depth": 42.96,
+        "magnitude": 1.33,
+        "place": "3 km ESE of Rose Lodge, Oregon",
+        "time": 1791974258370,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujbcgz",
+        "lat": 61.593,
+        "lon": -151.278,
+        "depth": 5,
+        "magnitude": 1.5,
+        "place": "41 km W of Susitna, Alaska",
+        "time": 1791973487726,
+        "status": "normal"
+      },
+      {
+        "id": "tx2026ufufaw",
+        "lat": 31.641,
+        "lon": -104.402,
+        "depth": 6.0999,
+        "magnitude": 2.1,
+        "place": "59 km S of Whites City, New Mexico",
+        "time": 1791973356987,
+        "status": "normal"
+      },
+      {
+        "id": "tx2026uftwjt",
+        "lat": 31.711,
+        "lon": -104.178,
+        "depth": 7.7405,
+        "magnitude": 1.7,
+        "place": "54 km SSE of Whites City, New Mexico",
+        "time": 1791972689591,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347471",
+        "lat": 33.5821666666667,
+        "lon": -116.759333333333,
+        "depth": 12.38,
+        "magnitude": 0.64,
+        "place": "8 km WNW of Anza, CA",
+        "time": 1791972168440,
+        "status": "normal"
+      },
+      {
+        "id": "pr71536683",
+        "lat": 18.8753333333333,
+        "lon": -64.296,
+        "depth": 76.09,
+        "magnitude": 3.23,
+        "place": "79 km NE of Cruz Bay, U.S. Virgin Islands",
+        "time": 1791971826030,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026ujabah",
+        "lat": 62.178,
+        "lon": -149.805,
+        "depth": 12.1,
+        "magnitude": 1.3,
+        "place": "3 km NE of Susitna North, Alaska",
+        "time": 1791971609431,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347463",
+        "lat": 33.0661666666667,
+        "lon": -116.478666666667,
+        "depth": 14.63,
+        "magnitude": 0.95,
+        "place": "12 km E of Julian, CA",
+        "time": 1791971529310,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449236",
+        "lat": 38.8139991760254,
+        "lon": -122.81583404541,
+        "depth": 2.69000005722046,
+        "magnitude": 1.1,
+        "place": "7 km NW of The Geysers, CA",
+        "time": 1791971337000,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uizxct",
+        "lat": 64.097,
+        "lon": -145.181,
+        "depth": 8.3,
+        "magnitude": 1.4,
+        "place": "25 km N of Deltana, Alaska",
+        "time": 1791971331432,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347455",
+        "lat": 33.371,
+        "lon": -116.394833333333,
+        "depth": 11.91,
+        "magnitude": 0.29,
+        "place": "13 km N of Borrego Springs, CA",
+        "time": 1791971179270,
+        "status": "normal"
+      },
+      {
+        "id": "uw714119572",
+        "lat": 47.4198333333333,
+        "lon": -121.846333333333,
+        "depth": 20.03,
+        "magnitude": 0.99,
+        "place": "6 km WSW of Wilderness Rim, Washington",
+        "time": 1791970826410,
+        "status": "normal"
+      },
+      {
+        "id": "nn00925747",
+        "lat": 39.5809,
+        "lon": -116.7788,
+        "depth": 9.202,
+        "magnitude": 1.94,
+        "place": "26 km ENE of Austin, Nevada",
+        "time": 1791970821602,
+        "status": "normal"
+      },
+      {
+        "id": "uw714119582",
+        "lat": 48.0161666666667,
+        "lon": -121.632166666667,
+        "depth": 10.84,
+        "magnitude": 1.32,
+        "place": "13 km SE of Verlot, Washington",
+        "time": 1791970776050,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uizjnx",
+        "lat": 61.847,
+        "lon": -151.108,
+        "depth": 66.6,
+        "magnitude": 1.5,
+        "place": "22 km SE of Skwentna, Alaska",
+        "time": 1791970393254,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uizfjh",
+        "lat": 57.556,
+        "lon": -155.828,
+        "depth": 18.8,
+        "magnitude": 1.4,
+        "place": "82 km W of Karluk, Alaska",
+        "time": 1791970103155,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uizeqb",
+        "lat": 60.052,
+        "lon": -153.1,
+        "depth": 5,
+        "magnitude": 0.4,
+        "place": "63 km ENE of Pedro Bay, Alaska",
+        "time": 1791970051687,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449231",
+        "lat": 36.0530014038086,
+        "lon": -120.626998901367,
+        "depth": -0.730000019073486,
+        "magnitude": 1.27,
+        "place": "25 km NW of Parkfield, CA",
+        "time": 1791969767090,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uiyypv",
+        "lat": 61.469,
+        "lon": -150.066,
+        "depth": 28.5,
+        "magnitude": 1.2,
+        "place": "8 km SW of Big Lake, Alaska",
+        "time": 1791969647628,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449226",
+        "lat": 38.8613319396973,
+        "lon": -122.826499938965,
+        "depth": 1.36000001430511,
+        "magnitude": 0.94,
+        "place": "10 km WNW of Cobb, CA",
+        "time": 1791969591590,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u28e",
+        "lat": -5.4767,
+        "lon": 35.0428,
+        "depth": 10,
+        "magnitude": 4.6,
+        "place": "42 km NNE of Kilimatinde, Tanzania",
+        "time": 1791969378828,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uiyrnc",
+        "lat": 58.698,
+        "lon": -156.501,
+        "depth": 14.8,
+        "magnitude": 1.5,
+        "place": "9 km E of King Salmon, Alaska",
+        "time": 1791969143619,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u28d",
+        "lat": 32.3496,
+        "lon": -104.4747,
+        "depth": 8.189,
+        "magnitude": 3.1,
+        "place": "21 km NNW of Whites City, New Mexico",
+        "time": 1791968427870,
+        "status": "normal"
+      },
+      {
+        "id": "uw714119552",
+        "lat": 47.4221666666667,
+        "lon": -121.825,
+        "depth": 19.08,
+        "magnitude": 2.65,
+        "place": "5 km WSW of Wilderness Rim, Washington",
+        "time": 1791968404270,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uixvco",
+        "lat": 60.049,
+        "lon": -153.139,
+        "depth": 2.3,
+        "magnitude": 0.2,
+        "place": "61 km ENE of Pedro Bay, Alaska",
+        "time": 1791967593776,
+        "status": "normal"
+      },
+      {
+        "id": "uu80159916",
+        "lat": 44.695,
+        "lon": -110.816833333333,
+        "depth": 2.26,
+        "magnitude": 0.37,
+        "place": "23 km E of West Yellowstone, Montana",
+        "time": 1791967475240,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449221",
+        "lat": 38.8199996948242,
+        "lon": -122.794998168945,
+        "depth": 2.80999994277954,
+        "magnitude": 0.74,
+        "place": "6 km NW of The Geysers, CA",
+        "time": 1791967332810,
+        "status": "normal"
+      },
+      {
+        "id": "hv75055957",
+        "lat": 19.1026666666667,
+        "lon": -155.449333333333,
+        "depth": 26.99,
+        "magnitude": 1.97,
+        "place": "11 km SSE of Pāhala, Hawaii",
+        "time": 1791967332400,
+        "status": "normal"
+      },
+      {
+        "id": "hv75055952",
+        "lat": 19.2534999847412,
+        "lon": -155.140167236328,
+        "depth": 40.4599990844727,
+        "magnitude": 1.79,
+        "place": "23 km SSE of Volcano, Hawaii",
+        "time": 1791967170760,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uixfcv",
+        "lat": 61.793,
+        "lon": -149.445,
+        "depth": 18.2,
+        "magnitude": 1.7,
+        "place": "12 km WNW of Fishhook, Alaska",
+        "time": 1791966487744,
+        "status": "normal"
+      },
+      {
+        "id": "uu80159911",
+        "lat": 39.2945,
+        "lon": -111.205833333333,
+        "depth": -2.25,
+        "magnitude": 1.09,
+        "place": "15 km WNW of Orangeville, Utah",
+        "time": 1791966207530,
+        "status": "normal"
+      },
+      {
+        "id": "pr71536668",
+        "lat": 18.1811666666667,
+        "lon": -67.2476666666667,
+        "depth": 19.21,
+        "magnitude": 2.84,
+        "place": "11 km W of Mayagüez, Puerto Rico",
+        "time": 1791965416300,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347447",
+        "lat": 34.0455,
+        "lon": -117.189333333333,
+        "depth": 14.95,
+        "magnitude": 1.69,
+        "place": "1 km SSW of Redlands, CA",
+        "time": 1791964167590,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347439",
+        "lat": 34.136,
+        "lon": -118.507166666667,
+        "depth": 6.74,
+        "magnitude": 1.47,
+        "place": "3 km SSW of Encino, CA",
+        "time": 1791964122710,
+        "status": "normal"
+      },
+      {
+        "id": "uu80159901",
+        "lat": 39.4085,
+        "lon": -111.8095,
+        "depth": -0.32,
+        "magnitude": 1.32,
+        "place": "17 km SSE of Levan, Utah",
+        "time": 1791964075270,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347431",
+        "lat": 33.5371666666667,
+        "lon": -116.7085,
+        "depth": 6.46,
+        "magnitude": 0.17,
+        "place": "4 km WSW of Anza, CA",
+        "time": 1791963984700,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347423",
+        "lat": 33.6695,
+        "lon": -116.750333333333,
+        "depth": 13.45,
+        "magnitude": 0.54,
+        "place": "8 km SSW of Idyllwild, CA",
+        "time": 1791963897720,
+        "status": "normal"
+      },
+      {
+        "id": "tx2026ufohks",
+        "lat": 31.615,
+        "lon": -104.115,
+        "depth": 6.0999,
+        "magnitude": 1.7,
+        "place": "45 km NW of Toyah, Texas",
+        "time": 1791962605222,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347415",
+        "lat": 32.1885,
+        "lon": -115.251166666667,
+        "depth": 7.86,
+        "magnitude": 1.72,
+        "place": "9 km WSW of Alberto Oviedo Mota, B.C., MX",
+        "time": 1791961521970,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uiucxf",
+        "lat": 60.078,
+        "lon": -152.93,
+        "depth": 111.1,
+        "magnitude": 0.9,
+        "place": "68 km WNW of Happy Valley, Alaska",
+        "time": 1791960938231,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uitpuv",
+        "lat": 55.85,
+        "lon": -159.798,
+        "depth": 7.1,
         "magnitude": 1.6,
-        "place": "25 km ESE of Lowell Point, Alaska",
-        "time": 1791430171928,
+        "place": "20 km WSW of Ivanof Bay, Alaska",
+        "time": 1791960026913,
         "status": "normal"
       },
       {
-        "id": "av94464826",
-        "lat": 58.3881666666667,
-        "lon": -154.501333333333,
-        "depth": 2.79,
-        "magnitude": -0.21,
-        "place": "91 km N of Karluk, Alaska",
-        "time": 1791430130690,
+        "id": "us6000u27u",
+        "lat": -5.443,
+        "lon": 152.2617,
+        "depth": 35,
+        "magnitude": 4.9,
+        "place": "121 km S of Kokopo, Papua New Guinea",
+        "time": 1791959226453,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347407",
+        "lat": 33.5368333333333,
+        "lon": -116.709,
+        "depth": 6.33,
+        "magnitude": 0.38,
+        "place": "4 km WSW of Anza, CA",
+        "time": 1791958434300,
+        "status": "normal"
+      },
+      {
+        "id": "hv75055917",
+        "lat": 19.3858333333333,
+        "lon": -155.278333333333,
+        "depth": 1.57,
+        "magnitude": 1.97,
+        "place": "7 km SW of Volcano, Hawaii",
+        "time": 1791957919330,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347391",
+        "lat": 33.6493333333333,
+        "lon": -116.695166666667,
+        "depth": 16.32,
+        "magnitude": 0.48,
+        "place": "10 km SSE of Idyllwild, CA",
+        "time": 1791957143710,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449216",
+        "lat": 37.6123352050781,
+        "lon": -121.652496337891,
+        "depth": 7.21000003814697,
+        "magnitude": 1.04,
+        "place": "13 km SE of Livermore, CA",
+        "time": 1791957007520,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449211",
+        "lat": 38.7924995422363,
+        "lon": -122.761329650879,
+        "depth": 1.05999994277954,
+        "magnitude": 0.86,
+        "place": "2 km NNW of The Geysers, CA",
+        "time": 1791956850490,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uirqqv",
+        "lat": 55.579,
+        "lon": -159.308,
+        "depth": 65.3,
+        "magnitude": 1.8,
+        "place": "37 km SSE of Ivanof Bay, Alaska",
+        "time": 1791956504229,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uiroom",
+        "lat": 60.043,
+        "lon": -153.085,
+        "depth": 5,
+        "magnitude": 0.7,
+        "place": "63 km ENE of Pedro Bay, Alaska",
+        "time": 1791956347207,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347383",
+        "lat": 35.3241666666667,
+        "lon": -117.793666666667,
+        "depth": 7.82,
+        "magnitude": 0.82,
+        "place": "15 km WSW of Johannesburg, CA",
+        "time": 1791955718170,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u27j",
+        "lat": 7.5657,
+        "lon": -80.6021,
+        "depth": 10,
+        "magnitude": 4.7,
+        "place": "10 km S of La Mesa, Panama",
+        "time": 1791954575397,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347375",
+        "lat": 33.539,
+        "lon": -116.7055,
+        "depth": 5.91,
+        "magnitude": 0.16,
+        "place": "3 km WSW of Anza, CA",
+        "time": 1791954036950,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449206",
+        "lat": 36.4046669006348,
+        "lon": -120.954833984375,
+        "depth": 12.3000001907349,
+        "magnitude": 1.66,
+        "place": "22 km SE of Pinnacles, CA",
+        "time": 1791953934100,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347367",
+        "lat": 34.3151666666667,
+        "lon": -116.847166666667,
+        "depth": 2.11,
+        "magnitude": 0.81,
+        "place": "6 km N of Big Bear City, CA",
+        "time": 1791953656560,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347359",
+        "lat": 33.8606666666667,
+        "lon": -116.9275,
+        "depth": 12.83,
+        "magnitude": 0.6,
+        "place": "9 km SSW of Banning, CA",
+        "time": 1791953628530,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449191",
+        "lat": 37.9661674499512,
+        "lon": -122.058502197266,
+        "depth": 14.6300001144409,
+        "magnitude": 1.72,
+        "place": "2 km N of Pleasant Hill, CA",
+        "time": 1791953475490,
+        "status": "normal"
+      },
+      {
+        "id": "us6000u27i",
+        "lat": 54.9935,
+        "lon": -160.4145,
+        "depth": 49.214,
+        "magnitude": 3.4,
+        "place": "38 km S of Sand Point, Alaska",
+        "time": 1791953459720,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449186",
+        "lat": 37.8530006408691,
+        "lon": -122.038833618164,
+        "depth": 7.3600001335144,
+        "magnitude": 1.23,
+        "place": "1 km WNW of Alamo, CA",
+        "time": 1791953175170,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347351",
+        "lat": 35.3263333333333,
+        "lon": -117.7855,
+        "depth": 8.56,
+        "magnitude": 1.04,
+        "place": "15 km WSW of Johannesburg, CA",
+        "time": 1791952508430,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uipjcs",
+        "lat": 60.472,
+        "lon": -152.862,
+        "depth": 16,
+        "magnitude": 0.4,
+        "place": "81 km NW of Ninilchik, Alaska",
+        "time": 1791952370416,
+        "status": "normal"
+      },
+      {
+        "id": "uw714119542",
+        "lat": 47.7741666666667,
+        "lon": -122.735,
+        "depth": 22.28,
+        "magnitude": 0.93,
+        "place": "5 km NNW of Bangor Trident Base, Washington",
+        "time": 1791952328060,
+        "status": "normal"
+      },
+      {
+        "id": "nn00925727",
+        "lat": 39.3319,
+        "lon": -119.0036,
+        "depth": 6.9892,
+        "magnitude": 1.53,
+        "place": "21 km ESE of Silver Springs, Nevada",
+        "time": 1791951603273,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uiouzi",
+        "lat": 60.009,
+        "lon": -153.088,
+        "depth": 5,
+        "magnitude": 0.9,
+        "place": "62 km ENE of Pedro Bay, Alaska",
+        "time": 1791951392558,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uiosuh",
+        "lat": 60.056,
+        "lon": -153.045,
+        "depth": 5,
+        "magnitude": 0.1,
+        "place": "66 km ENE of Pedro Bay, Alaska",
+        "time": 1791951240775,
+        "status": "normal"
+      },
+      {
+        "id": "uu80159896",
+        "lat": 44.0908333333333,
+        "lon": -110.589,
+        "depth": 8.99,
+        "magnitude": 1.17,
+        "place": "51 km NE of Alta, Wyoming",
+        "time": 1791950739850,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449171",
+        "lat": 38.8311653137207,
+        "lon": -122.809669494629,
+        "depth": 1.71000003814697,
+        "magnitude": 1.01,
+        "place": "8 km NW of The Geysers, CA",
+        "time": 1791950452050,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uiogfr",
+        "lat": 61.273,
+        "lon": -141.269,
+        "depth": 4.4,
+        "magnitude": 1.7,
+        "place": "90 km ESE of McCarthy, Alaska",
+        "time": 1791950371933,
+        "status": "normal"
+      },
+      {
+        "id": "uw714119522",
+        "lat": 46.8448333333333,
+        "lon": -121.7405,
+        "depth": -2.28,
+        "magnitude": 0.54,
+        "place": "24 km ENE of Ashford, Washington",
+        "time": 1791950360490,
+        "status": "normal"
+      },
+      {
+        "id": "uw714119512",
+        "lat": 47.7803333333333,
+        "lon": -122.752833333333,
+        "depth": 21.92,
+        "magnitude": 1.1,
+        "place": "7 km NNW of Bangor Trident Base, Washington",
+        "time": 1791950358410,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uioapb",
+        "lat": 60.996,
+        "lon": -151.068,
+        "depth": 65.6,
+        "magnitude": 3.2,
+        "place": "8 km SSE of Tyonek, Alaska",
+        "time": 1791950028898,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347343",
+        "lat": 32.9913333333333,
+        "lon": -117.534166666667,
+        "depth": 14.12,
+        "magnitude": 1.42,
+        "place": "23 km WSW of Encinitas, CA",
+        "time": 1791949080760,
+        "status": "normal"
+      },
+      {
+        "id": "nc75449166",
+        "lat": 38.8418350219727,
+        "lon": -122.87816619873,
+        "depth": 2.53999996185303,
+        "magnitude": 0.88,
+        "place": "13 km ENE of Cloverdale, CA",
+        "time": 1791948258110,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026uinave",
+        "lat": 58.432,
+        "lon": -154.421,
+        "depth": 5,
+        "magnitude": 0.5,
+        "place": "96 km N of Karluk, Alaska",
+        "time": 1791948201099,
+        "status": "normal"
+      },
+      {
+        "id": "hv75055837",
+        "lat": 19.4591666666667,
+        "lon": -155.600166666667,
+        "depth": -0.19,
+        "magnitude": 1.49,
+        "place": "27 km E of Honaunau-Napoopoo, Hawaii",
+        "time": 1791948148700,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347327",
+        "lat": 33.648,
+        "lon": -116.715166666667,
+        "depth": 14.57,
+        "magnitude": 0.86,
+        "place": "10 km S of Idyllwild, CA",
+        "time": 1791948132960,
+        "status": "normal"
+      },
+      {
+        "id": "ci41347319",
+        "lat": 33.6526666666667,
+        "lon": -116.713666666667,
+        "depth": 14.4,
+        "magnitude": 0.53,
+        "place": "10 km S of Idyllwild, CA",
+        "time": 1791948054730,
         "status": "normal"
       }
     ]
@@ -2340,3683 +2060,17 @@
     "cards": [
       {
         "title": "🌊 OCEANOS",
-        "subtitle": "Desvio médio absoluto",
-        "value": "0.55 °C",
-        "detail": "Campo NOAA OISST — 2026-10-07",
-        "status": "alerta"
-      },
-      {
-        "title": "EXTREMO",
-        "subtitle": "Maior desvio observado",
-        "value": "4.15 °C",
-        "detail": "Valor absoluto da anomalia",
-        "status": "alerta"
-      },
-      {
-        "title": "ÁREA QUENTE",
-        "subtitle": "Pontos com +1 °C",
-        "value": "19.5%",
-        "detail": "Estimativa na grade consultada",
-        "status": "normal"
-      },
-      {
-        "title": "REFERÊNCIA",
-        "subtitle": "OISST",
-        "value": "1981+",
-        "detail": "Série histórica do produto",
-        "status": "normal"
-      },
-      {
-        "title": "MAPA",
-        "subtitle": "Grade global",
-        "value": 600,
-        "detail": "Pontos processados",
-        "status": "normal"
+        "subtitle": "SST",
+        "value": "—",
+        "detail": "Fonte temporariamente indisponível",
+        "status": "desconhecido"
       }
     ],
-    "grid": [
-      {
-        "lat": -59.875,
-        "lon": 0.125,
-        "anomaly": -0.07,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 7.625,
-        "anomaly": -0.04,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 15.125,
-        "anomaly": -0.01,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 22.625,
-        "anomaly": -0.19,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 30.125,
-        "anomaly": -0.55,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 37.625,
-        "anomaly": -0.36,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 45.125,
-        "anomaly": -0.07,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 52.625,
-        "anomaly": -0.15,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 60.125,
-        "anomaly": 0.09,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 67.625,
-        "anomaly": -0.24,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 75.125,
-        "anomaly": -0.28,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 82.625,
-        "anomaly": -0.47,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 90.125,
-        "anomaly": -0.77,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 97.625,
-        "anomaly": -0.66,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 105.125,
-        "anomaly": -0.39,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 112.625,
-        "anomaly": -0.33,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 120.125,
-        "anomaly": 0.2,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 127.625,
-        "anomaly": 0.18,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 135.125,
-        "anomaly": 0.2,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 142.625,
-        "anomaly": 0.39,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 150.125,
-        "anomaly": -0.6,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 157.625,
-        "anomaly": 0.15,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 165.125,
-        "anomaly": 0.09,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -59.875,
-        "lon": 172.625,
-        "anomaly": 1.19,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 0.125,
-        "anomaly": -0.73,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 7.625,
-        "anomaly": -0.4,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 15.125,
-        "anomaly": -0.58,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 22.625,
-        "anomaly": -0.48,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 30.125,
-        "anomaly": 0.27,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 37.625,
-        "anomaly": 0.66,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 45.125,
-        "anomaly": 0.37,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 52.625,
-        "anomaly": 0.12,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 60.125,
-        "anomaly": -0.06,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 67.625,
-        "anomaly": 0.9,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 75.125,
-        "anomaly": 0.03,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 82.625,
-        "anomaly": 0.27,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 90.125,
-        "anomaly": 0.32,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 97.625,
-        "anomaly": -0.27,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 105.125,
-        "anomaly": 1,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 112.625,
-        "anomaly": 0.59,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 120.125,
-        "anomaly": -0.07,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 127.625,
-        "anomaly": 0.55,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 135.125,
-        "anomaly": 0.08,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 142.625,
-        "anomaly": 0.34,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 150.125,
-        "anomaly": 3.37,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 157.625,
-        "anomaly": 1.85,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 165.125,
-        "anomaly": 1.35,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -54.875,
-        "lon": 172.625,
-        "anomaly": -1.21,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 0.125,
-        "anomaly": 0.6,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 7.625,
-        "anomaly": 0.47,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 15.125,
-        "anomaly": 1.48,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 22.625,
-        "anomaly": 0.42,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 30.125,
-        "anomaly": -0.28,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 37.625,
-        "anomaly": 1.77,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 45.125,
-        "anomaly": 0.04,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 52.625,
-        "anomaly": -0.15,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 60.125,
-        "anomaly": 0.25,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 67.625,
-        "anomaly": -0.16,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 75.125,
-        "anomaly": 0.49,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 82.625,
-        "anomaly": -0.19,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 90.125,
-        "anomaly": 0.39,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 97.625,
-        "anomaly": 1.2,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 105.125,
-        "anomaly": 0.2,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 112.625,
-        "anomaly": 0.39,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 120.125,
-        "anomaly": 0.75,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 127.625,
-        "anomaly": 0.44,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 135.125,
-        "anomaly": -0.46,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 142.625,
-        "anomaly": 0.92,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 150.125,
-        "anomaly": 0.34,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 157.625,
-        "anomaly": 0.46,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 165.125,
-        "anomaly": 0.87,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -49.875,
-        "lon": 172.625,
-        "anomaly": 0.68,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 0.125,
-        "anomaly": -0.71,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 7.625,
-        "anomaly": -0.76,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 15.125,
-        "anomaly": 0.63,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 22.625,
-        "anomaly": -0.37,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 30.125,
-        "anomaly": 1.69,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 37.625,
-        "anomaly": 0.04,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 45.125,
-        "anomaly": 0.75,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 52.625,
-        "anomaly": 1.21,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 60.125,
-        "anomaly": 3.79,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 67.625,
-        "anomaly": 0.36,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 75.125,
-        "anomaly": 1.41,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 82.625,
-        "anomaly": -2.26,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 90.125,
-        "anomaly": 0.62,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 97.625,
-        "anomaly": -0.73,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 105.125,
-        "anomaly": 1.05,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 112.625,
-        "anomaly": 0.19,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 120.125,
-        "anomaly": -0.15,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 127.625,
-        "anomaly": -0.12,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 135.125,
-        "anomaly": -0.13,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 142.625,
-        "anomaly": 0.77,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 150.125,
-        "anomaly": 0.75,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 157.625,
-        "anomaly": 0.6,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 165.125,
-        "anomaly": 0.98,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -44.875,
-        "lon": 172.625,
-        "anomaly": 0.84,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -39.875,
-        "lon": 0.125,
-        "anomaly": 1.56,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -39.875,
-        "lon": 7.625,
-        "anomaly": 3.17,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -39.875,
-        "lon": 15.125,
-        "anomaly": 0.47,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -39.875,
-        "lon": 22.625,
-        "anomaly": 0.08,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 30.125,
-        "anomaly": 2.86,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 37.625,
-        "anomaly": 0.29,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 45.125,
-        "anomaly": 2.09,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 52.625,
-        "anomaly": -1.82,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 60.125,
-        "anomaly": -0.81,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 67.625,
-        "anomaly": -0.02,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 75.125,
-        "anomaly": 0.04,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 82.625,
-        "anomaly": 0.02,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 90.125,
-        "anomaly": -0.17,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 97.625,
-        "anomaly": 0.44,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 105.125,
-        "anomaly": -0.35,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 112.625,
-        "anomaly": 0.71,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 120.125,
-        "anomaly": 0.03,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 127.625,
-        "anomaly": 0.62,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 135.125,
-        "anomaly": 0.24,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 142.625,
-        "anomaly": -0.12,
-        "region": "Índico"
-      },
-      {
-        "lat": -39.875,
-        "lon": 150.125,
-        "anomaly": 2.86,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -39.875,
-        "lon": 157.625,
-        "anomaly": -0.42,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -39.875,
-        "lon": 165.125,
-        "anomaly": 1.24,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -39.875,
-        "lon": 172.625,
-        "anomaly": 0.53,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -34.875,
-        "lon": 0.125,
-        "anomaly": -0.07,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -34.875,
-        "lon": 7.625,
-        "anomaly": 1.62,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -34.875,
-        "lon": 15.125,
-        "anomaly": 1.22,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -34.875,
-        "lon": 22.625,
-        "anomaly": -0.75,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 30.125,
-        "anomaly": -0.03,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 37.625,
-        "anomaly": 0.71,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 45.125,
-        "anomaly": 0.28,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 52.625,
-        "anomaly": 0.72,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 60.125,
-        "anomaly": -0.07,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 67.625,
-        "anomaly": -0.26,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 75.125,
-        "anomaly": 0.07,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 82.625,
-        "anomaly": 0.29,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 90.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 97.625,
-        "anomaly": 0.37,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 105.125,
-        "anomaly": 0.54,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 112.625,
-        "anomaly": 0.34,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 120.125,
-        "anomaly": -0.43,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 127.625,
-        "anomaly": 0.41,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 135.125,
-        "anomaly": 0.61,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 142.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -34.875,
-        "lon": 150.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -34.875,
-        "lon": 157.625,
-        "anomaly": 1.8,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -34.875,
-        "lon": 165.125,
-        "anomaly": 0.2,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -34.875,
-        "lon": 172.625,
-        "anomaly": -0.33,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -29.875,
-        "lon": 0.125,
-        "anomaly": 0.56,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -29.875,
-        "lon": 7.625,
-        "anomaly": 0.95,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -29.875,
-        "lon": 15.125,
-        "anomaly": 0.14,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -29.875,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 37.625,
-        "anomaly": -0.08,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 45.125,
-        "anomaly": -0.13,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 52.625,
-        "anomaly": -0.51,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 60.125,
-        "anomaly": -0.06,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 67.625,
-        "anomaly": -0.39,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 75.125,
-        "anomaly": -0.95,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 82.625,
-        "anomaly": 0.03,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 90.125,
-        "anomaly": 0.07,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 97.625,
-        "anomaly": 1.06,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 105.125,
-        "anomaly": 1.76,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 112.625,
-        "anomaly": 0.87,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 135.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 142.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -29.875,
-        "lon": 150.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -29.875,
-        "lon": 157.625,
-        "anomaly": 0.86,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -29.875,
-        "lon": 165.125,
-        "anomaly": 0.07,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -29.875,
-        "lon": 172.625,
-        "anomaly": 1.05,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -24.875,
-        "lon": 0.125,
-        "anomaly": 0.62,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -24.875,
-        "lon": 7.625,
-        "anomaly": 0.67,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -24.875,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -24.875,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 37.625,
-        "anomaly": -0.35,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 52.625,
-        "anomaly": 0.66,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 60.125,
-        "anomaly": 0.96,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 67.625,
-        "anomaly": 0.17,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 75.125,
-        "anomaly": 1.02,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 82.625,
-        "anomaly": 1.1,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 90.125,
-        "anomaly": 1.27,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 97.625,
-        "anomaly": 1.26,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 105.125,
-        "anomaly": 0.71,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 112.625,
-        "anomaly": 0.53,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 135.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 142.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -24.875,
-        "lon": 150.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -24.875,
-        "lon": 157.625,
-        "anomaly": 0.87,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -24.875,
-        "lon": 165.125,
-        "anomaly": 0.55,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -24.875,
-        "lon": 172.625,
-        "anomaly": 0.21,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -19.875,
-        "lon": 0.125,
-        "anomaly": 0.14,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -19.875,
-        "lon": 7.625,
-        "anomaly": 0.51,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -19.875,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -19.875,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 37.625,
-        "anomaly": 0.55,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 52.625,
-        "anomaly": 0.73,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 60.125,
-        "anomaly": 0.36,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 67.625,
-        "anomaly": 0.13,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 75.125,
-        "anomaly": 0.95,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 82.625,
-        "anomaly": 1.98,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 90.125,
-        "anomaly": 1.82,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 97.625,
-        "anomaly": 1.16,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 105.125,
-        "anomaly": 0.81,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 112.625,
-        "anomaly": 0.16,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 120.125,
-        "anomaly": 2.29,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 135.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 142.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -19.875,
-        "lon": 150.125,
-        "anomaly": -0.31,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -19.875,
-        "lon": 157.625,
-        "anomaly": -0.33,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -19.875,
-        "lon": 165.125,
-        "anomaly": 0.08,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -19.875,
-        "lon": 172.625,
-        "anomaly": -0.53,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -14.875,
-        "lon": 0.125,
-        "anomaly": 0.56,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -14.875,
-        "lon": 7.625,
-        "anomaly": 1.54,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -14.875,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -14.875,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 45.125,
-        "anomaly": 0.4,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 52.625,
-        "anomaly": -0.2,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 60.125,
-        "anomaly": -0.29,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 67.625,
-        "anomaly": 1.33,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 75.125,
-        "anomaly": 1.27,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 82.625,
-        "anomaly": 1.05,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 90.125,
-        "anomaly": 2.26,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 97.625,
-        "anomaly": 0.93,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 105.125,
-        "anomaly": 0.67,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 112.625,
-        "anomaly": 0.59,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 120.125,
-        "anomaly": 1.14,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 135.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 142.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -14.875,
-        "lon": 150.125,
-        "anomaly": -0.35,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -14.875,
-        "lon": 157.625,
-        "anomaly": -0.18,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -14.875,
-        "lon": 165.125,
-        "anomaly": 0.71,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -14.875,
-        "lon": 172.625,
-        "anomaly": -0.49,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -9.875,
-        "lon": 0.125,
-        "anomaly": 0.65,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -9.875,
-        "lon": 7.625,
-        "anomaly": 1.06,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -9.875,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -9.875,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 45.125,
-        "anomaly": -0.1,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 52.625,
-        "anomaly": -0.56,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 60.125,
-        "anomaly": 1.01,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 67.625,
-        "anomaly": 1.29,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 75.125,
-        "anomaly": 2.07,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 82.625,
-        "anomaly": 2.1,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 90.125,
-        "anomaly": 0.72,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 97.625,
-        "anomaly": 0.64,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 105.125,
-        "anomaly": 0.06,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 112.625,
-        "anomaly": 0.47,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 127.625,
-        "anomaly": -0.02,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 135.125,
-        "anomaly": -0.91,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 142.625,
-        "anomaly": -0.19,
-        "region": "Índico"
-      },
-      {
-        "lat": -9.875,
-        "lon": 150.125,
-        "anomaly": -0.34,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -9.875,
-        "lon": 157.625,
-        "anomaly": -0.45,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -9.875,
-        "lon": 165.125,
-        "anomaly": 0.54,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -9.875,
-        "lon": 172.625,
-        "anomaly": 0.15,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -4.875,
-        "lon": 0.125,
-        "anomaly": 0.91,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -4.875,
-        "lon": 7.625,
-        "anomaly": 0.46,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -4.875,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -4.875,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 45.125,
-        "anomaly": 0.62,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 52.625,
-        "anomaly": 1.22,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 60.125,
-        "anomaly": 0.87,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 67.625,
-        "anomaly": 1.36,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 75.125,
-        "anomaly": 1.48,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 82.625,
-        "anomaly": 1.14,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 90.125,
-        "anomaly": 0.75,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 97.625,
-        "anomaly": 0.27,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 112.625,
-        "anomaly": -0.76,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 127.625,
-        "anomaly": -0.88,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 135.125,
-        "anomaly": -1.47,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 142.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": -4.875,
-        "lon": 150.125,
-        "anomaly": -0.52,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -4.875,
-        "lon": 157.625,
-        "anomaly": -0.2,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -4.875,
-        "lon": 165.125,
-        "anomaly": 0.18,
-        "region": "Oceano global"
-      },
-      {
-        "lat": -4.875,
-        "lon": 172.625,
-        "anomaly": 0.76,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 0.125,
-        "lon": 0.125,
-        "anomaly": 1.12,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 0.125,
-        "lon": 7.625,
-        "anomaly": 1.17,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 0.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 0.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 45.125,
-        "anomaly": 0.91,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 52.625,
-        "anomaly": 1.03,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 60.125,
-        "anomaly": 1.26,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 67.625,
-        "anomaly": 1.31,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 75.125,
-        "anomaly": 1.84,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 82.625,
-        "anomaly": 1.82,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 90.125,
-        "anomaly": 1.29,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 97.625,
-        "anomaly": 1.11,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 105.125,
-        "anomaly": 0.16,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 112.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 120.125,
-        "anomaly": -0.2,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 127.625,
-        "anomaly": -0.68,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 135.125,
-        "anomaly": 0.76,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 142.625,
-        "anomaly": -0.21,
-        "region": "Índico"
-      },
-      {
-        "lat": 0.125,
-        "lon": 150.125,
-        "anomaly": -0.37,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 0.125,
-        "lon": 157.625,
-        "anomaly": 0.96,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 0.125,
-        "lon": 165.125,
-        "anomaly": 0.92,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 0.125,
-        "lon": 172.625,
-        "anomaly": 0.93,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 5.125,
-        "lon": 0.125,
-        "anomaly": 0.12,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 5.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 5.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 5.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 52.625,
-        "anomaly": 2.55,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 60.125,
-        "anomaly": 2.04,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 67.625,
-        "anomaly": 2.26,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 75.125,
-        "anomaly": 2.24,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 82.625,
-        "anomaly": 2,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 90.125,
-        "anomaly": 1.86,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 97.625,
-        "anomaly": 1.21,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 105.125,
-        "anomaly": 0.72,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 112.625,
-        "anomaly": 0.91,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 120.125,
-        "anomaly": -0.72,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 127.625,
-        "anomaly": -0.33,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 135.125,
-        "anomaly": -0.16,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 142.625,
-        "anomaly": 0.16,
-        "region": "Índico"
-      },
-      {
-        "lat": 5.125,
-        "lon": 150.125,
-        "anomaly": 0.03,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 5.125,
-        "lon": 157.625,
-        "anomaly": 0.11,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 5.125,
-        "lon": 165.125,
-        "anomaly": 0.05,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 5.125,
-        "lon": 172.625,
-        "anomaly": 0.16,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 10.125,
-        "lon": 0.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 10.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 10.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 10.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 52.625,
-        "anomaly": 2.71,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 60.125,
-        "anomaly": 1.86,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 67.625,
-        "anomaly": 2.08,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 75.125,
-        "anomaly": 2.23,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 82.625,
-        "anomaly": 1.56,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 90.125,
-        "anomaly": 2.24,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 97.625,
-        "anomaly": 0.92,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 112.625,
-        "anomaly": 1.38,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 120.125,
-        "anomaly": 0.82,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 127.625,
-        "anomaly": 0.46,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 135.125,
-        "anomaly": -0.1,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 142.625,
-        "anomaly": -0.69,
-        "region": "Índico"
-      },
-      {
-        "lat": 10.125,
-        "lon": 150.125,
-        "anomaly": -0.83,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 10.125,
-        "lon": 157.625,
-        "anomaly": 0.18,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 10.125,
-        "lon": 165.125,
-        "anomaly": 0.22,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 10.125,
-        "lon": 172.625,
-        "anomaly": 1.03,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 15.125,
-        "lon": 0.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 15.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 15.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 15.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 52.625,
-        "anomaly": 2.15,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 60.125,
-        "anomaly": 1.97,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 67.625,
-        "anomaly": 1.4,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 82.625,
-        "anomaly": 1.65,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 90.125,
-        "anomaly": 1.33,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 97.625,
-        "anomaly": 1.22,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 112.625,
-        "anomaly": 1.56,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 127.625,
-        "anomaly": 1,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 135.125,
-        "anomaly": 0.81,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 142.625,
-        "anomaly": 0.24,
-        "region": "Índico"
-      },
-      {
-        "lat": 15.125,
-        "lon": 150.125,
-        "anomaly": 0.12,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 15.125,
-        "lon": 157.625,
-        "anomaly": 0.87,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 15.125,
-        "lon": 165.125,
-        "anomaly": 1.17,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 15.125,
-        "lon": 172.625,
-        "anomaly": 0.84,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 20.125,
-        "lon": 0.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 20.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 20.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 20.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 37.625,
-        "anomaly": 0.29,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 52.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 60.125,
-        "anomaly": 0.38,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 67.625,
-        "anomaly": 0.87,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 82.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 90.125,
-        "anomaly": 1.32,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 97.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 112.625,
-        "anomaly": 1.47,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 120.125,
-        "anomaly": 0.79,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 127.625,
-        "anomaly": 0.33,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 135.125,
-        "anomaly": 0.68,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 142.625,
-        "anomaly": 0.9,
-        "region": "Índico"
-      },
-      {
-        "lat": 20.125,
-        "lon": 150.125,
-        "anomaly": 0.16,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 20.125,
-        "lon": 157.625,
-        "anomaly": 0.41,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 20.125,
-        "lon": 165.125,
-        "anomaly": 0.89,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 20.125,
-        "lon": 172.625,
-        "anomaly": 0.84,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 25.125,
-        "lon": 0.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 25.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 25.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 25.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 52.625,
-        "anomaly": 1.66,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 60.125,
-        "anomaly": 0.18,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 67.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 82.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 90.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 97.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 112.625,
-        "anomaly": 0,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 120.125,
-        "anomaly": 1.01,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 127.625,
-        "anomaly": 0.96,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 135.125,
-        "anomaly": 1.19,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 142.625,
-        "anomaly": 0.77,
-        "region": "Índico"
-      },
-      {
-        "lat": 25.125,
-        "lon": 150.125,
-        "anomaly": 0.24,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 25.125,
-        "lon": 157.625,
-        "anomaly": 0.63,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 25.125,
-        "lon": 165.125,
-        "anomaly": 0.85,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 25.125,
-        "lon": 172.625,
-        "anomaly": 0.07,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 0.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 30.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 30.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 30.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 52.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 60.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 67.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 82.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 90.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 97.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 112.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 127.625,
-        "anomaly": 0.84,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 135.125,
-        "anomaly": 0.39,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 142.625,
-        "anomaly": 0.97,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 150.125,
-        "anomaly": 0.96,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 157.625,
-        "anomaly": 1.46,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 165.125,
-        "anomaly": 0.38,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 30.125,
-        "lon": 172.625,
-        "anomaly": 0.59,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 0.125,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 35.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 35.125,
-        "lon": 15.125,
-        "anomaly": 2.02,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 35.125,
-        "lon": 22.625,
-        "anomaly": 0.53,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 30.125,
-        "anomaly": 0.18,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 52.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 60.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 67.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 82.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 90.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 97.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 112.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 120.125,
-        "anomaly": 1.94,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 135.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 142.625,
-        "anomaly": 0.62,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 150.125,
-        "anomaly": 0.97,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 157.625,
-        "anomaly": 2.65,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 165.125,
-        "anomaly": 1.68,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 35.125,
-        "lon": 172.625,
-        "anomaly": 1.35,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 0.125,
-        "anomaly": 3.29,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 40.125,
-        "lon": 7.625,
-        "anomaly": 4.15,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 40.125,
-        "lon": 15.125,
-        "anomaly": 2.44,
-        "region": "Atlântico Norte"
-      },
-      {
-        "lat": 40.125,
-        "lon": 22.625,
-        "anomaly": 1.47,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 52.625,
-        "anomaly": 3.09,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 60.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 67.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 82.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 90.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 97.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 112.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 120.125,
-        "anomaly": 1.73,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 135.125,
-        "anomaly": 2.56,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 142.625,
-        "anomaly": 0.01,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 150.125,
-        "anomaly": 2.16,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 157.625,
-        "anomaly": 1.95,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 165.125,
-        "anomaly": 2.76,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 40.125,
-        "lon": 172.625,
-        "anomaly": 2.79,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 0.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 30.125,
-        "anomaly": 2.16,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 52.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 60.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 67.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 82.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 90.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 97.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 112.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 135.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 142.625,
-        "anomaly": 1.34,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 150.125,
-        "anomaly": -1.16,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 157.625,
-        "anomaly": 1.45,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 165.125,
-        "anomaly": 2.15,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 45.125,
-        "lon": 172.625,
-        "anomaly": 3.83,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 0.125,
-        "anomaly": 3.04,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 52.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 60.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 67.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 82.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 90.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 97.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 112.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 135.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 142.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 150.125,
-        "anomaly": 0.5,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 157.625,
-        "anomaly": 1.4,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 165.125,
-        "anomaly": 1.03,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 50.125,
-        "lon": 172.625,
-        "anomaly": 0.23,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 0.125,
-        "anomaly": 2.04,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 7.625,
-        "anomaly": 2.22,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 15.125,
-        "anomaly": 3.21,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 52.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 60.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 67.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 82.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 90.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 97.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 112.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 135.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 142.625,
-        "anomaly": 1.27,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 150.125,
-        "anomaly": 1.33,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 157.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 165.125,
-        "anomaly": 0.82,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 55.125,
-        "lon": 172.625,
-        "anomaly": 0.92,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 0.125,
-        "anomaly": 1.12,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 7.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 15.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 22.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 30.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 37.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 45.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 52.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 60.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 67.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 75.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 82.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 90.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 97.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 105.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 112.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 120.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 127.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 135.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 142.625,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 150.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 157.625,
-        "anomaly": 0.36,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 165.125,
-        "anomaly": 0,
-        "region": "Oceano global"
-      },
-      {
-        "lat": 60.125,
-        "lon": 172.625,
-        "anomaly": 0.44,
-        "region": "Oceano global"
-      }
-    ],
-    "sst": {
-      "usedDate": "2026-10-07",
-      "signedAverage": 0.42,
-      "absoluteAverage": 0.5509333333333334,
-      "maximum": 4.15,
-      "hotAreaPercent": 19.5,
-      "regions": {
-        "Oceano global": {
-          "sum": 126.11000000000003,
-          "count": 335,
-          "maximum": 3.83,
-          "mean": 0.38
-        },
-        "Índico": {
-          "sum": 113.93999999999997,
-          "count": 238,
-          "maximum": 2.86,
-          "mean": 0.48
-        },
-        "Atlântico Norte": {
-          "sum": 14.31,
-          "count": 27,
-          "maximum": 4.15,
-          "mean": 0.53
-        }
-      },
-      "reference": "NOAA OISST · climatologia do produto"
-    },
+    "grid": [],
     "enso": {
-      "roni": 2.16,
-      "phase": "El Niño",
-      "source": "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt",
-      "observedAt": "2026-JAS",
-      "status": "normal",
-      "live": true,
-      "probabilities": {
-        "season": "SON",
-        "lanina": 0,
-        "neutral": 0,
-        "elnino": 100
-      }
+      "roni": 0,
+      "status": "desconhecido",
+      "source": "https://psl.noaa.gov/enso/"
     }
   },
   "space": {
@@ -6024,7 +2078,7 @@
       {
         "title": "☄️ ESPAÇO",
         "subtitle": "Objetos próximos",
-        "value": 7,
+        "value": 3,
         "detail": "NASA NeoWs",
         "status": "normal"
       },
@@ -6045,58 +2099,26 @@
     ],
     "neos": [
       {
-        "name": "(2001 UP)",
-        "date": "2026-Oct-09 23:58",
-        "distance": "62.620.485,945 km",
-        "absoluteMagnitude": 25.7,
+        "name": "(2009 TK8)",
+        "date": "2026-Oct-15 02:57",
+        "distance": "12.187.273,339 km",
+        "absoluteMagnitude": 20.17,
         "potentiallyHazardous": false,
         "status": "normal"
       },
       {
-        "name": "(2003 QF70)",
-        "date": "2026-Oct-09 20:03",
-        "distance": "46.792.545,271 km",
-        "absoluteMagnitude": 20.03,
+        "name": "(2013 JR22)",
+        "date": "2026-Oct-15 20:32",
+        "distance": "18.290.737,512 km",
+        "absoluteMagnitude": 20.87,
         "potentiallyHazardous": false,
         "status": "normal"
       },
       {
-        "name": "(2015 KT121)",
-        "date": "2026-Oct-09 13:10",
-        "distance": "46.791.579,318 km",
-        "absoluteMagnitude": 25.9,
-        "potentiallyHazardous": false,
-        "status": "normal"
-      },
-      {
-        "name": "(2016 UW35)",
-        "date": "2026-Oct-09 13:39",
-        "distance": "32.507.570,043 km",
-        "absoluteMagnitude": 24.6,
-        "potentiallyHazardous": false,
-        "status": "normal"
-      },
-      {
-        "name": "(2018 VJ1)",
-        "date": "2026-Oct-09 15:08",
-        "distance": "54.641.922,831 km",
-        "absoluteMagnitude": 24.16,
-        "potentiallyHazardous": false,
-        "status": "normal"
-      },
-      {
-        "name": "(2019 EO2)",
-        "date": "2026-Oct-09 20:18",
-        "distance": "74.515.530,751 km",
-        "absoluteMagnitude": 23.36,
-        "potentiallyHazardous": false,
-        "status": "normal"
-      },
-      {
-        "name": "(2019 GE1)",
-        "date": "2026-Oct-09 15:13",
-        "distance": "17.122.192,421 km",
-        "absoluteMagnitude": 27,
+        "name": "(2017 TM6)",
+        "date": "2026-Oct-15 08:22",
+        "distance": "58.678.322,743 km",
+        "absoluteMagnitude": 23.3,
         "potentiallyHazardous": false,
         "status": "normal"
       }
@@ -6127,6 +2149,16 @@
       }
     ],
     "events": [
+      {
+        "title": "Pneumonia of undetermined etiology - the Russian Federation",
+        "summary": "On 2 October 2026, WHO became aware through media reports of the death of an employee of the Irkutsk APRI of Siberia and the Far East, Russian Federation. The individual died on 2 October following hospitalization for severe pneumonia on 29 September. On 3 October, 5 October, 6 October and 7 October, WHO contacted the ",
+        "date": "2026-10-10T15:00:00Z",
+        "sourceName": "Organização Mundial da Saúde",
+        "url": "https://www.who.int/2026-DON620",
+        "lat": null,
+        "lon": null,
+        "status": "atencao"
+      },
       {
         "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
         "summary": "Since the previous Disease Outbreak News was published on 25 September 2026, an additional 775 confirmed cases, including 379 confirmed deaths, have been reported in the Democratic Republic of the Congo.&nbsp;&nbsp; In the most recent 24-hour period, as of 6 October, 62 new confirmed cases were reported, with Ituri acc",
@@ -6215,16 +2247,6 @@
         "url": "https://www.who.int/2026-DON611",
         "lat": null,
         "lon": null,
-        "status": "atencao"
-      },
-      {
-        "title": "Nipah virus disease - India",
-        "summary": "On 11 June 2026, WHO was informed of a laboratory-confirmed case of Nipah virus infection reported in Kozhikode district, Kerala State. Initial positive results were obtained through PCR testing at local laboratories and were subsequently confirmed by RT‑PCR at the National Institute of Virology, Pune. The case is an a",
-        "date": "2026-06-25T18:00:00Z",
-        "sourceName": "Organização Mundial da Saúde",
-        "url": "https://www.who.int/2026-DON609",
-        "lat": 22.9,
-        "lon": 79,
         "status": "atencao"
       }
     ]

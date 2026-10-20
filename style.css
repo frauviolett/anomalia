@@ -425,7 +425,7 @@ section {
 }
 
 .dot.green {
-    background: #38bdf8;
+    background: #22c55e;
 }
 
 .dot.yellow {
@@ -458,6 +458,49 @@ section {
     display: block;
 }
 
+.overview-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.overview-top-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 32px;
+    align-items: stretch;
+}
+
+.overview-top-grid > * {
+    min-width: 0;
+}
+
+.overview-top-grid .map-panel { grid-column: span 2; width: 100%; }
+.overview-top-grid .recent-panel { grid-column: span 1; width: 100%; }
+
+/* O mapa ocupa toda a área útil do card, acompanhando a altura do feed. */
+.overview-top-grid .map-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.overview-top-grid .map-panel #global-map {
+    flex: 1 1 auto;
+    width: 100%;
+    height: auto;
+    min-height: 480px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
 
 /* =========================================================
    SECTION HEADING
@@ -469,6 +512,10 @@ section {
     justify-content: space-between;
     gap: 30px;
     margin-bottom: 28px;
+}
+
+.section-heading > div {
+    min-width: 0;
 }
 
 .section-kicker,
@@ -500,6 +547,9 @@ section {
     padding-bottom: 5px;
     font-size: 10px;
     color: #7b9098;
+    line-height: 1.35;
+    text-align: right;
+    overflow-wrap: anywhere;
 }
 
 
@@ -859,6 +909,7 @@ section {
         repeat(auto-fit, minmax(250px, 1fr));
     gap: 14px;
 }
+.news-radar-filters{display:flex;justify-content:space-between;gap:18px;margin:18px 0;flex-wrap:wrap}.news-radar-filters>div{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.news-radar-filters .panel-kicker{margin-right:4px}.news-filter{padding:7px 10px;border:1px solid #cbd5e1;border-radius:999px;background:#f8fafc;color:#475569;cursor:pointer;font-size:9px;font-weight:800}.news-filter:hover,.news-filter.active{border-color:#0f766e;background:#0f766e;color:#fff}.news-hero-card,.news-investigative-card{border:1px solid #cbd5e1;background:#f8fafc;box-shadow:0 8px 24px rgba(15,23,42,.05)}.news-hero-card{margin-bottom:16px;padding:22px;border-left:4px solid #f97316;border-radius:14px}.news-card-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;color:#94a3b8;font-size:9px}.news-severity{display:inline-block;padding:5px 8px;border-radius:999px;font-size:8px;font-weight:900}.news-severity.anomaly{background:#ffedd5;color:#c2410c}.news-severity.attention{background:#fef3c7;color:#a16207}.news-severity.normal{background:#dcfce7;color:#15803d}.news-domain{display:block;margin-top:14px;color:#64748b;font-size:9px;font-weight:800}.news-hero-card h3{max-width:800px;margin:7px 0 16px;color:#0f172a;font-size:20px;line-height:1.2}.news-analysis{max-width:780px;padding:12px 14px;border-left:3px solid #0ea5a8;background:#ecfeff;color:#475569;font-size:10px;line-height:1.45}.news-analysis p{margin-top:5px}.news-hero-actions{display:flex;gap:8px;margin-top:16px}.news-hero-actions a,.news-hero-actions button{padding:8px 11px;border:1px solid #cbd5e1;border-radius:7px;background:#fff;color:#0f766e;font-size:9px;font-weight:800;text-decoration:none;cursor:pointer}.news-hero-actions button{background:#0f766e;color:#fff}.news-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.news-investigative-card{min-height:190px;padding:15px;border-radius:12px}.news-investigative-card h3{margin:10px 0 8px;color:#0f172a;font-size:13px;line-height:1.3}.news-investigative-card p{color:#64748b;font-size:10px;line-height:1.5}.news-investigative-card footer{display:flex;justify-content:space-between;gap:8px;margin-top:16px;padding-top:10px;border-top:1px solid #e2e8f0;background:transparent;color:#94a3b8;font-size:8px}.news-investigative-card footer a{color:#0f766e;font-weight:800;text-decoration:none}@media(max-width:900px){.news-grid{grid-template-columns:1fr}.news-hero-card h3{font-size:17px}}
 
 
 /* =========================================================
@@ -941,6 +992,14 @@ footer {
 footer strong {
     color: #173642;
     letter-spacing: 0.12em;
+}
+
+.footer-live-note {
+    flex-basis: 100%;
+    color: #8b9da2;
+    font-size: 8px;
+    letter-spacing: .04em;
+    text-align: center;
 }
 
 
@@ -1047,6 +1106,12 @@ footer strong {
     .section-heading {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .update-time {
+        width: 100%;
+        padding-bottom: 0;
+        text-align: left;
     }
 
     .module-grid {
@@ -1999,6 +2064,17 @@ footer strong {
 .ocean-risk-level.status-alerta strong { color: #b52d2d; }
 .ocean-risk-content p { color: #647779; font-size: 11px; line-height: 1.5; }
 .ocean-risk-content small { color: #879797; font-size: 9px; }
+.ocean-update-stamp { display: block; margin-top: 14px; padding-top: 10px; border-top: 1px solid #e2ecea; color: #527174 !important; font: 700 9px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .04em; }
+.ocean-event-timestamp { display: block; margin-top: 8px; color: #718789 !important; font: 700 8px/1.35 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .03em; }
+.ocean .dashboard-grid > .panel { min-height: 520px; border-radius: 16px; }
+.ocean-peak-badge { display: inline-block; margin-top: 10px; padding: 6px 9px; border-radius: 999px; background: #fff0e5; color: #c2410c; font-size: 9px; font-weight: 900; letter-spacing: .05em; animation: oceanPeakPulse 2.2s ease-in-out infinite; }
+.ocean-region-bar { display: block; grid-column: 1 / -1; height: 5px; overflow: hidden; border-radius: 999px; background: #f1e7df; }.ocean-region-bar em { display: block; height: 100%; border-radius: inherit; background: #e8752e; }
+.enso-live { background: #f8fafc !important; }.enso-hydrology-impacts small b { color: #334e52; font-weight: 900; }
+@keyframes oceanPeakPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(234,88,12,.08); } 50% { box-shadow: 0 0 0 5px rgba(234,88,12,.12); } }
+.ocean-dashboard-title { display: none; }
+.enso-hydrology-impacts { display: grid; gap: 4px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #e4eceb; }
+.enso-hydrology-impacts span { color: #3c5759; font-size: 10px; font-weight: 800; }.enso-hydrology-impacts small { color: #718381; font-size: 9px; line-height: 1.4; }
+.ocean-threat-section { padding: 12px 0; border-bottom: 1px solid #edf2f1; }.ocean-threat-section:last-child { border-bottom: 0; }.ocean-threat-section > div { display: flex; align-items: center; justify-content: space-between; gap: 8px; }.ocean-threat-section strong { color: #35575a; font-size: 10px; letter-spacing: .04em; }.ocean-threat-section p { margin: 8px 0 0; color: #647779; font-size: 10px; line-height: 1.45; }.ocean-threat-badge { padding: 5px 7px; border-radius: 999px; font-size: 8px; font-weight: 900; white-space: nowrap; }.ocean-threat-badge.normal { background: #e8f7e9; color: #24743a; }.ocean-threat-badge.attention { background: #fff9d9; color: #8a6a00; }
 .planetary-score { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2px 14px; max-width: 440px; margin: 20px 0 22px; padding: 13px 16px; border: 1px solid rgba(146, 205, 199, .42); border-left: 4px solid #3d9b8b; border-radius: 8px; background: rgba(16, 48, 53, .72); color: #dff4ef; box-shadow: 0 8px 22px rgba(8, 36, 41, .18); }
 .planetary-score-label { grid-column: 1 / -1; color: #9ad4c8; font-size: 9px; font-weight: 900; letter-spacing: .1em; }
 .planetary-score strong { color: #fff; font-size: 30px; line-height: 1; }
@@ -2007,11 +2083,194 @@ footer strong {
 .planetary-score-change { grid-column: 1 / -1; color: #a9c4c0; font-size: 10px; }
 .planetary-score[data-level="normal"] { border-left-color: #4eaa68; }
 .planetary-score[data-level="normal"] b { background: #bfe7c8; }
+.planetary-score[data-level="normal"] { border-left-color: #22c55e; }.planetary-score[data-level="normal"] b { background:#dcfce7;color:#15803d; }
+.planetary-score[data-level="atencao"] { border-left-color:#eab308; }.planetary-score[data-level="atencao"] b { background:#fef3c7;color:#a16207; }
+.planetary-score[data-level="anomalia-moderada"] { border-left-color:#fb923c; }.planetary-score[data-level="anomalia-moderada"] b { background:#ffedd5;color:#c2410c; }
 .planetary-score[data-level="anomalia"] { border-left-color: #ed791f; }
-.planetary-score[data-level="anomalia"] b { background: #ffd2ad; }
+.planetary-score[data-level="anomalia"] b { background: #ffedd5;color:#c2410c; }
 .planetary-score[data-level="alerta"] { border-left-color: #ef4444; }
-.planetary-score[data-level="alerta"] b { background: #ffc1c1; }
+.planetary-score[data-level="alerta"] b { background: #fee2e2;color:#b91c1c; }
+.planetary-score-timestamp{grid-column:1/-1;color:#a9c4c0;font:9px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.02em}
+.home-analysis-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-columns: minmax(0, 1fr); gap: 18px; width: 100%; max-width: none; margin: 42px 0; padding: 0; box-sizing: border-box; align-items: stretch; }
+.home-analysis-grid > * { min-width: 0; box-sizing: border-box; }
+.home-analysis-section { position: relative; min-width: 0; width: 100%; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; padding: 20px; border-radius: 18px; background: #fff; border: 1px solid #dbe5e4; box-shadow: 0 10px 30px rgba(22, 76, 91, 0.045); }
+.home-analysis-grid > .home-analysis-section { grid-column: span 1; min-width: 0; max-width: none; }
+.home-analysis-section > .section-heading { flex: 0 0 auto; }
+.home-analysis-section .section-heading { margin-bottom: 14px; }
+.home-analysis-section .section-heading h2 { font-size: 21px; }
+.home-analysis-section .section-heading p { color: #718283; font-size: 11px; line-height: 1.5; }
+.analysis-empty { padding: 20px; border: 1px dashed #cbdad8; color: #7a8c8b; background: #f8fbfa; font-size: 11px; line-height: 1.5; }
+.critical-card { padding: 18px; border: 1px solid #dbe5e4; border-left: 4px solid #ef4444; background: #fff; }
+.critical-card, .cross-card { flex: 1; }
+.critical-badge { display: inline-block; padding: 5px 8px; border-radius: 12px; background: #ffd9d3; color: #b8322d; font-size: 9px; font-weight: 900; letter-spacing: .07em; }
+.critical-card h3 { margin: 13px 0 10px; color: #20373c; font-size: 16px; line-height: 1.3; }
+.critical-signature { color: #627675; font-size: 11px; line-height: 1.55; }
+.critical-signature strong, .critical-sectors strong { display: block; color: #3e5958; font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
+.critical-sectors { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
+.critical-sectors strong { flex-basis: 100%; }
+.critical-sectors span { padding: 5px 8px; border: 1px solid #dbe5e4; border-radius: 4px; color: #637675; font-size: 9px; }
+.cross-card { padding: 18px; border: 1px solid #dbe5e4; background: #fff; }
+.cross-events { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; }
+.cross-events div { padding: 11px; border: 1px solid #dbe5e4; background: #f8fbfa; }
+.cross-events span { display: block; color: #45817c; font-size: 8px; font-weight: 900; letter-spacing: .07em; }
+.cross-events strong { display: block; margin-top: 6px; color: #294345; font-size: 11px; line-height: 1.35; }
+.cross-events small { display: block; margin-top: 4px; color: #718382; font-size: 9px; }
+.cross-events > b { color: #6ca69e; font-size: 20px; }
+.cross-card > p { margin: 15px 0 0; color: #5f7473; font-size: 11px; line-height: 1.55; }
+.cross-investigative { border-color: #f1d9a6; background: linear-gradient(135deg, #fffdf7, #fffaf0); }
+.cross-investigative-badge { display: inline-block; margin-bottom: 14px; padding: 6px 9px; border-radius: 999px; background: #ffedd5; color: #b45309; font-size: 9px; font-weight: 900; letter-spacing: .07em; }
+.cross-investigative-reading { color: #52605f !important; }
+.cross-investigative-reading mark { padding: 2px 5px; border-radius: 5px; background: rgba(245,158,11,.12); color: #b45309; font-weight: 900; }
+.cross-investigative-reading b { color: #9a3412; }
+.critical-feed-card .section-heading { margin-bottom: 14px; }
+.feed-cta { padding: 13px; border-left: 4px solid #3d9b8b; background: #f0f8f6; }
+.feed-cta strong { display: block; color: #234548; font-size: 14px; line-height: 1.3; }
+.feed-cta p { margin: 8px 0 0; color: #637877; font-size: 10px; line-height: 1.5; }
+.feed-access { display: grid; gap: 8px; margin: 13px 0; }
+.critical-feed-card .feed-access { flex: 1; align-content: start; }
+.feed-access > div { padding: 10px; border: 1px solid #dbe5e4; background: #f9fcfb; }
+.feed-access span { display: block; color: #4a7e79; font-size: 8px; font-weight: 900; letter-spacing: .07em; }
+.feed-access strong { display: block; margin-top: 4px; color: #294447; font-size: 11px; }
+.feed-access small { display: block; margin-top: 3px; color: #788a89; font-size: 9px; }
+.feed-action { width: 100%; padding: 10px 12px; border: 1px solid #2d7774; border-radius: 5px; background: #2d7774; color: #fff; cursor: pointer; font-size: 9px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; }
+.feed-action:hover { background: #245f5c; }
+@media (max-width: 1000px) { .home-analysis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 800px) { .home-analysis-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .overview-top-grid { grid-template-columns: 1fr; } .overview-top-grid .map-panel, .overview-top-grid .recent-panel { grid-column: span 1; } }
+@media (max-width: 900px) { .overview-top-grid .map-panel #global-map { min-height: 380px; } }
 .ocean-mhw-metrics { display: grid; grid-template-columns: 1fr 1.2fr; gap: 7px; margin: 12px 0; }
+.biology-legacy-panels { display: none; }
+.biology-timeline-panel { margin-top: 18px; }
+.biology-timeline-panel { width: 100%; box-sizing: border-box; }
+.biology-timeline-source { color: #809190; font-size: 9px; }
+.biology-timeline { display: grid; gap: 0; }
+.biology-timeline-item { display: grid; grid-template-columns: 16px 1fr; gap: 11px; padding: 12px 0; border-bottom: 1px solid #e1ebea; }
+.biology-timeline-item:last-child { border-bottom: 0; }
+.biology-timeline-dot { width: 9px; height: 9px; margin-top: 5px; border: 2px solid #fff; border-radius: 50%; background: #facc15; box-shadow: 0 0 0 1px #d0a900; }
+.biology-timeline-item.status-anomalia .biology-timeline-dot { background: #f97316; box-shadow: 0 0 0 1px #c35b0d; }
+.biology-timeline-item.status-alerta .biology-timeline-dot { background: #ef4444; box-shadow: 0 0 0 1px #c13030; }
+.biology-timeline-head { display: flex; justify-content: space-between; gap: 10px; }
+.biology-timeline-head strong { color: #244144; font-size: 12px; }
+.biology-timeline-head time { color: #849391; font-size: 9px; white-space: nowrap; }
+.biology-timeline-item p { margin: 5px 0; color: #657978; font-size: 10px; line-height: 1.45; }
+.biology-timeline-item small { color: #879797; font-size: 9px; }
+.biology-timeline-panel #biology-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.biology-event-card { padding: 16px; border: 1px solid #dce8e6; border-radius: 14px; background: #fff; box-shadow: 0 3px 12px rgba(22, 76, 91, .04); transition: transform .2s ease, box-shadow .2s ease; }
+.biology-event-card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(22, 76, 91, .12); }
+.biology-event-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.biology-event-card-top time { color: #879797; font-size: 9px; }
+.biology-event-badge { padding: 4px 8px; border-radius: 99px; background: #fff9d9; color: #8a6a00; font-size: 8px; font-weight: 900; letter-spacing: .07em; }
+.biology-event-card.status-normal .biology-event-badge { background: #e8f7e9; color: #24743a; }
+.biology-event-card.status-anomalia .biology-event-badge { background: #fff0df; color: #b4570f; }
+.biology-event-card.status-alerta .biology-event-badge { background: #ffe4e4; color: #c13030; }
+.biology-event-card h4 { margin: 12px 0 7px; color: #173642; font-size: 14px; line-height: 1.35; }
+.biology-event-card p { display: -webkit-box; min-height: 32px; margin: 0; overflow: hidden; color: #647779; font-size: 11px; line-height: 1.45; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.biology-event-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 14px; padding-top: 10px; border-top: 1px solid #edf2f1; color: #849391; font-size: 9px; }
+.biology-history-link { border: 0; padding: 0; background: transparent; color: #287b7a; cursor: pointer; font-size: 9px; font-weight: 800; }
+.biology-history-link:hover { text-decoration: underline; }
+.biology-type-card::after { content: ""; display: block; width: 100%; height: 4px; margin-top: 14px; border-radius: 99px; background: linear-gradient(90deg, #dce8e6 0 45%, #eef3f2 45%); }
+.biology-type-card { padding: 20px; border-radius: 16px; }
+.biology-risk-dashboard { display: grid; grid-template-columns: 1.05fr 1.25fr; gap: 18px; align-items: stretch; margin-bottom: 18px; padding: 22px; border-radius: 18px; background: linear-gradient(135deg, #f7fcfb, #fff); }
+.biology-risk-main h3 { margin: 5px 0 14px; color: #173642; font-size: 20px; }
+.biology-risk-score-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.biology-risk-score-row strong { color: #2f8e50; font-size: 42px; letter-spacing: -.05em; }
+.biology-risk-score-row strong small { color: #789092; font-size: 15px; letter-spacing: 0; }
+.biology-risk-score-row span { padding: 6px 10px; border-radius: 99px; background: #e8f7e9; color: #24743a; font-size: 9px; font-weight: 900; letter-spacing: .06em; }
+.biology-risk-score-row span.status-atencao { background: #fff9d9; color: #8a6a00; }
+.biology-risk-score-row span.status-anomalia { background: #fff0df; color: #b4570f; }
+.biology-risk-score-row span.status-alerta { background: #ffe4e4; color: #c13030; }
+.biology-risk-main p { max-width: 390px; margin: 10px 0 0; color: #6c7e80; font-size: 11px; line-height: 1.5; }
+.biology-risk-chart-wrap { padding: 12px 12px 8px; border: 1px solid #dce8e6; border-radius: 12px; background: #fbfefd; }
+.biology-risk-chart-label { color: #66807c; font-size: 8px; font-weight: 900; letter-spacing: .1em; }
+.biology-risk-sparkline { display: block; width: 100%; height: 112px; margin-top: 5px; overflow: visible; }
+.biology-risk-sparkline path { fill: none; stroke: #3d9b62; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 3px 3px rgba(61,155,98,.18)); }
+.biology-risk-metrics { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+.biology-risk-metrics > div { padding: 11px; border: 1px solid #dce8e6; border-radius: 10px; background: #fff; }
+.biology-risk-metrics span, .biology-risk-metrics small { display: block; color: #829391; font-size: 8px; font-weight: 800; letter-spacing: .06em; }
+.biology-risk-metrics strong { display: block; margin: 5px 0 3px; color: #2b5554; font-size: 12px; }
+.biology-signal-concentration { grid-column: 1 / -1; padding: 12px 14px; border: 1px solid #dce8e6; border-radius: 10px; background: #fbfefd; }
+.biology-signal-concentration > span { display: block; margin-bottom: 8px; color: #66807c; font-size: 8px; font-weight: 900; letter-spacing: .1em; }
+.biology-category-bar { margin: 9px 0; }
+.biology-category-bar > div { display: flex; justify-content: space-between; gap: 10px; color: #365355; font-size: 10px; }
+.biology-category-bar strong { color: #287b7a; font-size: 10px; }
+.biology-category-bar i { display: block; height: 7px; margin-top: 5px; overflow: hidden; border-radius: 99px; background: #e1ecea; }
+.biology-category-bar em { display: block; height: 100%; border-radius: inherit; background: #3d9b8b; }
+.biology-category-bar:nth-of-type(3) em { background: #e1be26; }
+.biology-signal-concentration > small { display: block; margin-top: 9px; color: #849391; font-size: 8px; }
+@media (max-width: 760px) { .biology-risk-dashboard { grid-template-columns: 1fr; } .biology-risk-metrics { grid-column: auto; grid-template-columns: 1fr; } }
+.biology-type-card.status-normal::after { background: linear-gradient(90deg, #55ad6e 0 72%, #e2f1e4 72%); }
+.biology-type-card.status-atencao::after { background: linear-gradient(90deg, #e1be26 0 58%, #fff4bd 58%); }
+.biology-type-card.status-anomalia::after { background: linear-gradient(90deg, #ed791f 0 76%, #ffe1c6 76%); }
+.biology-type-card.status-alerta::after { background: linear-gradient(90deg, #ef4444 0 88%, #ffd0d0 88%); }
+@media (max-width: 680px) { .biology-timeline-panel #biology-list { grid-template-columns: 1fr; } }
+
+/* Radar de inteligência: biologia humana */
+.biology-signal-types { gap: 16px; margin: 22px 0 26px; }
+.biology-verifier { margin: 24px 0; padding: 24px; border-radius: 16px; }
+.biology-signal-types { gap: 18px; margin: 24px 0; }
+.biology-type-card { display: flex; gap: 16px; min-height: 0; padding: 24px; border: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-radius: 16px; background: #fff; box-shadow: 0 4px 14px rgba(15, 23, 42, .05); }
+.biology-type-card::after { display: none; }
+.biology-type-head { display: block; flex: 0 0 auto; }
+.biology-type-icon { width: 44px; height: 44px; border-radius: 14px; background: #f1f5f9; font-size: 22px; }
+.biology-type-content { min-width: 0; flex: 1; }
+.biology-category-label { display: block; color: #94a3b8; font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+.biology-location { display: block; margin-top: 13px; color: #475569; font-size: 10px; font-weight: 900; letter-spacing: .06em; }
+.biology-type-card h3 { margin: 8px 0 8px; color: #1e293b; font-size: 18px; line-height: 1.2; }
+.biology-type-card .biology-impact { min-height: 17px; margin: 0; overflow: hidden; color: #64748b; font-size: 11px; line-height: 1.5; text-overflow: ellipsis; white-space: nowrap; }
+.biology-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 20px; padding-top: 13px; border-top: 1px solid #f1f5f9; }
+.biology-card-footer .biology-classification { padding: 5px 9px; border-radius: 999px; background: #fef3c7; color: #b45309; font-size: 9px; font-weight: 800; letter-spacing: .04em; }
+.biology-type-card.status-normal .biology-classification { background: #ecfdf5; color: #047857; }
+.biology-type-card.status-anomalia .biology-classification { background: #ffedd5; color: #c2410c; }
+.biology-type-card.status-alerta .biology-classification { background: #fee2e2; color: #b91c1c; }
+.biology-card-footer .biology-card-data { color: #94a3b8; font-size: 10px; white-space: nowrap; }
+.biology-oms-data { display: none; }
+.biology-timeline-panel { margin-top: 24px; padding: 24px; border-color: #f1f5f9; border-radius: 16px; box-shadow: 0 4px 14px rgba(15, 23, 42, .05); }
+.biology-timeline { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+.biology-news-card { min-width: 0; padding: 18px; border: 1px solid #f1f5f9; border-radius: 14px; background: #fff; box-shadow: 0 3px 10px rgba(15, 23, 42, .04); }
+.biology-news-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.biology-news-card time { color: #94a3b8; font-size: 10px; }
+.biology-news-card h4 { margin: 14px 0 10px; color: #1e293b; font-size: 15px; line-height: 1.35; }
+.biology-news-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.biology-news-chips span { padding: 5px 8px; border-radius: 7px; background: #f8fafc; color: #475569; font-size: 10px; font-weight: 700; }
+.biology-news-card p { display: -webkit-box; min-height: 32px; margin: 0; overflow: hidden; color: #64748b; font-size: 11px; line-height: 1.45; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.biology-news-card > a { display: inline-block; margin-top: 14px; color: #64748b; font-size: 10px; font-weight: 700; text-decoration: none; }
+.biology-news-card > a:hover { color: #0f766e; }
+.biology-news-card.status-atencao .biology-event-badge { background: #fffbeb; color: #b45309; }
+.biology-risk-main h3 { max-width: 460px; }
+.biology-risk-main p { max-width: 560px; color: #334155; font-weight: 600; }
+.biology-risk-thermometer { width: 100%; height: 10px; margin: 14px 0 10px; overflow: hidden; border-radius: 999px; background: #fee2e2; }
+.biology-risk-thermometer span { display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #f59e0b, #f97316 55%, #dc2626); transition: width .5s ease; }
+.biology-risk-justification { margin-top: 8px !important; color: #475569 !important; font-size: 11px !important; line-height: 1.5 !important; font-weight: 600; }
+.biology-risk-score-row { align-items: flex-start; flex-direction: column; gap: 8px; }
+.biology-risk-score-row strong { color: #dc2626 !important; }
+.biology-risk-score-row span { background: #fff1f2; color: #be123c; }
+.biology-risk-dashboard { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; padding: 24px; background: #f8fafc; }
+.biology-pandemic-focus { padding: 22px; border: 1px solid #e2e8f0; border-radius: 16px; background: rgba(255,255,255,.8); box-shadow: 0 4px 14px rgba(15,23,42,.04); }
+.biology-pandemic-focus h3 { margin: 10px 0 20px; color: #1e293b; font-size: 19px; line-height: 1.25; }
+.biology-dispersion-data { display: grid; gap: 14px; }
+.biology-dispersion-data span { display: grid; grid-template-columns: 24px 1fr; gap: 2px 8px; color: #64748b; font-size: 12px; }
+.biology-dispersion-data b { color: #94a3b8; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+.biology-dispersion-data strong { grid-column: 2; color: #334155; font-size: 12px; }
+.biology-focus-criterion { display: inline-block; margin-top: 20px; padding: 6px 9px; border-radius: 999px; background: #ecfdf5; color: #047857; font-size: 9px; font-weight: 800; letter-spacing: .06em; }
+.biology-geographic-spread { display: grid; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1px solid #e2e8f0; color: #475569; font-size: 11px; line-height: 1.4; }
+.biology-geographic-spread > strong { font-weight: 800; }
+.biology-geographic-spread > strong b { color: #0f172a; }
+.biology-country-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.biology-country-tags span { padding: 5px 8px; border: 1px solid #e2e8f0; border-radius: 999px; background: #f8fafc; color: #334155; font-size: 10px; font-weight: 700; }
+.biology-risk-status.status-baixo { background: #dcfce7; color: #15803d; }
+.biology-risk-status.status-medio { background: #fef9c3; color: #a16207; }
+.biology-risk-status.status-alto { background: #ffedd5; color: #c2410c; }
+.biology-risk-status.status-critico { background: #fee2e2; color: #b91c1c; }
+.biology-anomaly-badge { display: inline-block; margin: 4px 0 12px; padding: 8px 11px; border-radius: 999px; background: #fff7ed; color: #c2410c; font-size: 11px; font-weight: 900; letter-spacing: .04em; }
+.biology-dispersion-ruler { margin-top: 12px; padding: 8px 10px; border-radius: 8px; background: #fff7ed; color: #c2410c; font-size: 11px; font-weight: 800; }
+.biology-risk-score-row strong, .biology-risk-thermometer { display: none; }
+.biology-risk-main h3 { margin-bottom: 6px; }
+.biology-risk-main { padding: 2px; }
+.footer-refresh-note { color: #64748b; font-weight: 700; }
+.biology-regional-status { grid-column: 1 / -1; padding: 12px 15px; border-radius: 10px; background: #e2e8f0; color: #334155; font-size: 10px; font-weight: 700; line-height: 1.45; }
+.biology-risk-dashboard > .biology-risk-metrics { grid-column: 1 / -1; }
+@media (max-width: 760px) { .biology-risk-dashboard { grid-template-columns: 1fr; } .biology-regional-status { grid-column: auto; } }
+@media (max-width: 680px) { .biology-signal-types, .biology-timeline { grid-template-columns: 1fr; } }
 .ocean-mhw-metrics > div { padding: 10px 8px; border: 1px solid #e1d8d0; background: #fffaf5; }
 .ocean-mhw-metrics small { display: block; color: #8b7667; font-size: 7px; font-weight: 900; letter-spacing: .06em; }
 .ocean-mhw-metrics b { display: block; margin-top: 5px; color: #c35b1c; font-size: 17px; line-height: 1.15; }
@@ -2032,6 +2291,26 @@ footer strong {
 .enso-probability em.lanina { background: #4385ad; }
 .enso-probability em.elnino { background: #d85a4a; }
 @media (max-width: 900px) { #ocean .dashboard-grid { grid-template-columns: 1fr; } }
+
+/* Tradução de dados da aba Oceanos */
+.enso-impact.drought { background:#fffbeb; }
+#ocean .dashboard-grid > .panel { height: 100%; min-height: 520px; }
+.ocean-card-score { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; padding:9px 11px; border-left:4px solid #d0a900; background:#fff9df; color:#8a6a00; }
+.ocean-card-score.status-anomalia { border-color:#ed791f; background:#fff1e5; color:#c35b0d; }
+.ocean-card-score span { font-size:9px; font-weight:900; letter-spacing:.06em; }
+.ocean-card-score strong { font-size:22px; line-height:1; }.ocean-card-score strong span { font-size:10px; }
+.ocean-hotspot-alert { margin-top:10px; padding:10px; border:1px solid #f3a06c; border-radius:8px; background:#fff0e5; color:#bd4b12; font-size:10px; line-height:1.4; }
+.ocean-region-progress { display:grid; gap:14px; margin-top:16px; }.ocean-region-progress > div > div { display:flex; justify-content:space-between; gap:8px; color:#365355; font-size:10px; }.ocean-region-progress strong { color:#bf6226; }.ocean-region-progress i { display:block; height:8px; margin-top:6px; overflow:hidden; border-radius:99px; background:#f1e7df; }.ocean-region-progress em { display:block; height:100%; border-radius:inherit; background:linear-gradient(90deg,#facc15,#e8752e); }
+.ocean-enso-refactor { padding:0 2px; }.ocean-enso-phase { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; color:#365355; font-size:9px; }.ocean-enso-phase b { color:#c35b0d; font-size:12px; }.enso-impact-grid { display:grid; gap:10px; margin-top:10px; }.enso-impact { padding:12px; border:1px solid; border-radius:9px; font-size:10px; line-height:1.45; }.enso-impact p { margin:7px 0 0; color:#526a72; }.enso-impact.flood { border-color:#bfdbfe; background:rgba(239,246,255,.78); color:#1d4ed8; }.enso-impact.drought { border-color:#fcd34d; background:rgba(fffbeb,.78); color:#a16207; }
+.ocean-mini-radar { margin:10px 0; padding:8px; border:1px solid #b9d8dc; border-radius:10px; background:radial-gradient(circle at 20% 45%,#d9f4f4,#eff8f7 55%,#dcefee); }.ocean-mini-radar svg { display:block; width:100%; height:115px; }.ocean-mini-radar path { fill:none; stroke:#73aeb2; stroke-width:2; opacity:.8; }.ocean-mini-radar circle { fill:#f97316; stroke:#fff; stroke-width:2; filter:drop-shadow(0 0 5px #f97316); }.ocean-mini-radar text { fill:#37666a; font-size:11px; font-weight:900; letter-spacing:1px; }
+.ocean-enso-kpi { margin: 10px 0; padding: 12px 14px; border: 1px solid #ead3c0; background: linear-gradient(135deg, #fff8f0, #fff); }
+.ocean-enso-kpi small { display: block; color: #8b6a4a; font-size: 8px; font-weight: 900; letter-spacing: .08em; }
+.ocean-enso-kpi strong { display: block; margin: 4px 0 5px; color: #c45f20; font-size: 30px; line-height: 1; letter-spacing: -.03em; }
+.ocean-enso-kpi p { margin: 0; color: #7a8582; font-size: 9px; line-height: 1.45; }
+.ocean-mini-radar .ocean-map-label { fill: #1e555d; font-size: 9px; letter-spacing: 0; paint-order: stroke; stroke: #eff8f7; stroke-width: 3px; }
+.ocean-radar-technical { display: block; margin-top: 7px; color: #82918f; font-size: 8px; line-height: 1.4; }
+.ocean-risk-content .ocean-threat-section { padding:11px 0; }.ocean-risk-content .ocean-threat-section p { margin-top:7px; }.ocean-threat-badge { flex-shrink:0; }
+.enso-phase-callout { display:grid; gap:5px; margin:0 0 12px; padding:11px 12px; border:1px solid #f3c27b; border-radius:9px; background:rgba(255,247,237,.78); color:#9a4d12; }.enso-phase-callout b { font-size:10px; letter-spacing:.03em; }.enso-phase-callout span { color:#6b7371; font-size:9px; line-height:1.4; }.enso-impact { display:grid; gap:7px; padding:12px; border-color:#cbd5e1; background:rgba(248,250,252,.6); }.enso-impact.flood { background:rgba(239,246,255,.2); border-color:#bfdbfe; }.enso-impact.drought { background:rgba(255,251,235,.2); border-color:#fcd34d; }.enso-region { display:block; color:#27484c; font-size:11px; }.enso-impact-badge { display:inline-block; width:max-content; padding:5px 7px; border-radius:999px; background:#dbeafe; color:#1d4ed8; font-size:8px; font-weight:900; letter-spacing:.03em; }.enso-impact.drought .enso-impact-badge { background:#fef3c7; color:#a16207; }
 .earth-dashboard-title { width: fit-content; margin: 0 auto 18px; padding: 10px 28px; border: 2px solid #7d8989; border-radius: 8px; background: linear-gradient(#f3f5f4, #aeb7b6 48%, #eef1f0); box-shadow: 0 3px 0 #5c6868, 0 6px 10px rgba(33,55,57,.2); color: #162528; font-size: 11px; font-weight: 900; letter-spacing: .08em; text-align: center; }
 .earth-search-panel { margin-bottom: 24px; }
 .earth-search-panel { display: grid; grid-template-columns: 1fr 1.1fr; gap: 18px; align-items: center; margin-bottom: 16px; padding: 20px; border-radius: 18px; background: #fff; border: 1px solid #e0e9e9; }
@@ -2063,6 +2342,49 @@ footer strong {
 .earth-verification-points span { display: flex; align-items: flex-start; gap: 9px; color: #53676b; font-size: 11px; line-height: 1.45; }
 .earth-verification-points b { flex: 0 0 21px; height: 21px; border-radius: 50%; display: grid; place-items: center; background: #d3ece9; color: #236a70; }
 .earth-method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.earth-category-tabs { display: none; }
+.earth-secondary-monitoring { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+.earth-method-step { border: 1px solid #dbe5e4; border-radius: 14px; background: #fff; box-shadow: 0 4px 14px rgba(22,76,91,.05); }
+.earth-secondary-card { min-height: 260px; padding: 22px 20px 19px; border: 1px solid #dbe5e4; border-top-width: 1px; border-radius: 14px; background: #fff; box-shadow: 0 4px 14px rgba(22,76,91,.05); }
+.earth-global-thermometer { padding: 4px 0; text-align: left; }
+.earth-global-thermometer .earth-index-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.earth-global-thermometer .earth-index-heading strong { color: #173642; font-size: 30px; }
+.earth-global-thermometer .earth-index-track { margin: 14px 0 8px; }
+.earth-global-pillars { display: grid; gap: 10px; margin-top: 18px; }
+.earth-global-pillar > div { display: flex; justify-content: space-between; gap: 10px; color: #647779; font-size: 10px; }
+.earth-global-pillar strong { color: #334e52; font-size: 10px; }
+.earth-global-pillar > i { display: block; height: 7px; margin-top: 5px; overflow: hidden; border-radius: 999px; background: #e7eeee; }
+.earth-global-pillar > i em { display: block; height: 100%; border-radius: inherit; background: #7daaa0; }
+.earth-global-pillar:nth-child(1) > i em { background: #f97316; }.earth-global-pillar:nth-child(2) > i em { background: #f59e0b; }.earth-global-pillar:nth-child(3) > i em { background: #a855f7; }.earth-global-pillar:nth-child(4) > i em { background: #0891b2; }
+.earth-global-pillar:nth-child(1) strong::after { content: "FOCO CRÍTICO"; }.earth-global-pillar:nth-child(2) strong::after { content: "ELEVADO"; }.earth-global-pillar:nth-child(3) strong::after { content: "MODERADO"; }.earth-global-pillar:nth-child(4) strong::after { content: "ESTÁVEL"; }
+.earth-global-pillar strong::after { display: inline-block; margin-left: 6px; padding: 3px 5px; border-radius: 5px; background: #f1f5f9; color: #64748b; font-size: 7px; letter-spacing: .04em; }
+.earth-global-pillar.is-focus strong { color: #c2410c; font-weight: 900; }.earth-global-pillar.is-focus > i em { background: #f97316; }
+.earth-global-highlights { margin-top: 22px; padding-top: 16px; border-top: 1px solid #dbe5e4; }.earth-global-highlights > span { color: #829391; font-size: 8px; font-weight: 900; letter-spacing: .1em; }.earth-global-highlights p { margin: 8px 0 0; color: #52696b; font-size: 10px; line-height: 1.4; }.earth-global-highlights b { color: #20373c; }
+.earth-method-step:nth-child(2) .earth-index-track, .earth-method-step:nth-child(2) .earth-index-labels { display: none; }
+.earth-global-alert .earth-global-thermometer, .earth-global-alert .earth-index-heading strong { color: #b91c1c; }.earth-global-alert .earth-index-track i { background: #dc2626; }
+.earth-global-anomaly .earth-index-track i { background: #f97316; }.earth-global-attention .earth-index-track i { background: #eab308; }.earth-global-normal .earth-index-track i { background: #22c55e; }
+.earth-global-note { margin: 14px 0 0; color: #829391; font-size: 10px; }
+.earth-method-step .earth-activity-chart { display: none; }
+.earth-secondary-card.volcano { border-top-color: #f97316; }.earth-secondary-card.landslide { border-top-color: #ca8a04; }.earth-secondary-card.fire { border-top-color: #dc2626; }
+.earth-secondary-card-head { display: flex; align-items: center; gap: 9px; }.earth-secondary-card-head .section-kicker { flex: 1; }
+.earth-secondary-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 11px; background: #edf4f3; font-size: 20px; }
+.earth-secondary-card h3 { margin: 10px 0 14px; color: #20373c; font-size: 17px; }
+.earth-secondary-signal { display: grid; gap: 6px; padding: 13px; border-radius: 10px; background: #f8fafc; color: #64748b; font-size: 10px; line-height: 1.45; }
+.earth-secondary-signal strong { font-size: 11px; }.earth-status.normal { color: #15803d; }.earth-status.attention { color: #a16207; }.earth-status.anomaly { color: #c2410c; }.earth-status.critical { color: #b91c1c; }
+.earth-secondary-metric { display: grid; gap: 5px; margin-top: 16px; padding-top: 13px; border-top: 1px solid #edf2f1; }.earth-secondary-metric span, .earth-secondary-index span { color: #94a3b8; font-size: 8px; font-weight: 900; letter-spacing: .1em; }.earth-secondary-metric strong { color: #334155; font-size: 13px; }.earth-secondary-metric small { color: #94a3b8; font-size: 9px; }
+.earth-secondary-index { display: flex; align-items: end; justify-content: space-between; gap: 10px; margin-top: 18px; }.earth-secondary-index strong { font-size: 25px; }.earth-score.normal { color: #15803d; }.earth-score.attention { color: #a16207; }.earth-score.anomaly { color: #c2410c; }.earth-score.critical { color: #b91c1c; }.earth-secondary-index strong small { color: #94a3b8; font-size: 11px; }
+@media (max-width: 900px) { .earth-secondary-monitoring { grid-template-columns: 1fr; } }
+.earth-dashboard-title { display: none; }
+.earth-category-tab { flex: 1 1 190px; padding: 10px 12px; border: 0; border-radius: 10px; background: transparent; color: #647779; cursor: pointer; font: inherit; font-size: 11px; font-weight: 800; text-align: left; }
+.earth-category-tab small { display: block; margin-top: 3px; color: #94a3b8; font-size: 8px; font-weight: 600; }
+.earth-category-tab.active { background: #123f4d; color: #fff; box-shadow: 0 4px 10px rgba(18,63,77,.16); }
+.earth-category-tab.active small { color: #c7e5e4; }
+.earth-category-card { border-top: 3px solid #dbe5e4; }
+.earth-category-card.volcano { border-top-color: #f97316; }
+.earth-category-card.landslide { border-top-color: #a16207; }
+.earth-category-card.fire { border-top-color: #dc2626; }
+.earth-category-empty { display: grid; gap: 6px; margin: 16px 0; padding: 14px; border-radius: 10px; background: #f8fafc; color: #475569; }
+.earth-category-empty small { color: #94a3b8; font-size: 10px; }
 .earth-method-step { position: relative; border: 1px solid #dbe5e4; background: #fff; padding: 22px 20px 19px; min-height: 260px; }
 .earth-step-number { position: absolute; top: 18px; right: 19px; color: #b2c5c5; font-size: 11px; font-weight: 900; letter-spacing: .08em; }
 .earth-step-icon { display: grid; place-items: center; width: 34px; height: 34px; margin-bottom: 19px; border-radius: 50%; background: #e7f3f1; color: #2b7477; font-size: 17px; }
@@ -2722,6 +3044,9 @@ footer strong {
 .ai-event-card { margin-bottom: 10px; padding: 14px; border-left: 4px solid var(--status-color, #94a3b8); border-radius: 11px; background: #fff; }
 .ai-event-head { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
 .ai-event-head small { color: #84969d; font-size: 9px; }
+.ai-event-date { display: flex; align-items: center; gap: 5px; margin-top: 9px; color: #84969d; font-size: 9px; }
+.ai-event-date span { font-weight: 700; }
+.ai-event-date strong { color: #365b64; font-weight: 800; }
 .ai-event-card h3 { margin: 8px 0 5px; color: #173642; font-size: 12px; }
 .ai-event-card p { color: #6b8188; font-size: 10px; line-height: 1.5; }
 .ai-event-card a { display: inline-block; margin-top: 8px; color: #008da9; font-size: 9px; font-weight: 800; text-decoration: none; }
@@ -2735,7 +3060,13 @@ footer strong {
 .ai-page-button { padding: 8px 11px; border: 1px solid #c9dce0; border-radius: 8px; background: #fff; color: #35616b; cursor: pointer; font-size: 9px; font-weight: 800; }
 .ai-page-button:disabled { cursor: not-allowed; opacity: .4; }
 .ai-summary-card { position: relative; overflow: hidden; }
+.ai-autonomy-banner{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:18px 0;padding:18px 20px;border:1px solid #cbd5e1;border-left:4px solid #f97316;border-radius:12px;background:#f8fafc}.ai-autonomy-banner h3{margin-top:5px;color:#0f172a;font-size:15px}.ai-autonomy-banner h3 strong{color:#ea580c}.ai-autonomy-banner p{margin-top:7px;color:#64748b;font-size:10px;line-height:1.5}.ai-risk-badge,.ai-emerging-tag{padding:7px 10px;border-radius:999px;background:#ffedd5;color:#c2410c;font-size:8px;font-weight:900;letter-spacing:.05em;white-space:nowrap}
+.ai-terminal-grid{display:grid;grid-template-columns:1.15fr 1fr 1.15fr;gap:12px;margin-bottom:20px}.ai-terminal-card{min-height:300px;padding:16px;border:1px solid #cbd5e1;border-radius:12px;background:#f8fafc;box-shadow:0 8px 22px rgba(15,23,42,.04)}.ai-terminal-card .ai-card-heading{display:flex;gap:8px;flex-wrap:wrap;color:#334155;font-size:9px;letter-spacing:.04em}.ai-terminal-card .ai-card-heading>span{color:#f97316;font-weight:900}.ai-terminal-card .ai-card-heading strong{flex:1}.ai-terminal-card .ai-card-heading em{width:100%;color:#ea580c;font-size:8px;font-style:normal}.ai-card-copy{margin-top:8px;color:#64748b;font-size:9px;line-height:1.5}.ai-source{display:block;margin-top:14px;color:#94a3b8;font-size:8px}.ai-terminal-card .ai-donut-wrap{margin-top:28px}.ai-terminal-card .ai-donut{background:conic-gradient(#f97316 0 42%,#0ea5e9 42% 77%,#cbd5e1 77% 100%)}.ai-behavior-bars{display:grid;gap:15px;margin-top:26px}.ai-behavior-bars strong{display:block;color:#334155;font-size:9px;line-height:1.3}.ai-behavior-bars strong b{float:right;color:#ea580c}.ai-behavior-bars i{display:block;height:7px;margin:6px 0;border-radius:99px;background:#e2e8f0}.ai-behavior-bars em{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#fb923c,#f97316)}.ai-behavior-bars small{display:block;color:#64748b;font-size:8px;line-height:1.35}.ai-legacy-impact{display:none}
+.ai-event-card p{margin-top:10px;padding:9px 11px;border-left:2px solid #cbd5e1;background:#f8fafc}.ai-event-card p:before{content:"Contexto do Evento";display:block;margin-bottom:4px;color:#475569;font-size:9px;font-weight:900;letter-spacing:.04em}.ai-event-card a{font-size:0}.ai-event-card a:after{content:"Ver Documentação na Base AIID ↗";font-size:9px}#ai .ai-legacy-impact{display:none!important}
+@media (max-width:900px){.ai-terminal-grid{grid-template-columns:1fr}.ai-autonomy-banner{align-items:flex-start;flex-direction:column}}
+.ai-impact-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;margin-bottom:20px}.ai-impact-grid+.ai-signal-types{display:none}.ai-chart-card,.ai-metric-card{display:block;min-height:220px;padding:15px;border-color:#cbd5e1;background:#f8fafc}.ai-card-heading{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;color:#334155;font-size:9px;letter-spacing:.04em}.ai-card-heading>span{color:#f97316;font-weight:900}.ai-card-heading strong{flex:1}.ai-card-heading em{width:100%;color:#ea580c;font-size:8px;font-style:normal}.ai-line-chart{width:100%;height:145px;margin-top:10px}.ai-chart-grid{stroke:#dbe4ee;stroke-width:1}.ai-area{fill:url(#aiArea)}.ai-line{fill:none;stroke:#f97316;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.ai-line-chart circle{fill:#fff;stroke:#f97316;stroke-width:3}.ai-chart-axis{display:flex;justify-content:space-between;color:#94a3b8;font-size:7px}.ai-donut-wrap{display:flex;align-items:center;gap:14px;margin-top:20px}.ai-donut{display:grid;place-items:center;width:112px;height:112px;border-radius:50%;background:conic-gradient(#f97316 0 42%,#0ea5a8 42% 77%,#64748b 77% 100%)}.ai-donut:before{content:"";position:absolute;width:73px;height:73px;border-radius:50%;background:#f8fafc}.ai-donut span{position:relative;z-index:1;color:#0f172a;font-size:20px;font-weight:900;text-align:center}.ai-donut small{display:block;color:#64748b;font-size:7px}.ai-legend{display:grid;gap:8px;color:#64748b;font-size:8px}.ai-legend span{display:flex;align-items:center;gap:5px}.ai-legend i{width:8px;height:8px;border-radius:2px;background:#f97316}.ai-legend i.data{background:#0ea5a8}.ai-legend i.vision{background:#64748b}.ai-legend b{margin-left:auto;color:#334155}.ai-incident-count{display:block;margin:32px 0 10px;color:#0f172a;font-size:38px;line-height:1}.ai-incident-count small{color:#64748b;font-size:11px}.ai-scanline{height:5px;margin:20px 0 12px;border-radius:99px;background:linear-gradient(90deg,#f97316 0 64%,#e2e8f0 64%)}.ai-metric-card p{color:#64748b;font-size:9px;line-height:1.5}.ai-event-context{margin-top:10px;padding:9px 11px;border-left:2px solid #cbd5e1;background:#f8fafc}.ai-event-context strong{color:#475569;font-size:9px}.ai-category-tag{display:inline-block;margin-top:9px;padding:5px 7px;border-radius:999px;background:#e2e8f0;color:#475569;font-size:8px;font-weight:800}
 .ai-summary-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--status-color, #94a3b8); }
+#ai{background:linear-gradient(180deg,#eef2f7 0%,#f8fafc 38%,#eef2f7 100%)}#ai .ai-terminal-grid{align-items:stretch}#ai .ai-terminal-card{height:100%;box-sizing:border-box;background:#f8fafc;border-color:#cbd5e1}#ai .ai-terminal-card .ai-source{margin-top:auto;padding-top:14px}
 
 @media (max-width: 800px) {
     .ai-verifier, .ai-signal-types { grid-template-columns: 1fr; }
@@ -2743,6 +3074,10 @@ footer strong {
     .ai-action { min-height: 42px; }
     .ai-list-toolbar { align-items: flex-start; flex-direction: column; }
 }
+#news .news-investigative-card{background:#f8fafc!important;border-top:1px solid #cbd5e1!important;border-right:1px solid #cbd5e1!important;border-bottom:1px solid #cbd5e1!important}#news .news-investigative-card.status-normal{border-left:4px solid #35a853!important}#news .news-investigative-card.status-atencao{border-left:4px solid #d0a900!important}#news .news-investigative-card.status-anomalia{border-left:4px solid #ed791f!important}#news .news-investigative-card.status-alerta{border-left:4px solid #d23a3a!important}#news .news-hero-card{background:linear-gradient(135deg,#46666c,#58777b)!important;border:1px solid #6f9698!important;border-left:4px solid #f97316!important}
+#news .news-investigative-card{background:linear-gradient(135deg,#46666c,#58777b)!important;border-color:#6f9698!important;color:#e6f4f3!important;box-shadow:0 8px 22px rgba(44,76,82,.18)}#news .news-investigative-card h3{color:#fff!important}#news .news-investigative-card p{color:#d7e7e6!important}#news .news-investigative-card footer{border-color:rgba(215,231,230,.25)!important;background:transparent!important;color:#c5d9d8!important}#news .news-investigative-card footer a{color:#9de5db!important}#news .news-investigative-card .news-domain{color:#e1efee!important}#news .news-investigative-card .news-card-meta>span:last-child{color:#c5d9d8!important}
+.news-pagination{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px 0;color:#64748b;font-size:10px;font-weight:800}.news-pagination button{padding:8px 11px;border:1px solid #cbd5e1;border-radius:8px;background:#fff;color:#0f766e;cursor:pointer;font-size:9px;font-weight:800}.news-pagination button:disabled{cursor:not-allowed;opacity:.4}#news-list .news-investigative-card[hidden],#news-list-extra .news-investigative-card[hidden]{display:none!important}
+.news-hero-card{background:linear-gradient(135deg,#46666c,#58777b);border-left-color:#f97316;color:#e6f4f3}.news-hero-card h3{color:#fff}.news-hero-card .news-domain,.news-hero-card .news-card-meta>span:last-child{color:#d7e7e6}.news-analysis{background:rgba(15,52,59,.32);border-left-color:#7dd3c7;color:#e6f4f3}.news-hero-actions a{background:#f8fafc}.news-investigative-card{border-left:3px solid #94a3b8;background:#f8fafc}.news-investigative-card.status-normal{border-left-color:#35a853}.news-investigative-card.status-atencao{border-left-color:#d0a900}.news-investigative-card.status-anomalia{border-left-color:#ed791f}.news-investigative-card.status-alerta{border-left-color:#d23a3a}.news-severity.alerta{background:#fee2e2;color:#b91c1c}.news-severity.anomaly{background:#ffedd5;color:#c2410c}.news-severity.attention{background:#fef9c3;color:#a78300}.news-severity.normal{background:#dcfce7;color:#24743a}
 .biology-event-item { padding: 13px 0; border-bottom: 1px solid rgba(20, 100, 120, .10); border-left: 3px solid var(--status-color, #94a3b8); padding-left: 10px; }
 .biology-event-item:last-child { border-bottom: 0; }
 .biology-event-head { display: flex; justify-content: space-between; gap: 8px; }
@@ -2750,6 +3085,59 @@ footer strong {
 .biology-event-item h4 { margin: 7px 0 4px; color: #173642; font-size: 11px; line-height: 1.35; }
 .biology-event-item p { color: #6b8188; font-size: 10px; line-height: 1.45; }
 .biology-event-source { display: block; margin-top: 6px; color: #00a3c2; font-size: 9px; }
+#news .news-investigative-card{background:#f8fafc!important;border:1px solid #cbd5e1!important;border-left:1px solid #cbd5e1!important;color:inherit!important;box-shadow:0 8px 24px rgba(15,23,42,.05)!important}#news .news-investigative-card h3{color:#0f172a!important}#news .news-investigative-card p{color:#64748b!important}#news .news-investigative-card footer{border-color:#e2e8f0!important;background:transparent!important;color:#94a3b8!important}#news .news-investigative-card footer a{color:#0f766e!important}#news .news-investigative-card .news-domain{color:#64748b!important}#news .news-investigative-card .news-card-meta>span:last-child{color:#94a3b8!important}#news .news-hero-card{background:#f8fafc!important;border:1px solid #cbd5e1!important;border-left:4px solid #f97316!important;color:inherit!important}#news .news-hero-card h3{color:#0f172a!important}#news .news-analysis{background:#ecfeff!important;color:#475569!important}
+
+/* Feed de inteligência: leitura rápida, hierarquia editorial e status visível. */
+#news .news-radar-filters { margin: 24px 0 20px; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 16px; background: rgba(248,250,252,.72); }
+#news .news-radar-filters > div { gap: 7px; }
+#news .news-radar-filters .panel-kicker { margin-right: 7px; color: #64748b; font-size: 9px; letter-spacing: .12em; }
+#news .news-filter { padding: 8px 13px; border: 1px solid #e2e8f0; border-radius: 999px; background: #fff; color: #475569; font-size: 10px; font-weight: 800; transition: all .2s ease; }
+#news .news-filter:hover { border-color: #94a3b8; transform: translateY(-1px); }
+#news .news-filter.active { border-color: #0f172a; background: #0f172a; color: #fff; box-shadow: 0 4px 10px rgba(15,23,42,.15); }
+#news .news-hero-card { margin-bottom: 22px; padding: 30px 32px; border: 0 !important; border-left: 6px solid #f97316 !important; border-radius: 20px; background: linear-gradient(135deg,#172433,#263b4a) !important; box-shadow: 0 16px 32px rgba(15,23,42,.14); color: #e2e8f0; }
+#news .news-hero-card h3 { max-width: 900px; margin: 12px 0 20px; color: #fff !important; font-size: 2rem; line-height: 1.12; letter-spacing: -.035em; }
+#news .news-hero-card .news-domain, #news .news-hero-card .news-card-meta > span:last-child { color: #b8c9d3; }
+#news .news-analysis { max-width: 860px; padding: 16px 18px; border: 1px solid rgba(148,163,184,.18); border-left: 3px solid #5eead4; border-radius: 10px; background: rgba(15,23,42,.32) !important; color: #dbeafe !important; }
+#news .news-analysis strong { color: #99f6e4; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+#news .news-hero-actions { margin-top: 22px; }
+#news .news-hero-actions a, #news .news-hero-actions button { padding: 10px 14px; border-radius: 9px; font-size: 10px; transition: all .2s ease; }
+#news .news-hero-actions a { background: rgba(255,255,255,.08); color: #e2e8f0; }
+#news .news-hero-actions button { background: #14b8a6; color: #062c2a; }
+#news .news-grid { gap: 16px; }
+#news .news-investigative-card { min-height: 205px; padding: 18px 20px; border: 1px solid #e2e8f0 !important; border-left: 4px solid #94a3b8 !important; border-radius: 16px; background: #fff !important; box-shadow: 0 8px 24px rgba(15,23,42,.045) !important; transition: transform .2s ease, box-shadow .2s ease; }
+#news .news-investigative-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(15,23,42,.09) !important; }
+#news .news-investigative-card.status-normal { border-left-color: #22c55e !important; }
+#news .news-investigative-card.status-atencao { border-left-color: #eab308 !important; }
+#news .news-investigative-card.status-anomalia { border-left-color: #f97316 !important; }
+#news .news-investigative-card.status-alerta { border-left-color: #ef4444 !important; }
+#news .news-card-meta .news-severity { display: none; }
+#news .news-domain { margin-top: 0; color: #475569 !important; font-size: 10px; }
+#news .news-investigative-card h3 { margin: 14px 0 9px; font-size: 15px; line-height: 1.28; transition: color .2s ease; }
+#news .news-investigative-card:hover h3 { color: #0f766e !important; }
+#news .news-investigative-card footer { margin-top: 20px; padding-top: 12px; border-top: 1px solid #eef2f7 !important; }
+#news .news-investigative-card footer a { color: #64748b !important; }
+
+/* Terminal territorial nacional */
+#brazil .section-heading h2 { letter-spacing: -.035em; }
+.brazil-national-risk { display:flex; align-items:center; gap:10px; margin:14px 0 10px; flex-wrap:wrap; color:#334155; font-size:11px; font-weight:800; }
+.brazil-national-risk strong { padding:6px 9px; border-radius:999px; background:#ffedd5; color:#c2410c; font-size:9px; letter-spacing:.04em; }
+.brazil-terminal-top { display:grid; grid-template-columns:1.5fr 1fr; gap:18px; margin-top:22px; }
+.brazil-map-panel, .brazil-alerts-panel { padding:18px; border:1px solid #e2e8f0; border-radius:16px; background:#fff; box-shadow:0 8px 22px rgba(15,23,42,.04); }
+.brazil-panel-head { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
+.brazil-panel-head h3 { margin:5px 0 0; color:#0f172a; font-size:15px; }
+.brazil-panel-head > span { color:#64748b; font-size:10px; font-weight:800; }
+.brazil-map { display:block; width:100%; max-height:340px; margin:14px auto 4px; }
+.brazil-region { cursor:pointer; stroke:#fff; stroke-width:3; transition:all .2s ease; }
+.brazil-region:hover { filter:brightness(.9); stroke:#0f172a; stroke-width:5; }
+.brazil-region.status-normal { fill:#4ade80; }.brazil-region.status-atencao { fill:#facc15; }.brazil-region.status-anomalia { fill:#fb923c; }.brazil-region.status-alerta { fill:#f87171; }
+.brazil-map-legend { display:flex; gap:12px; flex-wrap:wrap; color:#64748b; font-size:9px; font-weight:700; }
+.status-dot { display:inline-block; width:8px; height:8px; margin-right:4px; border-radius:50%; }.status-dot.normal{background:#22c55e}.status-dot.atencao{background:#eab308}.status-dot.anomalia{background:#f97316}.status-dot.alerta{background:#ef4444}
+.monitoring-timestamp{display:block;margin-top:8px;color:#64748b;font:700 9px/1.3 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.04em;text-transform:uppercase}.monitoring-timestamp::before{content:"◷ ";color:#0f766e}@media(min-width:760px){.section-heading,.panel-header{position:relative}.section-heading>.monitoring-timestamp,.panel-header>.monitoring-timestamp{position:absolute;right:0;bottom:2px;margin-top:0;text-align:right}}@media(max-width:759px){.monitoring-timestamp{margin-bottom:8px}}
+@media(max-width:900px){.section-heading>.monitoring-timestamp,.panel-header>.monitoring-timestamp{position:static;width:100%;margin-top:8px;margin-bottom:8px;text-align:left}}
+.brazil-alerts-panel { display:grid; gap:10px; align-content:start; }.brazil-alert-card { padding:12px; border-left:4px solid #94a3b8; border-radius:10px; background:#f8fafc; }.brazil-alert-card.status-alerta{border-left-color:#ef4444}.brazil-alert-card.status-anomalia{border-left-color:#f97316}.brazil-alert-card.status-atencao{border-left-color:#eab308}.brazil-alert-badge{display:block; margin-bottom:6px; color:#64748b; font-size:9px; font-weight:900}.brazil-alert-card strong{display:block; color:#1e293b; font-size:12px}.brazil-alert-card p{margin:5px 0; color:#64748b; font-size:10px; line-height:1.4}.brazil-alert-card small{color:#94a3b8; font-size:9px}
+.brazil-region-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; margin-top:18px; }.brazil-region-card { min-height:190px; padding:15px; border:1px solid #e2e8f0; border-left:4px solid #94a3b8; border-radius:13px; background:#fff; transition:opacity .2s, transform .2s, box-shadow .2s; }.brazil-region-card:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(15,23,42,.07)}.brazil-region-card.is-muted{opacity:.35}.brazil-region-card.status-normal{border-left-color:#22c55e}.brazil-region-card.status-atencao{border-left-color:#eab308}.brazil-region-card.status-anomalia{border-left-color:#f97316}.brazil-region-card.status-alerta{border-left-color:#ef4444}.brazil-region-card header{display:flex;justify-content:space-between;gap:8px;align-items:center}.brazil-region-card h3{margin:0;color:#0f172a;font-size:14px}.brazil-region-card header span{font-size:8px;font-weight:900;color:#64748b}.brazil-metric{display:block;margin:22px 0 8px;color:#0f766e;font-size:13px;line-height:1.25}.brazil-region-card p{margin:0;color:#64748b;font-size:10px;line-height:1.45}.brazil-region-card footer{margin-top:18px;color:#94a3b8;font-size:9px}
+@media(max-width:1000px){.brazil-region-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){.brazil-terminal-top{grid-template-columns:1fr}.brazil-region-grid{grid-template-columns:1fr 1fr}}@media(max-width:460px){.brazil-region-grid{grid-template-columns:1fr}}
+@media (max-width: 600px) { #news .news-hero-card { padding: 24px 20px; } #news .news-hero-card h3 { font-size: 1.55rem; } }
 .biology-empty { padding: 18px 0; color: #71868c; font-size: 11px; }
 
 @media (max-width: 800px) {
@@ -2757,3 +3145,15 @@ footer strong {
     .biology-verifier-form { flex-direction: column; }
     .biology-action { min-height: 42px; }
 }
+/* Densidade de crise e pulsar operacional */
+.brazil-region.status-alerta,.brazil-region.status-anomalia{animation:brazil-pulse 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes brazil-pulse{0%,100%{filter:drop-shadow(0 0 0 rgba(239,68,68,0))}50%{filter:drop-shadow(0 0 9px rgba(239,68,68,.8))}}
+.brazil-country-outline{fill:#f8fafc;stroke:#0f766e;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}.brazil-region{stroke:#fff;stroke-width:2;stroke-linejoin:round}.brazil-hotspots circle{fill:#ef4444;stroke:#fff;stroke-width:3;animation:hotspot-ping 1.7s ease-out infinite}.brazil-hotspots circle+circle{animation-delay:.8s}@keyframes hotspot-ping{0%,100%{opacity:1;stroke-width:3;r:7px}70%{opacity:.35;stroke-width:12;r:13px}}
+.brazil-map-svg{display:block;width:100%;height:100%;filter:drop-shadow(0 4px 6px rgba(15,23,42,.12))}.brazil-map-svg .brazil-hotspot{stroke:#fff;stroke-width:3;animation:hotspot-ping 1.7s ease-out infinite}.brazil-map-svg .brazil-hotspot-anomalia{fill:#ea580c}.brazil-map-svg .brazil-hotspot-alerta{fill:#dc2626;animation-delay:.45s}
+.brazil-map-panel{min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center}.brazil-map-panel>.brazil-panel-head{width:100%;margin-bottom:16px}.brazil-map-stage{position:relative;width:100%;max-width:340px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;margin:auto}.brazil-map-stage .brazil-map{width:100%;height:100%;max-height:none;margin:0;filter:drop-shadow(0 2px 3px rgba(15,23,42,.12))}.brazil-map-stage .brazil-region{stroke:#fff;stroke-width:2;cursor:pointer;transition:filter .2s ease}.brazil-map-stage .brazil-region:hover{filter:brightness(.9)}.brazil-map-hotspot{position:absolute;pointer-events:none;display:flex;align-items:center;justify-content:center}.brazil-map-hotspot span{position:absolute;display:inline-flex;border-radius:999px;opacity:.75;animation:map-ping 1.6s cubic-bezier(0,0,.2,1) infinite}.brazil-map-hotspot i{position:relative;display:inline-flex;border-radius:999px;border:2px solid #fff}.hotspot-norte{top:28%;left:38%}.hotspot-norte span{width:20px;height:20px;background:#fb923c}.hotspot-norte i{width:12px;height:12px;background:#ea580c}.hotspot-sudeste{top:58%;left:68%}.hotspot-sudeste span{width:24px;height:24px;background:#f87171}.hotspot-sudeste i{width:14px;height:14px;background:#dc2626}@keyframes map-ping{75%,100%{transform:scale(2);opacity:0}}
+.brazil-region-card header span{font-size:0}.brazil-region-card header span:before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:#94a3b8}.brazil-region-card.status-normal header span:before{background:#22c55e}.brazil-region-card.status-atencao header span:before{background:#eab308}.brazil-region-card.status-anomalia header span:before{background:#f97316}.brazil-region-card.status-alerta header span:before{background:#ef4444}
+.brazil-region-card{min-height:0!important;height:auto!important;padding:14px!important;display:flex;flex-direction:column;background:#fff!important}.brazil-region-card .brazil-signal-list{flex:1;margin-bottom:14px}.brazil-region-card footer{margin-top:auto!important;padding-top:8px;border-top:1px solid #f1f5f9;color:#94a3b8;font:10px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;background:transparent!important;min-height:0!important;height:auto!important}
+.brazil-card-source{margin-top:auto;padding-top:8px;border-top:1px solid #f1f5f9;color:#94a3b8;font:10px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap}
+.brazil-news-feed{margin-top:22px;padding:18px;border:1px solid #e2e8f0;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(15,23,42,.04)}.brazil-feed-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.brazil-feed-head h3{margin:5px 0 0;color:#0f172a;font-size:17px}.brazil-feed-live{color:#dc2626;font:800 9px ui-monospace,SFMono-Regular,Consolas,monospace}.brazil-feed-filters{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}.brazil-feed-filters button{padding:7px 10px;border:1px solid #e2e8f0;border-radius:999px;background:#f8fafc;color:#475569;font-size:9px;font-weight:800;cursor:pointer}.brazil-feed-filters button.active{background:#0f172a;border-color:#0f172a;color:#fff}.brazil-news-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.brazil-news-item{padding:12px;border:1px solid #e2e8f0;border-left:4px solid #94a3b8;border-radius:10px;background:#f8fafc}.brazil-news-item.status-alerta{border-left-color:#ef4444}.brazil-news-item.status-anomalia{border-left-color:#f97316}.brazil-news-item.status-atencao{border-left-color:#eab308}.brazil-news-item time{display:block;color:#0f172a;font:700 9px ui-monospace,SFMono-Regular,Consolas,monospace}.brazil-news-item>span{display:block;margin-top:7px;color:#64748b;font-size:9px;font-weight:800}.brazil-news-item h4{margin:8px 0 5px;color:#1e293b;font-size:11px;line-height:1.3}.brazil-news-item p{margin:0;color:#64748b;font-size:9px;line-height:1.4}@media(max-width:900px){.brazil-news-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.brazil-news-list{grid-template-columns:1fr}.brazil-feed-head{display:block}}
+.brazil-alerts-panel h3{font-size:12px!important;line-height:1.25}.brazil-alert-card{background:#fff;border:1px solid #e2e8f0;box-shadow:0 4px 12px rgba(15,23,42,.04)}.brazil-alert-card time{display:block;margin-bottom:7px;color:#0f172a;font:700 9px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.05em}.brazil-alert-card strong{font-weight:900;color:#0f172a}.brazil-alert-card p{color:#334155}.brazil-alert-card p b,.brazil-alert-card strong b{color:#020617}.brazil-region-grid{align-items:stretch}.brazil-region-card{height:100%;min-height:250px;box-sizing:border-box}.brazil-region-card header span{display:flex;align-items:center;gap:4px}.brazil-region-card header span:first-letter{font-size:13px}.brazil-stress{order:0;margin:13px 0 15px}.brazil-region-card .brazil-metric{order:1;margin:0 0 9px}.brazil-region-card .brazil-signal-list{order:2;margin-bottom:18px}.brazil-region-card footer{order:3;margin-top:auto}.brazil-region-card header{order:-1}.brazil-region-card .brazil-stress i{height:7px}.brazil-region-card .brazil-signal-list li:before{content:"•";font-size:13px;font-weight:900}
+.brazil-region-card{display:flex;flex-direction:column}.brazil-signal-list{display:grid;gap:4px;margin:0 0 13px;padding:0;list-style:none;color:#475569;font-size:9px;font-weight:700}.brazil-signal-list li:before{content:"↗";margin-right:5px;color:#f97316}.brazil-stress{margin-top:auto}.brazil-stress span{display:block;color:#94a3b8;font-size:8px;font-weight:900;letter-spacing:.04em}.brazil-stress strong{display:block;margin:3px 0;color:#334155;font-size:10px}.brazil-stress i{display:block;height:6px;overflow:hidden;border-radius:99px;background:#e2e8f0}.brazil-stress em{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#22c55e,#facc15,#ef4444)}
