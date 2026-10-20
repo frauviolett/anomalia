@@ -3,9 +3,7 @@ import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
-const ROOT = path.resolve(
-  path.dirname(fileURLToPath(import.meta.url))
-);
+const ROOT = path.dirname(fileURLToPath(import.meta.url));
 
 const OUTPUT =
   path.join(
@@ -42,33 +40,6 @@ async function getJSON(url) {
 
   return response.json();
 
-}
-
-async function getText(url) {
-  const response = await fetch(url, { headers: { "User-Agent": "ANOMALIA/2.0 public-data-observer" } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText} — ${url}`);
-  return response.text();
-}
-
-async function getEnsoData() {
-  const source = "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt";
-  try {
-    const text = await getText(source);
-    const rows = text.split(/\r?\n/).map(line => {
-      const match = line.match(/^\s*(DJF|JFM|FMA|MAM|AMJ|MJJ|JJA|JAS|ASO|SON|OND|NDJ)\s+(\d{4})\s+[-\d.]+\s+([-\d.]+)/);
-      return match ? { season: match[1], year: Number(match[2]), value: Number(match[3]) } : null;
-    }).filter(item => item && Number.isFinite(item.value));
-    const latest = rows.at(-1);
-    if (!latest) throw new Error("Nenhum índice Niño 3.4 válido");
-    const phase = latest.value >= 0.5 ? "El Niño" : latest.value <= -0.5 ? "La Niña" : "Neutro";
-    const probabilityText = await getText("https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/probabilities/");
-    const probabilityRows = [...probabilityText.matchAll(/<tr>\s*<th[^>]*>\s*<abbr[^>]*>([A-Z]{3})[\s\S]*?<\/th>\s*<td>(\d+)<\/td>\s*<td>(\d+)<\/td>\s*<td>(\d+)<\/td>\s*<\/tr>/gi)];
-    const probabilities = probabilityRows.length ? { season: probabilityRows[0][1], lanina: Number(probabilityRows[0][2]), neutral: Number(probabilityRows[0][3]), elnino: Number(probabilityRows[0][4]) } : null;
-    return { roni: Number(latest.value.toFixed(2)), phase, source, observedAt: `${latest.year}-${latest.season}`, status: "normal", live: true, probabilities };
-  } catch (error) {
-    console.warn("ENSO NOAA indisponível:", error.message);
-    return { roni: null, phase: null, source, observedAt: null, status: "desconhecido", live: false };
-  }
 }
 
 
@@ -240,8 +211,6 @@ async function getEarthquakes() {
 
 async function getOceanData() {
 
-  const enso = await getEnsoData();
-
   const points = [];
 
   const latitudes =
@@ -284,7 +253,7 @@ async function getOceanData() {
 
 
     const query =
-      `https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21NrtAgg_LonPM180.json?anom[(${date}T12:00:00Z)][(0)][(-60):20:(60)][(0):30:(180)]`;
+      `https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21NrtAgg_LonPM180.json?anom[(${date}T12:00:00Z)][(-60):20:(60)][(-150):30:(150)]`;
 
 
     try {
@@ -325,7 +294,16 @@ async function getOceanData() {
 
       grid: [],
 
-      enso
+      enso: {
+
+        roni: 0,
+
+        status: "desconhecido",
+
+        source:
+          "https://psl.noaa.gov/enso/"
+
+      }
 
     };
 
@@ -399,19 +377,6 @@ async function getOceanData() {
       p => Math.abs(p.anomaly)
     );
 
-  const regionStats = {};
-  points.forEach(point => {
-    const key = point.region || "Oceano global";
-    if (!regionStats[key]) regionStats[key] = { sum: 0, count: 0, maximum: -Infinity };
-    regionStats[key].sum += point.anomaly;
-    regionStats[key].count += 1;
-    regionStats[key].maximum = Math.max(regionStats[key].maximum, point.anomaly);
-  });
-  Object.values(regionStats).forEach(stat => {
-    stat.mean = stat.count ? Number((stat.sum / stat.count).toFixed(2)) : null;
-    stat.maximum = Number.isFinite(stat.maximum) ? Number(stat.maximum.toFixed(2)) : null;
-  });
-
 
   const average =
     anomalies.length
@@ -426,13 +391,6 @@ async function getOceanData() {
     anomalies.length
       ? Math.max(...anomalies)
       : null;
-
-  const signedAverage = points.length
-    ? Number((points.reduce((sum, point) => sum + point.anomaly, 0) / points.length).toFixed(2))
-    : null;
-  const hotAreaPercent = points.length
-    ? Number(((points.filter(point => point.anomaly >= 1).length / points.length) * 100).toFixed(1))
-    : null;
 
 
   let oceanStatus =
@@ -479,14 +437,6 @@ async function getOceanData() {
       },
 
       {
-        title: "ÁREA QUENTE",
-        subtitle: "Pontos com +1 °C",
-        value: hotAreaPercent === null ? "—" : `${hotAreaPercent}%`,
-        detail: "Estimativa na grade consultada",
-        status: hotAreaPercent >= 20 ? "anomalia" : "normal"
-      },
-
-      {
         title: "REFERÊNCIA",
         subtitle: "OISST",
         value: "1981+",
@@ -507,17 +457,17 @@ async function getOceanData() {
     ],
 
     grid: points,
-    sst: {
-      usedDate,
-      signedAverage,
-      absoluteAverage: average,
-      maximum,
-      hotAreaPercent,
-      regions: regionStats,
-      reference: "NOAA OISST · climatologia do produto"
-    },
 
-    enso
+    enso: {
+
+      roni: 0,
+
+      status: "desconhecido",
+
+      source:
+        "https://psl.noaa.gov/enso/"
+
+    }
 
   };
 
