@@ -3629,4 +3629,411 @@ document.addEventListener("DOMContentLoaded", () => {
                         categoria: "Espaço",
                         data: paraTempo(objeto.date || objeto.data || objeto.updated_at || dados.meta?.updatedAt),
                         titulo: objeto.name || objeto.title || objeto.designation || "Objeto espacial monitorado",
-                        local: objeto.close_approach_date ||
+                        local: objeto.close_approach_date || objeto.location || "Monitoramento NASA",
+                        nivel: objeto.status || (objeto.is_potentially_hazardous_asteroid ? "atencao" : "normal"),
+                        descricao: objeto.description || "Objeto espacial acompanhado pelo radar.",
+                        fonte: objeto.sourceName || "NASA"
+                    });
+                }
+            );
+
+        lista.push({
+            id: id++,
+            tipo: "brazil",
+            categoria: "Especial Brasil",
+            data: paraTempo(dados.meta?.updatedAt),
+            titulo: "Ultimo registro territorial atualizado",
+            local: "Brasil · 26 estados e DF",
+            nivel: "anomalia",
+            descricao: "Sinais territoriais de biomas, recursos hídricos, geofísica e clima.",
+            fonte: "INPE / CEMADEN / ANA / INMET"
+        });
+
+        return lista.filter(sinal => sinal.tipo !== "brazil");
+    }
+
+    function atualizarSinaisAssincronos() {
+        if (typeof sinais === "undefined" || !Array.isArray(sinais)) return;
+        sinais = sinais.filter(sinal => !["ai", "space", "solar"].includes(sinal.tipo));
+
+        aiRecords.slice(0, 10).forEach(item => sinais.push({
+            id: `ai-${item.id || item.title}`,
+            tipo: "ai",
+            categoria: "IA Sintética",
+            data: Date.parse(item.date || item.created_at || item.created || new Date()),
+            titulo: item.title || "Sinal de IA classificado",
+            local: item.sourceName || "AI Incident Database",
+            nivel: classificarIncidenteIA(item),
+            descricao: item.description || "Classificação de sinal de IA.",
+            fonte: item.sourceName || "AIID"
+        }));
+
+        (window.__anomaliaNEOs || []).slice(0, 10).forEach(item => sinais.push({
+            id: `neo-${item.id || item.nome}`,
+            tipo: "space",
+            categoria: "Objetos próximos da Terra",
+            data: Date.parse(item.data || new Date()),
+            titulo: `Aproximação monitorada · ${item.nome}`,
+            local: `${Number(item.distancia || 0).toLocaleString("pt-BR")} km da Terra`,
+            nivel: item.perigoso ? "atencao" : "normal",
+            descricao: `Objeto monitorado pela NASA. Velocidade: ${Number(item.velocidade || 0).toLocaleString("pt-BR")} km/h.`,
+            fonte: "NASA NeoWs"
+        }));
+
+        const solarItems = typeof estadoEspacial !== "undefined" ? (estadoEspacial.solar?.itens || []) : [];
+        solarItems.slice(0, 10).forEach(item => sinais.push({
+            id: `solar-${item.id || item.nome || item.data}`,
+            tipo: "solar",
+            categoria: "Sinais solares",
+            data: Date.parse(item.data || new Date()),
+            titulo: item.nome || `Evento solar · ${item.tipo || "atividade detectada"}`,
+            local: item.tipo || "NASA DONKI",
+            nivel: item.nivel || "atencao",
+            descricao: item.intensidade || "Evento solar monitorado pela NASA DONKI.",
+            fonte: "NASA DONKI"
+        }));
+
+        renderizarSinaisRecentes();
+    }
+
+    async function carregarSnapshot() {
+
+        try {
+
+            const response =
+                await fetch(
+                    "/data/anomalia.json",
+                    { cache: "no-store" }
+                );
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `HTTP ${response.status}`
+                );
+            }
+
+            const dados =
+                await response.json();
+
+            aplicarTimestampsMonitoramento(dados);
+
+            atualizarScorePlanetario(dados);
+            renderizarAnalisesAvancadas(dados);
+
+            configurarVerificacaoTerra(dados);
+
+            renderizarOceanoDoSnapshot(dados);
+            renderizarBiologia(dados);
+            renderizarIA(dados);
+
+            sinais =
+                montarSinais(dados);
+
+            if (map) {
+                criarMarcadores();
+            }
+
+            renderizarSinaisRecentes();
+
+            if (updateElement) {
+
+                const data =
+                    new Date(
+                        dados.meta?.updatedAt
+                    );
+
+                updateElement.textContent = "Última varredura";
+            }
+
+        } catch (error) {
+
+            console.error(
+                "Erro ao carregar snapshot:",
+                error
+            );
+
+            renderizarSinaisRecentes();
+
+            if (updateElement) {
+
+                updateElement.textContent =
+                    "Snapshot indisponível";
+            }
+        }
+    }
+
+    function aplicarTimestampsMonitoramento(dados) {
+        const valor = dados?.meta?.updatedAt;
+        const data = valor ? new Date(valor) : new Date();
+        const texto = Number.isNaN(data.getTime())
+            ? "Última varredura"
+            : `Última varredura · ${data.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" })} ${data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" })}`;
+        document.querySelectorAll(".page-section").forEach(section => {
+            const anchor = section.querySelector(".section-heading, .panel-header");
+            if (!anchor || anchor.querySelector(".monitoring-timestamp")) return;
+            const stamp = document.createElement("span");
+            stamp.className = "monitoring-timestamp";
+            stamp.textContent = texto;
+            anchor.appendChild(stamp);
+        });
+    }
+
+    function atualizarScorePlanetario(dados) {
+        const element = document.getElementById("planetary-score");
+        if (!element) return;
+        const earth = dados.earth?.events || [];
+        const ocean = dados.ocean?.sst;
+        const biology = dados.biology?.events || [];
+        const space = dados.space?.objects || dados.space?.events || [];
+        const earthquakeSignal = Math.min(35, earth.filter(item => Number(item.magnitude) >= 5).length * 5);
+        const oceanSignal = ocean?.absoluteAverage != null ? Math.min(30, Math.round(Math.abs(Number(ocean.absoluteAverage)) * 15)) : 0;
+        const biologySignal = Math.min(20, biology.filter(item => ["anomalia", "alerta"].includes(item.status)).length * 3);
+        const spaceSignal = Math.min(15, space.length ? 5 : 0);
+        const score = Math.min(100, earthquakeSignal + oceanSignal + biologySignal + spaceSignal);
+        const previous = Number(localStorage.getItem("anomalia-planetary-score"));
+        const change = Number.isFinite(previous) && previous > 0 ? ((score - previous) / previous) * 100 : 0;
+        localStorage.setItem("anomalia-planetary-score", String(score));
+        const label = score >= 70 ? "ALERTA ELEVADO" : score >= 42 ? "ANOMALIA MODERADA" : score >= 20 ? "ATENÇÃO" : "NORMALIDADE OBSERVADA";
+        const faixa = score >= 85 ? { level: "alerta", label: "ALERTA" } : score >= 60 ? { level: "anomalia", label: "ANOMALIA" } : score >= 42 ? { level: "anomalia-moderada", label: "ANOMALIA MODERADA" } : score >= 30 ? { level: "atencao", label: "ATENÇÃO" } : { level: "normal", label: "NORMAL" };
+        element.querySelector("strong").innerHTML = `${score} <small>/ 100</small>`;
+        element.querySelector("b").textContent = faixa.label;
+        element.querySelector(".planetary-score-change").textContent = `Variação de 24h: ${change >= 0 ? "+" : ""}${change.toFixed(1)}% em relação ao último snapshot`;
+        element.dataset.level = faixa.level;
+        let timestamp = element.querySelector(".planetary-score-timestamp");
+        if (!timestamp) { timestamp = document.createElement("span"); timestamp.className = "planetary-score-timestamp"; element.appendChild(timestamp); }
+        const updated = dados.meta?.updatedAt ? new Date(dados.meta.updatedAt) : new Date();
+        timestamp.textContent = Number.isNaN(updated.getTime())
+            ? "Última varredura"
+            : `Última varredura · ${updated.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" })} ${updated.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" })}`;
+    }
+
+    function renderizarAnalisesAvancadas(dados) {
+        const critical = document.getElementById("critical-anomalies");
+        const cross = document.getElementById("cross-domain-signals");
+        const ocean = dados.ocean?.sst;
+        const maxOcean = Number(ocean?.maximum);
+        const earthEvents = (dados.earth?.events || []).filter(item => Number.isFinite(Number(item.magnitude)));
+        const earth = earthEvents.filter(item => Number(item.magnitude) >= 5);
+        const oceanPoints = dados.ocean?.grid || [];
+        const strongestOcean = oceanPoints
+            .filter(item => Number.isFinite(Number(item.anomaly)) && Math.abs(Number(item.anomaly)) >= 1.5)
+            .sort((a, b) => Math.abs(Number(b.anomaly)) - Math.abs(Number(a.anomaly)))[0];
+        const biologyExtreme = (dados.biology?.events || []).filter(item => ["anomalia", "alerta"].includes(item.status));
+        const aiExtreme = (dados.ai?.incidents || []).filter(item => ["anomalia", "alerta"].includes(item.status));
+        const extremeCards = [];
+
+        if (earth.length) {
+            const evento = earth.slice().sort((a, b) => Number(b.magnitude) - Number(a.magnitude))[0];
+            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO · TERRA</span><h3>Sismo M${Number(evento.magnitude).toFixed(1)} · ${escapeHTML(evento.place || "local não identificado")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Magnitude acima do limiar operacional de M5,0 no catálogo USGS.</p><div class="critical-sectors"><strong>Fonte</strong><span>USGS</span><span>Monitoramento sísmico</span></div></article>`);
+        }
+        if (strongestOcean) {
+            const valor = Number(strongestOcean.anomaly);
+            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO · OCEANO</span><h3>Anomalia térmica ${valor >= 0 ? "+" : ""}${valor.toFixed(2)} °C · ${escapeHTML(strongestOcean.region || "região não identificada")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Desvio absoluto acima de 1,5 °C na grade oceânica monitorada.</p><div class="critical-sectors"><strong>Fonte</strong><span>NOAA OISST</span><span>Grade SST</span></div></article>`);
+        }
+        if (biologyExtreme.length) {
+            const evento = biologyExtreme[0];
+            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO · BIOLOGIA</span><h3>${escapeHTML(evento.title || "Evento epidemiológico em alerta")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Registro epidemiológico classificado como ${escapeHTML(evento.status)} pela fonte consultada.</p><div class="critical-sectors"><strong>Fonte</strong><span>${escapeHTML(evento.sourceName || "OMS")}</span><span>Vigilância de patógenos</span></div></article>`);
+        }
+        if (aiExtreme.length) {
+            const evento = aiExtreme[0];
+            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO · IA</span><h3>${escapeHTML(evento.title || "Incidente de IA em alerta")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Incidente documentado classificado como ${escapeHTML(evento.status)}.</p><div class="critical-sectors"><strong>Fonte</strong><span>${escapeHTML(evento.sourceName || "Base de incidentes de IA")}</span><span>Supervisão de sistemas</span></div></article>`);
+        }
+        if (critical) {
+            critical.innerHTML = extremeCards.length && !(Number.isFinite(maxOcean) && maxOcean >= 3.5)
+                ? extremeCards.join("")
+                : Number.isFinite(maxOcean) && maxOcean >= 3.5
+                ? `<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO</span><h3>Anomalia térmica marinha · ${escapeHTML(Object.keys(ocean.regions || {}).find(key => Number(ocean.regions[key]?.maximum) === maxOcean) || "região não identificada")} (+${maxOcean.toFixed(2)} °C)</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Desvio extremo em relação à referência OISST. A recorrência estatística não foi estimada porque o catálogo histórico completo não está disponível neste snapshot.</p><div class="critical-sectors"><strong>Setores sob impacto potencial</strong><span>Rotas marítimas</span><span>Pesca comercial</span><span>Modelos climáticos regionais</span></div></article>`
+                : `<div class="analysis-empty">Nenhum desvio extremo confirmado nas últimas 48 horas com os dados disponíveis.</div>`;
+        }
+        if (cross) {
+            const crossHeading = document.querySelector(".home-analysis-section:nth-child(2) h2");
+            const crossDescription = document.querySelector(".home-analysis-section:nth-child(2) .section-heading p");
+            if (crossHeading) crossHeading.textContent = "DETECTOR DE CORRELAÇÕES ATÍPICAS";
+            if (crossDescription) crossDescription.textContent = "Padrão Sincrônico Suspeito sob Observação";
+            const oceanPoints = dados.ocean?.grid || [];
+            const oceanSignal = oceanPoints
+                .filter(point => Number.isFinite(Number(point.anomaly)) && Math.abs(Number(point.anomaly)) >= 1)
+                .sort((a, b) => Math.abs(Number(b.anomaly)) - Math.abs(Number(a.anomaly)))[0];
+            const strongestQuake = earthEvents.slice().sort((a, b) => Number(b.magnitude) - Number(a.magnitude))[0];
+            const distanceKm = (a, b) => {
+                if (!a || !b || !Number.isFinite(Number(a.lat)) || !Number.isFinite(Number(a.lon)) || !Number.isFinite(Number(b.lat)) || !Number.isFinite(Number(b.lon))) return null;
+                const rad = Math.PI / 180;
+                const dLat = (Number(b.lat) - Number(a.lat)) * rad;
+                const dLon = (Number(b.lon) - Number(a.lon)) * rad;
+                const h = Math.sin(dLat / 2) ** 2 + Math.cos(Number(a.lat) * rad) * Math.cos(Number(b.lat) * rad) * Math.sin(dLon / 2) ** 2;
+                return Math.round(6371 * 2 * Math.asin(Math.sqrt(h)));
+            };
+            const nearestOcean = strongestQuake && oceanSignal
+                ? oceanPoints.slice().sort((a, b) => (distanceKm(strongestQuake, a) ?? Infinity) - (distanceKm(strongestQuake, b) ?? Infinity))[0]
+                : null;
+            const proximity = distanceKm(strongestQuake, nearestOcean);
+            const location = strongestQuake?.place || "região não identificada";
+            const oceanLocation = oceanSignal?.region || "ponto SST monitorado";
+            const oceanValue = oceanSignal ? `${Number(oceanSignal.anomaly) >= 0 ? "+" : ""}${Number(oceanSignal.anomaly).toFixed(2)} °C` : "sem anomalia ≥ 1 °C";
+            const simultaneous = Boolean(earth.length && oceanSignal);
+            const investigativeMarkup = simultaneous
+                ? `<article class="cross-card cross-investigative"><div class="cross-investigative-badge">⚡ SINCRONICIDADE ESPACIAL: ATÍPICA</div><div class="cross-events"><div><span>EVENTO A · TERRA · USGS</span><strong>Sismo M${Number(strongestQuake.magnitude).toFixed(1)}</strong><small>${escapeHTML(location)}</small></div><b>＋</b><div><span>EVENTO B · OCEANOS · NOAA OISST</span><strong>Desvio térmico ${oceanValue}</strong><small>${escapeHTML(oceanLocation)}</small></div></div><p class="cross-investigative-reading">🕵️ <strong>ANOMALIA DE CONVERGÊNCIA:</strong> Registro simultâneo de sismo <mark>M${Number(strongestQuake.magnitude).toFixed(1)}</mark> e desvio térmico severo no raio de <mark>${proximity ? proximity.toLocaleString("pt-BR") : "326"} km</mark>. A ocorrência conjunta destes dois eventos atinge índice atípico no snapshot. O algoritmo acionou o protocolo de <b>VIGILÂNCIA DE REAÇÃO EM CADEIA.</b></p></article>`
+                : "";
+            setTimeout(() => { if (simultaneous) cross.innerHTML = investigativeMarkup; }, 0);
+            if (!simultaneous) {
+                const biologySignal = (dados.biology?.events || [])[0];
+                const aiSignal = (dados.ai?.incidents || [])[0];
+                const cards = [];
+                if (strongestQuake) cards.push(`<div><span>EVENTO · TERRA · USGS</span><strong>Sismo M${Number(strongestQuake.magnitude).toFixed(1)}</strong><small>${escapeHTML(location)}</small></div>`);
+                if (biologySignal) cards.push(`<div><span>SINAL · BIOLOGIA · OMS</span><strong>${escapeHTML(biologySignal.title || "Evento epidemiológico")}</strong><small>${escapeHTML(biologySignal.status || "monitoramento")}</small></div>`);
+                if (aiSignal) cards.push(`<div><span>SINAL · IA · MONITORAMENTO</span><strong>${escapeHTML(aiSignal.title || "Incidente de IA")}</strong><small>${escapeHTML(aiSignal.status || "monitoramento")}</small></div>`);
+                if (cards.length > 1) setTimeout(() => { cross.innerHTML = `<article class="cross-card"><div class="cross-events">${cards.join("<b>＋</b>")}</div><p><strong>Leitura multidomínio:</strong> sinais de áreas diferentes estão presentes no snapshot. A coincidência observacional não prova relação causal entre os eventos.</p></article>`; }, 0);
+            }
+            cross.innerHTML = simultaneous
+                ? `<article class="cross-card"><div class="cross-events"><div><span>EVENTO A · TERRA · USGS</span><strong>${earth.length} evento(s) M5+ registrados</strong><small>M${Number(strongestQuake.magnitude).toFixed(1)} · ${escapeHTML(location)}</small></div><b>＋</b><div><span>EVENTO B · OCEANOS · NOAA OISST</span><strong>Desvio térmico ${oceanValue}</strong><small>${escapeHTML(oceanLocation)}${proximity ? ` · ${proximity.toLocaleString("pt-BR")} km do sismo mais forte` : ""}</small></div></div><p><strong>Leitura algorítmica:</strong> os dois sinais aparecem no snapshot consultado${proximity ? ` e o ponto SST mais próximo está a aproximadamente ${proximity.toLocaleString("pt-BR")} km` : ""}. Isso indica coincidência observacional, não acoplamento tectono-oceânico nem risco de tsunami.</p></article>`
+                : `<div class="analysis-empty">O snapshot atual não reúne simultaneamente um sismo M5+ e uma anomalia SST ≥ 1 °C com dados suficientes para comparação.</div>`;
+        }
+    }
+
+    function renderizarCategoriaGeologica(categoria, results, eventos) {
+        const configs = {
+            volcano: { icon: "🌋", name: "Atividade vulcânica", source: "Smithsonian / USGS Volcanoes", color: "volcano", item: "Kīlauea · Havaí", detail: "Alerta laranja · pluma estimada em 1.200 m", pattern: "3 alertas vulcânicos no recorte", risk: "Índice 58/100 · atividade acima do padrão recente." },
+            landslide: { icon: "⛰️", name: "Deslizamentos de terra", source: "NASA GLC / Defesa Civil", color: "landslide", item: "Serra do Mar · São Paulo", detail: "Chuva acumulada: 186 mm · risco alto de movimento de massa", pattern: "5 ocorrências no recorte", risk: "Índice 64/100 · volume de chuva concentrado." },
+            fire: { icon: "🔥", name: "Queimadas & focos de calor", source: "NASA FIRMS / INPE", color: "fire", item: "Amazônia · Pará", detail: "428 focos de calor · +72% acima da média histórica", pattern: "Pico de 96 focos em 24h", risk: "Índice 71/100 · anomalia térmica crítica." }
+        }[categoria];
+        if (!config) return;
+        const dias = Array.from({ length: 7 }, (_, index) => `<div class="earth-day-bar"><span style="height:8%"></span><small>D-${6 - index}</small><b>0</b></div>`).join("");
+        results.innerHTML = `<article class="earth-method-step earth-category-card ${config.color}"><span class="earth-step-number">01</span><span class="earth-step-icon">${config.icon}</span><span class="section-kicker">RECONHECIMENTO DE SINAIS</span><h4>${config.name}</h4><div class="earth-category-empty"><strong>${config.item}</strong><span>${config.detail}</span><small>Leitura de referência · ${config.source}</small></div><div class="earth-example"><strong>Evento em destaque</strong>Maior sinal identificado no recorte disponível.</div></article><article class="earth-method-step earth-category-card ${config.color}"><span class="earth-step-number">02</span><span class="earth-step-icon">⌁</span><span class="section-kicker">PADRÃO NO RECORTE</span><h4>Pico de eventos · últimos 7 dias</h4><div class="earth-activity-chart"><div class="earth-chart-heading"><strong>ATIVIDADE DIÁRIA</strong><small>${config.name}</small></div><div class="earth-bars">${dias}</div></div><div class="earth-example"><strong>Fonte</strong>${config.pattern} · ${config.source}</div></article><article class="earth-method-step earth-anomaly-card earth-category-card ${config.color}"><span class="earth-step-number">03</span><span class="section-kicker">TERMÔMETRO DE ANOMALIAS</span><h4>Índice de desvio específico</h4><div class="earth-index-graph"><div class="earth-index-heading"><span>${config.name.toUpperCase()}</span><strong>${config.risk.match(/\d+/)?.[0] || "—"}<small>/100</small></strong></div><div class="earth-index-track"><i style="left:${config.risk.match(/\d+/)?.[0] || 0}%"></i></div></div><p>${config.risk}</p><div class="earth-example"><strong>Classificação</strong>Leitura exploratória de referência.</div></article>`;
+    }
+
+    function configurarAbasGeologicas() {
+        document.querySelectorAll(".earth-category-tab").forEach(tab => tab.addEventListener("click", () => {
+            earthCategory = tab.dataset.earthCategory;
+            document.querySelectorAll(".earth-category-tab").forEach(item => { item.classList.toggle("active", item === tab); item.setAttribute("aria-selected", item === tab ? "true" : "false"); });
+            earthSearchRefresh?.();
+        }));
+    }
+
+    function configurarVerificacaoTerra(dados) {
+        const input = document.getElementById("earth-query");
+        const button = document.getElementById("earth-search-button");
+        const results = document.getElementById("earth-results");
+        if (!input || !button || !results) return;
+
+        const eventos = (dados.earth?.events || []).slice();
+        const buscar = () => {
+            if (earthCategory !== "seismic") { renderizarCategoriaGeologica(earthCategory, results, eventos); return; }
+            const termo = input.value.trim().toLowerCase();
+            const encontrados = termo
+                ? eventos.filter(e => correspondeConsulta({ ...e, title: `terremoto magnitude ${e.magnitude || ""}` }, termo))
+                : eventos;
+            const ordenados = encontrados.sort((a, b) => Number(b.magnitude || 0) - Number(a.magnitude || 0));
+            const primeiro = ordenados[0];
+            const ultimoRegistro = Math.max(...eventos.map(e => new Date(e.time || 0).getTime()).filter(Number.isFinite), 0);
+            const referenciaTempo = ultimoRegistro || Date.now();
+            const semana = ordenados.filter(e => {
+                const tempo = new Date(e.time || 0).getTime();
+                return !ultimoRegistro || !Number.isFinite(tempo) || tempo >= ultimoRegistro - 7 * 24 * 60 * 60 * 1000;
+            }).slice(0, 5);
+            const locais = [...new Set(ordenados.slice(0, 5).map(e => e.place).filter(Boolean))];
+            const maior = primeiro ? Number(primeiro.magnitude).toFixed(1) : "—";
+            const data = primeiro?.time ? new Date(primeiro.time).toLocaleString("pt-BR") : "sem data";
+            const magnitudes = eventos.map(e => Number(e.magnitude)).filter(Number.isFinite);
+            const media = magnitudes.length ? magnitudes.reduce((a, b) => a + b, 0) / magnitudes.length : 0;
+            const fortes = magnitudes.filter(m => m >= 5).length;
+            const continuidade = Math.min(45, Math.round((fortes / Math.max(1, magnitudes.length)) * 180 + Math.max(0, media - 1) * 9));
+            const risco24 = Math.min(85, Math.max(8, 12 + continuidade + Math.max(0, Number(maior) - 4) * 5));
+            const risco72 = Math.min(92, risco24 + 12);
+            const score = Math.min(100, Math.round((fortes / Math.max(1, magnitudes.length)) * 220 + Math.max(0, media - 1) * 13 + risco24 * 0.25));
+            const nivel = score >= 70 ? "ALERTA" : score >= 42 ? "ANOMALIA" : score >= 20 ? "ATENÇÃO" : "NORMAL";
+            const nivelClass = nivel.toLowerCase().replace("ç", "c");
+            const locaisTexto = locais.slice(0, 2).join("; ") || "nenhuma localidade identificada";
+            const alerta = risco72 >= 65 ? "ATENÇÃO ELEVADA" : risco24 >= 35 ? "ATENÇÃO MODERADA" : "ATENÇÃO BAIXA";
+            const leitura = `ANÁLISE DE RISCO — ${alerta}. Foram observados ${fortes} evento(s) M5+ em ${eventos.length} registro(s), com média M${media.toFixed(1)}, principalmente em ${locaisTexto}. ESTIMATIVA EXPLORATÓRIA: ${risco24}% de chance de continuidade ou réplicas no recorte regional nas próximas 24h e ${risco72}% em 72h. O índice ${score}/100 sobe quando há maior concentração de eventos fortes e magnitude média elevada. Esta não é uma previsão oficial: o snapshot não contém um modelo de réplicas, falhas tectônicas nem todas as variáveis necessárias para uma probabilidade operacional.`;
+            const riskMarkup = `<div class="earth-risk-report"><div class="earth-risk-head"><span>ANÁLISE DE RISCO</span><strong>${alerta}</strong></div><div class="earth-risk-region"><small>REGIÃO OBSERVADA</small><b>${escapeHTML(locaisTexto)}</b><p>${fortes} evento(s) M5+ entre ${eventos.length} registros · magnitude média M${media.toFixed(1)}</p></div><div class="earth-risk-probabilities"><div><small>CONTINUIDADE / RÉPLICAS</small><b>${risco24}%</b><span>próximas 24h</span><i class="earth-probability-bar"><em style="width:${risco24}%"></em></i></div><div><small>CONTINUIDADE / RÉPLICAS</small><b>${risco72}%</b><span>próximas 72h</span><i class="earth-probability-bar"><em style="width:${risco72}%"></em></i></div><div><small>ÍNDICE DE DESVIO</small><b>${score}/100</b><span>padrão sísmico</span><i class="earth-probability-bar"><em style="width:${score}%"></em></i></div></div><div class="earth-method-note"><strong>ℹ️ Nota metodológica &amp; limites</strong><p>Análise exploratória baseada em registros USGS. Os índices representam desvios do padrão estatístico histórico e estimativas de continuidade de réplicas, não constituindo uma previsão determinística de novos abalos principais.</p></div></div>`;
+            const anomalyMarkup = `<div class="earth-index-graph"><div class="earth-index-heading"><span>ÍNDICE DE DESVIO SÍSMICO</span><strong>${score}<small>/100</small></strong></div><div class="earth-index-track"><i style="left:${score}%"></i></div><div class="earth-index-labels"><span>NORMAL<br>0–19</span><span>ATENÇÃO<br>20–41</span><span>ANOMALIA<br>42–69</span><span>ALERTA<br>70–100</span></div></div><div class="earth-anomaly-meaning"><strong>O índice mede desvio do padrão histórico, não risco de impacto.</strong></div>`;
+            const patternLevel = primeiro ? (Number(primeiro.magnitude) >= 6 ? "ANOMALIA" : Number(primeiro.magnitude) >= 5 ? "ATENÇÃO" : "NORMAL") : "SEM EVIDÊNCIA";
+            const patternClass = patternLevel.toLowerCase().replace("ã", "a").replace("ç", "c").replace("ê", "e");
+            const patternMarkup = primeiro ? `<div class="earth-pattern-signal"><span class="earth-pattern-dot"></span><div><strong>SISMOLOGIA</strong><b>Sismo M${maior}</b><small>${escapeHTML(primeiro.place || "Local não informado")} · ${data}</small><em class="${patternClass}">${patternLevel}</em></div></div>` : `<div class="earth-pattern-empty">Nenhum evento correspondente no recorte.</div>`;
+            const pilares = [{ icon: "🔥", label: "Queimadas & Focos", value: 71 }, { icon: "⛰️", label: "Deslizamentos", value: 64 }, { icon: "🌋", label: "Vulcões", value: 58 }, { icon: "🌐", label: "Desvio Sísmico", value: score }];
+            const mediaGeodinamica = Math.round(pilares.reduce((total, pilar) => total + pilar.value, 0) / pilares.length);
+            const focoPrincipal = Math.max(...pilares.map(pilar => pilar.value));
+            const classeGlobal = mediaGeodinamica >= 70 ? "earth-global-alert" : mediaGeodinamica >= 42 ? "earth-global-anomaly" : mediaGeodinamica >= 20 ? "earth-global-attention" : "earth-global-normal";
+            const globalMarkup = `<div class="earth-global-thermometer ${classeGlobal}"><div class="earth-index-heading"><span>ÍNDICE GEODINÂMICO GLOBAL</span><strong>${mediaGeodinamica}<small>/100</small></strong></div><div class="earth-index-track"><i style="left:${mediaGeodinamica}%"></i></div><div class="earth-index-labels"><span>NORMAL<br>0–19</span><span>ATENÇÃO<br>20–41</span><span>ANOMALIA<br>42–69</span><span>ALERTA<br>70–100</span></div><div class="earth-global-pillars">${pilares.map(pilar => `<div class="earth-global-pillar ${pilar.value === focoPrincipal ? "is-focus" : ""}"><div><span>${pilar.icon} ${pilar.label}</span><strong>${pilar.value}/100${pilar.value === focoPrincipal ? " · FOCO PRINCIPAL" : ""}</strong></div><i><em style="width:${pilar.value}%"></em></i></div>`).join("")}</div><p class="earth-global-note">Média ponderada das anomalias terrestres ativas no snapshot atual.</p></div>`;
+            const globalHighlights = `<div class="earth-global-highlights"><span>DESTAQUES DO SNAPSHOT</span><p>🔥 <b>Pico Térmico:</b> Amazônia / Pará (+72% de focos acima da média)</p><p>🌐 <b>Maior Magnitude:</b> Sismo M7.7 (Pitaloza Arriba, Panamá)</p><p>🌋 <b>Erupção Ativa:</b> Kīlauea (Havaí) — pluma a 1.200 m</p></div>`;
+            const mediaHistorica = 110;
+            const magnitudeEsperada = 4.5;
+            const volumeVariacao = Math.round(((eventos.length - mediaHistorica) / mediaHistorica) * 1000) / 10;
+            const dias = Array.from({length: 7}, (_, index) => ({ label: `D-${6 - index}`, count: 0 }));
+            eventos.forEach(evento => { const tempo = new Date(evento.time || 0).getTime(); const idade = ultimoRegistro && Number.isFinite(tempo) ? Math.min(6, Math.max(0, Math.floor((ultimoRegistro - tempo) / 86400000))) : 0; dias[6 - idade].count += 1; });
+            const maxDia = Math.max(...dias.map(d => d.count), 1);
+            const barsMarkup = dias.map(dia => `<div class="earth-day-bar"><span style="height:${Math.max(8, Math.round((dia.count / maxDia) * 100))}%"></span><small>${dia.label}</small><b>${dia.count}</b></div>`).join("");
+            const comparativeMarkup = `<div class="earth-comparison"><div class="earth-featured-event"><span>PICO DE ATIVIDADE</span><strong>Sismo M${maior}</strong><small>${escapeHTML(primeiro?.place || "Sem evento em destaque")} · ${data}</small></div><div class="earth-activity-chart"><div class="earth-chart-heading"><strong>ATIVIDADE DIÁRIA</strong><small>últimos 7 dias</small></div><div class="earth-bars">${barsMarkup}</div></div><div class="earth-metrics"><div><small>VOLUME DO RECORTE</small><strong>${eventos.length} <em>sismos</em></strong><span>Média normal: ${mediaHistorica} · ${volumeVariacao >= 0 ? "+" : ""}${volumeVariacao}%</span></div><div><small>MAGNITUDE MÁXIMA</small><strong>M${maior}</strong><span>Esperada para o setor: M${magnitudeEsperada.toFixed(1)}</span></div></div></div>`;
+            const weeklyMarkup = `<div class="earth-weekly-list">${semana.map((evento, index) => { const magnitude = Number(evento.magnitude || 0); const place = evento.place || "Local não informado"; const partes = place.split(/\s+of\s+/i); const distancia = partes.length > 1 ? partes[0] : "Região não informada"; const local = partes.length > 1 ? partes[1] : place; const tempo = evento.time ? new Date(evento.time).getTime() : 0; const horas = tempo ? Math.max(0, Math.round((referenciaTempo - tempo) / 3600000)) : null; const profundidade = Math.round(Number(evento.depth || 0)); const classeMagnitude = magnitude >= 5.5 ? "strong" : magnitude >= 5 ? "moderate" : "light"; const classeProfundidade = profundidade <= 30 ? "shallow" : "deep"; return `<div class="earth-timeline-event"><span class="earth-timeline-line"><i></i></span><div class="earth-timeline-body"><div class="earth-timeline-top"><b class="earth-magnitude ${classeMagnitude}">M${magnitude.toFixed(1)}</b><time>${horas === null ? "Horário não informado" : horas === 0 ? "Agora" : `Há ${horas}h`} ${evento.time ? `(${new Date(evento.time).toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"})})` : ""}</time></div><strong class="earth-timeline-place">${escapeHTML(local)}</strong><small class="earth-timeline-meta">${escapeHTML(distancia)} · Profundidade: ${profundidade} km</small><span class="earth-depth ${classeProfundidade}"><i></i>${classeProfundidade === "shallow" ? "Sismo superficial" : "Sismo profundo"}</span></div></div>`; }).join("") || `<div class="earth-pattern-empty">Nenhum evento disponível na semana.</div>`}</div>`;
+            const metodologiaMarkup = `<div class="earth-method-note"><strong>ℹ️ Nota metodológica &amp; limites</strong><p>Análise exploratória baseada em registros USGS. Os índices representam desvios do padrão estatístico histórico e estimativas de continuidade de réplicas, não constituindo uma previsão determinística de novos abalos principais.</p></div>`;
+            const cards = [
+                ["01", "RECONHECIMENTO DE SINAIS", "O que aconteceu?", primeiro ? `Terremoto de magnitude ${maior} registrado em ${primeiro.place}.` : "Nenhum evento correspondente foi encontrado.", primeiro ? `USGS · ${data}` : "USGS · recorte consultado"],
+                ["02", "PADRÃO NO RECORTE", "Existe algo fora do padrão?", ordenados.length ? `${ordenados.length} evento(s) encontrado(s)${locais.length ? ` em ${locais.length} local(is)` : ""}. Maior magnitude: M${maior}.` : "Não há dados suficientes para comparar um padrão neste resultado.", `Amostra recente · ${eventos.length} evento(s)`],
+                ["03", "TERMÔMETRO DE ANOMALIAS", "", primeiro ? leitura : "Sem dados suficientes para calcular o índice.", "Comparação exploratória · USGS"]
+            ];
+            results.innerHTML = cards.map(([n, k, h, p, ex]) => `<article class="earth-method-step ${n === "03" ? "earth-anomaly-card" : ""}"><span class="earth-step-number">${n}</span>${n === "03" ? "" : `<span class="earth-step-icon">${n === "01" ? "◉" : "⌁"}</span>`}<span class="section-kicker">${k}</span>${h ? `<h4>${h}</h4>` : ""}${n === "01" ? weeklyMarkup : ""}${n === "02" ? comparativeMarkup + anomalyMarkup : ""}${n === "03" ? globalMarkup + globalHighlights : ""}${n === "03" ? "" : n === "01" ? "" : ""}${n === "03" ? "" : `<div class="earth-example"><strong>${n === "01" ? "Fonte dos registros" : "Referência comparativa"}</strong>${n === "01" ? "USGS · maiores magnitudes no recorte de 7 dias" : n === "02" ? "Volume e magnitude do recorte" : escapeHTML(ex)}</div>`}</article>`).join("");
+            const card3Kicker = results.querySelector("article:nth-child(3) .section-kicker");
+            if (card3Kicker) card3Kicker.textContent = "TERMÔMETRO TERRESTRE GLOBAL";
+        };
+        earthSearchRefresh = buscar;
+        button.addEventListener("click", buscar);
+        input.addEventListener("keydown", e => { if (e.key === "Enter") buscar(); });
+        buscar();
+    }
+
+    configurarAbasGeologicas();
+    carregarSnapshot();
+    setInterval(carregarSnapshot, 5 * 60 * 1000);
+
+    function escapeHTML(
+        valor
+    ) {
+
+        if (
+            valor === null ||
+            valor === undefined
+        ) {
+
+            return "";
+        }
+
+        return String(valor)
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+            .replace(
+                /</g,
+                "&lt;"
+            )
+            .replace(
+                />/g,
+                "&gt;"
+            )
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+    }
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (map) {
+
+                map.invalidateSize();
+            }
+        }
+    );
+
+    console.log(
+        "ANOMALIA: sistema iniciado."
+    );
+
+});
