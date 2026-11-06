@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-06T22:04:06.009Z",
+    "updatedAt": "2026-11-06T22:14:05.960Z",
     "version": "2.0",
     "methodology": "comparison-based"
   },
@@ -8,7 +8,7 @@
     "earth": {
       "title": "🌍 TERRA",
       "subtitle": "Eventos nas últimas 24h",
-      "value": 211,
+      "value": 213,
       "detail": "Fonte: USGS",
       "status": "normal"
     },
@@ -36,6 +36,13 @@
   },
   "signals": [
     {
+      "title": "Sismo — 4 km ENE of Kalaoa, Hawaii",
+      "description": "Magnitude 3.0",
+      "status": "normal",
+      "lat": 19.742166519165,
+      "lon": -155.936492919922
+    },
+    {
       "title": "Sismo — 5 km NNW of Pacifica, CA",
       "description": "Magnitude 1.3",
       "status": "normal",
@@ -55,13 +62,6 @@
       "status": "normal",
       "lat": 58.173,
       "lon": -155.374
-    },
-    {
-      "title": "Sismo — 62 km WNW of Anchor Point, Alaska",
-      "description": "Magnitude 2.0",
-      "status": "normal",
-      "lat": 59.94,
-      "lon": -152.895
     },
     {
       "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -97,7 +97,7 @@
       {
         "title": "🌍 TERRA",
         "subtitle": "Eventos nas últimas 24h",
-        "value": 211,
+        "value": 213,
         "detail": "Fonte: USGS",
         "status": "normal"
       },
@@ -124,6 +124,16 @@
       }
     ],
     "events": [
+      {
+        "id": "hv75068057",
+        "lat": 19.742166519165,
+        "lon": -155.936492919922,
+        "depth": 13.289999961853,
+        "magnitude": 3.03,
+        "place": "4 km ENE of Kalaoa, Hawaii",
+        "time": 1794002918930,
+        "status": "normal"
+      },
       {
         "id": "nc75463302",
         "lat": 37.6543350219727,
@@ -186,12 +196,12 @@
       },
       {
         "id": "nn00926740",
-        "lat": 39.0533,
-        "lon": -115.4828,
+        "lat": 39.052,
+        "lon": -115.4832,
         "depth": 0,
-        "magnitude": 2.58,
+        "magnitude": 2.77,
         "place": "39 km WNW of Preston, Nevada",
-        "time": 1794000846705,
+        "time": 1794000846730,
         "status": "normal"
       },
       {
@@ -296,12 +306,12 @@
       },
       {
         "id": "ci41359391",
-        "lat": 33.8575,
-        "lon": -117.509166666667,
-        "depth": 1.33,
-        "magnitude": 1.34,
-        "place": "3 km SSE of Home Gardens, CA",
-        "time": 1793996401820,
+        "lat": 33.8648333333333,
+        "lon": -117.503166666667,
+        "depth": -0.51,
+        "magnitude": 1.24,
+        "place": "2 km SE of Home Gardens, CA",
+        "time": 1793996401570,
         "status": "normal"
       },
       {
@@ -1972,6 +1982,16 @@
         "magnitude": 1.2,
         "place": "11 km NNW of Meadow Lakes, Alaska",
         "time": 1793925546753,
+        "status": "normal"
+      },
+      {
+        "id": "us7000twdk",
+        "lat": 22.662,
+        "lon": 121.1634,
+        "depth": 10,
+        "magnitude": 4.2,
+        "place": "76 km ENE of Donggang, Taiwan",
+        "time": 1793925460810,
         "status": "normal"
       },
       {
