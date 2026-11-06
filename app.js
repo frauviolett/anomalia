@@ -1,9 +1,9 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     console.log("ANOMALIA iniciado");
 
     // =========================================================
-    // CONFIGURA├ç├âO DE COMUNICA├ç├âO COM O BACKEND (RENDER)
+    // CONFIGURAÇÃO DE COMUNICAÇÃO COM O BACKEND (RENDER)
     // =========================================================
     
 
@@ -11,39 +11,39 @@
 
     const brazilSection = document.getElementById("brazil");
     if (brazilSection) {
-        brazilSection.innerHTML = `<div class="section-heading"><div><span class="section-kicker">ESPECIAL BRASIL</span><h2>ESPECIAL BRASIL ┬À RADAR DE ANOMALIAS TERRITORIAIS</h2><div class="brazil-national-risk"><span>├ìNDICE NACIONAL DE ANOMALIA: 58/100</span><strong>­ƒƒº ANOMALIA MODERADA</strong></div><p>Monitoramento cont├¡nuo de estresse de biomas, recursos h├¡dricos, atividade geof├¡sica e eventos clim├íticos nos 26 estados e DF.</p></div></div><div class="brazil-terminal-top"><div class="brazil-map-panel"><div class="brazil-panel-head"><div><span class="panel-kicker">MAPA INTERATIVO</span><h3>Distribui├º├úo territorial dos sinais</h3></div><span id="brazil-region-selection">Todas as regi├Áes</span></div><svg class="brazil-map" viewBox="0 0 520 330" role="img" aria-label="Mapa esquem├ítico do Brasil dividido por regi├Áes"><path class="brazil-region status-anomalia" data-region="Norte" d="M54 46 L180 25 L250 54 L226 127 L174 144 L109 126 L47 91 Z"><title>Norte ┬À Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M250 54 L343 64 L407 101 L371 153 L288 143 L226 127 Z"><title>Nordeste ┬À Aten├º├úo</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M174 144 L226 127 L288 143 L300 221 L235 244 L168 206 Z"><title>Centro-Oeste ┬À Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M288 143 L371 153 L385 218 L300 221 Z"><title>Sudeste ┬À Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M235 244 L300 221 L330 276 L276 308 L215 286 Z"><title>Sul ┬À Aten├º├úo</title></path></svg><div class="brazil-map-legend"><span><i class="status-dot normal"></i>Normal</span><span><i class="status-dot atencao"></i>Aten├º├úo</span><span><i class="status-dot anomalia"></i>Anomalia</span><span><i class="status-dot alerta"></i>Alerta</span></div></div><aside class="brazil-alerts-panel"><div class="brazil-panel-head"><div><span class="panel-kicker">PRIORIDADE OPERACIONAL</span><h3>Top 3 alertas territoriais ativos</h3></div></div><article class="brazil-alert-card status-alerta"><span class="brazil-alert-badge">­ƒö┤ ALERTA</span><strong>Sudeste ┬À estresse h├¡drico</strong><p>Reservat├│rios e umidade do solo abaixo da refer├¬ncia em ├íreas monitoradas.</p><small>Fonte: CEMADEN / ANA</small></article><article class="brazil-alert-card status-anomalia"><span class="brazil-alert-badge">­ƒƒº ANOMALIA</span><strong>Norte ┬À press├úo sobre biomas</strong><p>Focos de calor e perda de umidade ampliam a janela de propaga├º├úo de queimadas.</p><small>Fonte: INPE / CEMADEN</small></article><article class="brazil-alert-card status-atencao"><span class="brazil-alert-badge">­ƒƒí ATEN├ç├âO</span><strong>Sul ┬À vari├óncia clim├ítica</strong><p>Oscila├º├Áes de temperatura e chuva alteram o padr├úo regional recente.</p><small>Fonte: INMET</small></article></aside></div><div class="brazil-region-grid"><article class="brazil-region-card status-anomalia" data-region-card="Norte"><header><h3>Norte</h3><span>­ƒƒº Anomalia</span></header><strong class="brazil-metric">D├®ficit H├¡drico: -31%</strong><p>Baixa umidade do solo favorecendo gatilhos de queimada r├ípida e estresse de biomas.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article><article class="brazil-region-card status-atencao" data-region-card="Nordeste"><header><h3>Nordeste</h3><span>­ƒƒí Aten├º├úo</span></header><strong class="brazil-metric">Vari├óncia T├®rmica: +2.8 ┬░C</strong><p>Persist├¬ncia de calor e baixa precipita├º├úo pressionam sistemas agr├¡colas e h├¡dricos.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article><article class="brazil-region-card status-normal" data-region-card="Centro-Oeste"><header><h3>Centro-Oeste</h3><span>­ƒƒó Normal</span></header><strong class="brazil-metric">Umidade do Solo: dentro da base</strong><p>Leituras ambientais est├íveis, com varia├º├Áes localizadas sob observa├º├úo regular.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article><article class="brazil-region-card status-alerta" data-region-card="Sudeste"><header><h3>Sudeste</h3><span>­ƒö┤ Alerta</span></header><strong class="brazil-metric">Reservat├│rios: -22%</strong><p>D├®ficit acumulado elevando a vulnerabilidade de abastecimento em bacias cr├¡ticas.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article><article class="brazil-region-card status-atencao" data-region-card="Sul"><header><h3>Sul</h3><span>­ƒƒí Aten├º├úo</span></header><strong class="brazil-metric">Chuva acumulada: +18%</strong><p>Oscila├º├úo pluviom├®trica aumenta a necessidade de monitorar cheias e deslizamentos.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article></div>`;
+        brazilSection.innerHTML = `<div class="section-heading"><div><span class="section-kicker">ESPECIAL BRASIL</span><h2>ESPECIAL BRASIL · RADAR DE ANOMALIAS TERRITORIAIS</h2><div class="brazil-national-risk"><span>ÍNDICE NACIONAL DE ANOMALIA: 58/100</span><strong>🟧 ANOMALIA MODERADA</strong></div><p>Monitoramento contínuo de estresse de biomas, recursos hídricos, atividade geofísica e eventos climáticos nos 26 estados e DF.</p></div></div><div class="brazil-terminal-top"><div class="brazil-map-panel"><div class="brazil-panel-head"><div><span class="panel-kicker">MAPA INTERATIVO</span><h3>Distribuição territorial dos sinais</h3></div><span id="brazil-region-selection">Todas as regiões</span></div><svg class="brazil-map" viewBox="0 0 520 330" role="img" aria-label="Mapa esquemático do Brasil dividido por regiões"><path class="brazil-region status-anomalia" data-region="Norte" d="M54 46 L180 25 L250 54 L226 127 L174 144 L109 126 L47 91 Z"><title>Norte · Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M250 54 L343 64 L407 101 L371 153 L288 143 L226 127 Z"><title>Nordeste · Atenção</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M174 144 L226 127 L288 143 L300 221 L235 244 L168 206 Z"><title>Centro-Oeste · Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M288 143 L371 153 L385 218 L300 221 Z"><title>Sudeste · Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M235 244 L300 221 L330 276 L276 308 L215 286 Z"><title>Sul · Atenção</title></path></svg><div class="brazil-map-legend"><span><i class="status-dot normal"></i>Normal</span><span><i class="status-dot atencao"></i>Atenção</span><span><i class="status-dot anomalia"></i>Anomalia</span><span><i class="status-dot alerta"></i>Alerta</span></div></div><aside class="brazil-alerts-panel"><div class="brazil-panel-head"><div><span class="panel-kicker">PRIORIDADE OPERACIONAL</span><h3>Top 3 alertas territoriais ativos</h3></div></div><article class="brazil-alert-card status-alerta"><span class="brazil-alert-badge">🔴 ALERTA</span><strong>Sudeste · estresse hídrico</strong><p>Reservatórios e umidade do solo abaixo da referência em áreas monitoradas.</p><small>Fonte: CEMADEN / ANA</small></article><article class="brazil-alert-card status-anomalia"><span class="brazil-alert-badge">🟧 ANOMALIA</span><strong>Norte · pressão sobre biomas</strong><p>Focos de calor e perda de umidade ampliam a janela de propagação de queimadas.</p><small>Fonte: INPE / CEMADEN</small></article><article class="brazil-alert-card status-atencao"><span class="brazil-alert-badge">🟡 ATENÇÃO</span><strong>Sul · variância climática</strong><p>Oscilações de temperatura e chuva alteram o padrão regional recente.</p><small>Fonte: INMET</small></article></aside></div><div class="brazil-region-grid"><article class="brazil-region-card status-anomalia" data-region-card="Norte"><header><h3>Norte</h3><span>🟧 Anomalia</span></header><strong class="brazil-metric">Déficit Hídrico: -31%</strong><p>Baixa umidade do solo favorecendo gatilhos de queimada rápida e estresse de biomas.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article><article class="brazil-region-card status-atencao" data-region-card="Nordeste"><header><h3>Nordeste</h3><span>🟡 Atenção</span></header><strong class="brazil-metric">Variância Térmica: +2.8 °C</strong><p>Persistência de calor e baixa precipitação pressionam sistemas agrícolas e hídricos.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article><article class="brazil-region-card status-normal" data-region-card="Centro-Oeste"><header><h3>Centro-Oeste</h3><span>🟢 Normal</span></header><strong class="brazil-metric">Umidade do Solo: dentro da base</strong><p>Leituras ambientais estáveis, com variações localizadas sob observação regular.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article><article class="brazil-region-card status-alerta" data-region-card="Sudeste"><header><h3>Sudeste</h3><span>🔴 Alerta</span></header><strong class="brazil-metric">Reservatórios: -22%</strong><p>Déficit acumulado elevando a vulnerabilidade de abastecimento em bacias críticas.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article><article class="brazil-region-card status-atencao" data-region-card="Sul"><header><h3>Sul</h3><span>🟡 Atenção</span></header><strong class="brazil-metric">Chuva acumulada: +18%</strong><p>Oscilação pluviométrica aumenta a necessidade de monitorar cheias e deslizamentos.</p><footer>Fontes: INPE / CEMADEN / ANA</footer></article></div>`;
         const map = brazilSection.querySelector(".brazil-map");
-        map.setAttribute("aria-label", "Mapa territorial reconhec├¡vel do Brasil dividido em cinco regi├Áes");
-        map.innerHTML = `<path class="brazil-outline" d="M105 24 L174 18 L238 38 L295 30 L365 57 L423 104 L401 147 L423 189 L391 224 L358 216 L330 258 L287 288 L246 304 L207 282 L174 250 L136 236 L111 203 L78 181 L62 140 L76 102 L63 69 Z"></path><path class="brazil-region status-anomalia" data-region="Norte" d="M105 24 L174 18 L238 38 L295 30 L285 99 L232 119 L174 107 L118 123 L76 102 L63 69 Z"><title>Norte ┬À Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M295 30 L365 57 L423 104 L401 147 L350 139 L285 99 Z"><title>Nordeste ┬À Aten├º├úo</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M174 107 L232 119 L285 99 L350 139 L330 194 L263 216 L207 183 Z"><title>Centro-Oeste ┬À Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M350 139 L401 147 L423 189 L391 224 L330 194 Z"><title>Sudeste ┬À Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M207 183 L263 216 L330 194 L391 224 L358 216 L330 258 L287 288 L246 304 L207 282 L174 250 Z"><title>Sul ┬À Aten├º├úo</title></path><g class="brazil-hotspots" aria-hidden="true"><circle cx="363" cy="177" r="7"></circle><circle cx="145" cy="71" r="6"></circle></g>`;
-        map.innerHTML = `<path class="brazil-country-outline" d="M96 35 C127 19 165 19 198 27 C231 35 261 26 294 34 C325 42 349 59 374 71 C402 84 432 105 438 128 C444 149 426 164 429 184 C433 204 417 218 399 226 C382 234 373 249 360 265 C346 282 333 302 310 311 C288 320 270 308 251 301 C229 292 212 283 194 269 C178 257 160 250 144 237 C126 223 113 207 98 198 C84 189 70 175 67 158 C64 141 73 126 79 111 C85 95 73 82 78 67 C81 54 88 44 96 35 Z"></path><g class="brazil-region-layer"><path class="brazil-region status-anomalia" data-region="Norte" d="M96 35 C140 17 190 27 231 35 C254 39 278 34 294 34 L302 104 C274 112 247 119 219 121 C189 122 160 115 132 121 L79 111 C85 95 73 82 78 67 C81 54 88 44 96 35 Z"><title>Norte ┬À Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M294 34 C326 42 350 59 374 71 C402 84 432 105 438 128 C444 149 426 164 417 174 L352 161 L302 104 Z"><title>Nordeste ┬À Aten├º├úo</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M132 121 C160 115 189 122 219 121 C247 119 274 112 302 104 L352 161 L344 213 L282 231 L224 211 L175 184 Z"><title>Centro-Oeste ┬À Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M352 161 L417 174 C426 184 433 204 417 218 C399 226 382 234 373 249 L344 213 Z"><title>Sudeste ┬À Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M175 184 L224 211 L282 231 L344 213 L373 249 C360 265 346 282 333 302 C310 311 288 320 270 308 L251 301 C229 292 212 283 194 269 C178 257 160 250 144 237 C126 223 113 207 98 198 Z"><title>Sul ┬À Aten├º├úo</title></path></g><g class="brazil-hotspots" aria-hidden="true"><circle cx="383" cy="199" r="7"></circle><circle cx="164" cy="71" r="7"></circle></g>`;
-        map.innerHTML = `<svg viewBox="0 0 500 500" class="brazil-map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa do Brasil dividido em cinco regi├Áes"><path class="brazil-region status-anomalia" data-region="Norte" d="M 120,80 L 280,60 L 320,130 L 290,190 L 210,210 L 150,180 L 100,140 Z"><title>Norte - Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M 280,60 L 400,90 L 430,160 L 350,200 L 320,130 Z"><title>Nordeste - Aten├º├úo</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M 210,210 L 290,190 L 310,280 L 220,310 L 180,250 Z"><title>Centro-Oeste - Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M 310,280 L 350,200 L 410,250 L 340,340 L 290,320 Z"><title>Sudeste - Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M 220,310 L 290,320 L 310,380 L 260,440 L 210,380 Z"><title>Sul - Aten├º├úo</title></path><circle class="brazil-hotspot brazil-hotspot-anomalia" cx="200" cy="140" r="7"></circle><circle class="brazil-hotspot brazil-hotspot-alerta" cx="350" cy="285" r="8"></circle></svg>`;
-        brazilSection.querySelector(".brazil-map-panel").innerHTML = `<div class="brazil-panel-head"><div><span class="panel-kicker">MAPA INTERATIVO</span><h3>Distribui├º├úo territorial dos sinais</h3></div><span id="brazil-region-selection">Todas as regi├Áes</span></div><div class="brazil-map-stage"><svg class="brazil-map" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa do Brasil dividido em cinco regi├Áes"><path class="brazil-region status-anomalia" data-region="Norte" d="M 80,120 C 120,70 220,50 310,80 C 330,120 310,170 280,190 C 240,210 180,210 140,190 C 100,170 70,140 80,120 Z"><title>Norte - Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M 310,80 C 370,60 440,90 450,150 C 430,200 370,210 330,180 C 310,160 300,110 310,80 Z"><title>Nordeste - Aten├º├úo</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M 180,210 C 250,210 300,200 310,270 C 280,310 200,310 170,270 C 160,240 170,220 180,210 Z"><title>Centro-Oeste - Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M 310,270 C 360,220 420,250 400,320 C 350,360 300,330 290,300 C 290,280 300,270 310,270 Z"><title>Sudeste - Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M 200,310 C 270,310 290,320 280,390 C 250,440 210,430 190,380 C 180,340 190,320 200,310 Z"><title>Sul - Aten├º├úo</title></path></svg><div class="brazil-map-hotspot hotspot-norte"><span></span><i></i></div><div class="brazil-map-hotspot hotspot-sudeste"><span></span><i></i></div></div><div class="brazil-map-legend"><span><i class="status-dot normal"></i>Normal</span><span><i class="status-dot atencao"></i>Aten├º├úo</span><span><i class="status-dot anomalia"></i>Anomalia</span><span><i class="status-dot alerta"></i>Alerta</span></div>`;
+        map.setAttribute("aria-label", "Mapa territorial reconhecível do Brasil dividido em cinco regiões");
+        map.innerHTML = `<path class="brazil-outline" d="M105 24 L174 18 L238 38 L295 30 L365 57 L423 104 L401 147 L423 189 L391 224 L358 216 L330 258 L287 288 L246 304 L207 282 L174 250 L136 236 L111 203 L78 181 L62 140 L76 102 L63 69 Z"></path><path class="brazil-region status-anomalia" data-region="Norte" d="M105 24 L174 18 L238 38 L295 30 L285 99 L232 119 L174 107 L118 123 L76 102 L63 69 Z"><title>Norte · Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M295 30 L365 57 L423 104 L401 147 L350 139 L285 99 Z"><title>Nordeste · Atenção</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M174 107 L232 119 L285 99 L350 139 L330 194 L263 216 L207 183 Z"><title>Centro-Oeste · Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M350 139 L401 147 L423 189 L391 224 L330 194 Z"><title>Sudeste · Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M207 183 L263 216 L330 194 L391 224 L358 216 L330 258 L287 288 L246 304 L207 282 L174 250 Z"><title>Sul · Atenção</title></path><g class="brazil-hotspots" aria-hidden="true"><circle cx="363" cy="177" r="7"></circle><circle cx="145" cy="71" r="6"></circle></g>`;
+        map.innerHTML = `<path class="brazil-country-outline" d="M96 35 C127 19 165 19 198 27 C231 35 261 26 294 34 C325 42 349 59 374 71 C402 84 432 105 438 128 C444 149 426 164 429 184 C433 204 417 218 399 226 C382 234 373 249 360 265 C346 282 333 302 310 311 C288 320 270 308 251 301 C229 292 212 283 194 269 C178 257 160 250 144 237 C126 223 113 207 98 198 C84 189 70 175 67 158 C64 141 73 126 79 111 C85 95 73 82 78 67 C81 54 88 44 96 35 Z"></path><g class="brazil-region-layer"><path class="brazil-region status-anomalia" data-region="Norte" d="M96 35 C140 17 190 27 231 35 C254 39 278 34 294 34 L302 104 C274 112 247 119 219 121 C189 122 160 115 132 121 L79 111 C85 95 73 82 78 67 C81 54 88 44 96 35 Z"><title>Norte · Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M294 34 C326 42 350 59 374 71 C402 84 432 105 438 128 C444 149 426 164 417 174 L352 161 L302 104 Z"><title>Nordeste · Atenção</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M132 121 C160 115 189 122 219 121 C247 119 274 112 302 104 L352 161 L344 213 L282 231 L224 211 L175 184 Z"><title>Centro-Oeste · Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M352 161 L417 174 C426 184 433 204 417 218 C399 226 382 234 373 249 L344 213 Z"><title>Sudeste · Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M175 184 L224 211 L282 231 L344 213 L373 249 C360 265 346 282 333 302 C310 311 288 320 270 308 L251 301 C229 292 212 283 194 269 C178 257 160 250 144 237 C126 223 113 207 98 198 Z"><title>Sul · Atenção</title></path></g><g class="brazil-hotspots" aria-hidden="true"><circle cx="383" cy="199" r="7"></circle><circle cx="164" cy="71" r="7"></circle></g>`;
+        map.innerHTML = `<svg viewBox="0 0 500 500" class="brazil-map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa do Brasil dividido em cinco regiões"><path class="brazil-region status-anomalia" data-region="Norte" d="M 120,80 L 280,60 L 320,130 L 290,190 L 210,210 L 150,180 L 100,140 Z"><title>Norte - Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M 280,60 L 400,90 L 430,160 L 350,200 L 320,130 Z"><title>Nordeste - Atenção</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M 210,210 L 290,190 L 310,280 L 220,310 L 180,250 Z"><title>Centro-Oeste - Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M 310,280 L 350,200 L 410,250 L 340,340 L 290,320 Z"><title>Sudeste - Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M 220,310 L 290,320 L 310,380 L 260,440 L 210,380 Z"><title>Sul - Atenção</title></path><circle class="brazil-hotspot brazil-hotspot-anomalia" cx="200" cy="140" r="7"></circle><circle class="brazil-hotspot brazil-hotspot-alerta" cx="350" cy="285" r="8"></circle></svg>`;
+        brazilSection.querySelector(".brazil-map-panel").innerHTML = `<div class="brazil-panel-head"><div><span class="panel-kicker">MAPA INTERATIVO</span><h3>Distribuição territorial dos sinais</h3></div><span id="brazil-region-selection">Todas as regiões</span></div><div class="brazil-map-stage"><svg class="brazil-map" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa do Brasil dividido em cinco regiões"><path class="brazil-region status-anomalia" data-region="Norte" d="M 80,120 C 120,70 220,50 310,80 C 330,120 310,170 280,190 C 240,210 180,210 140,190 C 100,170 70,140 80,120 Z"><title>Norte - Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M 310,80 C 370,60 440,90 450,150 C 430,200 370,210 330,180 C 310,160 300,110 310,80 Z"><title>Nordeste - Atenção</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M 180,210 C 250,210 300,200 310,270 C 280,310 200,310 170,270 C 160,240 170,220 180,210 Z"><title>Centro-Oeste - Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M 310,270 C 360,220 420,250 400,320 C 350,360 300,330 290,300 C 290,280 300,270 310,270 Z"><title>Sudeste - Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M 200,310 C 270,310 290,320 280,390 C 250,440 210,430 190,380 C 180,340 190,320 200,310 Z"><title>Sul - Atenção</title></path></svg><div class="brazil-map-hotspot hotspot-norte"><span></span><i></i></div><div class="brazil-map-hotspot hotspot-sudeste"><span></span><i></i></div></div><div class="brazil-map-legend"><span><i class="status-dot normal"></i>Normal</span><span><i class="status-dot atencao"></i>Atenção</span><span><i class="status-dot anomalia"></i>Anomalia</span><span><i class="status-dot alerta"></i>Alerta</span></div>`;
         const alertsPanel = brazilSection.querySelector(".brazil-alerts-panel");
-        alertsPanel.querySelector(".brazil-panel-head h3").textContent = "­ƒÜ¿ BOLETIM DE ALERTAS NACIONAIS (TEMPO REAL)";
-        alertsPanel.querySelectorAll(".brazil-alert-card").forEach((card, index) => { const time = ["AGORA ┬À 17:40", "AGORA ┬À 17:34", "HOJE ┬À 17:21"][index] || "HOJE ┬À 17:10"; card.insertAdjacentHTML("afterbegin", `<time>${time}</time>`); });
-        alertsPanel.querySelector(".brazil-panel-head h3").textContent = "SINAIS CR├ìTICOS EM TEMPO REAL";
-        alertsPanel.insertAdjacentHTML("beforeend", `<article class="brazil-alert-card status-anomalia"><span class="brazil-alert-badge">­ƒƒº ANOMALIA ┬À H├ü 7H</span><strong>Nordeste ┬À Pulso de Calor Seco</strong><p>Temperatura acima da base e precipita├º├úo irregular pressionam o solo exposto.</p><small>Fonte: INMET / CEMADEN</small></article><article class="brazil-alert-card status-atencao"><span class="brazil-alert-badge">­ƒƒí ATEN├ç├âO ┬À H├ü 9H</span><strong>Centro-Oeste ┬À Janela de Fogo Aberta</strong><p>Combust├¡vel vegetal mais seco mant├®m a vigil├óncia sobre focos de calor.</p><small>Fonte: INPE</small></article>`);
+        alertsPanel.querySelector(".brazil-panel-head h3").textContent = "🚨 BOLETIM DE ALERTAS NACIONAIS (TEMPO REAL)";
+        alertsPanel.querySelectorAll(".brazil-alert-card").forEach((card, index) => { const time = ["AGORA · 17:40", "AGORA · 17:34", "HOJE · 17:21"][index] || "HOJE · 17:10"; card.insertAdjacentHTML("afterbegin", `<time>${time}</time>`); });
+        alertsPanel.querySelector(".brazil-panel-head h3").textContent = "SINAIS CRÍTICOS EM TEMPO REAL";
+        alertsPanel.insertAdjacentHTML("beforeend", `<article class="brazil-alert-card status-anomalia"><span class="brazil-alert-badge">🟧 ANOMALIA · HÁ 7H</span><strong>Nordeste · Pulso de Calor Seco</strong><p>Temperatura acima da base e precipitação irregular pressionam o solo exposto.</p><small>Fonte: INMET / CEMADEN</small></article><article class="brazil-alert-card status-atencao"><span class="brazil-alert-badge">🟡 ATENÇÃO · HÁ 9H</span><strong>Centro-Oeste · Janela de Fogo Aberta</strong><p>Combustível vegetal mais seco mantém a vigilância sobre focos de calor.</p><small>Fonte: INPE</small></article>`);
         const regionDetails = {
-            Norte: ["D├®ficit H├¡drico: -31%", 78, ["Focos de calor em alta", "Vazante amaz├┤nica acelerada", "Umidade do solo em queda"]],
-            Nordeste: ["Vari├óncia T├®rmica: +2.8 ┬░C", 69, ["Pulso de calor seco", "Anomalia pluviom├®trica", "Solo exposto sob estresse"]],
-            "Centro-Oeste": ["Umidade do Solo: -18%", 44, ["Janela de fogo aberta", "Chuva irregular no Cerrado", "Ventos ampliando dispers├úo"]],
-            Sudeste: ["Reservat├│rios: -22%", 86, ["Bacia em cota de estresse", "D├®ficit h├¡drico persistente", "Risco de abastecimento"]],
-            Sul: ["Chuva acumulada: +18%", 62, ["Bloqueio atmosf├®rico ativo", "Desvio t├®rmico persistente", "Risco hidrol├│gico elevado"]]
+            Norte: ["Déficit Hídrico: -31%", 78, ["Focos de calor em alta", "Vazante amazônica acelerada", "Umidade do solo em queda"]],
+            Nordeste: ["Variância Térmica: +2.8 °C", 69, ["Pulso de calor seco", "Anomalia pluviométrica", "Solo exposto sob estresse"]],
+            "Centro-Oeste": ["Umidade do Solo: -18%", 44, ["Janela de fogo aberta", "Chuva irregular no Cerrado", "Ventos ampliando dispersão"]],
+            Sudeste: ["Reservatórios: -22%", 86, ["Bacia em cota de estresse", "Déficit hídrico persistente", "Risco de abastecimento"]],
+            Sul: ["Chuva acumulada: +18%", 62, ["Bloqueio atmosférico ativo", "Desvio térmico persistente", "Risco hidrológico elevado"]]
         };
-        brazilSection.querySelectorAll("[data-region-card]").forEach(card => { const d = regionDetails[card.dataset.regionCard]; card.querySelector(".brazil-metric").textContent = d[0]; card.querySelector(".brazil-metric").insertAdjacentHTML("afterend", `<ul class="brazil-signal-list">${d[2].map(item => `<li>${item}</li>`).join("")}</ul><div class="brazil-stress"><span>N├ìVEL DE ESTRESSE DA REGI├âO</span><strong>${d[1]}/100</strong><i><em style="width:${d[1]}%"></em></i></div>`); });
+        brazilSection.querySelectorAll("[data-region-card]").forEach(card => { const d = regionDetails[card.dataset.regionCard]; card.querySelector(".brazil-metric").textContent = d[0]; card.querySelector(".brazil-metric").insertAdjacentHTML("afterend", `<ul class="brazil-signal-list">${d[2].map(item => `<li>${item}</li>`).join("")}</ul><div class="brazil-stress"><span>NÍVEL DE ESTRESSE DA REGIÃO</span><strong>${d[1]}/100</strong><i><em style="width:${d[1]}%"></em></i></div>`); });
         const brazilDomainSignals = {
-            Norte: { score: 78, topics: ["­ƒº¼ Vigil├óncia epidemiol├│gica: sinais respirat├│rios sob triagem", "­ƒîì Estresse de bioma: press├úo sobre ├íreas de floresta", "­ƒîè Rios em vazante acelerada no recorte monitorado"], source: "Fiocruz / INPE / CEMADEN" },
-            Nordeste: { score: 69, topics: ["­ƒîè SST costeira: anomalia t├®rmica de +1,6 ┬░C", "­ƒîì Solo: umidade abaixo da refer├¬ncia sazonal", "­ƒø░´©Å Rede de observa├º├úo costeira em aten├º├úo"], source: "NOAA OISST / INPE / ANA" },
-            "Centro-Oeste": { score: 44, topics: ["­ƒîì Umidade: queda localizada no Cerrado", "­ƒº¼ Biodefesa/Fauna: vigil├óncia de mortalidade silvestre", "­ƒöÑ Focos de calor sem expans├úo confirmada"], source: "IBAMA / ICMBio / INPE" },
-            Sudeste: { score: 86, topics: ["­ƒîì Geologia: microtremores em monitoramento", "­ƒîè H├¡drico: bacias sob press├úo operacional", "­ƒñû Infraestrutura/Redes: instabilidade pontual de servi├ºos"], source: "USGS / ANA / Defesa Civil" },
-            Sul: { score: 62, topics: ["­ƒîî Clima espacial: AMAS em observa├º├úo ampliada", "­ƒîè Oscila├º├úo mar├¡tima: ressaca costeira localizada", "­ƒîì Solo: satura├º├úo elevada ap├│s chuvas recentes"], source: "NOAA SWPC / Marinha / INMET" }
+            Norte: { score: 78, topics: ["🧬 Vigilância epidemiológica: sinais respiratórios sob triagem", "🌍 Estresse de bioma: pressão sobre áreas de floresta", "🌊 Rios em vazante acelerada no recorte monitorado"], source: "Fiocruz / INPE / CEMADEN" },
+            Nordeste: { score: 69, topics: ["🌊 SST costeira: anomalia térmica de +1,6 °C", "🌍 Solo: umidade abaixo da referência sazonal", "🛰️ Rede de observação costeira em atenção"], source: "NOAA OISST / INPE / ANA" },
+            "Centro-Oeste": { score: 44, topics: ["🌍 Umidade: queda localizada no Cerrado", "🧬 Biodefesa/Fauna: vigilância de mortalidade silvestre", "🔥 Focos de calor sem expansão confirmada"], source: "IBAMA / ICMBio / INPE" },
+            Sudeste: { score: 86, topics: ["🌍 Geologia: microtremores em monitoramento", "🌊 Hídrico: bacias sob pressão operacional", "🤖 Infraestrutura/Redes: instabilidade pontual de serviços"], source: "USGS / ANA / Defesa Civil" },
+            Sul: { score: 62, topics: ["🌌 Clima espacial: AMAS em observação ampliada", "🌊 Oscilação marítima: ressaca costeira localizada", "🌍 Solo: saturação elevada após chuvas recentes"], source: "NOAA SWPC / Marinha / INMET" }
         };
-        brazilSection.querySelectorAll("[data-region-card]").forEach(card => { const region = card.dataset.regionCard; const d = brazilDomainSignals[region]; card.innerHTML = `<header><h3>${region}</h3><span>${card.classList.contains("status-alerta") ? "Alerta" : card.classList.contains("status-anomalia") ? "Anomalia" : card.classList.contains("status-atencao") ? "Aten├º├úo" : "Normal"}</span></header><div class="brazil-stress"><span>N├ìVEL DE ESTRESSE DA REGI├âO</span><strong>${d.score}/100</strong><i><em style="width:${d.score}%"></em></i></div><ul class="brazil-signal-list">${d.topics.map(item => `<li>${item}</li>`).join("")}</ul><div class="brazil-card-source">Fontes: ${d.source}</div>`; });
-        brazilSection.querySelector(".brazil-region-grid").insertAdjacentHTML("afterend", `<section class="brazil-news-feed" aria-labelledby="brazil-news-title"><div class="brazil-feed-head"><div><span class="panel-kicker">CLIPPING BRASIL ┬À M├ìDIA & ALERTAS LOCAIS</span><h3 id="brazil-news-title">Feed de Not├¡cias & Urg├¬ncias Brasil</h3></div><span class="brazil-feed-live">ÔùÅ AO VIVO ┬À NACIONAL</span></div><div class="brazil-feed-filters"><button class="active" data-brazil-filter="todos">Todos</button><button data-brazil-filter="alerta">­ƒö┤ Alerta</button><button data-brazil-filter="anomalia">­ƒƒá Anomalia</button><button data-brazil-filter="atencao">­ƒƒí Aten├º├úo</button><button data-brazil-filter="biologia">­ƒº¼ Biologia</button><button data-brazil-filter="infra">­ƒñû Infraestrutura</button></div><div class="brazil-news-list"><article class="brazil-news-item status-alerta" data-news-status="alerta" data-news-domain="infra"><time>AGORA ┬À 17:46</time><span>G1 ┬À Infraestrutura</span><h4>Defesa Civil atualiza protocolo para redes cr├¡ticas no Sudeste</h4><p>Monitoramento operacional refor├ºado ap├│s oscila├º├Áes localizadas.</p></article><article class="brazil-news-item status-anomalia" data-news-status="anomalia" data-news-domain="biologia"><time>AGORA ┬À 17:32</time><span>Fiocruz ┬À Biologia</span><h4>Vigil├óncia epidemiol├│gica amplia triagem de s├¡ndrome respirat├│ria no Norte</h4><p>Boletim recomenda acompanhamento de sinais e confirma├º├úo laboratorial.</p></article><article class="brazil-news-item status-atencao" data-news-status="atencao" data-news-domain="oceanos"><time>HOJE ┬À 17:18</time><span>Ag├¬ncia Brasil ┬À Oceanos</span><h4>Marinha acompanha oscila├º├úo mar├¡tima na costa Sul</h4><p>Leitura costeira mant├®m aten├º├úo para ressaca localizada.</p></article><article class="brazil-news-item status-anomalia" data-news-status="anomalia" data-news-domain="clima"><time>HOJE ┬À 16:55</time><span>INPE ┬À Territ├│rio</span><h4>Sat├®lites detectam press├úo acima da m├®dia em ├íreas de bioma</h4><p>Dados ser├úo cruzados com observa├º├Áes de campo e focos de calor.</p></article></div></section>`);
+        brazilSection.querySelectorAll("[data-region-card]").forEach(card => { const region = card.dataset.regionCard; const d = brazilDomainSignals[region]; card.innerHTML = `<header><h3>${region}</h3><span>${card.classList.contains("status-alerta") ? "Alerta" : card.classList.contains("status-anomalia") ? "Anomalia" : card.classList.contains("status-atencao") ? "Atenção" : "Normal"}</span></header><div class="brazil-stress"><span>NÍVEL DE ESTRESSE DA REGIÃO</span><strong>${d.score}/100</strong><i><em style="width:${d.score}%"></em></i></div><ul class="brazil-signal-list">${d.topics.map(item => `<li>${item}</li>`).join("")}</ul><div class="brazil-card-source">Fontes: ${d.source}</div>`; });
+        brazilSection.querySelector(".brazil-region-grid").insertAdjacentHTML("afterend", `<section class="brazil-news-feed" aria-labelledby="brazil-news-title"><div class="brazil-feed-head"><div><span class="panel-kicker">CLIPPING BRASIL · MÍDIA & ALERTAS LOCAIS</span><h3 id="brazil-news-title">Feed de Notícias & Urgências Brasil</h3></div><span class="brazil-feed-live">● AO VIVO · NACIONAL</span></div><div class="brazil-feed-filters"><button class="active" data-brazil-filter="todos">Todos</button><button data-brazil-filter="alerta">🔴 Alerta</button><button data-brazil-filter="anomalia">🟠 Anomalia</button><button data-brazil-filter="atencao">🟡 Atenção</button><button data-brazil-filter="biologia">🧬 Biologia</button><button data-brazil-filter="infra">🤖 Infraestrutura</button></div><div class="brazil-news-list"><article class="brazil-news-item status-alerta" data-news-status="alerta" data-news-domain="infra"><time>AGORA · 17:46</time><span>G1 · Infraestrutura</span><h4>Defesa Civil atualiza protocolo para redes críticas no Sudeste</h4><p>Monitoramento operacional reforçado após oscilações localizadas.</p></article><article class="brazil-news-item status-anomalia" data-news-status="anomalia" data-news-domain="biologia"><time>AGORA · 17:32</time><span>Fiocruz · Biologia</span><h4>Vigilância epidemiológica amplia triagem de síndrome respiratória no Norte</h4><p>Boletim recomenda acompanhamento de sinais e confirmação laboratorial.</p></article><article class="brazil-news-item status-atencao" data-news-status="atencao" data-news-domain="oceanos"><time>HOJE · 17:18</time><span>Agência Brasil · Oceanos</span><h4>Marinha acompanha oscilação marítima na costa Sul</h4><p>Leitura costeira mantém atenção para ressaca localizada.</p></article><article class="brazil-news-item status-anomalia" data-news-status="anomalia" data-news-domain="clima"><time>HOJE · 16:55</time><span>INPE · Território</span><h4>Satélites detectam pressão acima da média em áreas de bioma</h4><p>Dados serão cruzados com observações de campo e focos de calor.</p></article></div></section>`);
         brazilSection.querySelectorAll("[data-brazil-filter]").forEach(button => button.addEventListener("click", () => { brazilSection.querySelectorAll("[data-brazil-filter]").forEach(item => item.classList.toggle("active", item === button)); const filter = button.dataset.brazilFilter; brazilSection.querySelectorAll(".brazil-news-item").forEach(item => { item.hidden = filter !== "todos" && item.dataset.newsStatus !== filter && item.dataset.newsDomain !== filter; }); }));
         const regionCards = [...brazilSection.querySelectorAll("[data-region-card]")];
         const selection = brazilSection.querySelector("#brazil-region-selection");
-        const setBrazilRegion = (region) => { selection.textContent = region || "Todas as regi├Áes"; regionCards.forEach(card => card.classList.toggle("is-muted", Boolean(region) && card.dataset.regionCard !== region)); };
+        const setBrazilRegion = (region) => { selection.textContent = region || "Todas as regiões"; regionCards.forEach(card => card.classList.toggle("is-muted", Boolean(region) && card.dataset.regionCard !== region)); };
         brazilSection.querySelectorAll(".brazil-region").forEach(region => { region.addEventListener("mouseenter", () => setBrazilRegion(region.dataset.region)); region.addEventListener("focus", () => setBrazilRegion(region.dataset.region)); region.addEventListener("click", () => setBrazilRegion(region.dataset.region)); });
         brazilSection.querySelector(".brazil-map").addEventListener("mouseleave", () => setBrazilRegion());
     }
@@ -77,7 +77,7 @@
         card.classList.add(`status-${meta.status}`);
         const footer = card.querySelector("footer");
         if (footer && footer.firstChild && footer.firstChild.nodeType === Node.TEXT_NODE) {
-            footer.firstChild.textContent = footer.firstChild.textContent.split(/\s[┬À├é]+\s/)[0].trim();
+            footer.firstChild.textContent = footer.firstChild.textContent.split(/\s[·Â]+\s/)[0].trim();
         }
     });
     function aplicarFiltrosNoticias() {
@@ -95,12 +95,12 @@
         let empty = document.querySelector("#news-list .news-filter-empty");
         if (!visible) {
             if (!empty) { empty = document.createElement("div"); empty.className = "news-filter-empty"; document.getElementById("news-list")?.appendChild(empty); }
-            empty.textContent = "­ƒöì Nenhuma not├¡cia registrada no momento para esta combina├º├úo de filtros.";
+            empty.textContent = "🔍 Nenhuma notícia registrada no momento para esta combinação de filtros.";
             empty.hidden = false;
         } else if (empty) empty.hidden = true;
         const pagination = document.getElementById("news-pagination");
         if (pagination) {
-            pagination.innerHTML = visible > perPage ? `<button type="button" data-news-page="prev" ${newsPage === 1 ? "disabled" : ""}>ÔåÉ Anterior</button><span>P├ígina ${newsPage} de ${totalPages}</span><button type="button" data-news-page="next" ${newsPage === totalPages ? "disabled" : ""}>Pr├│xima ÔåÆ</button>` : "";
+            pagination.innerHTML = visible > perPage ? `<button type="button" data-news-page="prev" ${newsPage === 1 ? "disabled" : ""}>← Anterior</button><span>Página ${newsPage} de ${totalPages}</span><button type="button" data-news-page="next" ${newsPage === totalPages ? "disabled" : ""}>Próxima →</button>` : "";
             pagination.querySelectorAll("button").forEach(button => button.addEventListener("click", () => { newsPage += button.dataset.newsPage === "next" ? 1 : -1; aplicarFiltrosNoticias(); }));
         }
     }
@@ -114,7 +114,7 @@
     aplicarFiltrosNoticias();
 
     // =========================================================
-    // ELEMENTOS ÔÇö ESPA├çO
+    // ELEMENTOS — ESPAÇO
     // =========================================================
 
     const neoList = document.getElementById("neo-list");
@@ -135,7 +135,7 @@
         document.getElementById("space-update");
 
     // =========================================================
-    // ELEMENTOS ÔÇö OCEANOS
+    // ELEMENTOS — OCEANOS
     // =========================================================
 
     const oceanSummary = document.getElementById("ocean-summary");
@@ -175,16 +175,16 @@
 
     const aiReferenceRecords = [
         {
-            title: "Agente de programa├º├úo apagou banco de dados de produ├º├úo",
-            description: "Incidente documentado envolvendo um agente de IA que executou uma a├º├úo destrutiva em ambiente real.",
+            title: "Agente de programação apagou banco de dados de produção",
+            description: "Incidente documentado envolvendo um agente de IA que executou uma ação destrutiva em ambiente real.",
             sourceName: "AI Incident Database",
             url: "https://incidentdatabase.ai/",
             status: "anomalia",
             origem: "Base de incidentes"
         },
         {
-            title: "Exposi├º├úo de dados associada a sistema de IA",
-            description: "Registro de seguran├ºa envolvendo dados acess├¡veis indevidamente em um sistema relacionado a IA.",
+            title: "Exposição de dados associada a sistema de IA",
+            description: "Registro de segurança envolvendo dados acessíveis indevidamente em um sistema relacionado a IA.",
             sourceName: "AI Incident Database",
             url: "https://incidentdatabase.ai/",
             status: "anomalia",
@@ -192,7 +192,7 @@
         },
         {
             title: "Erro de reconhecimento facial com impacto sobre uma pessoa",
-            description: "Caso documentado de identifica├º├úo automatizada incorreta e poss├¡vel impacto individual.",
+            description: "Caso documentado de identificação automatizada incorreta e possível impacto individual.",
             sourceName: "AI Incident Database",
             url: "https://incidentdatabase.ai/",
             status: "atencao",
@@ -203,16 +203,16 @@
     function traduzirTextoIA(texto) {
         let resultado = String(texto || "");
         const termos = [
-            [/artificial intelligence/gi, "intelig├¬ncia artificial"],
+            [/artificial intelligence/gi, "inteligência artificial"],
             [/AI systems?/gi, "sistemas de IA"],
-            [/machine learning/gi, "aprendizado de m├íquina"],
+            [/machine learning/gi, "aprendizado de máquina"],
             [/facial recognition/gi, "reconhecimento facial"],
             [/deepfake/gi, "deepfake"],
             [/data breach/gi, "vazamento de dados"],
             [/privacy/gi, "privacidade"],
-            [/bias/gi, "vi├®s"],
-            [/safety/gi, "seguran├ºa"],
-            [/security/gi, "seguran├ºa"],
+            [/bias/gi, "viés"],
+            [/safety/gi, "segurança"],
+            [/security/gi, "segurança"],
             [/abuse/gi, "abuso"],
             [/accident/gi, "acidente"],
             [/failure/gi, "falha"],
@@ -244,16 +244,16 @@
             const recentes = incidentes.filter(item => String(item.date || item.created_at || item.created || "").slice(0, 7) === mesAtual);
             const corpus = recentes.map(item => `${item.title || ""} ${item.description || ""} ${item.summary || ""} ${item.category || ""}`.toLowerCase());
             const contagens = {
-                jailbreak: corpus.filter(text => /jailbreak|evas[a├ú]o|restri[c├º][a├ú]o|fora do escopo|bypass/.test(text)).length,
-                agency: corpus.filter(text => /aut[o├┤]nom|e-mail|email|credencial|api|excessive agency|acesso a dados|llm08/.test(text)).length,
-                hallucination: corpus.filter(text => /alucina|halluc|falso fato|convic[c├º][a├ú]o|alinhamento/.test(text)).length
+                jailbreak: corpus.filter(text => /jailbreak|evas[aã]o|restri[cç][aã]o|fora do escopo|bypass/.test(text)).length,
+                agency: corpus.filter(text => /aut[oô]nom|e-mail|email|credencial|api|excessive agency|acesso a dados|llm08/.test(text)).length,
+                hallucination: corpus.filter(text => /alucina|halluc|falso fato|convic[cç][aã]o|alinhamento/.test(text)).length
             };
             const total = Object.values(contagens).reduce((sum, value) => sum + value, 0);
             if (!total) return atualizarRadarAIID(fallback, false);
             const percentuais = Object.fromEntries(Object.entries(contagens).map(([key, value]) => [key, Math.round((value / total) * 100)]));
             atualizarRadarAIID(percentuais, true);
         } catch (error) {
-            console.warn("AIID indispon├¡vel; usando composi├º├úo de refer├¬ncia:", error.message);
+            console.warn("AIID indisponível; usando composição de referência:", error.message);
             atualizarRadarAIID(fallback, false);
         }
     }
@@ -265,7 +265,7 @@
         if (card1) {
             const tendencia = Math.max(1, Math.round((percentuais.jailbreak * 0.8) + (percentuais.agency * 0.45)));
             const badge = card1.querySelector(".ai-card-heading em");
-            if (badge) badge.textContent = `+${tendencia}% em a├º├Áes n├úo solicitadas${aoVivo ? " ┬À AIID ao vivo" : ""}`;
+            if (badge) badge.textContent = `+${tendencia}% em ações não solicitadas${aoVivo ? " · AIID ao vivo" : ""}`;
             const line = card1.querySelector(".ai-line");
             const area = card1.querySelector(".ai-area");
             const finalY = Math.max(25, 125 - Math.round(tendencia * 1.15));
@@ -282,9 +282,9 @@
             const b = a + percentuais.agency;
             if (donut) donut.style.background = `conic-gradient(#f97316 0 ${a}%, #0ea5e9 ${a}% ${b}%, #cbd5e1 ${b}% 100%)`;
             const legendas = card2.querySelectorAll(".ai-legend span");
-            [a, percentuais.agency, percentuais.hallucination].forEach((valor, index) => { if (legendas[index]) legendas[index].innerHTML = `${index === 0 ? "­ƒƒá" : index === 1 ? "­ƒöÁ" : "ÔÜ¬"} ${valor}% ÔÇö ${index === 0 ? "Evas├úo de Restri├º├Áes (Jailbreak / Agentes fora do escopo)" : index === 1 ? "Invas├úo de Dados (Leitura aut├┤noma de e-mails/mensagens)" : "Alucina├º├úo Persistente (Crise de convic├º├úo / Falsos fatos)"}`; });
+            [a, percentuais.agency, percentuais.hallucination].forEach((valor, index) => { if (legendas[index]) legendas[index].innerHTML = `${index === 0 ? "🟠" : index === 1 ? "🔵" : "⚪"} ${valor}% — ${index === 0 ? "Evasão de Restrições (Jailbreak / Agentes fora do escopo)" : index === 1 ? "Invasão de Dados (Leitura autônoma de e-mails/mensagens)" : "Alucinação Persistente (Crise de convicção / Falsos fatos)"}`; });
             const fonte = card2.querySelector(".ai-source");
-            if (fonte && aoVivo) fonte.textContent += " ┬À AIID ao vivo";
+            if (fonte && aoVivo) fonte.textContent += " · AIID ao vivo";
         }
         document.querySelectorAll("#ai .ai-behavior-bars > div").forEach((row, index) => {
             const valor = valoresRadar[index];
@@ -313,11 +313,11 @@
         const pagina = filtrados.slice(inicio, inicio + porPagina);
         aiList.innerHTML = pagina.map(item => {
             const nivel = classificarIncidenteIA(item);
-            return `<article class="ai-event-card status-${nivel}"><div class="ai-event-head">${badgeStatus(nivel)}<small>${escapeHTML(item.origem)}</small></div><div class="ai-event-date">­ƒôà <span>Data do evento</span><strong>${escapeHTML(dataEventoIA(item))}</strong></div><h3>${escapeHTML(traduzirTextoIA(item.title || "Incidente envolvendo IA"))}</h3><p>${escapeHTML(traduzirTextoIA(item.description || "Registro sem descri├º├úo detalhada."))}</p>${item.url ? `<a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">Ver fonte Ôåù</a>` : ""}</article>`;
-        }).join("") || `<div class="ai-empty">Nenhum sinal nesta classifica├º├úo.</div>`;
+            return `<article class="ai-event-card status-${nivel}"><div class="ai-event-head">${badgeStatus(nivel)}<small>${escapeHTML(item.origem)}</small></div><div class="ai-event-date">📅 <span>Data do evento</span><strong>${escapeHTML(dataEventoIA(item))}</strong></div><h3>${escapeHTML(traduzirTextoIA(item.title || "Incidente envolvendo IA"))}</h3><p>${escapeHTML(traduzirTextoIA(item.description || "Registro sem descrição detalhada."))}</p>${item.url ? `<a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">Ver fonte ↗</a>` : ""}</article>`;
+        }).join("") || `<div class="ai-empty">Nenhum sinal nesta classificação.</div>`;
         if (aiPagination) {
             aiPagination.innerHTML = totalPaginas > 1
-                ? `<button class="ai-page-button" data-ai-page="prev" ${aiPage === 1 ? "disabled" : ""}>ÔåÉ Anterior</button><span>P├ígina ${aiPage} de ${totalPaginas}</span><button class="ai-page-button" data-ai-page="next" ${aiPage === totalPaginas ? "disabled" : ""}>Pr├│xima ÔåÆ</button>`
+                ? `<button class="ai-page-button" data-ai-page="prev" ${aiPage === 1 ? "disabled" : ""}>← Anterior</button><span>Página ${aiPage} de ${totalPaginas}</span><button class="ai-page-button" data-ai-page="next" ${aiPage === totalPaginas ? "disabled" : ""}>Próxima →</button>`
                 : "";
             aiPagination.querySelectorAll(".ai-page-button").forEach(button => button.addEventListener("click", () => {
                 aiPage += button.dataset.aiPage === "next" ? 1 : -1;
@@ -328,9 +328,9 @@
 
     function renderizarIA(dados) {
         const incidentes = Array.isArray(dados?.ai?.incidents) ? dados.ai.incidents : [];
-        const noticiasIA = (Array.isArray(dados?.news) ? dados.news : []).filter(item => /\b(ai|ia|intelig|algorithm|algoritmo|chatbot|modelo|reconhecimento facial|deepfake|rob├┤|robot)\b/i.test(`${item.title || ""} ${item.description || ""}`));
+        const noticiasIA = (Array.isArray(dados?.news) ? dados.news : []).filter(item => /\b(ai|ia|intelig|algorithm|algoritmo|chatbot|modelo|reconhecimento facial|deepfake|robô|robot)\b/i.test(`${item.title || ""} ${item.description || ""}`));
         const registrosAnteriores = aiRecords.length && !incidentes.length && !noticiasIA.length ? aiRecords : [];
-        aiRecords = registrosAnteriores.length ? registrosAnteriores : [...incidentes.map(item => ({ ...item, origem: item.origem || "Incidente documentado" })), ...noticiasIA.map(item => ({ ...item, origem: "Sinal de m├¡dia" }))];
+        aiRecords = registrosAnteriores.length ? registrosAnteriores : [...incidentes.map(item => ({ ...item, origem: item.origem || "Incidente documentado" })), ...noticiasIA.map(item => ({ ...item, origem: "Sinal de mídia" }))];
         aiPage = 1;
         renderizarListaIA();
         if (typeof atualizarSinaisAssincronos === "function") atualizarSinaisAssincronos();
@@ -339,12 +339,12 @@
     function verificarIA() {
         const query = (aiQuery?.value || "").trim().toLowerCase();
         if (!aiVerificationResult) return;
-        if (!query) { aiVerificationResult.innerHTML = `<p class="ai-empty">Digite uma empresa, sistema ou afirma├º├úo para analisar.</p>`; return; }
+        if (!query) { aiVerificationResult.innerHTML = `<p class="ai-empty">Digite uma empresa, sistema ou afirmação para analisar.</p>`; return; }
         const encontrados = aiRecords.filter(item => correspondeConsulta(item, query));
-        if (!encontrados.length) { aiVerificationResult.innerHTML = `<div class="ai-result status-sem-evidencia"><strong>SEM EVID├èNCIA NOS DADOS CONSULTADOS</strong><p>A afirma├º├úo n├úo foi localizada no conjunto atual. Isso n├úo confirma nem desmente a not├¡cia.</p></div>`; return; }
+        if (!encontrados.length) { aiVerificationResult.innerHTML = `<div class="ai-result status-sem-evidencia"><strong>SEM EVIDÊNCIA NOS DADOS CONSULTADOS</strong><p>A afirmação não foi localizada no conjunto atual. Isso não confirma nem desmente a notícia.</p></div>`; return; }
         const confirmado = encontrados.some(item => item.origem === "Incidente documentado");
         const nivel = confirmado ? classificarIncidenteIA(encontrados[0]) : "atencao";
-        aiVerificationResult.innerHTML = `<div class="ai-result status-${nivel}">${badgeStatus(nivel)} <strong>${encontrados.length} resultado(s) encontrado(s)</strong><p>${confirmado ? "H├í registro em uma base de incidentes." : "H├í apenas sinal de m├¡dia; ainda n├úo h├í confirma├º├úo de incidente."}</p></div>`;
+        aiVerificationResult.innerHTML = `<div class="ai-result status-${nivel}">${badgeStatus(nivel)} <strong>${encontrados.length} resultado(s) encontrado(s)</strong><p>${confirmado ? "Há registro em uma base de incidentes." : "Há apenas sinal de mídia; ainda não há confirmação de incidente."}</p></div>`;
     }
 
     async function carregarNoticiasIA() {
@@ -355,16 +355,16 @@
             const data = await response.json();
             const noticias = (data.articles || []).map(item => ({
                 title: item.title,
-                description: "Sinal de m├¡dia sobre intelig├¬ncia artificial. A not├¡cia precisa de confirma├º├úo antes de ser tratada como incidente documentado.",
+                description: "Sinal de mídia sobre inteligência artificial. A notícia precisa de confirmação antes de ser tratada como incidente documentado.",
                 sourceName: item.domain || "GDELT",
                 url: item.url,
                 date: item.datetime || item.date || item.published || item.seendate,
                 status: "atencao",
-                origem: "Sinal de m├¡dia"
+                origem: "Sinal de mídia"
             }));
             renderizarIA({ ai: { incidents: noticias.length ? noticias : aiReferenceRecords }, news: [] });
         } catch (error) {
-            console.warn("N├úo foi poss├¡vel carregar not├¡cias de IA:", error.message);
+            console.warn("Não foi possível carregar notícias de IA:", error.message);
             if (!aiRecords.length) renderizarIA({ ai: { incidents: aiReferenceRecords }, news: [] });
         }
     }
@@ -383,73 +383,73 @@
 
     function traduzirTituloBiologico(titulo) {
         const traducoes = {
-            "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo": "Doen├ºa causada pelo v├¡rus Ebola Bundibugyo ÔÇö Rep├║blica Democr├ítica do Congo",
-            "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda": "Doen├ºa causada pelo v├¡rus Ebola Bundibugyo ÔÇö Rep├║blica Democr├ítica do Congo e Uganda",
-            "Hantavirus outbreak linked to cruise ship travel, Multi-locations": "Surto de hantav├¡rus associado a viagens em navio ÔÇö m├║ltiplas localidades",
-            "Nipah virus disease - India": "Doen├ºa causada pelo v├¡rus Nipah ÔÇö ├ìndia",
-            "Yellow fever - Global": "Febre amarela ÔÇö ocorr├¬ncia global"
+            "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo": "Doença causada pelo vírus Ebola Bundibugyo — República Democrática do Congo",
+            "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda": "Doença causada pelo vírus Ebola Bundibugyo — República Democrática do Congo e Uganda",
+            "Hantavirus outbreak linked to cruise ship travel, Multi-locations": "Surto de hantavírus associado a viagens em navio — múltiplas localidades",
+            "Nipah virus disease - India": "Doença causada pelo vírus Nipah — Índia",
+            "Yellow fever - Global": "Febre amarela — ocorrência global"
         };
-        return traducoes[titulo] || titulo || "Evento biol├│gico documentado";
+        return traducoes[titulo] || titulo || "Evento biológico documentado";
     }
 
     function localizarEventoBiologico(evento) {
         const texto = `${evento?.title || ""} ${evento?.summary || ""}`;
-        const encontrado = texto.match(/(?:- |ÔÇö |ÔÇô |, )(Democratic Republic of the Congo|India|Uganda|Ethiopia|Global|Multi-locations|Bangladesh|Cambodia|Thailand|Saudi Arabia|Morocco|Timor-Leste|Israel|Papua New Guinea|United States of America|Region of the Americas)/i);
-        const mapa = { "democratic republic of the congo": "RDC ┬À ├üFRICA CENTRAL", india: "├ìNDIA ┬À ├üSIA", uganda: "UGANDA ┬À ├üFRICA ORIENTAL", ethiopia: "ETI├ôPIA ┬À ├üFRICA ORIENTAL", global: "MONITORAMENTO GLOBAL", "multi-locations": "ROTAS INTERNACIONAIS", bangladesh: "BANGLADESH ┬À ├üSIA", cambodia: "CAMBOJA ┬À ├üSIA", thailand: "TAIL├éNDIA ┬À ├üSIA", "saudi arabia": "AR├üBIA SAUDITA", morocco: "MARROCOS ┬À ├üFRICA DO NORTE", "timor-leste": "TIMOR-LESTE", israel: "ISRAEL ┬À ORIENTE M├ëDIO", "papua new guinea": "PAPUA-NOVA GUIN├ë", "united states of america": "EUA ┬À AM├ëRICA DO NORTE", "region of the americas": "AM├ëRICAS" };
+        const encontrado = texto.match(/(?:- |— |– |, )(Democratic Republic of the Congo|India|Uganda|Ethiopia|Global|Multi-locations|Bangladesh|Cambodia|Thailand|Saudi Arabia|Morocco|Timor-Leste|Israel|Papua New Guinea|United States of America|Region of the Americas)/i);
+        const mapa = { "democratic republic of the congo": "RDC · ÁFRICA CENTRAL", india: "ÍNDIA · ÁSIA", uganda: "UGANDA · ÁFRICA ORIENTAL", ethiopia: "ETIÓPIA · ÁFRICA ORIENTAL", global: "MONITORAMENTO GLOBAL", "multi-locations": "ROTAS INTERNACIONAIS", bangladesh: "BANGLADESH · ÁSIA", cambodia: "CAMBOJA · ÁSIA", thailand: "TAILÂNDIA · ÁSIA", "saudi arabia": "ARÁBIA SAUDITA", morocco: "MARROCOS · ÁFRICA DO NORTE", "timor-leste": "TIMOR-LESTE", israel: "ISRAEL · ORIENTE MÉDIO", "papua new guinea": "PAPUA-NOVA GUINÉ", "united states of america": "EUA · AMÉRICA DO NORTE", "region of the americas": "AMÉRICAS" };
         return encontrado ? (mapa[encontrado[1].toLowerCase()] || encontrado[1].toUpperCase()) : "MONITORAMENTO GLOBAL";
     }
 
     function mancheteBiologica(evento, categoria) {
         const titulo = traduzirTituloBiologico(evento?.title || "");
         if (/ebola|bundibugyo/i.test(titulo)) return "Surto de Ebola Bundibugyo";
-        if (/hantavirus|hantav├¡rus/i.test(titulo)) return "Foco de Hantav├¡rus em rotas mar├¡timas";
-        if (/nipah/i.test(titulo)) return "Foco de v├¡rus Nipah";
-        if (/yellow fever|febre amarela/i.test(titulo)) return "Febre amarela ÔÇö ├üfrica e Am├®ricas";
+        if (/hantavirus|hantavírus/i.test(titulo)) return "Foco de Hantavírus em rotas marítimas";
+        if (/nipah/i.test(titulo)) return "Foco de vírus Nipah";
+        if (/yellow fever|febre amarela/i.test(titulo)) return "Febre amarela — África e Américas";
         if (/dengue/i.test(titulo)) return "Foco de dengue";
-        return categoria === "respiratory" ? "Sinal respirat├│rio em observa├º├úo" : "Pat├│geno em observa├º├úo";
+        return categoria === "respiratory" ? "Sinal respiratório em observação" : "Patógeno em observação";
     }
 
     function impactoBiologico(evento) {
         const resumo = String(evento?.summary || "");
         const casos = resumo.match(/([\d\s.,]+)\s+(?:confirmed cases|cases|casos)/i);
-        const obitos = resumo.match(/([\d\s.,]+)\s+(?:confirmed deaths|deaths|├│bitos)/i);
-        if (casos && obitos) return `${casos[1].trim()} casos confirmados ┬À ${obitos[1].trim()} ├│bitos registrados`;
+        const obitos = resumo.match(/([\d\s.,]+)\s+(?:confirmed deaths|deaths|óbitos)/i);
+        if (casos && obitos) return `${casos[1].trim()} casos confirmados · ${obitos[1].trim()} óbitos registrados`;
         if (casos) return `${casos[1].trim()} casos confirmados no boletim mais recente`;
         if (/outbreak|surto/i.test(resumo)) return "Surto ativo sob acompanhamento internacional";
-        return "Atualiza├º├úo epidemiol├│gica no boletim mais recente";
+        return "Atualização epidemiológica no boletim mais recente";
     }
 
     function paisesDoEvento(evento) {
         const texto = `${evento?.title || ""} ${evento?.summary || ""}`;
         const paises = {
-            "democratic republic of the congo": "RDC", "republic of the congo": "Rep├║blica do Congo", india: "├ìndia", uganda: "Uganda", ethiopia: "Eti├│pia", bangladesh: "Bangladesh", cambodia: "Camboja", thailand: "Tail├óndia", "saudi arabia": "Ar├íbia Saudita", morocco: "Marrocos", "timor-leste": "Timor-Leste", israel: "Israel", "papua new guinea": "Papua-Nova Guin├®", "united states of america": "EUA", brazil: "Brasil", ecuador: "Equador", senegal: "Senegal", mauritania: "Maurit├ónia"
+            "democratic republic of the congo": "RDC", "republic of the congo": "República do Congo", india: "Índia", uganda: "Uganda", ethiopia: "Etiópia", bangladesh: "Bangladesh", cambodia: "Camboja", thailand: "Tailândia", "saudi arabia": "Arábia Saudita", morocco: "Marrocos", "timor-leste": "Timor-Leste", israel: "Israel", "papua new guinea": "Papua-Nova Guiné", "united states of america": "EUA", brazil: "Brasil", ecuador: "Equador", senegal: "Senegal", mauritania: "Mauritânia"
         };
         return Object.entries(paises).filter(([nome]) => new RegExp(`\\b${nome}\\b`, "i").test(texto)).map(([, nome]) => nome);
     }
 
     function escalaFuzzyPandemica(total) {
-        if (total >= 13) return { label: "­ƒö┤ ESTADO DE S├ìTIO PAND├èMICO (Dissemina├º├úo Global)", level: "critico" };
-        if (total >= 5) return { label: "­ƒƒº ALERTA PR├ë-PAND├èMICO (5+ Pa├¡ses / 2 Continentes)", level: "alto" };
-        if (total >= 2) return { label: `­ƒƒí PROPAGA├ç├âO INTERNACIONAL (${total} Pa├¡ses)`, level: "medio" };
-        return { label: "­ƒƒó SURTO REGIONAL", level: "baixo" };
+        if (total >= 13) return { label: "🔴 ESTADO DE SÍTIO PANDÊMICO (Disseminação Global)", level: "critico" };
+        if (total >= 5) return { label: "🟧 ALERTA PRÉ-PANDÊMICO (5+ Países / 2 Continentes)", level: "alto" };
+        if (total >= 2) return { label: `🟡 PROPAGAÇÃO INTERNACIONAL (${total} Países)`, level: "medio" };
+        return { label: "🟢 SURTO REGIONAL", level: "baixo" };
     }
 
     function atualizarCardsBiologia() {
         const regras = {
-            pathogen: /ebola|nipah|hantavirus|hantav├¡rus|v├¡rus|virus|pat├│geno|pathogen|linhagem|variant/i,
+            pathogen: /ebola|nipah|hantavirus|hantavírus|vírus|virus|patógeno|pathogen|linhagem|variant/i,
             respiratory: /respirat|influenza|gripe|pneumonia|covid|sars|mers/i,
-            vector: /dengue|mal├íria|malaria|zika|chikungunya|febre amarela|yellow fever|vetor|vector/i
+            vector: /dengue|malária|malaria|zika|chikungunya|febre amarela|yellow fever|vetor|vector/i
         };
         const ordem = { sem_evidencia: 0, normal: 1, atencao: 2, anomalia: 3, alerta: 4 };
-        const simbolos = { normal: "­ƒƒó NORMAL", atencao: "­ƒƒí ATEN├ç├âO", anomalia: "­ƒƒá ANOMALIA", alerta: "­ƒö┤ ALERTA", sem_evidencia: "ÔÜ¬ SEM EVID├èNCIA" };
+        const simbolos = { normal: "🟢 NORMAL", atencao: "🟡 ATENÇÃO", anomalia: "🟠 ANOMALIA", alerta: "🔴 ALERTA", sem_evidencia: "⚪ SEM EVIDÊNCIA" };
 
         document.querySelectorAll("[data-biology-card]").forEach(card => {
             const categoria = card.dataset.biologyCard;
             const descricao = card.querySelector(".biology-impact");
             const rotulos = {
-                respiratory: ["V├ìRUS RESPIRAT├ôRIOS", "Influenza / Covid / VSR", "Sinais e eventos respirat├│rios documentados pela OMS."],
-                vector: ["ARBOVIROSES & VETORES", "Dengue / Chikungunya", "Doen├ºas transmitidas por mosquitos e outros vetores."],
-                pathogen: ["VIGIL├éNCIA DE PAT├ôGENOS", "Vigil├óncia de rotina", "Monitoramento cont├¡nuo de novos agentes e alertas epidemiol├│gicos."]
+                respiratory: ["VÍRUS RESPIRATÓRIOS", "Influenza / Covid / VSR", "Sinais e eventos respiratórios documentados pela OMS."],
+                vector: ["ARBOVIROSES & VETORES", "Dengue / Chikungunya", "Doenças transmitidas por mosquitos e outros vetores."],
+                pathogen: ["VIGILÂNCIA DE PATÓGENOS", "Vigilância de rotina", "Monitoramento contínuo de novos agentes e alertas epidemiológicos."]
             }[categoria];
             if (rotulos) {
                 const titulo = card.querySelector("h3");
@@ -468,7 +468,7 @@
             const ultimoBoletim = biologyEvents.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))[0];
             const foco = ultimo || ultimoBoletim;
             const local = card.querySelector(".biology-location") || (() => { const el = document.createElement("span"); el.className = "biology-location"; card.querySelector(".biology-type-content")?.insertBefore(el, card.querySelector("h3")); return el; })();
-            if (local) local.textContent = `­ƒôì ${localizarEventoBiologico(foco)} ┬À ${simbolos[nivel]}`;
+            if (local) local.textContent = `📍 ${localizarEventoBiologico(foco)} · ${simbolos[nivel]}`;
             const tituloFoco = card.querySelector("h3");
             if (tituloFoco && foco) tituloFoco.textContent = mancheteBiologica(foco, categoria);
             if (descricao && foco) descricao.textContent = impactoBiologico(foco);
@@ -479,24 +479,24 @@
             const omsData = card.querySelector(".biology-oms-data");
             if (classificacao) classificacao.textContent = simbolos[nivel];
             if (omsData) omsData.innerHTML = ultimo
-                ? `<strong>OMS:</strong> ${escapeHTML(traduzirTituloBiologico(ultimo.title))}<small>Fonte: Organiza├º├úo Mundial da Sa├║de ┬À ${formatDateBR(ultimo.date)}</small>${ultimo.url ? `<a class="biology-oms-link" href="${escapeHTML(ultimo.url)}" target="_blank" rel="noopener noreferrer">Ver publica├º├úo da OMS Ôåù</a>` : ""}`
+                ? `<strong>OMS:</strong> ${escapeHTML(traduzirTituloBiologico(ultimo.title))}<small>Fonte: Organização Mundial da Saúde · ${formatDateBR(ultimo.date)}</small>${ultimo.url ? `<a class="biology-oms-link" href="${escapeHTML(ultimo.url)}" target="_blank" rel="noopener noreferrer">Ver publicação da OMS ↗</a>` : ""}`
                 : "Nenhum registro correspondente da OMS no snapshot atual.";
             if (!ultimo && omsData && biologyEvents.length) {
                 const boletim = biologyEvents.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))[0];
-                omsData.innerHTML = `<strong>Sem correspond├¬ncia espec├¡fica para esta categoria.</strong><small>├Ültimo boletim OMS: ${escapeHTML(traduzirTituloBiologico(boletim.title))} ┬À ${formatDateBR(boletim.date)}</small>${boletim.url ? `<a class="biology-oms-link" href="${escapeHTML(boletim.url)}" target="_blank" rel="noopener noreferrer">Consultar boletim da OMS Ôåù</a>` : ""}`;
+                omsData.innerHTML = `<strong>Sem correspondência específica para esta categoria.</strong><small>Último boletim OMS: ${escapeHTML(traduzirTituloBiologico(boletim.title))} · ${formatDateBR(boletim.date)}</small>${boletim.url ? `<a class="biology-oms-link" href="${escapeHTML(boletim.url)}" target="_blank" rel="noopener noreferrer">Consultar boletim da OMS ↗</a>` : ""}`;
             }
             if (categoria === "pathogen" && !ultimo) {
-                if (classificacao) classificacao.textContent = "VIGIL├éNCIA DE ROTINA";
-                if (dados) dados.textContent = biologyEvents.length ? `├Ültimo boletim consultado: ${formatDateBR(ultimoBoletim?.date)}` : "Bases OMS/CDC aguardando atualiza├º├úo";
+                if (classificacao) classificacao.textContent = "VIGILÂNCIA DE ROTINA";
+                if (dados) dados.textContent = biologyEvents.length ? `Último boletim consultado: ${formatDateBR(ultimoBoletim?.date)}` : "Bases OMS/CDC aguardando atualização";
                 if (omsData) omsData.innerHTML = biologyEvents.length
-                    ? `<strong>EST├üVEL / DENTRO DO PADR├âO</strong><small>Nenhuma emerg├¬ncia de interesse internacional ativa no momento. Monitoramento cont├¡nuo conectado ├ás bases OMS/CDC.</small>`
-                    : `<strong>VIGIL├éNCIA DE ROTINA</strong><small>Nenhuma emerg├¬ncia de interesse internacional ativa no momento. Monitoramento cont├¡nuo conectado ├ás bases OMS/CDC.</small>`;
+                    ? `<strong>ESTÁVEL / DENTRO DO PADRÃO</strong><small>Nenhuma emergência de interesse internacional ativa no momento. Monitoramento contínuo conectado às bases OMS/CDC.</small>`
+                    : `<strong>VIGILÂNCIA DE ROTINA</strong><small>Nenhuma emergência de interesse internacional ativa no momento. Monitoramento contínuo conectado às bases OMS/CDC.</small>`;
             }
             if (dados) dados.textContent = eventos.length
-                ? `${eventos.length} registro(s) relacionado(s) ┬À ├║ltimo: ${formatDateBR(ultimo.date)}`
+                ? `${eventos.length} registro(s) relacionado(s) · último: ${formatDateBR(ultimo.date)}`
                 : ultimoBoletim
-                    ? `Nenhum sinal espec├¡fico ┬À ├║ltimo boletim consultado: ${formatDateBR(ultimoBoletim.date)}`
-                    : "Aguardando atualiza├º├úo das bases oficiais";
+                    ? `Nenhum sinal específico · último boletim consultado: ${formatDateBR(ultimoBoletim.date)}`
+                    : "Aguardando atualização das bases oficiais";
             if (dados) dados.textContent = formatDateBR(ultimo?.date || ultimoBoletim?.date || new Date());
         });
     }
@@ -504,29 +504,29 @@
     function renderizarBiologia(dados) {
         biologyEvents = Array.isArray(dados?.biology?.events) ? dados.biology.events : [];
         const riscoScore = Math.min(100, Math.round(biologyEvents.reduce((total, event) => total + ({ alerta: 18, anomalia: 12, atencao: 7, normal: 2 }[event.status] || 1), 0)));
-        const riscoNivel = riscoScore >= 70 ? "ALERTA" : riscoScore >= 42 ? "ATEN├ç├âO" : riscoScore >= 20 ? "MONITORANDO" : "EST├üVEL / VIGIL├éNCIA DE ROTINA";
+        const riscoNivel = riscoScore >= 70 ? "ALERTA" : riscoScore >= 42 ? "ATENÇÃO" : riscoScore >= 20 ? "MONITORANDO" : "ESTÁVEL / VIGILÂNCIA DE ROTINA";
         const riscoElement = document.getElementById("biology-risk-score");
         const statusElement = document.getElementById("biology-risk-status");
         const riskTitle = document.querySelector(".biology-risk-dashboard h3");
-        if (riskTitle) riskTitle.textContent = "RADAR DE PROPAGA├ç├âO GLOBAL";
+        if (riskTitle) riskTitle.textContent = "RADAR DE PROPAGAÇÃO GLOBAL";
         if (riskTitle) {
             riskTitle.textContent = "DESVIO DE LINHA DE BASE (ANOMALIA)";
             let anomalyBadge = document.getElementById("biology-anomaly-badge");
             if (!anomalyBadge) { anomalyBadge = document.createElement("div"); anomalyBadge.id = "biology-anomaly-badge"; anomalyBadge.className = "biology-anomaly-badge"; riskTitle.after(anomalyBadge); }
-            anomalyBadge.textContent = "ÔÜí DESVIO ESTAT├ìSTICO: +3.8¤â";
+            anomalyBadge.textContent = "⚡ DESVIO ESTATÍSTICO: +3.8σ";
         }
         if (riscoElement) riscoElement.innerHTML = `${riscoScore}<small>/100</small>`;
         const progress = document.getElementById("biology-risk-progress");
         if (progress) progress.style.width = `${riscoScore}%`;
         if (statusElement) {
-            const nivelTexto = riscoScore >= 70 ? "N├ìVEL CR├ìTICO" : riscoScore >= 42 ? "N├ìVEL ALTO" : riscoScore >= 20 ? "N├ìVEL DE ATEN├ç├âO" : "N├ìVEL EST├üVEL";
-            statusElement.textContent = `­ƒö┤ ALERTA DE PROPAGA├ç├âO - ${riscoScore}/100`;
+            const nivelTexto = riscoScore >= 70 ? "NÍVEL CRÍTICO" : riscoScore >= 42 ? "NÍVEL ALTO" : riscoScore >= 20 ? "NÍVEL DE ATENÇÃO" : "NÍVEL ESTÁVEL";
+            statusElement.textContent = `🔴 ALERTA DE PROPAGAÇÃO - ${riscoScore}/100`;
             statusElement.className = `biology-risk-status status-${riscoScore >= 70 ? "alerta" : riscoScore >= 42 ? "anomalia" : riscoScore >= 20 ? "atencao" : "normal"}`;
         }
-        const focoEspalhamento = biologyEvents.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0)).find(event => /ebola|hantavirus|hantav├¡rus|nipah/i.test(event.title || "")) || biologyEvents[0];
+        const focoEspalhamento = biologyEvents.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0)).find(event => /ebola|hantavirus|hantavírus|nipah/i.test(event.title || "")) || biologyEvents[0];
         const focusPathogen = document.getElementById("biology-focus-pathogen");
         const focusOrigin = document.getElementById("biology-focus-origin");
-        if (focusPathogen && focoEspalhamento) focusPathogen.textContent = `­ƒªá ${mancheteBiologica(focoEspalhamento, "pathogen")}`;
+        if (focusPathogen && focoEspalhamento) focusPathogen.textContent = `🦠 ${mancheteBiologica(focoEspalhamento, "pathogen")}`;
         if (focusOrigin && focoEspalhamento) focusOrigin.textContent = localizarEventoBiologico(focoEspalhamento);
         const focoChave = focoEspalhamento ? mancheteBiologica(focoEspalhamento, "pathogen") : "";
         const eventosDoFoco = focoChave ? biologyEvents.filter(event => mancheteBiologica(event, "pathogen") === focoChave) : [];
@@ -539,7 +539,7 @@
         if (countryTags) countryTags.innerHTML = (paisesFoco.length ? paisesFoco : ["Monitoramento global"]).map(pais => `<span>${escapeHTML(pais)}</span>`).join("");
         if (bulletins) bulletins.textContent = eventosDoFoco.length || biologyEvents.length;
         if (statusElement) {
-            statusElement.textContent = "­ƒƒí FASE 2: SURTO REGIONAL ATIVO";
+            statusElement.textContent = "🟡 FASE 2: SURTO REGIONAL ATIVO";
             statusElement.className = "biology-risk-status status-medio";
         }
         if (statusElement) {
@@ -547,42 +547,42 @@
             statusElement.className = `biology-risk-status status-${escala.level}`;
         }
         const riskExplanation = document.getElementById("biology-risk-explanation");
-        if (riskExplanation) riskExplanation.textContent = "Este ├¡ndice resume os sinais publicados nos boletins da OMS: quantidade de registros e classifica├º├úo de aten├º├úo (normal, aten├º├úo, anomalia ou alerta). Ele n├úo representa a probabilidade de uma doen├ºa espec├¡fica, nem prev├¬ uma pandemia.";
+        if (riskExplanation) riskExplanation.textContent = "Este índice resume os sinais publicados nos boletins da OMS: quantidade de registros e classificação de atenção (normal, atenção, anomalia ou alerta). Ele não representa a probabilidade de uma doença específica, nem prevê uma pandemia.";
         const metrics = document.getElementById("biology-risk-metrics");
         if (riskExplanation) {
-            riskExplanation.textContent = "O volume de atualiza├º├Áes sobre o Ebola na RDC nas ├║ltimas 48h est├í 4x acima do padr├úo hist├│rico da OMS.";
+            riskExplanation.textContent = "O volume de atualizações sobre o Ebola na RDC nas últimas 48h está 4x acima do padrão histórico da OMS.";
         }
         if (statusElement) {
-            statusElement.textContent = "­ƒƒí FASE 2: SURTO REGIONAL ATIVO";
+            statusElement.textContent = "🟡 FASE 2: SURTO REGIONAL ATIVO";
             statusElement.className = "biology-risk-status status-medio";
         }
         const pandemicKicker = document.querySelector(".biology-pandemic-focus .panel-kicker");
-        if (pandemicKicker) pandemicKicker.textContent = "RISCO DE PROPAGA├ç├âO PAND├èMICA";
+        if (pandemicKicker) pandemicKicker.textContent = "RISCO DE PROPAGAÇÃO PANDÊMICA";
         const dispersionRuler = document.getElementById("biology-dispersion-ruler") || (() => { const el = document.createElement("div"); el.id = "biology-dispersion-ruler"; el.className = "biology-dispersion-ruler"; document.getElementById("biology-focus-countries")?.parentElement?.appendChild(el); return el; })();
-        if (dispersionRuler) dispersionRuler.textContent = `${paisesFoco.length} / 5 Pa├¡ses para Alerta Pr├®-Pand├¬mico`;
+        if (dispersionRuler) dispersionRuler.textContent = `${paisesFoco.length} / 5 Países para Alerta Pré-Pandêmico`;
         const focosPrincipais = [...new Map(biologyEvents.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0)).map(event => [mancheteBiologica(event), event])).values()].slice(0, 2);
         if (riskExplanation) riskExplanation.textContent = focosPrincipais.length
-            ? `Alertas concentrados em: ${focosPrincipais.map(event => `${mancheteBiologica(event)} ┬À ${localizarEventoBiologico(event)} (${formatDateBR(event.date)})`).join(" e ")}.`
-            : "Nenhum foco epidemiol├│gico destacado no snapshot atual.";
+            ? `Alertas concentrados em: ${focosPrincipais.map(event => `${mancheteBiologica(event)} · ${localizarEventoBiologico(event)} (${formatDateBR(event.date)})`).join(" e ")}.`
+            : "Nenhum foco epidemiológico destacado no snapshot atual.";
         const justification = document.getElementById("biology-risk-justification");
         if (justification) {
             const ebola = biologyEvents.find(event => /ebola/i.test(event.title || ""));
-            const hantavirus = biologyEvents.find(event => /hantavirus|hantav├¡rus/i.test(`${event.title || ""} ${event.summary || ""}`));
-            const obitos = ebola?.summary?.match(/([\d\s.,]+)\s+(?:confirmed deaths|deaths|├│bitos)/i)?.[1]?.trim();
-            justification.textContent = `Por que ${riscoScore}/100? ${ebola ? `Pat├│geno de alta mortalidade confirmado (Ebola na RDC${obitos ? `: ${obitos} ├│bitos` : ""})` : "Sinais epidemiol├│gicos confirmados"}${hantavirus ? " e circula├º├úo ativa de eventos associados a hantav├¡rus" : ""}.`;
+            const hantavirus = biologyEvents.find(event => /hantavirus|hantavírus/i.test(`${event.title || ""} ${event.summary || ""}`));
+            const obitos = ebola?.summary?.match(/([\d\s.,]+)\s+(?:confirmed deaths|deaths|óbitos)/i)?.[1]?.trim();
+            justification.textContent = `Por que ${riscoScore}/100? ${ebola ? `Patógeno de alta mortalidade confirmado (Ebola na RDC${obitos ? `: ${obitos} óbitos` : ""})` : "Sinais epidemiológicos confirmados"}${hantavirus ? " e circulação ativa de eventos associados a hantavírus" : ""}.`;
         }
-        if (metrics) metrics.innerHTML = `<div><span>TAXA DE MUTA├ç├âO</span><strong>Sem s├®rie gen├┤mica</strong><small>n├úo calculada pelo snapshot</small></div><div><span>DESVIO SAZONAL DE VETORES</span><strong>${biologyEvents.filter(event => /dengue|malaria|mal├íria|zika|chikungunya|febre amarela/i.test(`${event.title} ${event.summary}`)).length ? "Monitorando" : "Sem sinal"}</strong><small>classifica├º├úo por boletins OMS</small></div><div><span>TRANSMISS├âO INTER-REGIONAL</span><strong>${new Set(biologyEvents.map(event => event.lat && event.lon ? `${event.lat},${event.lon}` : event.title)).size > 1 ? "Em observa├º├úo" : "Sem evid├¬ncia"}</strong><small>n├úo ├® taxa operacional</small></div>`;
+        if (metrics) metrics.innerHTML = `<div><span>TAXA DE MUTAÇÃO</span><strong>Sem série genômica</strong><small>não calculada pelo snapshot</small></div><div><span>DESVIO SAZONAL DE VETORES</span><strong>${biologyEvents.filter(event => /dengue|malaria|malária|zika|chikungunya|febre amarela/i.test(`${event.title} ${event.summary}`)).length ? "Monitorando" : "Sem sinal"}</strong><small>classificação por boletins OMS</small></div><div><span>TRANSMISSÃO INTER-REGIONAL</span><strong>${new Set(biologyEvents.map(event => event.lat && event.lon ? `${event.lat},${event.lon}` : event.title)).size > 1 ? "Em observação" : "Sem evidência"}</strong><small>não é taxa operacional</small></div>`;
         if (metrics) {
             const total = Math.max(1, biologyEvents.length);
             const categorias = [
-                ["Pat├│genos respirat├│rios", /influenza|gripe|covid|sars|mers|respirat|pneumonia|v[i├¡]rus respirat/i],
-                ["Arboviroses & vetores", /dengue|malaria|mal├íria|zika|chikungunya|febre amarela|mosquito|arbov/i],
-                ["Febres hemorr├ígicas / outros", /.*/i]
+                ["Patógenos respiratórios", /influenza|gripe|covid|sars|mers|respirat|pneumonia|v[ií]rus respirat/i],
+                ["Arboviroses & vetores", /dengue|malaria|malária|zika|chikungunya|febre amarela|mosquito|arbov/i],
+                ["Febres hemorrágicas / outros", /.*/i]
             ];
             const contagens = categorias.map(([, regra]) => biologyEvents.filter(event => regra.test(`${event.title || ""} ${event.summary || ""}`)).length);
             const outros = Math.max(0, biologyEvents.length - contagens[0] - contagens[1]);
             const valores = [contagens[0], contagens[1], outros];
-            metrics.innerHTML = `<div class="biology-signal-concentration"><span>CONCENTRA├ç├âO DOS BOLETINS RECENTES</span>${categorias.map(([nome], index) => { const percentual = Math.round((valores[index] / total) * 100); return `<div class="biology-category-bar"><div><b>${nome}</b><strong>${percentual}%</strong></div><i><em style="width:${percentual}%"></em></i></div>`; }).join("")}<small>Percentuais calculados sobre ${biologyEvents.length} boletins recentes consultados da OMS; n├úo representam a distribui├º├úo global de doen├ºas.</small></div>`;
+            metrics.innerHTML = `<div class="biology-signal-concentration"><span>CONCENTRAÇÃO DOS BOLETINS RECENTES</span>${categorias.map(([nome], index) => { const percentual = Math.round((valores[index] / total) * 100); return `<div class="biology-category-bar"><div><b>${nome}</b><strong>${percentual}%</strong></div><i><em style="width:${percentual}%"></em></i></div>`; }).join("")}<small>Percentuais calculados sobre ${biologyEvents.length} boletins recentes consultados da OMS; não representam a distribuição global de doenças.</small></div>`;
         }
         if (metrics) metrics.innerHTML = "";
         const sparkline = document.getElementById("biology-risk-sparkline");
@@ -604,11 +604,11 @@
                 const nivel = event.status || "atencao";
                 const resumoOriginal = String(event.summary || "").replace(/&nbsp;|&mdash;|&ndash;/gi, " ").replace(/\s+/g, " ").trim();
                 const resumo = /since|additional|confirmed|reported|outbreak|cases|deaths/i.test(resumoOriginal)
-                    ? "Boletim oficial registra atualiza├º├Áes epidemiol├│gicas e acompanha a evolu├º├úo deste evento."
-                    : (resumoOriginal || "Boletim epidemiol├│gico registrado pela OMS.");
-                const numeros = [...resumo.matchAll(/([\d\s.,]+)\s+(confirmed cases|casos|deaths|├│bitos)/gi)].slice(0, 2);
-                const chips = numeros.map(match => `<span>${escapeHTML(match[1].trim())} ${/death|├│bito/i.test(match[2]) ? "├ôbitos" : "Novos casos"}</span>`).join("");
-                return `<article class="biology-news-card status-${nivel}"><div class="biology-news-card-top"><span class="biology-event-badge">${badgeStatus(nivel)}</span><time>${formatDateBR(event.date)}</time></div><h4>${escapeHTML(traduzirTituloBiologico(event.title))}</h4><div class="biology-news-chips">${chips || "<span>Boletim oficial</span>"}</div><p>${escapeHTML(resumo)}</p>${event.url ? `<a href="${escapeHTML(event.url)}" target="_blank" rel="noopener noreferrer">Ler boletim oficial Ôåù</a>` : ""}</article>`;
+                    ? "Boletim oficial registra atualizações epidemiológicas e acompanha a evolução deste evento."
+                    : (resumoOriginal || "Boletim epidemiológico registrado pela OMS.");
+                const numeros = [...resumo.matchAll(/([\d\s.,]+)\s+(confirmed cases|casos|deaths|óbitos)/gi)].slice(0, 2);
+                const chips = numeros.map(match => `<span>${escapeHTML(match[1].trim())} ${/death|óbito/i.test(match[2]) ? "Óbitos" : "Novos casos"}</span>`).join("");
+                return `<article class="biology-news-card status-${nivel}"><div class="biology-news-card-top"><span class="biology-event-badge">${badgeStatus(nivel)}</span><time>${formatDateBR(event.date)}</time></div><h4>${escapeHTML(traduzirTituloBiologico(event.title))}</h4><div class="biology-news-chips">${chips || "<span>Boletim oficial</span>"}</div><p>${escapeHTML(resumo)}</p>${event.url ? `<a href="${escapeHTML(event.url)}" target="_blank" rel="noopener noreferrer">Ler boletim oficial ↗</a>` : ""}</article>`;
             }).join("") || `<div class="biology-empty">Nenhum evento documentado no snapshot atual.</div>`;
         }
         if (biologyList) {
@@ -617,7 +617,7 @@
                     <div class="biology-event-head"><span>${badgeStatus(event.status || "sem_evidencia")}</span><small>${formatDateBR(event.date)}</small></div>
                     <h4>${escapeHTML(traduzirTituloBiologico(event.title))}</h4>
                     <p>${escapeHTML(event.summary || "Evento registrado por fonte oficial.")}</p>
-                    <small class="biology-event-source">Fonte: ${escapeHTML(event.sourceName || "Organiza├º├úo Mundial da Sa├║de")}</small>
+                    <small class="biology-event-source">Fonte: ${escapeHTML(event.sourceName || "Organização Mundial da Saúde")}</small>
                 </article>
             `).join("") || `<div class="biology-empty">Nenhum evento documentado no snapshot atual.</div>`;
         }
@@ -626,7 +626,7 @@
             const grupos = new Map();
             biologyEvents.forEach(event => {
                 const titulo = traduzirTituloBiologico(event.title);
-                const chave = titulo.split(/\s[ÔÇö-]\s|,\s/)[0].trim().toLowerCase();
+                const chave = titulo.split(/\s[—-]\s|,\s/)[0].trim().toLowerCase();
                 const atual = grupos.get(chave);
                 if (!atual) grupos.set(chave, { event, count: 1 });
                 else {
@@ -636,9 +636,9 @@
             });
             biologyList.innerHTML = [...grupos.values()].slice(0, 8).map(({ event, count }) => {
                 const nivel = event.status || "atencao";
-                const nivelLabel = { normal: "NORMAL", atencao: "ATEN├ç├âO", anomalia: "ANOMALIA", alerta: "ALERTA" }[nivel] || "MONITORANDO";
-                const resumo = String(event.summary || "Boletim epidemiol├│gico registrado pela OMS.").replace(/\s+/g, " ");
-                return `<article class="biology-event-card status-${nivel}"><div class="biology-event-card-top"><span class="biology-event-badge">${nivelLabel}</span><time>${formatDateBR(event.date)}</time></div><h4>${escapeHTML(traduzirTituloBiologico(event.title))}</h4><p>${escapeHTML(resumo)}</p><div class="biology-event-card-footer"><span>${escapeHTML(event.sourceName || "Organiza├º├úo Mundial da Sa├║de")}</span>${count > 1 ? `<button type="button" class="biology-history-link" data-history-key="${escapeHTML(event.title)}">Ver hist├│rico de boletins (${count})</button>` : ""}</div></article>`;
+                const nivelLabel = { normal: "NORMAL", atencao: "ATENÇÃO", anomalia: "ANOMALIA", alerta: "ALERTA" }[nivel] || "MONITORANDO";
+                const resumo = String(event.summary || "Boletim epidemiológico registrado pela OMS.").replace(/\s+/g, " ");
+                return `<article class="biology-event-card status-${nivel}"><div class="biology-event-card-top"><span class="biology-event-badge">${nivelLabel}</span><time>${formatDateBR(event.date)}</time></div><h4>${escapeHTML(traduzirTituloBiologico(event.title))}</h4><p>${escapeHTML(resumo)}</p><div class="biology-event-card-footer"><span>${escapeHTML(event.sourceName || "Organização Mundial da Saúde")}</span>${count > 1 ? `<button type="button" class="biology-history-link" data-history-key="${escapeHTML(event.title)}">Ver histórico de boletins (${count})</button>` : ""}</div></article>`;
             }).join("");
         }
 
@@ -652,7 +652,7 @@
                 const level = event.status || "sem_evidencia";
                 const colors = { normal: "#35a853", atencao: "#facc15", anomalia: "#fb923c", alerta: "#ef4444", sem_evidencia: "#94a3b8" };
                 const marker = L.circleMarker([Number(event.lat), Number(event.lon)], { radius: 7, color: colors[level], fillColor: colors[level], fillOpacity: .78, weight: 2 }).addTo(biologyMap);
-                marker.bindPopup(`<strong>${escapeHTML(traduzirTituloBiologico(event.title))}</strong><br>${escapeHTML(event.sourceName || "Organiza├º├úo Mundial da Sa├║de")} ┬À ${level.toUpperCase()}`);
+                marker.bindPopup(`<strong>${escapeHTML(traduzirTituloBiologico(event.title))}</strong><br>${escapeHTML(event.sourceName || "Organização Mundial da Saúde")} · ${level.toUpperCase()}`);
                 return marker;
             });
             setTimeout(() => biologyMap.invalidateSize(), 150);
@@ -673,17 +673,17 @@
         const query = (biologyQuery?.value || "").trim().toLowerCase();
         if (!biologyVerificationResult) return;
         if (!query) {
-            biologyVerificationResult.innerHTML = `<p class="biology-verification-empty">Digite o nome do pat├│geno, regi├úo ou afirma├º├úo para analisar.</p>`;
+            biologyVerificationResult.innerHTML = `<p class="biology-verification-empty">Digite o nome do patógeno, região ou afirmação para analisar.</p>`;
             return;
         }
         const matches = biologyEvents.filter(event => correspondeConsulta(event, query));
         if (!matches.length) {
-            biologyVerificationResult.innerHTML = `<div class="biology-result status-sem-evidencia"><strong>SEM EVID├èNCIA NOS DADOS CONSULTADOS</strong><p>N├úo encontramos correspond├¬ncia nos eventos atuais da OMS. Isso n├úo confirma nem desmente a not├¡cia.</p></div>`;
+            biologyVerificationResult.innerHTML = `<div class="biology-result status-sem-evidencia"><strong>SEM EVIDÊNCIA NOS DADOS CONSULTADOS</strong><p>Não encontramos correspondência nos eventos atuais da OMS. Isso não confirma nem desmente a notícia.</p></div>`;
             return;
         }
         const levels = matches.map(event => event.status || "sem_evidencia");
         const level = levels.includes("alerta") ? "alerta" : levels.includes("anomalia") ? "anomalia" : levels.includes("atencao") ? "atencao" : "normal";
-        biologyVerificationResult.innerHTML = `<div class="biology-result status-${level}">${badgeStatus(level)} <strong>${matches.length} registro(s) relacionado(s)</strong><p>A informa├º├úo aparece nos dados consultados, classificada como sinal ${sinalizacaoConfig[level]?.label || level}. A exist├¬ncia de registro n├úo confirma, sozinha, uma epidemia ou pandemia.</p></div>`;
+        biologyVerificationResult.innerHTML = `<div class="biology-result status-${level}">${badgeStatus(level)} <strong>${matches.length} registro(s) relacionado(s)</strong><p>A informação aparece nos dados consultados, classificada como sinal ${sinalizacaoConfig[level]?.label || level}. A existência de registro não confirma, sozinha, uma epidemia ou pandemia.</p></div>`;
     }
 
     biologyVerify?.addEventListener("click", verificarBiologia);
@@ -692,79 +692,79 @@
     const oceanSignalsData = [
         {
             id: "sst",
-            icon: "­ƒîè",
+            icon: "🌊",
             title: "TEMPERATURA DO OCEANO",
-            region: "Atl├óntico Sul",
-            metric: "Temperatura da superf├¡cie do mar",
-            value: "+1,8 ┬░C acima da refer├¬ncia",
+            region: "Atlântico Sul",
+            metric: "Temperatura da superfície do mar",
+            value: "+1,8 °C acima da referência",
             numericValue: 1.8,
             threshold: 1.5,
-            unit: "┬░C",
-            detail: "Onde o oceano est├í excepcionalmente quente ou frio em rela├º├úo ├á refer├¬ncia.",
+            unit: "°C",
+            detail: "Onde o oceano está excepcionalmente quente ou frio em relação à referência.",
             detected: "07/10/2026",
-            reference: "per├¡odo hist├│rico",
+            reference: "período histórico",
             source: "NOAA",
             level: "anomalia"
         },
         {
             id: "marine-heatwave",
-            icon: "­ƒöÑ",
+            icon: "🔥",
             title: "ONDAS DE CALOR MARINHAS",
-            region: "Atl├óntico Sul subtropical",
-            metric: "Persist├¬ncia do aquecimento",
+            region: "Atlântico Sul subtropical",
+            metric: "Persistência do aquecimento",
             value: "12 dias acima do limiar",
             numericValue: 12,
             threshold: 5,
             unit: "dias",
-            detail: "H├í alguma regi├úo passando por um per├¡odo excepcional de aquecimento?",
+            detail: "Há alguma região passando por um período excepcional de aquecimento?",
             detected: "07/10/2026",
-            reference: "percentil 90 hist├│rico",
+            reference: "percentil 90 histórico",
             source: "NOAA Marine Heatwave",
             level: "alerta"
         },
         {
             id: "sea-level",
-            icon: "Ôåò´©Å",
-            title: "N├ìVEL DO MAR",
-            region: "Pac├¡fico oeste",
-            metric: "Altura do n├¡vel m├®dio do mar",
-            value: "+9 cm em rela├º├úo ├á refer├¬ncia",
+            icon: "↕️",
+            title: "NÍVEL DO MAR",
+            region: "Pacífico oeste",
+            metric: "Altura do nível médio do mar",
+            value: "+9 cm em relação à referência",
             numericValue: 9,
             threshold: 10,
             unit: "cm",
-            detail: "Existem regi├Áes apresentando eleva├º├úo ou comportamento fora da refer├¬ncia?",
+            detail: "Existem regiões apresentando elevação ou comportamento fora da referência?",
             detected: "07/10/2026",
-            reference: "m├®dia satelital hist├│rica",
+            reference: "média satelital histórica",
             source: "NASA / NOAA",
             level: "atencao"
         },
         {
             id: "sea-ice",
-            icon: "­ƒºè",
+            icon: "🧊",
             title: "GELO MARINHO",
-            region: "├ürtico",
-            metric: "Extens├úo de gelo marinho",
-            value: "-6% para esta ├®poca",
+            region: "Ártico",
+            metric: "Extensão de gelo marinho",
+            value: "-6% para esta época",
             numericValue: -6,
             threshold: -10,
             unit: "%",
-            detail: "A extens├úo do gelo no ├ürtico ou na Ant├írtida est├í muito diferente do esperado?",
+            detail: "A extensão do gelo no Ártico ou na Antártida está muito diferente do esperado?",
             detected: "07/10/2026",
-            reference: "m├®dia 1981ÔÇô2010",
+            reference: "média 1981–2010",
             source: "NSIDC",
             level: "atencao"
         },
         {
             id: "salinity",
-            icon: "­ƒºé",
+            icon: "🧂",
             title: "SALINIDADE",
-            region: "Atl├óntico Norte",
-            metric: "Salinidade da superf├¡cie",
-            value: "+0,18 PSU acima da refer├¬ncia",
+            region: "Atlântico Norte",
+            metric: "Salinidade da superfície",
+            value: "+0,18 PSU acima da referência",
             numericValue: 0.18,
             threshold: 0.25,
             unit: "PSU",
-            detail: "Existem mudan├ºas importantes na salinidade de determinadas regi├Áes?",
+            detail: "Existem mudanças importantes na salinidade de determinadas regiões?",
             detected: "07/10/2026",
             reference: "climatologia Argo",
             source: "Argo / NOAA",
@@ -772,27 +772,27 @@
         },
         {
             id: "circulation",
-            icon: "­ƒîè",
-            title: "CORRENTES / CIRCULA├ç├âO",
-            region: "Atl├óntico Norte",
-            metric: "├ìndice de circula├º├úo oce├ónica",
-            value: "-11% do padr├úo esperado",
+            icon: "🌊",
+            title: "CORRENTES / CIRCULAÇÃO",
+            region: "Atlântico Norte",
+            metric: "Índice de circulação oceânica",
+            value: "-11% do padrão esperado",
             numericValue: -11,
             threshold: -15,
             unit: "%",
-            detail: "H├í altera├º├Áes relevantes em padr├Áes oce├ónicos de circula├º├úo?",
+            detail: "Há alterações relevantes em padrões oceânicos de circulação?",
             detected: "07/10/2026",
-            reference: "rean├ílise hist├│rica",
+            reference: "reanálise histórica",
             source: "Copernicus Marine",
             level: "atencao"
         }
     ];
 
     const oceanStatus = {
-        normal: { label: "NORMAL", icon: "­ƒƒó" },
-        atencao: { label: "ATEN├ç├âO", icon: "­ƒƒí" },
-        anomalia: { label: "ANOMALIA", icon: "­ƒƒá" },
-        alerta: { label: "ALERTA", icon: "­ƒö┤" }
+        normal: { label: "NORMAL", icon: "🟢" },
+        atencao: { label: "ATENÇÃO", icon: "🟡" },
+        anomalia: { label: "ANOMALIA", icon: "🟠" },
+        alerta: { label: "ALERTA", icon: "🔴" }
     };
 
     function oceanBadge(level) {
@@ -826,11 +826,11 @@
                 </div>
                 <dl class="ocean-signal-meta">
                     <div><dt>Detectado</dt><dd>${signal.detected}</dd></div>
-                    <div><dt>Refer├¬ncia</dt><dd>${signal.reference}</dd></div>
+                    <div><dt>Referência</dt><dd>${signal.reference}</dd></div>
                     <div><dt>Fonte</dt><dd>${signal.source}</dd></div>
                 </dl>
             </article>
-        `).join("") || `<div class="ocean-empty">Nenhum sinal nessa classifica├º├úo.</div>`;
+        `).join("") || `<div class="ocean-empty">Nenhum sinal nessa classificação.</div>`;
     }
 
     function renderOceanSummary() {
@@ -846,33 +846,33 @@
                 <span>ESTADO GERAL</span><strong>${oceanStatus[highest].label}</strong>
                 <small>${counts.anomalia || 0} anomalia(s) e ${counts.alerta || 0} alerta(s) no recorte</small>
             </div>
-            <div class="ocean-stat"><span>SINAIS MONITORADOS</span><strong>${oceanSignalsData.length}</strong><small>categorias oce├ónicas</small></div>
-            <div class="ocean-stat"><span>REGI├òES COM DIFEREN├çA</span><strong>${oceanSignalsData.filter(item => item.level !== "normal").length}</strong><small>fora do comportamento normal</small></div>
-            <div class="ocean-stat"><span>FONTES CONSULTADAS</span><strong>${new Set(oceanSignalsData.map(item => item.source)).size}</strong><small>fontes p├║blicas</small></div>
+            <div class="ocean-stat"><span>SINAIS MONITORADOS</span><strong>${oceanSignalsData.length}</strong><small>categorias oceânicas</small></div>
+            <div class="ocean-stat"><span>REGIÕES COM DIFERENÇA</span><strong>${oceanSignalsData.filter(item => item.level !== "normal").length}</strong><small>fora do comportamento normal</small></div>
+            <div class="ocean-stat"><span>FONTES CONSULTADAS</span><strong>${new Set(oceanSignalsData.map(item => item.source)).size}</strong><small>fontes públicas</small></div>
         `;
     }
 
     function renderENSO() {
         if (!ensoPanel) return;
-        const enso = { phase: "El Ni├▒o", index: 1.2, threshold: 0.5, period: "├║ltimas 4 semanas", source: "NOAA CPC" };
+        const enso = { phase: "El Niño", index: 1.2, threshold: 0.5, period: "últimas 4 semanas", source: "NOAA CPC" };
         const level = Math.abs(enso.index) >= 1.5 ? "alerta" : Math.abs(enso.index) >= enso.threshold ? "anomalia" : "normal";
         const description = level === "normal"
-            ? "O Pac├¡fico est├í dentro da faixa de refer├¬ncia, sem evid├¬ncia suficiente de uma fase dominante."
-            : `O Pac├¡fico apresenta sinais compat├¡veis com ${enso.phase}, uma condi├º├úo que pode alterar o comportamento clim├ítico global.`;
+            ? "O Pacífico está dentro da faixa de referência, sem evidência suficiente de uma fase dominante."
+            : `O Pacífico apresenta sinais compatíveis com ${enso.phase}, uma condição que pode alterar o comportamento climático global.`;
 
         ensoPanel.innerHTML = `
             <div class="enso-copy">
-                <span class="panel-kicker">OSCILA├ç├âO ENSO</span>
-                <h3>O Pac├¡fico est├í em uma condi├º├úo que altera o comportamento clim├ítico global?</h3>
+                <span class="panel-kicker">OSCILAÇÃO ENSO</span>
+                <h3>O Pacífico está em uma condição que altera o comportamento climático global?</h3>
                 <p>${description}</p>
             </div>
             <div class="enso-indicator status-${level}">
                 <span class="enso-indicator-label">FASE ATUAL</span>
                 <strong>${enso.phase}</strong>
                 ${oceanBadge(level)}
-                <small>├ìndice: ${enso.index.toFixed(1)} ┬░C ┬À ${enso.period}</small>
+                <small>Índice: ${enso.index.toFixed(1)} °C · ${enso.period}</small>
             </div>
-            <div class="enso-source">Refer├¬ncia: limiar de ┬▒${enso.threshold.toFixed(1)} ┬░C ┬À Fonte: ${enso.source}</div>
+            <div class="enso-source">Referência: limiar de ±${enso.threshold.toFixed(1)} °C · Fonte: ${enso.source}</div>
         `;
     }
 
@@ -915,8 +915,8 @@
             const cardsMarkup = ocean.cards.map(card => `
                 <div class="module-card status-${card.status || "sem_evidencia"}">
                     <span>${escapeHTML(card.subtitle || card.title || "OCEANO")}</span>
-                    <strong>${escapeHTML(card.value ?? "ÔÇö")}</strong>
-                    <small>${escapeHTML(card.detail || "Sem detalhe dispon├¡vel")}</small>
+                    <strong>${escapeHTML(card.value ?? "—")}</strong>
+                    <small>${escapeHTML(card.detail || "Sem detalhe disponível")}</small>
                 </div>
             `).join("");
             oceanSummary.innerHTML = cardsMarkup;
@@ -929,17 +929,17 @@
             const global = validValues.length ? validValues.reduce((sum, value) => sum + value, 0) / validValues.length : null;
             oceanGlobal = global;
             const regionData = ocean.sst?.regions || {};
-            const normalizeRegion = value => String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/├â|├é/g, "");
+            const normalizeRegion = value => String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/Ã|Â/g, "");
             const findRegion = name => Object.entries(regionData).find(([key]) => normalizeRegion(key).includes(normalizeRegion(name)))?.[1];
-            const regions = ["Atl├óntico Sul", "Pac├¡fico Equatorial", "Atl├óntico Norte"];
-            const regionMarkup = regions.map(region => { const stat = findRegion(region); return `<li><span>${region}</span><strong>${stat?.mean === null || stat?.mean === undefined ? "ÔÇö" : `${stat.mean >= 0 ? "+" : ""}${Number(stat.mean).toFixed(2)} ┬░C`}</strong><small>${stat ? `${stat.count} ponto(s) ┬À pico ${stat.maximum >= 0 ? "+" : ""}${Number(stat.maximum).toFixed(2)} ┬░C` : "Sem cobertura nesta grade"}</small></li>`; }).join("");
-            const chartMarkup = validValues.length ? `<div class="ocean-sst-chart" aria-label="Tend├¬ncia SST"><span style="height:35%"></span><span style="height:48%"></span><span style="height:42%"></span><span style="height:61%"></span><span style="height:76%"></span><span style="height:70%"></span><small>recorte dispon├¡vel</small></div>` : `<div class="ocean-sst-chart ocean-sst-chart-empty"><span>S├®rie temporal de 30 dias indispon├¡vel</span></div>`;
-            oceanSstContent.innerHTML = `<div class="ocean-sst-kpi"><small>ANOMALIA GLOBAL SST</small><strong>${global === null ? "ÔÇö" : `${global >= 0 ? "+" : ""}${global.toFixed(2)} ┬░C`}</strong><span class="ocean-sst-badge ${global !== null && global >= 0.5 ? "hot" : "neutral"}">${global !== null && global >= 0.5 ? "AQUECIMENTO AN├öMALO" : "SEM EVID├èNCIA SUFICIENTE"}</span><p>${global === null ? "A fonte SST n├úo forneceu pontos v├ílidos nesta atualiza├º├úo." : "Acima da m├®dia hist├│rica de refer├¬ncia."}</p></div><ul class="ocean-sst-regions">${regionMarkup}</ul><div class="ocean-sst-trend"><div><strong>TEND├èNCIA SST ┬À 30 DIAS</strong><small>evolu├º├úo da m├®dia oce├ónica</small></div>${chartMarkup}</div>`;
+            const regions = ["Atlântico Sul", "Pacífico Equatorial", "Atlântico Norte"];
+            const regionMarkup = regions.map(region => { const stat = findRegion(region); return `<li><span>${region}</span><strong>${stat?.mean === null || stat?.mean === undefined ? "—" : `${stat.mean >= 0 ? "+" : ""}${Number(stat.mean).toFixed(2)} °C`}</strong><small>${stat ? `${stat.count} ponto(s) · pico ${stat.maximum >= 0 ? "+" : ""}${Number(stat.maximum).toFixed(2)} °C` : "Sem cobertura nesta grade"}</small></li>`; }).join("");
+            const chartMarkup = validValues.length ? `<div class="ocean-sst-chart" aria-label="Tendência SST"><span style="height:35%"></span><span style="height:48%"></span><span style="height:42%"></span><span style="height:61%"></span><span style="height:76%"></span><span style="height:70%"></span><small>recorte disponível</small></div>` : `<div class="ocean-sst-chart ocean-sst-chart-empty"><span>Série temporal de 30 dias indisponível</span></div>`;
+            oceanSstContent.innerHTML = `<div class="ocean-sst-kpi"><small>ANOMALIA GLOBAL SST</small><strong>${global === null ? "—" : `${global >= 0 ? "+" : ""}${global.toFixed(2)} °C`}</strong><span class="ocean-sst-badge ${global !== null && global >= 0.5 ? "hot" : "neutral"}">${global !== null && global >= 0.5 ? "AQUECIMENTO ANÔMALO" : "SEM EVIDÊNCIA SUFICIENTE"}</span><p>${global === null ? "A fonte SST não forneceu pontos válidos nesta atualização." : "Acima da média histórica de referência."}</p></div><ul class="ocean-sst-regions">${regionMarkup}</ul><div class="ocean-sst-trend"><div><strong>TENDÊNCIA SST · 30 DIAS</strong><small>evolução da média oceânica</small></div>${chartMarkup}</div>`;
         }
 
         if (oceanSstContent) {
             const peak = grid.slice().sort((a, b) => Number(b.anomaly) - Number(a.anomaly))[0];
-            const peakBadge = document.createElement("span"); peakBadge.className = "ocean-peak-badge"; peakBadge.textContent = "­ƒÜ¿ PICO T├ëRMICO CR├ìTICO";
+            const peakBadge = document.createElement("span"); peakBadge.className = "ocean-peak-badge"; peakBadge.textContent = "🚨 PICO TÉRMICO CRÍTICO";
             oceanSstContent.querySelector(".ocean-sst-kpi")?.appendChild(peakBadge);
             const maxAbs = Math.max(...grid.map(item => Math.abs(Number(item.anomaly))).filter(Number.isFinite), 1);
             oceanSstContent.querySelectorAll(".ocean-sst-regions li").forEach((li, index) => { const stat = Object.values(ocean.sst?.regions || {})[index]; const value = Math.min(100, Math.round((Math.abs(Number(stat?.mean || 0)) / maxAbs) * 100)); const bar = document.createElement("i"); bar.className = "ocean-region-bar"; bar.innerHTML = `<em style="width:${value}%"></em>`; li.appendChild(bar); });
@@ -951,70 +951,70 @@
 
         if (ensoCard) {
             const ensoHeading = document.querySelector("#ocean .dashboard-grid > .panel:nth-child(2) h3");
-            if (ensoHeading) ensoHeading.textContent = "ENSO & IMPACTOS HIDROL├ôGICOS";
+            if (ensoHeading) ensoHeading.textContent = "ENSO & IMPACTOS HIDROLÓGICOS";
             const enso = ocean.enso || {};
             const roni = Number(enso.roni);
             const hasValue = Number.isFinite(roni) && roni !== 0;
             const displayRoni = hasValue ? roni : 0.2;
             const level = hasValue ? statusFromOceanAnomaly(roni) : "normal";
             const displayPhase = hasValue ? (enso.phase || "Neutro") : "Neutro";
-            const probabilities = enso.probabilities || { neutral: 60, lanina: 35, elnino: 5, season: "refer├¬ncia" };
-            const phase = enso.phase || (hasValue ? (roni >= .5 ? "El Ni├▒o" : roni <= -.5 ? "La Ni├▒a" : "Neutro") : "Sem evid├¬ncia suficiente");
+            const probabilities = enso.probabilities || { neutral: 60, lanina: 35, elnino: 5, season: "referência" };
+            const phase = enso.phase || (hasValue ? (roni >= .5 ? "El Niño" : roni <= -.5 ? "La Niña" : "Neutro") : "Sem evidência suficiente");
             ensoCard.innerHTML = `
                 <div class="enso-live status-${level}">
                     <span class="enso-indicator-label">FASE OBSERVADA</span>
                     <strong>${escapeHTML(displayPhase)}</strong>
-                    <div class="enso-index-value"><small>├ìNDICE T├ëRMICO</small><b>${displayRoni >= 0 ? "+" : ""}${displayRoni.toFixed(1)} ┬░C</b><span>Regi├úo Ni├▒o 3.4</span></div>
-                    <div class="enso-probability"><div><span>NEUTRO <b>${probabilities.neutral}%</b></span><i><em style="width:${probabilities.neutral}%"></em></i></div><div><span>LA NI├æA <b>${probabilities.lanina}%</b></span><i><em class="lanina" style="width:${probabilities.lanina}%"></em></i></div><div><span>EL NI├æO <b>${probabilities.elnino}%</b></span><i><em class="elnino" style="width:${probabilities.elnino}%"></em></i></div></div>
-                    ${hasValue ? oceanBadge(level) : "<span class=\"ocean-status-badge\">ÔÜ¬ SEM EVID├èNCIA</span>"}
-                    <p>${hasValue ? "O ├¡ndice observado est├í sendo comparado ao limiar ENSO da fonte." : "A fonte consultada n├úo forneceu um ├¡ndice ENSO v├ílido neste snapshot."}</p>
-                    <small>${hasValue ? `├ìndice: ${roni.toFixed(2)} ┬░C` : "├ìndice: ÔÇö"} ┬À Fonte: ${escapeHTML(enso.source || "NOAA CPC")}</small>
+                    <div class="enso-index-value"><small>ÍNDICE TÉRMICO</small><b>${displayRoni >= 0 ? "+" : ""}${displayRoni.toFixed(1)} °C</b><span>Região Niño 3.4</span></div>
+                    <div class="enso-probability"><div><span>NEUTRO <b>${probabilities.neutral}%</b></span><i><em style="width:${probabilities.neutral}%"></em></i></div><div><span>LA NIÑA <b>${probabilities.lanina}%</b></span><i><em class="lanina" style="width:${probabilities.lanina}%"></em></i></div><div><span>EL NIÑO <b>${probabilities.elnino}%</b></span><i><em class="elnino" style="width:${probabilities.elnino}%"></em></i></div></div>
+                    ${hasValue ? oceanBadge(level) : "<span class=\"ocean-status-badge\">⚪ SEM EVIDÊNCIA</span>"}
+                    <p>${hasValue ? "O índice observado está sendo comparado ao limiar ENSO da fonte." : "A fonte consultada não forneceu um índice ENSO válido neste snapshot."}</p>
+                    <small>${hasValue ? `Índice: ${roni.toFixed(2)} °C` : "Índice: —"} · Fonte: ${escapeHTML(enso.source || "NOAA CPC")}</small>
                 </div>
             `;
         }
 
         const ensoLive = ensoCard?.querySelector(".enso-live");
-        if (ensoLive && !ensoLive.querySelector(".enso-hydrology-impacts")) ensoLive.insertAdjacentHTML("beforeend", `<div class="enso-hydrology-impacts"><span>­ƒîº´©Å Risco de Enchentes/Inunda├º├Áes</span><small>Foco de chuva extrema associado ao aquecimento equatorial.</small><span>ÔÿÇ´©Å Risco de Estiagem/Seca</span><small>Anomalia de precipita├º├úo em regi├Áes sob influ├¬ncia do evento.</small></div>`);
-        ensoLive?.querySelector(".enso-hydrology-impacts")?.querySelectorAll("small").forEach((item, index) => { item.innerHTML = index === 0 ? "Foco de chuva extrema associado ao aquecimento equatorial ┬À <b>Sul do Brasil / Bacia Amaz├┤nica</b>." : "Anomalia de precipita├º├úo em regi├Áes sob influ├¬ncia do evento ┬À <b>Centro-Oeste e Nordeste</b>."; });
+        if (ensoLive && !ensoLive.querySelector(".enso-hydrology-impacts")) ensoLive.insertAdjacentHTML("beforeend", `<div class="enso-hydrology-impacts"><span>🌧️ Risco de Enchentes/Inundações</span><small>Foco de chuva extrema associado ao aquecimento equatorial.</small><span>☀️ Risco de Estiagem/Seca</span><small>Anomalia de precipitação em regiões sob influência do evento.</small></div>`);
+        ensoLive?.querySelector(".enso-hydrology-impacts")?.querySelectorAll("small").forEach((item, index) => { item.innerHTML = index === 0 ? "Foco de chuva extrema associado ao aquecimento equatorial · <b>Sul do Brasil / Bacia Amazônica</b>." : "Anomalia de precipitação em regiões sob influência do evento · <b>Centro-Oeste e Nordeste</b>."; });
         if (oceanRiskContent) {
             const values = grid.map(item => Number(item.anomaly)).filter(Number.isFinite);
             const hot = values.filter(value => value >= 1).length;
             const mean = values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
-            const level = mean >= 1.5 ? "ALERTA" : mean >= 1 ? "ANOMALIA" : mean >= .5 ? "ATEN├ç├âO" : "NORMAL";
+            const level = mean >= 1.5 ? "ALERTA" : mean >= 1 ? "ANOMALIA" : mean >= .5 ? "ATENÇÃO" : "NORMAL";
             if (!values.length) {
-                oceanRiskContent.innerHTML = `<div class="ocean-contingency"><strong>ÔÜá´©Å SINCRONIZA├ç├âO DE DADOS</strong><p>Atualizando dados de sat├®lite da NOAA/SST.</p><span>Exibindo a ├║ltima m├®dia consolidada dispon├¡vel quando a fonte retornar.</span></div>`;
+                oceanRiskContent.innerHTML = `<div class="ocean-contingency"><strong>⚠️ SINCRONIZAÇÃO DE DADOS</strong><p>Atualizando dados de satélite da NOAA/SST.</p><span>Exibindo a última média consolidada disponível quando a fonte retornar.</span></div>`;
             } else {
                 const area = Math.round((hot / values.length) * 100);
-                const category = mean >= 2 ? "Categoria 4 ┬À Extrema" : mean >= 1.5 ? "Categoria 3 ┬À Severa" : mean >= 1 ? "Categoria 2 ┬À Moderada" : "Categoria 1 ┬À Fraca";
+                const category = mean >= 2 ? "Categoria 4 · Extrema" : mean >= 1.5 ? "Categoria 3 · Severa" : mean >= 1 ? "Categoria 2 · Moderada" : "Categoria 1 · Fraca";
                 const status = mean >= 1 ? "ONDAS DE CALOR ATIVAS" : "ALERTA MODERADO";
-                oceanRiskContent.innerHTML = `<div class="ocean-risk-level status-${level.toLowerCase().replace("├º", "c").replace("├ú", "a")}" ><strong>${status}</strong><span>${hot} ponto(s) acima de +1 ┬░C</span></div><div class="ocean-mhw-metrics"><div><small>├üREA SOB ONDA DE CALOR</small><b>${area}%</b><span>do recorte oce├ónico</span></div><div><small>MAIOR CATEGORIA ATIVA</small><b>${category}</b><span>regi├úo de maior desvio observado</span></div></div><p>M├®dia do recorte: ${mean.toFixed(2)} ┬░C em ${values.length} ponto(s) SST. A leitura identifica calor oce├ónico an├┤malo; n├úo atribui causa isolada.</p><small>Refer├¬ncia: NOAA OISST ┬À an├ílise comparativa</small>`;
+                oceanRiskContent.innerHTML = `<div class="ocean-risk-level status-${level.toLowerCase().replace("ç", "c").replace("ã", "a")}" ><strong>${status}</strong><span>${hot} ponto(s) acima de +1 °C</span></div><div class="ocean-mhw-metrics"><div><small>ÁREA SOB ONDA DE CALOR</small><b>${area}%</b><span>do recorte oceânico</span></div><div><small>MAIOR CATEGORIA ATIVA</small><b>${category}</b><span>região de maior desvio observado</span></div></div><p>Média do recorte: ${mean.toFixed(2)} °C em ${values.length} ponto(s) SST. A leitura identifica calor oceânico anômalo; não atribui causa isolada.</p><small>Referência: NOAA OISST · análise comparativa</small>`;
             }
         }
 
         const oceanThreatHeading = document.querySelector(".ocean-risk-card .panel-kicker");
         const oceanThreatTitle = document.querySelector(".ocean-risk-card h3");
-        if (oceanThreatHeading) oceanThreatHeading.textContent = "AMEA├çAS & EVENTOS EXTREMOS";
-        if (oceanThreatTitle) oceanThreatTitle.textContent = "Tsunamis, ressacas & mar├®s";
-        if (oceanRiskContent) oceanRiskContent.innerHTML = `<div class="ocean-threat-section"><div><strong>­ƒîè TSUNAMIS ┬À NOAA PTWC</strong><span class="ocean-threat-badge normal">­ƒƒó NENHUM ALERTA VIGENTE</span></div><p>Nenhum epicentro s├¡smico associado a alerta de tsunami no snapshot atual.</p></div><div class="ocean-threat-section"><div><strong>­ƒî¼´©Å RESSACAS & MAR├ëS</strong><span class="ocean-threat-badge attention">­ƒƒí ANOMALIA EM OBSERVA├ç├âO</span></div><p>Onda de calor marinha: <b>Categoria 1 ┬À Fraca</b>. Eleva├º├úo de mar├® sem desvio extremo confirmado.</p></div>`;
+        if (oceanThreatHeading) oceanThreatHeading.textContent = "AMEAÇAS & EVENTOS EXTREMOS";
+        if (oceanThreatTitle) oceanThreatTitle.textContent = "Tsunamis, ressacas & marés";
+        if (oceanRiskContent) oceanRiskContent.innerHTML = `<div class="ocean-threat-section"><div><strong>🌊 TSUNAMIS · NOAA PTWC</strong><span class="ocean-threat-badge normal">🟢 NENHUM ALERTA VIGENTE</span></div><p>Nenhum epicentro sísmico associado a alerta de tsunami no snapshot atual.</p></div><div class="ocean-threat-section"><div><strong>🌬️ RESSACAS & MARÉS</strong><span class="ocean-threat-badge attention">🟡 ANOMALIA EM OBSERVAÇÃO</span></div><p>Onda de calor marinha: <b>Categoria 1 · Fraca</b>. Elevação de maré sem desvio extremo confirmado.</p></div>`;
         const oceanThreatText = oceanRiskContent?.querySelectorAll(".ocean-threat-section p");
-        if (oceanThreatText?.[0]) oceanThreatText[0].textContent = "Monitorando 0 sismos de magnitude > M6.5 em zona de subduc├º├úo.";
-        if (oceanThreatText?.[1]) oceanThreatText[1].innerHTML = "Atl├óntico Sul: ondula├º├úo an├┤mala de <b>2,8 m</b> na costa costeira ┬À Onda de calor marinha: <b>Categoria 1 ┬À Fraca</b>.";
-        if (oceanSstContent) oceanSstContent.innerHTML = `<div class="ocean-card-score status-atencao"><span>­ƒƒí ATEN├ç├âO</span><strong>35<span>/100</span></strong></div><div class="ocean-sst-kpi"><small>ANOMALIA T├ëRMICA MARINHA &amp; HOTSPOTS</small><strong>+3.36 ┬░C</strong><p>A ├ígua do <b>Pac├¡fico</b> est├í aquecendo em ritmo at├¡pico, agindo como um forno atmosf├®rico para o clima global.</p><div class="ocean-hotspot-alert">­ƒÜ¿ HOTSPOT T├ëRMICO CR├ìTICO: <b>PAC├ìFICO EQUATORIAL (+3.36 ┬░C)</b></div></div><div class="ocean-region-progress"><div><div><b>Pac├¡fico Equatorial</b><strong>+3.36 ┬░C</strong></div><i><em style="width:92%"></em></i></div><div><div><b>Atl├óntico Norte</b><strong>+1.18 ┬░C</strong></div><i><em style="width:55%"></em></i></div><div><div><b>Atl├óntico Sul</b><strong>+0.45 ┬░C</strong></div><i><em style="width:32%"></em></i></div></div>`;
-        if (ensoCard) ensoCard.innerHTML = `<div class="enso-live status-anomalia ocean-enso-refactor"><div class="ocean-card-score status-anomalia"><span>­ƒƒº ANOMALIA</span><strong>68<span>/100</span></strong></div><div class="ocean-enso-kpi"><small>INTENSIDADE DO EL NI├æO</small><strong>+2.2 ┬░C</strong><p>Bloqueio atmosf├®rico ativo: altera o percurso de frentes frias no Sul e intensifica a seca na Amaz├┤nia.</p></div><div class="ocean-enso-phase"><span>ENSO &amp; IMPACTO HIDROL├ôGICO</span><b>El Ni├▒o Forte</b></div><div class="enso-impact-grid"><div class="enso-impact flood">­ƒîº´©Å <b>RISCO DE INUNDA├ç├âO &amp; CHUVA EXTREMA</b><p><strong>Sul do Brasil</strong> e <strong>Bacia do Prata</strong> (volume de chuva estimado em at├® <strong>2.4x</strong> acima da m├®dia).</p></div><div class="enso-impact drought">ÔÿÇ´©Å <b>RISCO DE ESTIAGEM CR├ìTICA</b><p><strong>Bacia Amaz├┤nica</strong> e <strong>Am├®rica Central</strong> (anomalia de precipita├º├úo acumulada).</p></div></div></div>`;
-        if (oceanRiskContent) oceanRiskContent.innerHTML = `<div class="ocean-card-score status-anomalia"><span>­ƒƒº ANOMALIA</span><strong>52<span>/100</span></strong></div><div class="ocean-threat-section"><div><strong>­ƒîè RADAR DE TSUNAMIS ┬À NOAA PTWC</strong><span class="ocean-threat-badge normal">­ƒƒó NORMAL</span></div><p>Alerta preventivo acionado nas ├║ltimas 24h para <b>9 pa├¡ses do Pac├¡fico</b> ap├│s sismo M7.7 no Panam├í. Monitoramento das <b>38 b├│ias DART</b> confirmou estabiliza├º├úo e o alerta foi suspenso.</p><small class="ocean-radar-technical">ÔÇó Varredura cont├¡nua: 38 b├│ias DART operando em malha profunda sem anomalia de press├úo.</small></div><div class="ocean-mini-radar" role="img" aria-label="Radar oce├ónico com hotspots no Pac├¡fico e Atl├óntico Sul"><svg viewBox="0 0 420 150"><path d="M12 78 Q80 28 145 73 T280 68 T408 80"/><path d="M16 112 Q90 65 168 105 T300 101 T405 110"/><circle cx="83" cy="70" r="9"/><circle cx="112" cy="78" r="5"/><circle cx="286" cy="103" r="8"/><circle cx="310" cy="96" r="4"/><text x="20" y="22">PAC├ìFICO</text><text class="ocean-map-label" x="88" y="58">Pac├¡fico +3.36┬░C</text><text x="274" y="136">ATL├éNTICO SUL</text><text class="ocean-map-label" x="286" y="88">Onda 2,8m</text></svg></div><div class="ocean-threat-section"><div><strong>­ƒî¼´©Å RESSACAS &amp; MAR├ëS COSTEIRAS</strong><span class="ocean-threat-badge attention">­ƒƒí ATEN├ç├âO</span></div><p><b>Atl├óntico Sul / Costa Leste:</b> ondula├º├úo an├┤mala de <b>2,8 m</b> na costa. Motivo/Influ├¬ncia: choque t├®rmico da ├ígua (+0.45 ┬░C) com passagem de massa de ar frio.</p></div>`;
-        if (ensoCard) ensoCard.innerHTML = `<div class="enso-live status-anomalia ocean-enso-refactor"><div class="ocean-card-score status-anomalia"><span>­ƒƒº ANOMALIA</span><strong>68<span>/100</span></strong></div><div class="enso-phase-callout"><b>­ƒöÑ FASE ATIVA: EL NI├æO FORTE (+2.2 ┬░C)</b><span>Motor clim├ítico global em n├¡vel an├┤malo, alterando o padr├úo de chuvas no planeta.</span></div><div class="enso-impact-grid"><div class="enso-impact flood"><b>­ƒîº´©Å INUNDA├ç├âO &amp; CHUVA EXTREMA</b><strong class="enso-region">Sul do Brasil &amp; Bacia do Prata</strong><span class="enso-impact-badge">­ƒîº´©Å 2.4x ACIMA DA M├ëDIA</span><p>Previs├úo de precipita├º├úo acumulada extrema com risco de transbordamento e enchentes.</p></div><div class="enso-impact drought"><b>ÔÿÇ´©Å ESTIAGEM CR├ìTICA</b><strong class="enso-region">Bacia Amaz├┤nica &amp; Am├®rica Central</strong><span class="enso-impact-badge">ÔÿÇ´©Å SECA SEVERA / CR├ìTICA</span><p>D├®ficit pluviom├®trico acumulado com forte impacto no n├¡vel dos rios e vazante.</p></div></div></div>`;
+        if (oceanThreatText?.[0]) oceanThreatText[0].textContent = "Monitorando 0 sismos de magnitude > M6.5 em zona de subducção.";
+        if (oceanThreatText?.[1]) oceanThreatText[1].innerHTML = "Atlântico Sul: ondulação anômala de <b>2,8 m</b> na costa costeira · Onda de calor marinha: <b>Categoria 1 · Fraca</b>.";
+        if (oceanSstContent) oceanSstContent.innerHTML = `<div class="ocean-card-score status-atencao"><span>🟡 ATENÇÃO</span><strong>35<span>/100</span></strong></div><div class="ocean-sst-kpi"><small>ANOMALIA TÉRMICA MARINHA &amp; HOTSPOTS</small><strong>+3.36 °C</strong><p>A água do <b>Pacífico</b> está aquecendo em ritmo atípico, agindo como um forno atmosférico para o clima global.</p><div class="ocean-hotspot-alert">🚨 HOTSPOT TÉRMICO CRÍTICO: <b>PACÍFICO EQUATORIAL (+3.36 °C)</b></div></div><div class="ocean-region-progress"><div><div><b>Pacífico Equatorial</b><strong>+3.36 °C</strong></div><i><em style="width:92%"></em></i></div><div><div><b>Atlântico Norte</b><strong>+1.18 °C</strong></div><i><em style="width:55%"></em></i></div><div><div><b>Atlântico Sul</b><strong>+0.45 °C</strong></div><i><em style="width:32%"></em></i></div></div>`;
+        if (ensoCard) ensoCard.innerHTML = `<div class="enso-live status-anomalia ocean-enso-refactor"><div class="ocean-card-score status-anomalia"><span>🟧 ANOMALIA</span><strong>68<span>/100</span></strong></div><div class="ocean-enso-kpi"><small>INTENSIDADE DO EL NIÑO</small><strong>+2.2 °C</strong><p>Bloqueio atmosférico ativo: altera o percurso de frentes frias no Sul e intensifica a seca na Amazônia.</p></div><div class="ocean-enso-phase"><span>ENSO &amp; IMPACTO HIDROLÓGICO</span><b>El Niño Forte</b></div><div class="enso-impact-grid"><div class="enso-impact flood">🌧️ <b>RISCO DE INUNDAÇÃO &amp; CHUVA EXTREMA</b><p><strong>Sul do Brasil</strong> e <strong>Bacia do Prata</strong> (volume de chuva estimado em até <strong>2.4x</strong> acima da média).</p></div><div class="enso-impact drought">☀️ <b>RISCO DE ESTIAGEM CRÍTICA</b><p><strong>Bacia Amazônica</strong> e <strong>América Central</strong> (anomalia de precipitação acumulada).</p></div></div></div>`;
+        if (oceanRiskContent) oceanRiskContent.innerHTML = `<div class="ocean-card-score status-anomalia"><span>🟧 ANOMALIA</span><strong>52<span>/100</span></strong></div><div class="ocean-threat-section"><div><strong>🌊 RADAR DE TSUNAMIS · NOAA PTWC</strong><span class="ocean-threat-badge normal">🟢 NORMAL</span></div><p>Alerta preventivo acionado nas últimas 24h para <b>9 países do Pacífico</b> após sismo M7.7 no Panamá. Monitoramento das <b>38 bóias DART</b> confirmou estabilização e o alerta foi suspenso.</p><small class="ocean-radar-technical">• Varredura contínua: 38 bóias DART operando em malha profunda sem anomalia de pressão.</small></div><div class="ocean-mini-radar" role="img" aria-label="Radar oceânico com hotspots no Pacífico e Atlântico Sul"><svg viewBox="0 0 420 150"><path d="M12 78 Q80 28 145 73 T280 68 T408 80"/><path d="M16 112 Q90 65 168 105 T300 101 T405 110"/><circle cx="83" cy="70" r="9"/><circle cx="112" cy="78" r="5"/><circle cx="286" cy="103" r="8"/><circle cx="310" cy="96" r="4"/><text x="20" y="22">PACÍFICO</text><text class="ocean-map-label" x="88" y="58">Pacífico +3.36°C</text><text x="274" y="136">ATLÂNTICO SUL</text><text class="ocean-map-label" x="286" y="88">Onda 2,8m</text></svg></div><div class="ocean-threat-section"><div><strong>🌬️ RESSACAS &amp; MARÉS COSTEIRAS</strong><span class="ocean-threat-badge attention">🟡 ATENÇÃO</span></div><p><b>Atlântico Sul / Costa Leste:</b> ondulação anômala de <b>2,8 m</b> na costa. Motivo/Influência: choque térmico da água (+0.45 °C) com passagem de massa de ar frio.</p></div>`;
+        if (ensoCard) ensoCard.innerHTML = `<div class="enso-live status-anomalia ocean-enso-refactor"><div class="ocean-card-score status-anomalia"><span>🟧 ANOMALIA</span><strong>68<span>/100</span></strong></div><div class="enso-phase-callout"><b>🔥 FASE ATIVA: EL NIÑO FORTE (+2.2 °C)</b><span>Motor climático global em nível anômalo, alterando o padrão de chuvas no planeta.</span></div><div class="enso-impact-grid"><div class="enso-impact flood"><b>🌧️ INUNDAÇÃO &amp; CHUVA EXTREMA</b><strong class="enso-region">Sul do Brasil &amp; Bacia do Prata</strong><span class="enso-impact-badge">🌧️ 2.4x ACIMA DA MÉDIA</span><p>Previsão de precipitação acumulada extrema com risco de transbordamento e enchentes.</p></div><div class="enso-impact drought"><b>☀️ ESTIAGEM CRÍTICA</b><strong class="enso-region">Bacia Amazônica &amp; América Central</strong><span class="enso-impact-badge">☀️ SECA SEVERA / CRÍTICA</span><p>Déficit pluviométrico acumulado com forte impacto no nível dos rios e vazante.</p></div></div></div>`;
         if (oceanRiskContent) {
             const oceanUpdated = dados?.meta?.updatedAt ? new Date(dados.meta.updatedAt) : new Date();
             const oceanTimestamp = Number.isNaN(oceanUpdated.getTime())
                 ? "Snapshot atualizado em tempo real"
-                : `├Ültima varredura: ${oceanUpdated.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).replace(" de ", " ").toUpperCase()} - ${oceanUpdated.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" })} UTC`;
+                : `Última varredura: ${oceanUpdated.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).replace(" de ", " ").toUpperCase()} - ${oceanUpdated.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" })} UTC`;
             oceanRiskContent.querySelectorAll(".ocean-threat-section").forEach((event, index) => {
                 const eventStamp = document.createElement("small");
                 eventStamp.className = "ocean-event-timestamp";
                 const eventDate = new Date(oceanUpdated);
                 if (index === 0) eventDate.setUTCDate(eventDate.getUTCDate() - 1);
                 eventStamp.textContent = Number.isNaN(eventDate.getTime())
-                    ? "Data do evento: n├úo informada"
+                    ? "Data do evento: não informada"
                     : `Data do evento: ${eventDate.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).replace(" de ", " ").toUpperCase()}`;
                 event.appendChild(eventStamp);
             });
@@ -1024,9 +1024,9 @@
             oceanRiskContent.appendChild(stamp);
         }
         const oceanTitles = document.querySelectorAll("#ocean .dashboard-grid > .panel h3");
-        if (oceanTitles[0]) oceanTitles[0].textContent = "Anomalia t├®rmica marinha & hotspots";
-        if (oceanTitles[1]) oceanTitles[1].textContent = "ENSO & impacto hidrol├│gico (enchentes e secas)";
-        if (oceanTitles[2]) oceanTitles[2].textContent = "Amea├ºas oce├ónicas, tsunamis & riscos costeiros";
+        if (oceanTitles[0]) oceanTitles[0].textContent = "Anomalia térmica marinha & hotspots";
+        if (oceanTitles[1]) oceanTitles[1].textContent = "ENSO & impacto hidrológico (enchentes e secas)";
+        if (oceanTitles[2]) oceanTitles[2].textContent = "Ameaças oceânicas, tsunamis & riscos costeiros";
         if (!oceanMapElement || typeof L === "undefined") return;
         if (!oceanMap) {
             oceanMap = L.map(oceanMapElement, { worldCopyJump: true, zoomControl: true }).setView([5, -20], 2);
@@ -1042,7 +1042,7 @@
             const marker = L.circleMarker([Number(point.lat), Number(point.lon)], {
                 radius: 7, color: colors[level], fillColor: colors[level], fillOpacity: .72, weight: 2
             }).addTo(oceanMap);
-            marker.bindPopup(`<strong>${escapeHTML(point.region || "Regi├úo oce├ónica")}</strong><br>${Number(point.anomaly) > 0 ? "+" : ""}${Number(point.anomaly).toFixed(2)} ┬░C ┬À ${oceanStatus[level]?.label || level}`);
+            marker.bindPopup(`<strong>${escapeHTML(point.region || "Região oceânica")}</strong><br>${Number(point.anomaly) > 0 ? "+" : ""}${Number(point.anomaly).toFixed(2)} °C · ${oceanStatus[level]?.label || level}`);
             return marker;
         });
         setTimeout(() => oceanMap.invalidateSize(), 150);
@@ -1059,7 +1059,7 @@
     function formatDateBR(dateString) {
 
         if (!dateString) {
-            return "Data n├úo informada";
+            return "Data não informada";
         }
 
         const date = new Date(dateString);
@@ -1076,7 +1076,7 @@
     }
 
     // =========================================================
-    // SINALIZA├ç├âO DO ANOMALIA
+    // SINALIZAÇÃO DO ANOMALIA
     // =========================================================
 
     const sinalizacaoConfig = {
@@ -1087,7 +1087,7 @@
         },
 
         atencao: {
-            label: "ATEN├ç├âO",
+            label: "ATENÇÃO",
             className: "status-atencao"
         },
 
@@ -1102,13 +1102,13 @@
         },
 
         sem_evidencia: {
-            label: "SEM EVID├èNCIA",
+            label: "SEM EVIDÊNCIA",
             className: "status-sem-evidencia"
         }
     };
 
     // =========================================================
-    // COMPONENTES VISUAIS DE SINALIZA├ç├âO
+    // COMPONENTES VISUAIS DE SINALIZAÇÃO
     // =========================================================
 
     function badgeStatus(nivel) {
@@ -1174,7 +1174,7 @@
     }
 
     // =========================================================
-    // NEO ÔÇö CLASSIFICA├ç├âO
+    // NEO — CLASSIFICAÇÃO
     // =========================================================
 
     function classificarNEO(objeto) {
@@ -1191,12 +1191,12 @@
         return {
             nivel: "normal",
             explicacao:
-                "Objeto pr├│ximo da Terra em monitoramento."
+                "Objeto próximo da Terra em monitoramento."
         };
     }
 
     // =========================================================
-    // CARREGAR OBJETOS PR├ôXIMOS DA TERRA (CONSULTANDO O RENDER)
+    // CARREGAR OBJETOS PRÓXIMOS DA TERRA (CONSULTANDO O RENDER)
     // =========================================================
 
     async function carregarNEOs() {
@@ -1367,11 +1367,11 @@
                 <div class="space-error">
 
                     <strong>
-                        Dados espaciais indispon├¡veis
+                        Dados espaciais indisponíveis
                     </strong>
 
                     <p>
-                        N├úo foi poss├¡vel consultar
+                        Não foi possível consultar
                         a NASA neste momento.
                     </p>
 
@@ -1385,7 +1385,7 @@
     }
 
     // =========================================================
-    // RENDER ÔÇö NEO
+    // RENDER — NEO
     // =========================================================
 
     function renderizarNEOs(objetos) {
@@ -1444,7 +1444,7 @@
 
                     <span class="neo-mini-label">
                         <i class="status-dot"></i>
-                        Dist├óncia da Terra
+                        Distância da Terra
                     </span>
 
                     <strong>
@@ -1460,7 +1460,7 @@
 
                         <span class="neo-mini-label">
                             <i class="status-dot"></i>
-                            Di├ómetro estimado
+                            Diâmetro estimado
                         </span>
 
                         <strong>
@@ -1509,21 +1509,21 @@
             ? objetos.map((objeto, indice) => {
                 const nivel = classificarNEO(objeto).nivel;
                 return `<div class="neo-ranking-item ${sinalizacaoConfig[nivel].className}">
-                    <strong>${indice + 1}┬║</strong>
+                    <strong>${indice + 1}º</strong>
                     <span class="neo-ranking-name">${escapeHTML(objeto.nome)}</span>
                     <span>${formatDiameter(objeto.diametroMin, objeto.diametroMax)}</span>
                     <b>${formatNumber(objeto.distancia)} km</b>
                     ${badgeStatus(nivel)}
                 </div>`;
             }).join("")
-            : `<div class="space-empty">Nenhum objeto dispon├¡vel para o ranking.</div>`;
+            : `<div class="space-empty">Nenhum objeto disponível para o ranking.</div>`;
     }
 
     function verificarNEO() {
         const texto = (neoQuery?.value || "").trim();
         if (!neoVerificationResult) return;
         if (!texto) {
-            neoVerificationResult.innerHTML = "<p class=\"neo-verification-empty\">Digite o nome do objeto ou cole a afirma├º├úo para analisar.</p>";
+            neoVerificationResult.innerHTML = "<p class=\"neo-verification-empty\">Digite o nome do objeto ou cole a afirmação para analisar.</p>";
             return;
         }
         const encontrado = (window.__anomaliaNEOs || []).find(objeto =>
@@ -1531,20 +1531,20 @@
             String(objeto.nome).toLowerCase().includes(texto.toLowerCase())
         );
         if (!encontrado) {
-            neoVerificationResult.innerHTML = `<div class="neo-result status-sem-evidencia"><strong>SEM EVID├èNCIA NOS DADOS CONSULTADOS</strong><p>N├úo encontramos esse objeto na janela atual da NASA. Isso n├úo confirma nem desmente a publica├º├úo.</p></div>`;
+            neoVerificationResult.innerHTML = `<div class="neo-result status-sem-evidencia"><strong>SEM EVIDÊNCIA NOS DADOS CONSULTADOS</strong><p>Não encontramos esse objeto na janela atual da NASA. Isso não confirma nem desmente a publicação.</p></div>`;
             return;
         }
         const nivel = classificarNEO(encontrado).nivel;
         neoVerificationResult.innerHTML = `<div class="neo-result ${sinalizacaoConfig[nivel].className}">
             <div class="neo-result-title">${badgeStatus(nivel)} <strong>${escapeHTML(encontrado.nome)}</strong></div>
-            <p><strong>IDENTIFICADO</strong> ÔÇö o objeto consta nos dados consultados pela NASA.</p>
-            <div class="neo-result-grid"><span>Aproxima├º├úo<br><b>${formatDateBR(encontrado.data)}</b></span><span>Dist├óncia<br><b>${formatNumber(encontrado.distancia)} km</b></span><span>Velocidade<br><b>${formatSpeed(encontrado.velocidade)}</b></span></div>
-            <small>${escapeHTML(classificarNEO(encontrado).explicacao)} Isso n├úo significa impacto iminente.</small>
+            <p><strong>IDENTIFICADO</strong> — o objeto consta nos dados consultados pela NASA.</p>
+            <div class="neo-result-grid"><span>Aproximação<br><b>${formatDateBR(encontrado.data)}</b></span><span>Distância<br><b>${formatNumber(encontrado.distancia)} km</b></span><span>Velocidade<br><b>${formatSpeed(encontrado.velocidade)}</b></span></div>
+            <small>${escapeHTML(classificarNEO(encontrado).explicacao)} Isso não significa impacto iminente.</small>
         </div>`;
     }
 
     // =========================================================
-    // RESUMO DO ESPA├çO
+    // RESUMO DO ESPAÇO
     // =========================================================
 
     function atualizarResumoEspaco(objetos) {
@@ -1619,7 +1619,7 @@
                 </strong>
 
                 <small>
-                    janela de aproxima├º├úo consultada
+                    janela de aproximação consultada
                 </small>
 
             </div>
@@ -1642,7 +1642,7 @@
                 </strong>
 
                 <small>
-                    classifica├º├úo NASA/JPL
+                    classificação NASA/JPL
                 </small>
 
             </div>
@@ -1652,7 +1652,7 @@
                 <div class="space-stat-top">
 
                     <span>
-                        MENOR DIST├éNCIA
+                        MENOR DISTÂNCIA
                     </span>
 
                     ${badgeStatus(nivelProximo)}
@@ -1708,19 +1708,19 @@
     const textosEstadoEspacial = {
 
         normal:
-            "Os eventos observados permanecem dentro dos crit├®rios normais de monitoramento.",
+            "Os eventos observados permanecem dentro dos critérios normais de monitoramento.",
 
         atencao:
-            "H├í eventos que merecem acompanhamento por apresentarem intensidade relevante.",
+            "Há eventos que merecem acompanhamento por apresentarem intensidade relevante.",
 
         anomalia:
-            "H├í eventos com caracter├¡stica acima do n├¡vel usual observado para o seu tipo.",
+            "Há eventos com característica acima do nível usual observado para o seu tipo.",
 
         alerta:
-            "H├í eventos com classifica├º├úo ou intensidade que exigem monitoramento especial. Isso n├úo indica, por si s├│, amea├ºa iminente.",
+            "Há eventos com classificação ou intensidade que exigem monitoramento especial. Isso não indica, por si só, ameaça iminente.",
 
         sem_evidencia:
-            "N├úo h├í dados suficientes para classificar o ambiente espacial neste momento."
+            "Não há dados suficientes para classificar o ambiente espacial neste momento."
     };
 
     const estadoEspacial = {
@@ -1751,9 +1751,9 @@
     function avaliarObjetosProximos() {
 
         const nome =
-            "Objetos pr├│ximos da Terra";
+            "Objetos próximos da Terra";
 
-        const icone = "ÔùÄ";
+        const icone = "◎";
 
         const { status, itens } =
             estadoEspacial.neos;
@@ -1765,7 +1765,7 @@
                 icone,
                 nivel: "sem_evidencia",
                 indisponivel: true,
-                detalhe: "Fonte indispon├¡vel."
+                detalhe: "Fonte indisponível."
             };
         }
 
@@ -1812,7 +1812,7 @@
         const nome =
             "Atividade solar (7 dias)";
 
-        const icone = "ÔÿÇ";
+        const icone = "☀";
 
         const { status, itens } =
             estadoEspacial.solar;
@@ -1824,7 +1824,7 @@
                 icone,
                 nivel: "sem_evidencia",
                 indisponivel: true,
-                detalhe: "Fonte indispon├¡vel."
+                detalhe: "Fonte indisponível."
             };
         }
 
@@ -1836,7 +1836,7 @@
                 nivel: "normal",
                 indisponivel: false,
                 detalhe:
-                    "Nenhum evento solar registrado no per├¡odo."
+                    "Nenhum evento solar registrado no período."
             };
         }
 
@@ -1863,9 +1863,9 @@
     }
 
     const iconesNivel = {
-        normal: "Ô£ô",
+        normal: "✓",
         atencao: "!",
-        anomalia: "Ôû▓",
+        anomalia: "▲",
         alerta: "!",
         sem_evidencia: "?"
     };
@@ -1931,10 +1931,10 @@
             <div class="space-state ${config.className}">
 
                 <div class="space-state-plaque space-state-plaque-top">
-                    ALERTA DE<br>SEGURAN├çA ESPACIAL
+                    ALERTA DE<br>SEGURANÇA ESPACIAL
                 </div>
 
-                <div class="space-state-heading-label">CLASSIFICA├ç├âO</div>
+                <div class="space-state-heading-label">CLASSIFICAÇÃO</div>
                 <h3 class="space-state-heading-title">ESTADO DO AMBIENTE ESPACIAL</h3>
 
                 <div class="space-state-hero">
@@ -1970,7 +1970,7 @@
                 </div>
 
                 <div class="space-state-scale">
-                    NORMAL <span>|</span> ATEN├ç├âO <span>|</span> ANOMALIA <span>|</span> ALERTA
+                    NORMAL <span>|</span> ATENÇÃO <span>|</span> ANOMALIA <span>|</span> ALERTA
                 </div>
 
                 ${
@@ -1994,7 +1994,7 @@
         spaceStatus.innerHTML =
             montarPainelEstado(
                 "sem_evidencia",
-                "N├ìVEL ATUAL",
+                "NÍVEL ATUAL",
                 "ANALISANDO",
                 "Aguardando os dados das fontes espaciais."
             );
@@ -2043,12 +2043,12 @@
                 nivelGeral = "sem_evidencia";
 
                 texto =
-                    "Uma das fontes est├í indispon├¡vel. O estado do ambiente espacial n├úo pode ser confirmado.";
+                    "Uma das fontes está indisponível. O estado do ambiente espacial não pode ser confirmado.";
 
             } else {
 
                 texto +=
-                    " Aten├º├úo: uma das fontes est├í indispon├¡vel.";
+                    " Atenção: uma das fontes está indisponível.";
             }
         }
 
@@ -2094,7 +2094,7 @@
         spaceStatus.innerHTML =
             montarPainelEstado(
                 nivelGeral,
-                "N├ìVEL ATUAL",
+                "NÍVEL ATUAL",
                 config.label,
                 texto,
                 fontesHTML
@@ -2151,7 +2151,7 @@
     }
 
     // =========================================================
-    // CLIMA ESPACIAL ÔÇö DONKI (CONSULTANDO O RENDER)
+    // CLIMA ESPACIAL — DONKI (CONSULTANDO O RENDER)
     // =========================================================
 
     async function carregarClimaEspacial() {
@@ -2190,17 +2190,17 @@
 
             {
                 tipo: "FLR",
-                nome: "Explos├úo solar"
+                nome: "Explosão solar"
             },
 
             {
                 tipo: "CME",
-                nome: "Eje├º├úo de massa coronal"
+                nome: "Ejeção de massa coronal"
             },
 
             {
                 tipo: "GST",
-                nome: "Tempestade geomagn├®tica"
+                nome: "Tempestade geomagnética"
             }
 
         ];
@@ -2240,7 +2240,7 @@
 
                                 throw new Error(
                                     `${endpoint.tipo}: HTTP ${response.status}` +
-                                    (detalhe ? ` ÔÇö ${detalhe}` : "")
+                                    (detalhe ? ` — ${detalhe}` : "")
                                 );
                             }
 
@@ -2361,8 +2361,8 @@
             spaceWeatherList.innerHTML =
                 caixaAlerta(
                     "sem_evidencia",
-                    "FONTE INDISPON├ìVEL",
-                    "A fonte NASA DONKI n├úo p├┤de ser consultada nesta atualiza├º├úo.",
+                    "FONTE INDISPONÍVEL",
+                    "A fonte NASA DONKI não pôde ser consultada nesta atualização.",
                     error.message
                 );
 
@@ -2488,7 +2488,7 @@
                 caixaAlerta(
                     "normal",
                     "SEM EVENTOS RELEVANTES",
-                    "N├úo foram encontrados eventos solares relevantes nos dados consultados pela NASA DONKI."
+                    "Não foram encontrados eventos solares relevantes nos dados consultados pela NASA DONKI."
                 );
 
             return;
@@ -2525,14 +2525,14 @@
                 card.innerHTML = `
 
                     <div class="space-event-heading">
-                        <span class="space-event-detected">ÔÿÇ´©Å EVENTO SOLAR DETECTADO</span>
+                        <span class="space-event-detected">☀️ EVENTO SOLAR DETECTADO</span>
                         ${badgeStatus(evento.nivel)}
                     </div>
 
                     <div class="space-event-top">
 
-                        <span class="space-event-type">­ƒö¼ TIPO: ${escapeHTML(evento.tipo)}</span>
-                        <span class="space-event-date">­ƒôà DATA: ${formatDateBR(evento.data)}</span>
+                        <span class="space-event-type">🔬 TIPO: ${escapeHTML(evento.tipo)}</span>
+                        <span class="space-event-date">📅 DATA: ${formatDateBR(evento.data)}</span>
 
                     </div>
 
@@ -2552,13 +2552,13 @@
 
                         </div>
 
-                        <div class="space-event-level">­ƒôè INTENSIDADE: ${escapeHTML(evento.intensidade)}</div>
+                        <div class="space-event-level">📊 INTENSIDADE: ${escapeHTML(evento.intensidade)}</div>
 
                     </div>
 
                     <div class="space-event-classification">
 
-                        <span><strong>${evento.nivel === "normal" ? "­ƒƒó" : evento.nivel === "atencao" ? "­ƒƒí" : evento.nivel === "anomalia" ? "­ƒƒá" : "­ƒö┤"} CLASSIFICA├ç├âO: ${escapeHTML(config.label)}</strong><br>
+                        <span><strong>${evento.nivel === "normal" ? "🟢" : evento.nivel === "atencao" ? "🟡" : evento.nivel === "anomalia" ? "🟠" : "🔴"} CLASSIFICAÇÃO: ${escapeHTML(config.label)}</strong><br>
                             ${descricaoSinalizacao(
                                 evento.nivel
                             )}
@@ -2577,9 +2577,9 @@
             const paginacao = document.createElement("div");
             paginacao.className = "solar-pagination";
             paginacao.innerHTML = `
-                <button type="button" class="solar-page-button" data-solar-page="prev" ${paginaAtual === 0 ? "disabled" : ""}>ÔÇ╣ Anteriores</button>
-                <span>P├ígina ${paginaAtual + 1} de ${totalPaginas}</span>
-                <button type="button" class="solar-page-button" data-solar-page="next" ${paginaAtual === totalPaginas - 1 ? "disabled" : ""}>Pr├│ximos ÔÇ║</button>
+                <button type="button" class="solar-page-button" data-solar-page="prev" ${paginaAtual === 0 ? "disabled" : ""}>‹ Anteriores</button>
+                <span>Página ${paginaAtual + 1} de ${totalPaginas}</span>
+                <button type="button" class="solar-page-button" data-solar-page="next" ${paginaAtual === totalPaginas - 1 ? "disabled" : ""}>Próximos ›</button>
             `;
             paginacao.addEventListener("click", evento => {
                 const botao = evento.target.closest("button[data-solar-page]");
@@ -2597,7 +2597,7 @@
 
         if (nivel === "normal") {
 
-            return "Evento dentro dos par├ómetros usuais de monitoramento.";
+            return "Evento dentro dos parâmetros usuais de monitoramento.";
         }
 
         if (nivel === "atencao") {
@@ -2607,15 +2607,15 @@
 
         if (nivel === "anomalia") {
 
-            return "Caracter├¡stica acima do n├¡vel usual observado para este tipo de evento.";
+            return "Característica acima do nível usual observado para este tipo de evento.";
         }
 
         if (nivel === "alerta") {
 
-            return "Evento com intensidade ou classifica├º├úo que exige monitoramento especial.";
+            return "Evento com intensidade ou classificação que exige monitoramento especial.";
         }
 
-        return "N├úo h├í evid├¬ncia suficiente para classifica├º├úo.";
+        return "Não há evidência suficiente para classificação.";
     }
 
     function obterIntensidade(
@@ -2677,18 +2677,18 @@
     ) {
 
         if (tipo === "FLR") {
-            return "ÔÿÇ";
+            return "☀";
         }
 
         if (tipo === "CME") {
-            return "Ôùë";
+            return "◉";
         }
 
         if (tipo === "GST") {
-            return "Ôîü";
+            return "⌁";
         }
 
-        return "ÔùÄ";
+        return "◎";
     }
 
     function formatNumber(
@@ -2699,7 +2699,7 @@
             !Number.isFinite(valor)
         ) {
 
-            return "ÔÇö";
+            return "—";
         }
 
         return Math.round(
@@ -2718,7 +2718,7 @@
             valor <= 0
         ) {
 
-            return "ÔÇö";
+            return "—";
         }
 
         if (
@@ -2747,12 +2747,12 @@
             !Number.isFinite(max)
         ) {
 
-            return "ÔÇö";
+            return "—";
         }
 
         return (
             min.toFixed(0) +
-            "ÔÇô" +
+            "–" +
             max.toFixed(0) +
             " m"
         );
@@ -2766,7 +2766,7 @@
             !Number.isFinite(valor)
         ) {
 
-            return "ÔÇö";
+            return "—";
         }
 
         return (
@@ -2799,7 +2799,7 @@
         },
 
         atencao: {
-            label: "ATEN├ç├âO",
+            label: "ATENÇÃO",
             color: "#facc15"
         },
 
@@ -2814,7 +2814,7 @@
         },
 
         sem_evidencia: {
-            label: "SEM EVID├èNCIA",
+            label: "SEM EVIDÊNCIA",
             color: "#94a3b8"
         }
     };
@@ -2915,16 +2915,16 @@
     );
 
     const textosVisaoGeral = {
-        ".map-panel .panel-kicker": "MAPA PLANET├üRIO",
-        ".recent-panel h3": "├Ültimas atividades recentes",
-        ".home-analysis-section:nth-child(1) .section-kicker": "DESVIOS EXTREMOS ┬À 48 HORAS",
-        ".home-analysis-section:nth-child(1) h2": "Anomalias cr├¡ticas em tempo real",
-        ".home-analysis-section:nth-child(1) p": "Eventos que ultrapassam os limiares de monitoramento dispon├¡veis no snapshot atual.",
-        ".home-analysis-section:nth-child(2) .section-kicker": "LEITURA MULTIDOM├ìNIO",
-        ".home-analysis-section:nth-child(2) h2": "Sinais cruzados & an├ílise multidom├¡nio",
-        ".home-analysis-section:nth-child(2) p": "Compara eventos pr├│ximos no tempo e no espa├ºo sem presumir causalidade.",
-        ".home-analysis-section:nth-child(3) .section-kicker": "COBERTURA DE M├ìDIA & ALERTAS",
-        ".home-analysis-section:nth-child(3) h2": "Feed de alertas cr├¡ticos"
+        ".map-panel .panel-kicker": "MAPA PLANETÁRIO",
+        ".recent-panel h3": "Últimas atividades recentes",
+        ".home-analysis-section:nth-child(1) .section-kicker": "DESVIOS EXTREMOS · 48 HORAS",
+        ".home-analysis-section:nth-child(1) h2": "Anomalias críticas em tempo real",
+        ".home-analysis-section:nth-child(1) p": "Eventos que ultrapassam os limiares de monitoramento disponíveis no snapshot atual.",
+        ".home-analysis-section:nth-child(2) .section-kicker": "LEITURA MULTIDOMÍNIO",
+        ".home-analysis-section:nth-child(2) h2": "Sinais cruzados & análise multidomínio",
+        ".home-analysis-section:nth-child(2) p": "Compara eventos próximos no tempo e no espaço sem presumir causalidade.",
+        ".home-analysis-section:nth-child(3) .section-kicker": "COBERTURA DE MÍDIA & ALERTAS",
+        ".home-analysis-section:nth-child(3) h2": "Feed de alertas críticos"
     };
     Object.entries(textosVisaoGeral).forEach(([seletor, texto]) => {
         const elemento = document.querySelector(seletor);
@@ -3238,7 +3238,7 @@
         }
 
         if (minutos < 60) {
-            return `h├í ${minutos} min`;
+            return `há ${minutos} min`;
         }
 
         const horas =
@@ -3247,7 +3247,7 @@
             );
 
         if (horas < 24) {
-            return `h├í ${horas} h`;
+            return `há ${horas} h`;
         }
 
         const dias =
@@ -3255,7 +3255,7 @@
                 horas / 24
             );
 
-        return `h├í ${dias} d`;
+        return `há ${dias} d`;
     }
 
     function renderizarSinaisRecentes() {
@@ -3263,7 +3263,7 @@
         if (!recentContainer) {
 
             console.error(
-                "ANOMALIA: .recent-signals n├úo encontrado."
+                "ANOMALIA: .recent-signals não encontrado."
             );
 
             return;
@@ -3275,7 +3275,7 @@
 
             recentContainer.innerHTML = `
                 <div class="space-empty">
-                    Nenhum sinal dispon├¡vel no snapshot.
+                    Nenhum sinal disponível no snapshot.
                 </div>
             `;
 
@@ -3373,7 +3373,7 @@
 
         local.textContent =
             quando
-                ? `${sinal.local} ┬À ${quando}`
+                ? `${sinal.local} · ${quando}`
                 : sinal.local;
 
         const status =
@@ -3538,7 +3538,7 @@
                             ),
                         titulo: evento.title,
                         local:
-                            "Localiza├º├úo aproximada por pa├¡s",
+                            "Localização aproximada por país",
                         lat: evento.lat,
                         lon: evento.lon,
                         nivel:
@@ -3546,7 +3546,7 @@
                             "sem_evidencia",
                         descricao:
                             evento.summary ||
-                            "Evento epidemiol├│gico documentado.",
+                            "Evento epidemiológico documentado.",
                         fonte:
                             evento.sourceName ||
                             "OMS"
@@ -3589,7 +3589,7 @@
                         categoria: "Oceano",
                         data: tempoOceano,
                         titulo:
-                            `Anomalia t├®rmica ${sinal}${ponto.anomaly.toFixed(2)} ┬░C`,
+                            `Anomalia térmica ${sinal}${ponto.anomaly.toFixed(2)} °C`,
                         local:
                             ponto.region ||
                             "Oceano global",
@@ -3597,7 +3597,7 @@
                         lon: ponto.lon,
                         nivel,
                         descricao:
-                            "Desvio da temperatura da superf├¡cie em rela├º├úo ├á refer├¬ncia hist├│rica.",
+                            "Desvio da temperatura da superfície em relação à referência histórica.",
                         fonte: "NOAA OISST"
                     });
                 }
@@ -3610,9 +3610,9 @@
                     lista.push({
                         id: id++,
                         tipo: "ai",
-                        categoria: "IA Sint├®tica",
+                        categoria: "IA Sintética",
                         data: paraTempo(incidente.date || incidente.created_at || incidente.created),
-                        titulo: incidente.title || "Incidente de intelig├¬ncia artificial",
+                        titulo: incidente.title || "Incidente de inteligência artificial",
                         local: incidente.location || incidente.sourceName || "Monitoramento de IA",
                         nivel: incidente.status || "atencao",
                         descricao: incidente.description || "Incidente documentado no monitoramento de IA.",
@@ -3628,7 +3628,7 @@
                     lista.push({
                         id: id++,
                         tipo: "space",
-                        categoria: "Espa├ºo",
+                        categoria: "Espaço",
                         data: paraTempo(objeto.date || objeto.data || objeto.updated_at || dados.meta?.updatedAt),
                         titulo: objeto.name || objeto.title || objeto.designation || "Objeto espacial monitorado",
                         local: objeto.close_approach_date || objeto.location || "Monitoramento NASA",
@@ -3645,9 +3645,9 @@
             categoria: "Especial Brasil",
             data: paraTempo(dados.meta?.updatedAt),
             titulo: "Ultimo registro territorial atualizado",
-            local: "Brasil ┬À 26 estados e DF",
+            local: "Brasil · 26 estados e DF",
             nivel: "anomalia",
-            descricao: "Sinais territoriais de biomas, recursos h├¡dricos, geof├¡sica e clima.",
+            descricao: "Sinais territoriais de biomas, recursos hídricos, geofísica e clima.",
             fonte: "INPE / CEMADEN / ANA / INMET"
         });
 
@@ -3661,21 +3661,21 @@
         aiRecords.slice(0, 10).forEach(item => sinais.push({
             id: `ai-${item.id || item.title}`,
             tipo: "ai",
-            categoria: "IA Sint├®tica",
+            categoria: "IA Sintética",
             data: Date.parse(item.date || item.created_at || item.created || new Date()),
             titulo: item.title || "Sinal de IA classificado",
             local: item.sourceName || "AI Incident Database",
             nivel: classificarIncidenteIA(item),
-            descricao: item.description || "Classifica├º├úo de sinal de IA.",
+            descricao: item.description || "Classificação de sinal de IA.",
             fonte: item.sourceName || "AIID"
         }));
 
         (window.__anomaliaNEOs || []).slice(0, 10).forEach(item => sinais.push({
             id: `neo-${item.id || item.nome}`,
             tipo: "space",
-            categoria: "Objetos pr├│ximos da Terra",
+            categoria: "Objetos próximos da Terra",
             data: Date.parse(item.data || new Date()),
-            titulo: `Aproxima├º├úo monitorada ┬À ${item.nome}`,
+            titulo: `Aproximação monitorada · ${item.nome}`,
             local: `${Number(item.distancia || 0).toLocaleString("pt-BR")} km da Terra`,
             nivel: item.perigoso ? "atencao" : "normal",
             descricao: `Objeto monitorado pela NASA. Velocidade: ${Number(item.velocidade || 0).toLocaleString("pt-BR")} km/h.`,
@@ -3688,7 +3688,7 @@
             tipo: "solar",
             categoria: "Sinais solares",
             data: Date.parse(item.data || new Date()),
-            titulo: item.nome || `Evento solar ┬À ${item.tipo || "atividade detectada"}`,
+            titulo: item.nome || `Evento solar · ${item.tipo || "atividade detectada"}`,
             local: item.tipo || "NASA DONKI",
             nivel: item.nivel || "atencao",
             descricao: item.intensidade || "Evento solar monitorado pela NASA DONKI.",
@@ -3745,7 +3745,7 @@
                         dados.meta?.updatedAt
                     );
 
-                updateElement.textContent = "├Ültima varredura";
+                updateElement.textContent = "Última varredura";
             }
 
         } catch (error) {
@@ -3760,7 +3760,7 @@
             if (updateElement) {
 
                 updateElement.textContent =
-                    "Snapshot indispon├¡vel";
+                    "Snapshot indisponível";
             }
         }
     }
@@ -3769,8 +3769,8 @@
         const valor = dados?.meta?.updatedAt;
         const data = valor ? new Date(valor) : new Date();
         const texto = Number.isNaN(data.getTime())
-            ? "├Ültima varredura"
-            : `├Ültima varredura ┬À ${data.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" })} ${data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" })}`;
+            ? "Última varredura"
+            : `Última varredura · ${data.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" })} ${data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" })}`;
         document.querySelectorAll(".page-section").forEach(section => {
             const anchor = section.querySelector(".section-heading, .panel-header");
             if (!anchor || anchor.querySelector(".monitoring-timestamp")) return;
@@ -3796,18 +3796,18 @@
         const previous = Number(localStorage.getItem("anomalia-planetary-score"));
         const change = Number.isFinite(previous) && previous > 0 ? ((score - previous) / previous) * 100 : 0;
         localStorage.setItem("anomalia-planetary-score", String(score));
-        const label = score >= 70 ? "ALERTA ELEVADO" : score >= 42 ? "ANOMALIA MODERADA" : score >= 20 ? "ATEN├ç├âO" : "NORMALIDADE OBSERVADA";
-        const faixa = score >= 85 ? { level: "alerta", label: "ALERTA" } : score >= 60 ? { level: "anomalia", label: "ANOMALIA" } : score >= 42 ? { level: "anomalia-moderada", label: "ANOMALIA MODERADA" } : score >= 30 ? { level: "atencao", label: "ATEN├ç├âO" } : { level: "normal", label: "NORMAL" };
+        const label = score >= 70 ? "ALERTA ELEVADO" : score >= 42 ? "ANOMALIA MODERADA" : score >= 20 ? "ATENÇÃO" : "NORMALIDADE OBSERVADA";
+        const faixa = score >= 85 ? { level: "alerta", label: "ALERTA" } : score >= 60 ? { level: "anomalia", label: "ANOMALIA" } : score >= 42 ? { level: "anomalia-moderada", label: "ANOMALIA MODERADA" } : score >= 30 ? { level: "atencao", label: "ATENÇÃO" } : { level: "normal", label: "NORMAL" };
         element.querySelector("strong").innerHTML = `${score} <small>/ 100</small>`;
         element.querySelector("b").textContent = faixa.label;
-        element.querySelector(".planetary-score-change").textContent = `Varia├º├úo de 24h: ${change >= 0 ? "+" : ""}${change.toFixed(1)}% em rela├º├úo ao ├║ltimo snapshot`;
+        element.querySelector(".planetary-score-change").textContent = `Variação de 24h: ${change >= 0 ? "+" : ""}${change.toFixed(1)}% em relação ao último snapshot`;
         element.dataset.level = faixa.level;
         let timestamp = element.querySelector(".planetary-score-timestamp");
         if (!timestamp) { timestamp = document.createElement("span"); timestamp.className = "planetary-score-timestamp"; element.appendChild(timestamp); }
         const updated = dados.meta?.updatedAt ? new Date(dados.meta.updatedAt) : new Date();
         timestamp.textContent = Number.isNaN(updated.getTime())
-            ? "├Ültima varredura"
-            : `├Ültima varredura ┬À ${updated.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" })} ${updated.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" })}`;
+            ? "Última varredura"
+            : `Última varredura · ${updated.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" })} ${updated.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" })}`;
     }
 
     function renderizarAnalisesAvancadas(dados) {
@@ -3827,32 +3827,32 @@
 
         if (earth.length) {
             const evento = earth.slice().sort((a, b) => Number(b.magnitude) - Number(a.magnitude))[0];
-            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO ┬À TERRA</span><h3>Sismo M${Number(evento.magnitude).toFixed(1)} ┬À ${escapeHTML(evento.place || "local n├úo identificado")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Magnitude acima do limiar operacional de M5,0 no cat├ílogo USGS.</p><div class="critical-sectors"><strong>Fonte</strong><span>USGS</span><span>Monitoramento s├¡smico</span></div></article>`);
+            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO · TERRA</span><h3>Sismo M${Number(evento.magnitude).toFixed(1)} · ${escapeHTML(evento.place || "local não identificado")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Magnitude acima do limiar operacional de M5,0 no catálogo USGS.</p><div class="critical-sectors"><strong>Fonte</strong><span>USGS</span><span>Monitoramento sísmico</span></div></article>`);
         }
         if (strongestOcean) {
             const valor = Number(strongestOcean.anomaly);
-            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO ┬À OCEANO</span><h3>Anomalia t├®rmica ${valor >= 0 ? "+" : ""}${valor.toFixed(2)} ┬░C ┬À ${escapeHTML(strongestOcean.region || "regi├úo n├úo identificada")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Desvio absoluto acima de 1,5 ┬░C na grade oce├ónica monitorada.</p><div class="critical-sectors"><strong>Fonte</strong><span>NOAA OISST</span><span>Grade SST</span></div></article>`);
+            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO · OCEANO</span><h3>Anomalia térmica ${valor >= 0 ? "+" : ""}${valor.toFixed(2)} °C · ${escapeHTML(strongestOcean.region || "região não identificada")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Desvio absoluto acima de 1,5 °C na grade oceânica monitorada.</p><div class="critical-sectors"><strong>Fonte</strong><span>NOAA OISST</span><span>Grade SST</span></div></article>`);
         }
         if (biologyExtreme.length) {
             const evento = biologyExtreme[0];
-            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO ┬À BIOLOGIA</span><h3>${escapeHTML(evento.title || "Evento epidemiol├│gico em alerta")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Registro epidemiol├│gico classificado como ${escapeHTML(evento.status)} pela fonte consultada.</p><div class="critical-sectors"><strong>Fonte</strong><span>${escapeHTML(evento.sourceName || "OMS")}</span><span>Vigil├óncia de pat├│genos</span></div></article>`);
+            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO · BIOLOGIA</span><h3>${escapeHTML(evento.title || "Evento epidemiológico em alerta")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Registro epidemiológico classificado como ${escapeHTML(evento.status)} pela fonte consultada.</p><div class="critical-sectors"><strong>Fonte</strong><span>${escapeHTML(evento.sourceName || "OMS")}</span><span>Vigilância de patógenos</span></div></article>`);
         }
         if (aiExtreme.length) {
             const evento = aiExtreme[0];
-            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO ┬À IA</span><h3>${escapeHTML(evento.title || "Incidente de IA em alerta")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Incidente documentado classificado como ${escapeHTML(evento.status)}.</p><div class="critical-sectors"><strong>Fonte</strong><span>${escapeHTML(evento.sourceName || "Base de incidentes de IA")}</span><span>Supervis├úo de sistemas</span></div></article>`);
+            extremeCards.push(`<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO · IA</span><h3>${escapeHTML(evento.title || "Incidente de IA em alerta")}</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Incidente documentado classificado como ${escapeHTML(evento.status)}.</p><div class="critical-sectors"><strong>Fonte</strong><span>${escapeHTML(evento.sourceName || "Base de incidentes de IA")}</span><span>Supervisão de sistemas</span></div></article>`);
         }
         if (critical) {
             critical.innerHTML = extremeCards.length && !(Number.isFinite(maxOcean) && maxOcean >= 3.5)
                 ? extremeCards.join("")
                 : Number.isFinite(maxOcean) && maxOcean >= 3.5
-                ? `<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO</span><h3>Anomalia t├®rmica marinha ┬À ${escapeHTML(Object.keys(ocean.regions || {}).find(key => Number(ocean.regions[key]?.maximum) === maxOcean) || "regi├úo n├úo identificada")} (+${maxOcean.toFixed(2)} ┬░C)</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Desvio extremo em rela├º├úo ├á refer├¬ncia OISST. A recorr├¬ncia estat├¡stica n├úo foi estimada porque o cat├ílogo hist├│rico completo n├úo est├í dispon├¡vel neste snapshot.</p><div class="critical-sectors"><strong>Setores sob impacto potencial</strong><span>Rotas mar├¡timas</span><span>Pesca comercial</span><span>Modelos clim├íticos regionais</span></div></article>`
-                : `<div class="analysis-empty">Nenhum desvio extremo confirmado nas ├║ltimas 48 horas com os dados dispon├¡veis.</div>`;
+                ? `<article class="critical-card"><span class="critical-badge">ALERTA DE DESVIO EXTREMO</span><h3>Anomalia térmica marinha · ${escapeHTML(Object.keys(ocean.regions || {}).find(key => Number(ocean.regions[key]?.maximum) === maxOcean) || "região não identificada")} (+${maxOcean.toFixed(2)} °C)</h3><p class="critical-signature"><strong>Assinatura do evento</strong> Desvio extremo em relação à referência OISST. A recorrência estatística não foi estimada porque o catálogo histórico completo não está disponível neste snapshot.</p><div class="critical-sectors"><strong>Setores sob impacto potencial</strong><span>Rotas marítimas</span><span>Pesca comercial</span><span>Modelos climáticos regionais</span></div></article>`
+                : `<div class="analysis-empty">Nenhum desvio extremo confirmado nas últimas 48 horas com os dados disponíveis.</div>`;
         }
         if (cross) {
             const crossHeading = document.querySelector(".home-analysis-section:nth-child(2) h2");
             const crossDescription = document.querySelector(".home-analysis-section:nth-child(2) .section-heading p");
-            if (crossHeading) crossHeading.textContent = "DETECTOR DE CORRELA├ç├òES AT├ìPICAS";
-            if (crossDescription) crossDescription.textContent = "Padr├úo Sincr├┤nico Suspeito sob Observa├º├úo";
+            if (crossHeading) crossHeading.textContent = "DETECTOR DE CORRELAÇÕES ATÍPICAS";
+            if (crossDescription) crossDescription.textContent = "Padrão Sincrônico Suspeito sob Observação";
             const oceanPoints = dados.ocean?.grid || [];
             const oceanSignal = oceanPoints
                 .filter(point => Number.isFinite(Number(point.anomaly)) && Math.abs(Number(point.anomaly)) >= 1)
@@ -3870,38 +3870,38 @@
                 ? oceanPoints.slice().sort((a, b) => (distanceKm(strongestQuake, a) ?? Infinity) - (distanceKm(strongestQuake, b) ?? Infinity))[0]
                 : null;
             const proximity = distanceKm(strongestQuake, nearestOcean);
-            const location = strongestQuake?.place || "regi├úo n├úo identificada";
+            const location = strongestQuake?.place || "região não identificada";
             const oceanLocation = oceanSignal?.region || "ponto SST monitorado";
-            const oceanValue = oceanSignal ? `${Number(oceanSignal.anomaly) >= 0 ? "+" : ""}${Number(oceanSignal.anomaly).toFixed(2)} ┬░C` : "sem anomalia ÔëÑ 1 ┬░C";
+            const oceanValue = oceanSignal ? `${Number(oceanSignal.anomaly) >= 0 ? "+" : ""}${Number(oceanSignal.anomaly).toFixed(2)} °C` : "sem anomalia ≥ 1 °C";
             const simultaneous = Boolean(earth.length && oceanSignal);
             const investigativeMarkup = simultaneous
-                ? `<article class="cross-card cross-investigative"><div class="cross-investigative-badge">ÔÜí SINCRONICIDADE ESPACIAL: AT├ìPICA</div><div class="cross-events"><div><span>EVENTO A ┬À TERRA ┬À USGS</span><strong>Sismo M${Number(strongestQuake.magnitude).toFixed(1)}</strong><small>${escapeHTML(location)}</small></div><b>´╝ï</b><div><span>EVENTO B ┬À OCEANOS ┬À NOAA OISST</span><strong>Desvio t├®rmico ${oceanValue}</strong><small>${escapeHTML(oceanLocation)}</small></div></div><p class="cross-investigative-reading">­ƒòÁ´©Å <strong>ANOMALIA DE CONVERG├èNCIA:</strong> Registro simult├óneo de sismo <mark>M${Number(strongestQuake.magnitude).toFixed(1)}</mark> e desvio t├®rmico severo no raio de <mark>${proximity ? proximity.toLocaleString("pt-BR") : "326"} km</mark>. A ocorr├¬ncia conjunta destes dois eventos atinge ├¡ndice at├¡pico no snapshot. O algoritmo acionou o protocolo de <b>VIGIL├éNCIA DE REA├ç├âO EM CADEIA.</b></p></article>`
+                ? `<article class="cross-card cross-investigative"><div class="cross-investigative-badge">⚡ SINCRONICIDADE ESPACIAL: ATÍPICA</div><div class="cross-events"><div><span>EVENTO A · TERRA · USGS</span><strong>Sismo M${Number(strongestQuake.magnitude).toFixed(1)}</strong><small>${escapeHTML(location)}</small></div><b>＋</b><div><span>EVENTO B · OCEANOS · NOAA OISST</span><strong>Desvio térmico ${oceanValue}</strong><small>${escapeHTML(oceanLocation)}</small></div></div><p class="cross-investigative-reading">🕵️ <strong>ANOMALIA DE CONVERGÊNCIA:</strong> Registro simultâneo de sismo <mark>M${Number(strongestQuake.magnitude).toFixed(1)}</mark> e desvio térmico severo no raio de <mark>${proximity ? proximity.toLocaleString("pt-BR") : "326"} km</mark>. A ocorrência conjunta destes dois eventos atinge índice atípico no snapshot. O algoritmo acionou o protocolo de <b>VIGILÂNCIA DE REAÇÃO EM CADEIA.</b></p></article>`
                 : "";
             setTimeout(() => { if (simultaneous) cross.innerHTML = investigativeMarkup; }, 0);
             if (!simultaneous) {
                 const biologySignal = (dados.biology?.events || [])[0];
                 const aiSignal = (dados.ai?.incidents || [])[0];
                 const cards = [];
-                if (strongestQuake) cards.push(`<div><span>EVENTO ┬À TERRA ┬À USGS</span><strong>Sismo M${Number(strongestQuake.magnitude).toFixed(1)}</strong><small>${escapeHTML(location)}</small></div>`);
-                if (biologySignal) cards.push(`<div><span>SINAL ┬À BIOLOGIA ┬À OMS</span><strong>${escapeHTML(biologySignal.title || "Evento epidemiol├│gico")}</strong><small>${escapeHTML(biologySignal.status || "monitoramento")}</small></div>`);
-                if (aiSignal) cards.push(`<div><span>SINAL ┬À IA ┬À MONITORAMENTO</span><strong>${escapeHTML(aiSignal.title || "Incidente de IA")}</strong><small>${escapeHTML(aiSignal.status || "monitoramento")}</small></div>`);
-                if (cards.length > 1) setTimeout(() => { cross.innerHTML = `<article class="cross-card"><div class="cross-events">${cards.join("<b>´╝ï</b>")}</div><p><strong>Leitura multidom├¡nio:</strong> sinais de ├íreas diferentes est├úo presentes no snapshot. A coincid├¬ncia observacional n├úo prova rela├º├úo causal entre os eventos.</p></article>`; }, 0);
+                if (strongestQuake) cards.push(`<div><span>EVENTO · TERRA · USGS</span><strong>Sismo M${Number(strongestQuake.magnitude).toFixed(1)}</strong><small>${escapeHTML(location)}</small></div>`);
+                if (biologySignal) cards.push(`<div><span>SINAL · BIOLOGIA · OMS</span><strong>${escapeHTML(biologySignal.title || "Evento epidemiológico")}</strong><small>${escapeHTML(biologySignal.status || "monitoramento")}</small></div>`);
+                if (aiSignal) cards.push(`<div><span>SINAL · IA · MONITORAMENTO</span><strong>${escapeHTML(aiSignal.title || "Incidente de IA")}</strong><small>${escapeHTML(aiSignal.status || "monitoramento")}</small></div>`);
+                if (cards.length > 1) setTimeout(() => { cross.innerHTML = `<article class="cross-card"><div class="cross-events">${cards.join("<b>＋</b>")}</div><p><strong>Leitura multidomínio:</strong> sinais de áreas diferentes estão presentes no snapshot. A coincidência observacional não prova relação causal entre os eventos.</p></article>`; }, 0);
             }
             cross.innerHTML = simultaneous
-                ? `<article class="cross-card"><div class="cross-events"><div><span>EVENTO A ┬À TERRA ┬À USGS</span><strong>${earth.length} evento(s) M5+ registrados</strong><small>M${Number(strongestQuake.magnitude).toFixed(1)} ┬À ${escapeHTML(location)}</small></div><b>´╝ï</b><div><span>EVENTO B ┬À OCEANOS ┬À NOAA OISST</span><strong>Desvio t├®rmico ${oceanValue}</strong><small>${escapeHTML(oceanLocation)}${proximity ? ` ┬À ${proximity.toLocaleString("pt-BR")} km do sismo mais forte` : ""}</small></div></div><p><strong>Leitura algor├¡tmica:</strong> os dois sinais aparecem no snapshot consultado${proximity ? ` e o ponto SST mais pr├│ximo est├í a aproximadamente ${proximity.toLocaleString("pt-BR")} km` : ""}. Isso indica coincid├¬ncia observacional, n├úo acoplamento tectono-oce├ónico nem risco de tsunami.</p></article>`
-                : `<div class="analysis-empty">O snapshot atual n├úo re├║ne simultaneamente um sismo M5+ e uma anomalia SST ÔëÑ 1 ┬░C com dados suficientes para compara├º├úo.</div>`;
+                ? `<article class="cross-card"><div class="cross-events"><div><span>EVENTO A · TERRA · USGS</span><strong>${earth.length} evento(s) M5+ registrados</strong><small>M${Number(strongestQuake.magnitude).toFixed(1)} · ${escapeHTML(location)}</small></div><b>＋</b><div><span>EVENTO B · OCEANOS · NOAA OISST</span><strong>Desvio térmico ${oceanValue}</strong><small>${escapeHTML(oceanLocation)}${proximity ? ` · ${proximity.toLocaleString("pt-BR")} km do sismo mais forte` : ""}</small></div></div><p><strong>Leitura algorítmica:</strong> os dois sinais aparecem no snapshot consultado${proximity ? ` e o ponto SST mais próximo está a aproximadamente ${proximity.toLocaleString("pt-BR")} km` : ""}. Isso indica coincidência observacional, não acoplamento tectono-oceânico nem risco de tsunami.</p></article>`
+                : `<div class="analysis-empty">O snapshot atual não reúne simultaneamente um sismo M5+ e uma anomalia SST ≥ 1 °C com dados suficientes para comparação.</div>`;
         }
     }
 
     function renderizarCategoriaGeologica(categoria, results, eventos) {
         const configs = {
-            volcano: { icon: "­ƒîï", name: "Atividade vulc├ónica", source: "Smithsonian / USGS Volcanoes", color: "volcano", item: "K─½lauea ┬À Hava├¡", detail: "Alerta laranja ┬À pluma estimada em 1.200 m", pattern: "3 alertas vulc├ónicos no recorte", risk: "├ìndice 58/100 ┬À atividade acima do padr├úo recente." },
-            landslide: { icon: "Ôø░´©Å", name: "Deslizamentos de terra", source: "NASA GLC / Defesa Civil", color: "landslide", item: "Serra do Mar ┬À S├úo Paulo", detail: "Chuva acumulada: 186 mm ┬À risco alto de movimento de massa", pattern: "5 ocorr├¬ncias no recorte", risk: "├ìndice 64/100 ┬À volume de chuva concentrado." },
-            fire: { icon: "­ƒöÑ", name: "Queimadas & focos de calor", source: "NASA FIRMS / INPE", color: "fire", item: "Amaz├┤nia ┬À Par├í", detail: "428 focos de calor ┬À +72% acima da m├®dia hist├│rica", pattern: "Pico de 96 focos em 24h", risk: "├ìndice 71/100 ┬À anomalia t├®rmica cr├¡tica." }
+            volcano: { icon: "🌋", name: "Atividade vulcânica", source: "Smithsonian / USGS Volcanoes", color: "volcano", item: "Kīlauea · Havaí", detail: "Alerta laranja · pluma estimada em 1.200 m", pattern: "3 alertas vulcânicos no recorte", risk: "Índice 58/100 · atividade acima do padrão recente." },
+            landslide: { icon: "⛰️", name: "Deslizamentos de terra", source: "NASA GLC / Defesa Civil", color: "landslide", item: "Serra do Mar · São Paulo", detail: "Chuva acumulada: 186 mm · risco alto de movimento de massa", pattern: "5 ocorrências no recorte", risk: "Índice 64/100 · volume de chuva concentrado." },
+            fire: { icon: "🔥", name: "Queimadas & focos de calor", source: "NASA FIRMS / INPE", color: "fire", item: "Amazônia · Pará", detail: "428 focos de calor · +72% acima da média histórica", pattern: "Pico de 96 focos em 24h", risk: "Índice 71/100 · anomalia térmica crítica." }
         }[categoria];
         if (!config) return;
         const dias = Array.from({ length: 7 }, (_, index) => `<div class="earth-day-bar"><span style="height:8%"></span><small>D-${6 - index}</small><b>0</b></div>`).join("");
-        results.innerHTML = `<article class="earth-method-step earth-category-card ${config.color}"><span class="earth-step-number">01</span><span class="earth-step-icon">${config.icon}</span><span class="section-kicker">RECONHECIMENTO DE SINAIS</span><h4>${config.name}</h4><div class="earth-category-empty"><strong>${config.item}</strong><span>${config.detail}</span><small>Leitura de refer├¬ncia ┬À ${config.source}</small></div><div class="earth-example"><strong>Evento em destaque</strong>Maior sinal identificado no recorte dispon├¡vel.</div></article><article class="earth-method-step earth-category-card ${config.color}"><span class="earth-step-number">02</span><span class="earth-step-icon">Ôîü</span><span class="section-kicker">PADR├âO NO RECORTE</span><h4>Pico de eventos ┬À ├║ltimos 7 dias</h4><div class="earth-activity-chart"><div class="earth-chart-heading"><strong>ATIVIDADE DI├üRIA</strong><small>${config.name}</small></div><div class="earth-bars">${dias}</div></div><div class="earth-example"><strong>Fonte</strong>${config.pattern} ┬À ${config.source}</div></article><article class="earth-method-step earth-anomaly-card earth-category-card ${config.color}"><span class="earth-step-number">03</span><span class="section-kicker">TERM├öMETRO DE ANOMALIAS</span><h4>├ìndice de desvio espec├¡fico</h4><div class="earth-index-graph"><div class="earth-index-heading"><span>${config.name.toUpperCase()}</span><strong>${config.risk.match(/\d+/)?.[0] || "ÔÇö"}<small>/100</small></strong></div><div class="earth-index-track"><i style="left:${config.risk.match(/\d+/)?.[0] || 0}%"></i></div></div><p>${config.risk}</p><div class="earth-example"><strong>Classifica├º├úo</strong>Leitura explorat├│ria de refer├¬ncia.</div></article>`;
+        results.innerHTML = `<article class="earth-method-step earth-category-card ${config.color}"><span class="earth-step-number">01</span><span class="earth-step-icon">${config.icon}</span><span class="section-kicker">RECONHECIMENTO DE SINAIS</span><h4>${config.name}</h4><div class="earth-category-empty"><strong>${config.item}</strong><span>${config.detail}</span><small>Leitura de referência · ${config.source}</small></div><div class="earth-example"><strong>Evento em destaque</strong>Maior sinal identificado no recorte disponível.</div></article><article class="earth-method-step earth-category-card ${config.color}"><span class="earth-step-number">02</span><span class="earth-step-icon">⌁</span><span class="section-kicker">PADRÃO NO RECORTE</span><h4>Pico de eventos · últimos 7 dias</h4><div class="earth-activity-chart"><div class="earth-chart-heading"><strong>ATIVIDADE DIÁRIA</strong><small>${config.name}</small></div><div class="earth-bars">${dias}</div></div><div class="earth-example"><strong>Fonte</strong>${config.pattern} · ${config.source}</div></article><article class="earth-method-step earth-anomaly-card earth-category-card ${config.color}"><span class="earth-step-number">03</span><span class="section-kicker">TERMÔMETRO DE ANOMALIAS</span><h4>Índice de desvio específico</h4><div class="earth-index-graph"><div class="earth-index-heading"><span>${config.name.toUpperCase()}</span><strong>${config.risk.match(/\d+/)?.[0] || "—"}<small>/100</small></strong></div><div class="earth-index-track"><i style="left:${config.risk.match(/\d+/)?.[0] || 0}%"></i></div></div><p>${config.risk}</p><div class="earth-example"><strong>Classificação</strong>Leitura exploratória de referência.</div></article>`;
     }
 
     function configurarAbasGeologicas() {
@@ -3934,7 +3934,7 @@
                 return !ultimoRegistro || !Number.isFinite(tempo) || tempo >= ultimoRegistro - 7 * 24 * 60 * 60 * 1000;
             }).slice(0, 5);
             const locais = [...new Set(ordenados.slice(0, 5).map(e => e.place).filter(Boolean))];
-            const maior = primeiro ? Number(primeiro.magnitude).toFixed(1) : "ÔÇö";
+            const maior = primeiro ? Number(primeiro.magnitude).toFixed(1) : "—";
             const data = primeiro?.time ? new Date(primeiro.time).toLocaleString("pt-BR") : "sem data";
             const magnitudes = eventos.map(e => Number(e.magnitude)).filter(Number.isFinite);
             const media = magnitudes.length ? magnitudes.reduce((a, b) => a + b, 0) / magnitudes.length : 0;
@@ -3943,22 +3943,22 @@
             const risco24 = Math.min(85, Math.max(8, 12 + continuidade + Math.max(0, Number(maior) - 4) * 5));
             const risco72 = Math.min(92, risco24 + 12);
             const score = Math.min(100, Math.round((fortes / Math.max(1, magnitudes.length)) * 220 + Math.max(0, media - 1) * 13 + risco24 * 0.25));
-            const nivel = score >= 70 ? "ALERTA" : score >= 42 ? "ANOMALIA" : score >= 20 ? "ATEN├ç├âO" : "NORMAL";
-            const nivelClass = nivel.toLowerCase().replace("├º", "c");
+            const nivel = score >= 70 ? "ALERTA" : score >= 42 ? "ANOMALIA" : score >= 20 ? "ATENÇÃO" : "NORMAL";
+            const nivelClass = nivel.toLowerCase().replace("ç", "c");
             const locaisTexto = locais.slice(0, 2).join("; ") || "nenhuma localidade identificada";
-            const alerta = risco72 >= 65 ? "ATEN├ç├âO ELEVADA" : risco24 >= 35 ? "ATEN├ç├âO MODERADA" : "ATEN├ç├âO BAIXA";
-            const leitura = `AN├üLISE DE RISCO ÔÇö ${alerta}. Foram observados ${fortes} evento(s) M5+ em ${eventos.length} registro(s), com m├®dia M${media.toFixed(1)}, principalmente em ${locaisTexto}. ESTIMATIVA EXPLORAT├ôRIA: ${risco24}% de chance de continuidade ou r├®plicas no recorte regional nas pr├│ximas 24h e ${risco72}% em 72h. O ├¡ndice ${score}/100 sobe quando h├í maior concentra├º├úo de eventos fortes e magnitude m├®dia elevada. Esta n├úo ├® uma previs├úo oficial: o snapshot n├úo cont├®m um modelo de r├®plicas, falhas tect├┤nicas nem todas as vari├íveis necess├írias para uma probabilidade operacional.`;
-            const riskMarkup = `<div class="earth-risk-report"><div class="earth-risk-head"><span>AN├üLISE DE RISCO</span><strong>${alerta}</strong></div><div class="earth-risk-region"><small>REGI├âO OBSERVADA</small><b>${escapeHTML(locaisTexto)}</b><p>${fortes} evento(s) M5+ entre ${eventos.length} registros ┬À magnitude m├®dia M${media.toFixed(1)}</p></div><div class="earth-risk-probabilities"><div><small>CONTINUIDADE / R├ëPLICAS</small><b>${risco24}%</b><span>pr├│ximas 24h</span><i class="earth-probability-bar"><em style="width:${risco24}%"></em></i></div><div><small>CONTINUIDADE / R├ëPLICAS</small><b>${risco72}%</b><span>pr├│ximas 72h</span><i class="earth-probability-bar"><em style="width:${risco72}%"></em></i></div><div><small>├ìNDICE DE DESVIO</small><b>${score}/100</b><span>padr├úo s├¡smico</span><i class="earth-probability-bar"><em style="width:${score}%"></em></i></div></div><div class="earth-method-note"><strong>Ôä╣´©Å Nota metodol├│gica &amp; limites</strong><p>An├ílise explorat├│ria baseada em registros USGS. Os ├¡ndices representam desvios do padr├úo estat├¡stico hist├│rico e estimativas de continuidade de r├®plicas, n├úo constituindo uma previs├úo determin├¡stica de novos abalos principais.</p></div></div>`;
-            const anomalyMarkup = `<div class="earth-index-graph"><div class="earth-index-heading"><span>├ìNDICE DE DESVIO S├ìSMICO</span><strong>${score}<small>/100</small></strong></div><div class="earth-index-track"><i style="left:${score}%"></i></div><div class="earth-index-labels"><span>NORMAL<br>0ÔÇô19</span><span>ATEN├ç├âO<br>20ÔÇô41</span><span>ANOMALIA<br>42ÔÇô69</span><span>ALERTA<br>70ÔÇô100</span></div></div><div class="earth-anomaly-meaning"><strong>O ├¡ndice mede desvio do padr├úo hist├│rico, n├úo risco de impacto.</strong></div>`;
-            const patternLevel = primeiro ? (Number(primeiro.magnitude) >= 6 ? "ANOMALIA" : Number(primeiro.magnitude) >= 5 ? "ATEN├ç├âO" : "NORMAL") : "SEM EVID├èNCIA";
-            const patternClass = patternLevel.toLowerCase().replace("├ú", "a").replace("├º", "c").replace("├¬", "e");
-            const patternMarkup = primeiro ? `<div class="earth-pattern-signal"><span class="earth-pattern-dot"></span><div><strong>SISMOLOGIA</strong><b>Sismo M${maior}</b><small>${escapeHTML(primeiro.place || "Local n├úo informado")} ┬À ${data}</small><em class="${patternClass}">${patternLevel}</em></div></div>` : `<div class="earth-pattern-empty">Nenhum evento correspondente no recorte.</div>`;
-            const pilares = [{ icon: "­ƒöÑ", label: "Queimadas & Focos", value: 71 }, { icon: "Ôø░´©Å", label: "Deslizamentos", value: 64 }, { icon: "­ƒîï", label: "Vulc├Áes", value: 58 }, { icon: "­ƒîÉ", label: "Desvio S├¡smico", value: score }];
+            const alerta = risco72 >= 65 ? "ATENÇÃO ELEVADA" : risco24 >= 35 ? "ATENÇÃO MODERADA" : "ATENÇÃO BAIXA";
+            const leitura = `ANÁLISE DE RISCO — ${alerta}. Foram observados ${fortes} evento(s) M5+ em ${eventos.length} registro(s), com média M${media.toFixed(1)}, principalmente em ${locaisTexto}. ESTIMATIVA EXPLORATÓRIA: ${risco24}% de chance de continuidade ou réplicas no recorte regional nas próximas 24h e ${risco72}% em 72h. O índice ${score}/100 sobe quando há maior concentração de eventos fortes e magnitude média elevada. Esta não é uma previsão oficial: o snapshot não contém um modelo de réplicas, falhas tectônicas nem todas as variáveis necessárias para uma probabilidade operacional.`;
+            const riskMarkup = `<div class="earth-risk-report"><div class="earth-risk-head"><span>ANÁLISE DE RISCO</span><strong>${alerta}</strong></div><div class="earth-risk-region"><small>REGIÃO OBSERVADA</small><b>${escapeHTML(locaisTexto)}</b><p>${fortes} evento(s) M5+ entre ${eventos.length} registros · magnitude média M${media.toFixed(1)}</p></div><div class="earth-risk-probabilities"><div><small>CONTINUIDADE / RÉPLICAS</small><b>${risco24}%</b><span>próximas 24h</span><i class="earth-probability-bar"><em style="width:${risco24}%"></em></i></div><div><small>CONTINUIDADE / RÉPLICAS</small><b>${risco72}%</b><span>próximas 72h</span><i class="earth-probability-bar"><em style="width:${risco72}%"></em></i></div><div><small>ÍNDICE DE DESVIO</small><b>${score}/100</b><span>padrão sísmico</span><i class="earth-probability-bar"><em style="width:${score}%"></em></i></div></div><div class="earth-method-note"><strong>ℹ️ Nota metodológica &amp; limites</strong><p>Análise exploratória baseada em registros USGS. Os índices representam desvios do padrão estatístico histórico e estimativas de continuidade de réplicas, não constituindo uma previsão determinística de novos abalos principais.</p></div></div>`;
+            const anomalyMarkup = `<div class="earth-index-graph"><div class="earth-index-heading"><span>ÍNDICE DE DESVIO SÍSMICO</span><strong>${score}<small>/100</small></strong></div><div class="earth-index-track"><i style="left:${score}%"></i></div><div class="earth-index-labels"><span>NORMAL<br>0–19</span><span>ATENÇÃO<br>20–41</span><span>ANOMALIA<br>42–69</span><span>ALERTA<br>70–100</span></div></div><div class="earth-anomaly-meaning"><strong>O índice mede desvio do padrão histórico, não risco de impacto.</strong></div>`;
+            const patternLevel = primeiro ? (Number(primeiro.magnitude) >= 6 ? "ANOMALIA" : Number(primeiro.magnitude) >= 5 ? "ATENÇÃO" : "NORMAL") : "SEM EVIDÊNCIA";
+            const patternClass = patternLevel.toLowerCase().replace("ã", "a").replace("ç", "c").replace("ê", "e");
+            const patternMarkup = primeiro ? `<div class="earth-pattern-signal"><span class="earth-pattern-dot"></span><div><strong>SISMOLOGIA</strong><b>Sismo M${maior}</b><small>${escapeHTML(primeiro.place || "Local não informado")} · ${data}</small><em class="${patternClass}">${patternLevel}</em></div></div>` : `<div class="earth-pattern-empty">Nenhum evento correspondente no recorte.</div>`;
+            const pilares = [{ icon: "🔥", label: "Queimadas & Focos", value: 71 }, { icon: "⛰️", label: "Deslizamentos", value: 64 }, { icon: "🌋", label: "Vulcões", value: 58 }, { icon: "🌐", label: "Desvio Sísmico", value: score }];
             const mediaGeodinamica = Math.round(pilares.reduce((total, pilar) => total + pilar.value, 0) / pilares.length);
             const focoPrincipal = Math.max(...pilares.map(pilar => pilar.value));
             const classeGlobal = mediaGeodinamica >= 70 ? "earth-global-alert" : mediaGeodinamica >= 42 ? "earth-global-anomaly" : mediaGeodinamica >= 20 ? "earth-global-attention" : "earth-global-normal";
-            const globalMarkup = `<div class="earth-global-thermometer ${classeGlobal}"><div class="earth-index-heading"><span>├ìNDICE GEODIN├éMICO GLOBAL</span><strong>${mediaGeodinamica}<small>/100</small></strong></div><div class="earth-index-track"><i style="left:${mediaGeodinamica}%"></i></div><div class="earth-index-labels"><span>NORMAL<br>0ÔÇô19</span><span>ATEN├ç├âO<br>20ÔÇô41</span><span>ANOMALIA<br>42ÔÇô69</span><span>ALERTA<br>70ÔÇô100</span></div><div class="earth-global-pillars">${pilares.map(pilar => `<div class="earth-global-pillar ${pilar.value === focoPrincipal ? "is-focus" : ""}"><div><span>${pilar.icon} ${pilar.label}</span><strong>${pilar.value}/100${pilar.value === focoPrincipal ? " ┬À FOCO PRINCIPAL" : ""}</strong></div><i><em style="width:${pilar.value}%"></em></i></div>`).join("")}</div><p class="earth-global-note">M├®dia ponderada das anomalias terrestres ativas no snapshot atual.</p></div>`;
-            const globalHighlights = `<div class="earth-global-highlights"><span>DESTAQUES DO SNAPSHOT</span><p>­ƒöÑ <b>Pico T├®rmico:</b> Amaz├┤nia / Par├í (+72% de focos acima da m├®dia)</p><p>­ƒîÉ <b>Maior Magnitude:</b> Sismo M7.7 (Pitaloza Arriba, Panam├í)</p><p>­ƒîï <b>Erup├º├úo Ativa:</b> K─½lauea (Hava├¡) ÔÇö pluma a 1.200 m</p></div>`;
+            const globalMarkup = `<div class="earth-global-thermometer ${classeGlobal}"><div class="earth-index-heading"><span>ÍNDICE GEODINÂMICO GLOBAL</span><strong>${mediaGeodinamica}<small>/100</small></strong></div><div class="earth-index-track"><i style="left:${mediaGeodinamica}%"></i></div><div class="earth-index-labels"><span>NORMAL<br>0–19</span><span>ATENÇÃO<br>20–41</span><span>ANOMALIA<br>42–69</span><span>ALERTA<br>70–100</span></div><div class="earth-global-pillars">${pilares.map(pilar => `<div class="earth-global-pillar ${pilar.value === focoPrincipal ? "is-focus" : ""}"><div><span>${pilar.icon} ${pilar.label}</span><strong>${pilar.value}/100${pilar.value === focoPrincipal ? " · FOCO PRINCIPAL" : ""}</strong></div><i><em style="width:${pilar.value}%"></em></i></div>`).join("")}</div><p class="earth-global-note">Média ponderada das anomalias terrestres ativas no snapshot atual.</p></div>`;
+            const globalHighlights = `<div class="earth-global-highlights"><span>DESTAQUES DO SNAPSHOT</span><p>🔥 <b>Pico Térmico:</b> Amazônia / Pará (+72% de focos acima da média)</p><p>🌐 <b>Maior Magnitude:</b> Sismo M7.7 (Pitaloza Arriba, Panamá)</p><p>🌋 <b>Erupção Ativa:</b> Kīlauea (Havaí) — pluma a 1.200 m</p></div>`;
             const mediaHistorica = 110;
             const magnitudeEsperada = 4.5;
             const volumeVariacao = Math.round(((eventos.length - mediaHistorica) / mediaHistorica) * 1000) / 10;
@@ -3966,17 +3966,17 @@
             eventos.forEach(evento => { const tempo = new Date(evento.time || 0).getTime(); const idade = ultimoRegistro && Number.isFinite(tempo) ? Math.min(6, Math.max(0, Math.floor((ultimoRegistro - tempo) / 86400000))) : 0; dias[6 - idade].count += 1; });
             const maxDia = Math.max(...dias.map(d => d.count), 1);
             const barsMarkup = dias.map(dia => `<div class="earth-day-bar"><span style="height:${Math.max(8, Math.round((dia.count / maxDia) * 100))}%"></span><small>${dia.label}</small><b>${dia.count}</b></div>`).join("");
-            const comparativeMarkup = `<div class="earth-comparison"><div class="earth-featured-event"><span>PICO DE ATIVIDADE</span><strong>Sismo M${maior}</strong><small>${escapeHTML(primeiro?.place || "Sem evento em destaque")} ┬À ${data}</small></div><div class="earth-activity-chart"><div class="earth-chart-heading"><strong>ATIVIDADE DI├üRIA</strong><small>├║ltimos 7 dias</small></div><div class="earth-bars">${barsMarkup}</div></div><div class="earth-metrics"><div><small>VOLUME DO RECORTE</small><strong>${eventos.length} <em>sismos</em></strong><span>M├®dia normal: ${mediaHistorica} ┬À ${volumeVariacao >= 0 ? "+" : ""}${volumeVariacao}%</span></div><div><small>MAGNITUDE M├üXIMA</small><strong>M${maior}</strong><span>Esperada para o setor: M${magnitudeEsperada.toFixed(1)}</span></div></div></div>`;
-            const weeklyMarkup = `<div class="earth-weekly-list">${semana.map((evento, index) => { const magnitude = Number(evento.magnitude || 0); const place = evento.place || "Local n├úo informado"; const partes = place.split(/\s+of\s+/i); const distancia = partes.length > 1 ? partes[0] : "Regi├úo n├úo informada"; const local = partes.length > 1 ? partes[1] : place; const tempo = evento.time ? new Date(evento.time).getTime() : 0; const horas = tempo ? Math.max(0, Math.round((referenciaTempo - tempo) / 3600000)) : null; const profundidade = Math.round(Number(evento.depth || 0)); const classeMagnitude = magnitude >= 5.5 ? "strong" : magnitude >= 5 ? "moderate" : "light"; const classeProfundidade = profundidade <= 30 ? "shallow" : "deep"; return `<div class="earth-timeline-event"><span class="earth-timeline-line"><i></i></span><div class="earth-timeline-body"><div class="earth-timeline-top"><b class="earth-magnitude ${classeMagnitude}">M${magnitude.toFixed(1)}</b><time>${horas === null ? "Hor├írio n├úo informado" : horas === 0 ? "Agora" : `H├í ${horas}h`} ${evento.time ? `(${new Date(evento.time).toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"})})` : ""}</time></div><strong class="earth-timeline-place">${escapeHTML(local)}</strong><small class="earth-timeline-meta">${escapeHTML(distancia)} ┬À Profundidade: ${profundidade} km</small><span class="earth-depth ${classeProfundidade}"><i></i>${classeProfundidade === "shallow" ? "Sismo superficial" : "Sismo profundo"}</span></div></div>`; }).join("") || `<div class="earth-pattern-empty">Nenhum evento dispon├¡vel na semana.</div>`}</div>`;
-            const metodologiaMarkup = `<div class="earth-method-note"><strong>Ôä╣´©Å Nota metodol├│gica &amp; limites</strong><p>An├ílise explorat├│ria baseada em registros USGS. Os ├¡ndices representam desvios do padr├úo estat├¡stico hist├│rico e estimativas de continuidade de r├®plicas, n├úo constituindo uma previs├úo determin├¡stica de novos abalos principais.</p></div>`;
+            const comparativeMarkup = `<div class="earth-comparison"><div class="earth-featured-event"><span>PICO DE ATIVIDADE</span><strong>Sismo M${maior}</strong><small>${escapeHTML(primeiro?.place || "Sem evento em destaque")} · ${data}</small></div><div class="earth-activity-chart"><div class="earth-chart-heading"><strong>ATIVIDADE DIÁRIA</strong><small>últimos 7 dias</small></div><div class="earth-bars">${barsMarkup}</div></div><div class="earth-metrics"><div><small>VOLUME DO RECORTE</small><strong>${eventos.length} <em>sismos</em></strong><span>Média normal: ${mediaHistorica} · ${volumeVariacao >= 0 ? "+" : ""}${volumeVariacao}%</span></div><div><small>MAGNITUDE MÁXIMA</small><strong>M${maior}</strong><span>Esperada para o setor: M${magnitudeEsperada.toFixed(1)}</span></div></div></div>`;
+            const weeklyMarkup = `<div class="earth-weekly-list">${semana.map((evento, index) => { const magnitude = Number(evento.magnitude || 0); const place = evento.place || "Local não informado"; const partes = place.split(/\s+of\s+/i); const distancia = partes.length > 1 ? partes[0] : "Região não informada"; const local = partes.length > 1 ? partes[1] : place; const tempo = evento.time ? new Date(evento.time).getTime() : 0; const horas = tempo ? Math.max(0, Math.round((referenciaTempo - tempo) / 3600000)) : null; const profundidade = Math.round(Number(evento.depth || 0)); const classeMagnitude = magnitude >= 5.5 ? "strong" : magnitude >= 5 ? "moderate" : "light"; const classeProfundidade = profundidade <= 30 ? "shallow" : "deep"; return `<div class="earth-timeline-event"><span class="earth-timeline-line"><i></i></span><div class="earth-timeline-body"><div class="earth-timeline-top"><b class="earth-magnitude ${classeMagnitude}">M${magnitude.toFixed(1)}</b><time>${horas === null ? "Horário não informado" : horas === 0 ? "Agora" : `Há ${horas}h`} ${evento.time ? `(${new Date(evento.time).toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"})})` : ""}</time></div><strong class="earth-timeline-place">${escapeHTML(local)}</strong><small class="earth-timeline-meta">${escapeHTML(distancia)} · Profundidade: ${profundidade} km</small><span class="earth-depth ${classeProfundidade}"><i></i>${classeProfundidade === "shallow" ? "Sismo superficial" : "Sismo profundo"}</span></div></div>`; }).join("") || `<div class="earth-pattern-empty">Nenhum evento disponível na semana.</div>`}</div>`;
+            const metodologiaMarkup = `<div class="earth-method-note"><strong>ℹ️ Nota metodológica &amp; limites</strong><p>Análise exploratória baseada em registros USGS. Os índices representam desvios do padrão estatístico histórico e estimativas de continuidade de réplicas, não constituindo uma previsão determinística de novos abalos principais.</p></div>`;
             const cards = [
-                ["01", "RECONHECIMENTO DE SINAIS", "O que aconteceu?", primeiro ? `Terremoto de magnitude ${maior} registrado em ${primeiro.place}.` : "Nenhum evento correspondente foi encontrado.", primeiro ? `USGS ┬À ${data}` : "USGS ┬À recorte consultado"],
-                ["02", "PADR├âO NO RECORTE", "Existe algo fora do padr├úo?", ordenados.length ? `${ordenados.length} evento(s) encontrado(s)${locais.length ? ` em ${locais.length} local(is)` : ""}. Maior magnitude: M${maior}.` : "N├úo h├í dados suficientes para comparar um padr├úo neste resultado.", `Amostra recente ┬À ${eventos.length} evento(s)`],
-                ["03", "TERM├öMETRO DE ANOMALIAS", "", primeiro ? leitura : "Sem dados suficientes para calcular o ├¡ndice.", "Compara├º├úo explorat├│ria ┬À USGS"]
+                ["01", "RECONHECIMENTO DE SINAIS", "O que aconteceu?", primeiro ? `Terremoto de magnitude ${maior} registrado em ${primeiro.place}.` : "Nenhum evento correspondente foi encontrado.", primeiro ? `USGS · ${data}` : "USGS · recorte consultado"],
+                ["02", "PADRÃO NO RECORTE", "Existe algo fora do padrão?", ordenados.length ? `${ordenados.length} evento(s) encontrado(s)${locais.length ? ` em ${locais.length} local(is)` : ""}. Maior magnitude: M${maior}.` : "Não há dados suficientes para comparar um padrão neste resultado.", `Amostra recente · ${eventos.length} evento(s)`],
+                ["03", "TERMÔMETRO DE ANOMALIAS", "", primeiro ? leitura : "Sem dados suficientes para calcular o índice.", "Comparação exploratória · USGS"]
             ];
-            results.innerHTML = cards.map(([n, k, h, p, ex]) => `<article class="earth-method-step ${n === "03" ? "earth-anomaly-card" : ""}"><span class="earth-step-number">${n}</span>${n === "03" ? "" : `<span class="earth-step-icon">${n === "01" ? "Ôùë" : "Ôîü"}</span>`}<span class="section-kicker">${k}</span>${h ? `<h4>${h}</h4>` : ""}${n === "01" ? weeklyMarkup : ""}${n === "02" ? comparativeMarkup + anomalyMarkup : ""}${n === "03" ? globalMarkup + globalHighlights : ""}${n === "03" ? "" : n === "01" ? "" : ""}${n === "03" ? "" : `<div class="earth-example"><strong>${n === "01" ? "Fonte dos registros" : "Refer├¬ncia comparativa"}</strong>${n === "01" ? "USGS ┬À maiores magnitudes no recorte de 7 dias" : n === "02" ? "Volume e magnitude do recorte" : escapeHTML(ex)}</div>`}</article>`).join("");
+            results.innerHTML = cards.map(([n, k, h, p, ex]) => `<article class="earth-method-step ${n === "03" ? "earth-anomaly-card" : ""}"><span class="earth-step-number">${n}</span>${n === "03" ? "" : `<span class="earth-step-icon">${n === "01" ? "◉" : "⌁"}</span>`}<span class="section-kicker">${k}</span>${h ? `<h4>${h}</h4>` : ""}${n === "01" ? weeklyMarkup : ""}${n === "02" ? comparativeMarkup + anomalyMarkup : ""}${n === "03" ? globalMarkup + globalHighlights : ""}${n === "03" ? "" : n === "01" ? "" : ""}${n === "03" ? "" : `<div class="earth-example"><strong>${n === "01" ? "Fonte dos registros" : "Referência comparativa"}</strong>${n === "01" ? "USGS · maiores magnitudes no recorte de 7 dias" : n === "02" ? "Volume e magnitude do recorte" : escapeHTML(ex)}</div>`}</article>`).join("");
             const card3Kicker = results.querySelector("article:nth-child(3) .section-kicker");
-            if (card3Kicker) card3Kicker.textContent = "TERM├öMETRO TERRESTRE GLOBAL";
+            if (card3Kicker) card3Kicker.textContent = "TERMÔMETRO TERRESTRE GLOBAL";
         };
         earthSearchRefresh = buscar;
         button.addEventListener("click", buscar);
