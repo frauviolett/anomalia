@@ -5,6 +5,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // CONFIGURAÇÃO DE COMUNICAÇÃO COM O BACKEND (RENDER)
     // =========================================================
+const express = require('express');
+const cors = require('cors'); // 1. Importar o pacote cors
+
+const app = express();
+
+// 2. Permitir requisições de qualquer origem (ou restrinja para o seu domínio da Vercel)
+app.use(cors({
+    origin: [
+        'https://anomalia-five.vercel.app', // URL atual do seu frontend na Vercel
+        'http://localhost:3000',           // Caso teste localmente
+        'http://localhost:5500'
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(express.json());
+
     const RENDER_BACKEND_URL = "https://anomalia-9fpf.onrender.com";
 
     const brazilSection = document.getElementById("brazil");
