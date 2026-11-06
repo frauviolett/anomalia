@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-06T22:39:05.377Z",
+    "updatedAt": "2026-11-06T22:44:05.583Z",
     "version": "2.0",
     "methodology": "comparison-based"
   },
@@ -8,7 +8,7 @@
     "earth": {
       "title": "🌍 TERRA",
       "subtitle": "Eventos nas últimas 24h",
-      "value": 211,
+      "value": 210,
       "detail": "Fonte: USGS",
       "status": "normal"
     },
@@ -97,7 +97,7 @@
       {
         "title": "🌍 TERRA",
         "subtitle": "Eventos nas últimas 24h",
-        "value": 211,
+        "value": 210,
         "detail": "Fonte: USGS",
         "status": "normal"
       },
@@ -2223,16 +2223,6 @@
         "place": "6 km NNW of Meeker, Oklahoma",
         "time": 1793919026230,
         "status": "normal"
-      },
-      {
-        "id": "ci41358999",
-        "lat": 32.2413333333333,
-        "lon": -115.288666666667,
-        "depth": 11.39,
-        "magnitude": 2.34,
-        "place": "11 km W of Alberto Oviedo Mota, B.C., MX",
-        "time": 1793918399150,
-        "status": "normal"
       }
     ]
   },
@@ -2482,5 +2472,62 @@
     ],
     "incidents": []
   },
-  "news": []
+  "news": [
+    {
+      "source": "lebanon24.com",
+      "title": "  التريشينيلا  تستنفر أصحاب المطاعم",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://www.lebanon24.com/news/lebanon/1591900/%d8%a7%d9%84%d8%aa%d8%b1%d9%8a%d8%b4%d9%8a%d9%86%d9%8a%d9%84%d8%a7-%d8%aa%d8%b3%d8%aa%d9%86%d9%81%d8%b1-%d8%a3%d8%b5%d8%ad%d8%a7%d8%a8-%d8%a7%d9%84%d9%85%d8%b7%d8%a7%d8%b9%d9%85",
+      "status": "atencao"
+    },
+    {
+      "source": "aixmi-news.gr",
+      "title": "Αγρίνιο : Πέταγε αντικείμενα από μπαλκόνι – Έριξε μέχρι και μπαταρία αυτοκινήτου",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://www.aixmi-news.gr/agrinio-petage-antikeimena-apo-balkoni-erixe-mechri-kai-bataria-aftokinitou/",
+      "status": "atencao"
+    },
+    {
+      "source": "turystyka.wp.pl",
+      "title": "Awantura na rafie na Malediwach . Bójka 15 m pod wodą",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://turystyka.wp.pl/podwodna-bojka-na-rafie-nurkowie-starli-sie-15-m-pod-powierzchnia-7348075639462368a",
+      "status": "atencao"
+    },
+    {
+      "source": "jyllands-posten.dk",
+      "title": "EU - klimatjeneste : Oktober måned blev rekordvarm",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://jyllands-posten.dk/indland/ECE19808374/euklimatjeneste-oktober-maaned-blev-rekordvarm/?fp-exp=60300005&fp-alg=603000050",
+      "status": "atencao"
+    },
+    {
+      "source": "typos.com.cy",
+      "title": "Διεκόπη η δίκη της Ειρήνης Μουρτζούκου",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://typos.com.cy/ellada/diekopi-i-diki-tis-eirinis-mourtzoukou-ochi-den-einai-pateras-mou/",
+      "status": "atencao"
+    },
+    {
+      "source": "elwatannews.com",
+      "title": "إصابة 11 شخصا في حادثين منفصلين بالشرقية",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://www.elwatannews.com/news/details/8391351",
+      "status": "atencao"
+    },
+    {
+      "source": "iz.ru",
+      "title": "На девушку чуть не упала крыша в Свердловской области : что известно",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://iz.ru/2197364/devushka-edva-uspela-spastis-ot-padaiushchei-kryshi-v-sverdlovskoi-oblasti",
+      "status": "atencao"
+    },
+    {
+      "source": "draguignan.maville.com",
+      "title": " On est écœurés  : un incendie détruit cinq camions dune association à Marseille , la piste criminelle étudiée",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://draguignan.maville.com/actu/actudet_-on-est-ecoeures-un-incendie-detruit-cinq-camions-d-une-association-a-marseille-la-piste-criminelle-etudiee_fil-7558876_actu.Htm",
+      "status": "atencao"
+    }
+  ]
 }
