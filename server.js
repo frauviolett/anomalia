@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { spawn } from "child_process";
+import cors from "cors";
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -11,7 +12,35 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
+
+// Origens adicionais podem ser informadas no Render separadas por vírgula.
+// Ex.: CORS_ALLOWED_ORIGINS=https://meu-frontend.vercel.app,http://localhost:5173
+const allowedOrigins = new Set(
+  (process.env.CORS_ALLOWED_ORIGINS || "")
+    .split(",")
+    .map(origin => origin.trim())
+    .filter(Boolean)
+);
+
+if (process.env.VERCEL_URL) {
+  allowedOrigins.add(`https://${process.env.VERCEL_URL}`);
+}
+
+const corsMiddleware = cors({
+  origin(origin, callback) {
+    // Chamadas server-to-server e ferramentas locais podem não enviar Origin.
+    if (!origin) return callback(null, true);
+
+    const isVercelPreview = /^https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(origin);
+    const isLocalDevelopment = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin);
+
+    callback(null, allowedOrigins.has(origin) || isVercelPreview || isLocalDevelopment);
+  },
+  methods: ["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 204
+});
 
 let atualizacaoEmAndamento = false;
 
@@ -204,7 +233,7 @@ async function proxyNasa(request, response) {
 // =========================================================
 
 const server = http.createServer(
-  (request, response) => {
+  (request, response) => corsMiddleware(request, response, () => {
 
     let requestPath;
 
@@ -313,7 +342,7 @@ const server = http.createServer(
       }
     );
 
-  }
+  })
 );
 
 

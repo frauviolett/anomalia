@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-06T22:29:08.182Z",
+    "updatedAt": "2026-11-06T22:39:05.377Z",
     "version": "2.0",
     "methodology": "comparison-based"
   },
@@ -8,7 +8,7 @@
     "earth": {
       "title": "🌍 TERRA",
       "subtitle": "Eventos nas últimas 24h",
-      "value": 213,
+      "value": 211,
       "detail": "Fonte: USGS",
       "status": "normal"
     },
@@ -97,7 +97,7 @@
       {
         "title": "🌍 TERRA",
         "subtitle": "Eventos nas últimas 24h",
-        "value": 213,
+        "value": 211,
         "detail": "Fonte: USGS",
         "status": "normal"
       },
@@ -1095,13 +1095,23 @@
         "status": "normal"
       },
       {
+        "id": "ci10260206",
+        "lat": 33.468,
+        "lon": -116.423166666667,
+        "depth": 12.88,
+        "magnitude": 0.43,
+        "place": "24 km N of Borrego Springs, CA",
+        "time": 1793961928550,
+        "status": "normal"
+      },
+      {
         "id": "ci41359175",
-        "lat": 33.1811666666667,
-        "lon": -116.73,
-        "depth": 11.64,
-        "magnitude": 0.46,
+        "lat": 33.1803333333333,
+        "lon": -116.730333333333,
+        "depth": 11.48,
+        "magnitude": 0.43,
         "place": "7 km SSE of Lake Henshaw, CA",
-        "time": 1793961917500,
+        "time": 1793961917470,
         "status": "normal"
       },
       {
@@ -2222,36 +2232,6 @@
         "magnitude": 2.34,
         "place": "11 km W of Alberto Oviedo Mota, B.C., MX",
         "time": 1793918399150,
-        "status": "normal"
-      },
-      {
-        "id": "uw714135371",
-        "lat": 46.3435,
-        "lon": -122.812833333333,
-        "depth": -0.49,
-        "magnitude": 1.08,
-        "place": "10 km NE of Castle Rock, Washington",
-        "time": 1793918126440,
-        "status": "normal"
-      },
-      {
-        "id": "us7000twcy",
-        "lat": -23.5322,
-        "lon": 179.9392,
-        "depth": 523.445,
-        "magnitude": 4.6,
-        "place": "south of the Fiji Islands",
-        "time": 1793918088173,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026vypwpu",
-        "lat": 62.49,
-        "lon": -148.233,
-        "depth": 48.2,
-        "magnitude": 2.7,
-        "place": "78 km N of Chickaloon, Alaska",
-        "time": 1793918038466,
         "status": "normal"
       }
     ]
