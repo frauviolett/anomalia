@@ -115,7 +115,8 @@ async function fetchJSON(url) {
   );
 
   if (!result.ok) {
-    throw new Error(`HTTP ${result.status}`);
+    const detalhe = await result.text().catch(() => "");
+    throw new Error(`NASA HTTP ${result.status}${detalhe ? `: ${detalhe.slice(0, 180)}` : ""}`);
   }
 
   const text = (await result.text()).trim();

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-06T22:44:05.583Z",
+    "updatedAt": "2026-11-06T22:59:05.954Z",
     "version": "2.0",
     "methodology": "comparison-based"
   },
@@ -36,32 +36,32 @@
   },
   "signals": [
     {
+      "title": "Sismo — 62 km WNW of Aleneva, Alaska",
+      "description": "Magnitude 2.2",
+      "status": "normal",
+      "lat": 58.317,
+      "lon": -153.847
+    },
+    {
       "title": "Sismo — 6 km WNW of Cobb, CA",
-      "description": "Magnitude 0.7",
+      "description": "Magnitude 1.0",
       "status": "normal",
-      "lat": 38.8354988098145,
-      "lon": -122.789001464844
+      "lat": 38.8388328552246,
+      "lon": -122.783836364746
     },
     {
-      "title": "Sismo — 4 km ENE of Kalaoa, Hawaii",
-      "description": "Magnitude 3.0",
+      "title": "Sismo — 9 km ESE of Cloverdale, CA",
+      "description": "Magnitude 1.5",
       "status": "normal",
-      "lat": 19.742166519165,
-      "lon": -155.936492919922
+      "lat": 38.7798347473145,
+      "lon": -122.913665771484
     },
     {
-      "title": "Sismo — 5 km NNW of Pacifica, CA",
-      "description": "Magnitude 1.3",
+      "title": "Sismo — 46 km E of Port Alsworth, Alaska",
+      "description": "Magnitude 1.2",
       "status": "normal",
-      "lat": 37.6543350219727,
-      "lon": -122.509330749512
-    },
-    {
-      "title": "Sismo — 7 km SSE of Home Gardens, CA",
-      "description": "Magnitude 1.7",
-      "status": "normal",
-      "lat": 33.8196666666667,
-      "lon": -117.4835
+      "lat": 60.235,
+      "lon": -153.474
     },
     {
       "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -125,6 +125,56 @@
     ],
     "events": [
       {
+        "id": "aka2026wamrab",
+        "lat": 58.317,
+        "lon": -153.847,
+        "depth": 69.5,
+        "magnitude": 2.2,
+        "place": "62 km WNW of Aleneva, Alaska",
+        "time": 1794005782580,
+        "status": "normal"
+      },
+      {
+        "id": "nc75463352",
+        "lat": 38.8388328552246,
+        "lon": -122.783836364746,
+        "depth": 9.8100004196167,
+        "magnitude": 1.04,
+        "place": "6 km WNW of Cobb, CA",
+        "time": 1794005494690,
+        "status": "normal"
+      },
+      {
+        "id": "nc75463347",
+        "lat": 38.7798347473145,
+        "lon": -122.913665771484,
+        "depth": 4.65999984741211,
+        "magnitude": 1.54,
+        "place": "9 km ESE of Cloverdale, CA",
+        "time": 1794005145470,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026wamdvl",
+        "lat": 60.235,
+        "lon": -153.474,
+        "depth": 26.2,
+        "magnitude": 1.2,
+        "place": "46 km E of Port Alsworth, Alaska",
+        "time": 1794004870199,
+        "status": "normal"
+      },
+      {
+        "id": "uu80163271",
+        "lat": 38.5161666666667,
+        "lon": -112.919833333333,
+        "depth": 3.45,
+        "magnitude": 2.07,
+        "place": "15 km NNE of Milford, Utah",
+        "time": 1794004583340,
+        "status": "normal"
+      },
+      {
         "id": "nc75463317",
         "lat": 38.8354988098145,
         "lon": -122.789001464844,
@@ -136,12 +186,12 @@
       },
       {
         "id": "hv75068057",
-        "lat": 19.742166519165,
-        "lon": -155.936492919922,
-        "depth": 13.289999961853,
-        "magnitude": 3.03,
-        "place": "4 km ENE of Kalaoa, Hawaii",
-        "time": 1794002918930,
+        "lat": 19.7556666666667,
+        "lon": -155.9415,
+        "depth": 13.91,
+        "magnitude": 2.9,
+        "place": "5 km NE of Kalaoa, Hawaii",
+        "time": 1794002918790,
         "status": "normal"
       },
       {
@@ -2172,56 +2222,6 @@
         "magnitude": 1.8,
         "place": "52 km ENE of Pedro Bay, Alaska",
         "time": 1793919548349,
-        "status": "normal"
-      },
-      {
-        "id": "uu80163101",
-        "lat": 38.5171666666667,
-        "lon": -112.917,
-        "depth": 3.45,
-        "magnitude": 1.55,
-        "place": "15 km NNE of Milford, Utah",
-        "time": 1793919322670,
-        "status": "normal"
-      },
-      {
-        "id": "uw714135381",
-        "lat": 49.0743333333333,
-        "lon": -122.0945,
-        "depth": -0.8,
-        "magnitude": 0.98,
-        "place": "11 km E of Abbotsford, Canada",
-        "time": 1793919302730,
-        "status": "normal"
-      },
-      {
-        "id": "uu80163096",
-        "lat": 38.5115,
-        "lon": -112.918,
-        "depth": 3.48,
-        "magnitude": 1.05,
-        "place": "15 km NNE of Milford, Utah",
-        "time": 1793919294600,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026vyqnxi",
-        "lat": 60.45,
-        "lon": -142.954,
-        "depth": 13.3,
-        "magnitude": 1,
-        "place": "109 km S of McCarthy, Alaska",
-        "time": 1793919206605,
-        "status": "normal"
-      },
-      {
-        "id": "ok2026vsmd",
-        "lat": 35.55733333,
-        "lon": -96.9365,
-        "depth": 21.61,
-        "magnitude": 1.01,
-        "place": "6 km NNW of Meeker, Oklahoma",
-        "time": 1793919026230,
         "status": "normal"
       }
     ]
