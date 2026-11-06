@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-06T22:59:05.954Z",
+    "updatedAt": "2026-11-06T23:29:11.721Z",
     "version": "2.0",
     "methodology": "comparison-based"
   },
@@ -36,11 +36,25 @@
   },
   "signals": [
     {
-      "title": "Sismo — 62 km WNW of Aleneva, Alaska",
-      "description": "Magnitude 2.2",
+      "title": "Sismo — 25 km SSW of Petersville, Alaska",
+      "description": "Magnitude 2.1",
       "status": "normal",
-      "lat": 58.317,
-      "lon": -153.847
+      "lat": 62.293,
+      "lon": -151.003
+    },
+    {
+      "title": "Sismo — 2 km SSE of Guánica, Puerto Rico",
+      "description": "Magnitude 2.1",
+      "status": "normal",
+      "lat": 17.9465,
+      "lon": -66.9006666666667
+    },
+    {
+      "title": "Sismo — 61 km WNW of Aleneva, Alaska",
+      "description": "Magnitude 2.5",
+      "status": "normal",
+      "lat": 58.315,
+      "lon": -153.836
     },
     {
       "title": "Sismo — 6 km WNW of Cobb, CA",
@@ -48,20 +62,6 @@
       "status": "normal",
       "lat": 38.8388328552246,
       "lon": -122.783836364746
-    },
-    {
-      "title": "Sismo — 9 km ESE of Cloverdale, CA",
-      "description": "Magnitude 1.5",
-      "status": "normal",
-      "lat": 38.7798347473145,
-      "lon": -122.913665771484
-    },
-    {
-      "title": "Sismo — 46 km E of Port Alsworth, Alaska",
-      "description": "Magnitude 1.2",
-      "status": "normal",
-      "lat": 60.235,
-      "lon": -153.474
     },
     {
       "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -125,13 +125,33 @@
     ],
     "events": [
       {
+        "id": "aka2026wanpqa",
+        "lat": 62.293,
+        "lon": -151.003,
+        "depth": 76.3,
+        "magnitude": 2.1,
+        "place": "25 km SSW of Petersville, Alaska",
+        "time": 1794007484646,
+        "status": "normal"
+      },
+      {
+        "id": "pr71538633",
+        "lat": 17.9465,
+        "lon": -66.9006666666667,
+        "depth": 14.68,
+        "magnitude": 2.06,
+        "place": "2 km SSE of Guánica, Puerto Rico",
+        "time": 1794006367140,
+        "status": "normal"
+      },
+      {
         "id": "aka2026wamrab",
-        "lat": 58.317,
-        "lon": -153.847,
+        "lat": 58.315,
+        "lon": -153.836,
         "depth": 69.5,
-        "magnitude": 2.2,
-        "place": "62 km WNW of Aleneva, Alaska",
-        "time": 1794005782580,
+        "magnitude": 2.5,
+        "place": "61 km WNW of Aleneva, Alaska",
+        "time": 1794005782522,
         "status": "normal"
       },
       {
@@ -246,12 +266,12 @@
       },
       {
         "id": "ci41359423",
-        "lat": 33.8705,
-        "lon": -117.5075,
-        "depth": 2.1,
-        "magnitude": 1.49,
-        "place": "1 km SE of Home Gardens, CA",
-        "time": 1794001314010,
+        "lat": 33.8743333333333,
+        "lon": -117.5055,
+        "depth": -0.24,
+        "magnitude": 1.37,
+        "place": "1 km ESE of Home Gardens, CA",
+        "time": 1794001313790,
         "status": "normal"
       },
       {
@@ -395,6 +415,16 @@
         "status": "normal"
       },
       {
+        "id": "aka2026waguel",
+        "lat": 52.408,
+        "lon": -175.679,
+        "depth": 249.1,
+        "magnitude": 2.7,
+        "place": "88 km NE of Adak, Alaska",
+        "time": 1793995213528,
+        "status": "normal"
+      },
+      {
         "id": "nc75463222",
         "lat": 38.7933349609375,
         "lon": -122.761001586914,
@@ -425,6 +455,16 @@
         "status": "normal"
       },
       {
+        "id": "aka2026wafhox",
+        "lat": 57.147,
+        "lon": -156.949,
+        "depth": 106.4,
+        "magnitude": 2.3,
+        "place": "48 km SSE of Ugashik, Alaska",
+        "time": 1793992546970,
+        "status": "normal"
+      },
+      {
         "id": "uu80163236",
         "lat": 38.5153333333333,
         "lon": -112.914166666667,
@@ -452,6 +492,16 @@
         "magnitude": 4.4,
         "place": "10 km ESE of Pedasí, Panama",
         "time": 1793992014642,
+        "status": "normal"
+      },
+      {
+        "id": "aka2026waeruf",
+        "lat": 53.925,
+        "lon": -163.251,
+        "depth": 15.2,
+        "magnitude": 2.6,
+        "place": "103 km S of False Pass, Alaska",
+        "time": 1793991442240,
         "status": "normal"
       },
       {
@@ -2172,56 +2222,6 @@
         "magnitude": 3.6,
         "place": "138 km SSE of False Pass, Alaska",
         "time": 1793921365341,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026vyrsfw",
-        "lat": 62.428,
-        "lon": -153.146,
-        "depth": 69.7,
-        "magnitude": 1.7,
-        "place": "90 km SE of Nikolai, Alaska",
-        "time": 1793921304413,
-        "status": "normal"
-      },
-      {
-        "id": "pr71538538",
-        "lat": 17.8445,
-        "lon": -66.4078333333333,
-        "depth": 9.29,
-        "magnitude": 2.95,
-        "place": "13 km S of Santa Isabel, Puerto Rico",
-        "time": 1793920173360,
-        "status": "normal"
-      },
-      {
-        "id": "us7000twd4",
-        "lat": 53.5527,
-        "lon": -162.9503,
-        "depth": 16.134,
-        "magnitude": 4.6,
-        "place": "147 km SSE of False Pass, Alaska",
-        "time": 1793919897395,
-        "status": "normal"
-      },
-      {
-        "id": "uu80163106",
-        "lat": 38.5181666666667,
-        "lon": -112.921,
-        "depth": 2.69,
-        "magnitude": 1.94,
-        "place": "15 km NNE of Milford, Utah",
-        "time": 1793919652060,
-        "status": "normal"
-      },
-      {
-        "id": "aka2026vyqsrs",
-        "lat": 59.973,
-        "lon": -153.237,
-        "depth": 141.4,
-        "magnitude": 1.8,
-        "place": "52 km ENE of Pedro Bay, Alaska",
-        "time": 1793919548349,
         "status": "normal"
       }
     ]
