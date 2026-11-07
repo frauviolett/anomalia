@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-07T05:58:36.940Z",
+    "updatedAt": "2026-11-07T06:03:37.272Z",
     "version": "2.0",
     "methodology": "comparison-based"
   },
@@ -2182,5 +2182,62 @@
     ],
     "incidents": []
   },
-  "news": []
+  "news": [
+    {
+      "source": "natureworldnews.com",
+      "title": "Is Mars Volcanically Alive ? Hydrogen Chloride Spikes Over Alba Mons Point to a Hidden Magma Source",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://www.natureworldnews.com/articles/73755/20261106/mars-volcanically-alive-hydrogen-chloride-spikes-over-alba-mons-point-hidden-magma-source.htm",
+      "status": "atencao"
+    },
+    {
+      "source": "dnkb.com.cn",
+      "title": "像素火影次世代佩恩天道下载 - 像素火影次世代佩恩天道最新版下载v1 . 17 - 东快软件站",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://www.dnkb.com.cn/game/20494.html",
+      "status": "atencao"
+    },
+    {
+      "source": "abc.net.au",
+      "title": "Darren Lehmann says  everyone  was ball tampering , but denies Usman Khawaja sandpaper claims",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://www.abc.net.au/news/2026-11-07/darren-lehmann-usman-khawaja-sandpaper-ball-tampering/107359274",
+      "status": "atencao"
+    },
+    {
+      "source": "orissapost.com",
+      "title": "UTP dies by suicide at Ragadi Sub - Jail",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://www.orissapost.com/utp-dies-by-suicide-at-ragadi-sub-jail/",
+      "status": "atencao"
+    },
+    {
+      "source": "listindiario.com",
+      "title": "Mon Laferte es golpeada en el rostro con un celular lanzado durante un concierto",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://listindiario.com/entretenimiento/conciertos/20261106/mon-laferte-golpeada-rostro-celular-lanzado-concierto_929138.html",
+      "status": "atencao"
+    },
+    {
+      "source": "finance.sina.com.cn",
+      "title": "创新如何突围 ， 物理AI走到哪一步 ？ 从世界浙商大会看民营企业创新力",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://finance.sina.com.cn/jjxw/2026-11-07/doc-inixwthh5058589.shtml",
+      "status": "atencao"
+    },
+    {
+      "source": "thisdaylive.com",
+      "title": "Jos Family Christmas Festival as New Face of Plateau Tourism – THISDAYLIVE",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://www.thisdaylive.com/2026/11/07/jos-family-christmas-festival-as-new-face-of-plateau-tourism/",
+      "status": "atencao"
+    },
+    {
+      "source": "bangkokpost.com",
+      "title": "Bangkok Post - Bomb threats hamper waning European flyers",
+      "description": "Sinal de mídia identificado no clipping. A notícia não constitui, sozinha, evidência de uma anomalia.",
+      "url": "https://www.bangkokpost.com/business/general/3350380/bomb-threats-hamper-waning-european-flyers",
+      "status": "atencao"
+    }
+  ]
 }

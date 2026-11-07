@@ -4035,9 +4035,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const dados =
                 await response.json();
 
+            let indiceGlobalAtualizado = false;
             try {
                 const indiceResponse = await fetch(`${RENDER_BACKEND_URL}/api/global-index`, { cache: "no-store" });
-                if (indiceResponse.ok) atualizarScorePlanetario(await indiceResponse.json());
+                if (indiceResponse.ok) {
+                    atualizarScorePlanetario(await indiceResponse.json());
+                    indiceGlobalAtualizado = true;
+                }
             } catch (indiceError) {
                 console.warn("Índice global indisponível:", indiceError.message);
             }
@@ -4045,7 +4049,7 @@ document.addEventListener("DOMContentLoaded", () => {
             aplicarTimestampsMonitoramento(dados);
             carregarMonitoramentoPlanetario();
 
-            atualizarScorePlanetario(dados);
+            if (!indiceGlobalAtualizado) atualizarScorePlanetario(dados);
             renderizarAnalisesAvancadas(dados);
 
             configurarVerificacaoTerra(dados);
