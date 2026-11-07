@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     
 
-    const RENDER_BACKEND_URL = "https://anomalia-9fpf.onrender.com";
+    const isLocalBackend = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+    const RENDER_BACKEND_URL = isLocalBackend ? "" : "https://anomalia-9fpf.onrender.com";
 
     const brazilSection = document.getElementById("brazil");
     if (brazilSection) {
@@ -18,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
         map.innerHTML = `<path class="brazil-country-outline" d="M96 35 C127 19 165 19 198 27 C231 35 261 26 294 34 C325 42 349 59 374 71 C402 84 432 105 438 128 C444 149 426 164 429 184 C433 204 417 218 399 226 C382 234 373 249 360 265 C346 282 333 302 310 311 C288 320 270 308 251 301 C229 292 212 283 194 269 C178 257 160 250 144 237 C126 223 113 207 98 198 C84 189 70 175 67 158 C64 141 73 126 79 111 C85 95 73 82 78 67 C81 54 88 44 96 35 Z"></path><g class="brazil-region-layer"><path class="brazil-region status-anomalia" data-region="Norte" d="M96 35 C140 17 190 27 231 35 C254 39 278 34 294 34 L302 104 C274 112 247 119 219 121 C189 122 160 115 132 121 L79 111 C85 95 73 82 78 67 C81 54 88 44 96 35 Z"><title>Norte · Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M294 34 C326 42 350 59 374 71 C402 84 432 105 438 128 C444 149 426 164 417 174 L352 161 L302 104 Z"><title>Nordeste · Atenção</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M132 121 C160 115 189 122 219 121 C247 119 274 112 302 104 L352 161 L344 213 L282 231 L224 211 L175 184 Z"><title>Centro-Oeste · Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M352 161 L417 174 C426 184 433 204 417 218 C399 226 382 234 373 249 L344 213 Z"><title>Sudeste · Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M175 184 L224 211 L282 231 L344 213 L373 249 C360 265 346 282 333 302 C310 311 288 320 270 308 L251 301 C229 292 212 283 194 269 C178 257 160 250 144 237 C126 223 113 207 98 198 Z"><title>Sul · Atenção</title></path></g><g class="brazil-hotspots" aria-hidden="true"><circle cx="383" cy="199" r="7"></circle><circle cx="164" cy="71" r="7"></circle></g>`;
         map.innerHTML = `<svg viewBox="0 0 500 500" class="brazil-map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa do Brasil dividido em cinco regiões"><path class="brazil-region status-anomalia" data-region="Norte" d="M 120,80 L 280,60 L 320,130 L 290,190 L 210,210 L 150,180 L 100,140 Z"><title>Norte - Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M 280,60 L 400,90 L 430,160 L 350,200 L 320,130 Z"><title>Nordeste - Atenção</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M 210,210 L 290,190 L 310,280 L 220,310 L 180,250 Z"><title>Centro-Oeste - Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M 310,280 L 350,200 L 410,250 L 340,340 L 290,320 Z"><title>Sudeste - Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M 220,310 L 290,320 L 310,380 L 260,440 L 210,380 Z"><title>Sul - Atenção</title></path><circle class="brazil-hotspot brazil-hotspot-anomalia" cx="200" cy="140" r="7"></circle><circle class="brazil-hotspot brazil-hotspot-alerta" cx="350" cy="285" r="8"></circle></svg>`;
         brazilSection.querySelector(".brazil-map-panel").innerHTML = `<div class="brazil-panel-head"><div><span class="panel-kicker">MAPA INTERATIVO</span><h3>Distribuição territorial dos sinais</h3></div><span id="brazil-region-selection">Todas as regiões</span></div><div class="brazil-map-stage"><svg class="brazil-map" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa do Brasil dividido em cinco regiões"><path class="brazil-region status-anomalia" data-region="Norte" d="M 80,120 C 120,70 220,50 310,80 C 330,120 310,170 280,190 C 240,210 180,210 140,190 C 100,170 70,140 80,120 Z"><title>Norte - Anomalia</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M 310,80 C 370,60 440,90 450,150 C 430,200 370,210 330,180 C 310,160 300,110 310,80 Z"><title>Nordeste - Atenção</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M 180,210 C 250,210 300,200 310,270 C 280,310 200,310 170,270 C 160,240 170,220 180,210 Z"><title>Centro-Oeste - Normal</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M 310,270 C 360,220 420,250 400,320 C 350,360 300,330 290,300 C 290,280 300,270 310,270 Z"><title>Sudeste - Alerta</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M 200,310 C 270,310 290,320 280,390 C 250,440 210,430 190,380 C 180,340 190,320 200,310 Z"><title>Sul - Atenção</title></path></svg><div class="brazil-map-hotspot hotspot-norte"><span></span><i></i></div><div class="brazil-map-hotspot hotspot-sudeste"><span></span><i></i></div></div><div class="brazil-map-legend"><span><i class="status-dot normal"></i>Normal</span><span><i class="status-dot atencao"></i>Atenção</span><span><i class="status-dot anomalia"></i>Anomalia</span><span><i class="status-dot alerta"></i>Alerta</span></div>`;
+        brazilSection.querySelector(".brazil-map-panel").innerHTML = `<div class="brazil-panel-head"><div><span class="panel-kicker">MAPA INTERATIVO</span><h3>Distribuição territorial dos sinais</h3></div><span id="brazil-region-selection">Todas as regiões</span></div><div class="brazil-map-stage"><svg class="brazil-map" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa vetorial do Brasil dividido em cinco regiões"><path class="brazil-region status-anomalia" data-region="Norte" d="M105 92 L170 55 L255 42 L340 64 L382 118 L365 190 L325 230 L276 245 L226 225 L175 244 L119 211 L84 160 Z"><title>Norte</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M340 64 L420 82 L482 125 L510 190 L477 240 L421 255 L365 190 L382 118 Z"><title>Nordeste</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M175 244 L226 225 L276 245 L365 190 L421 255 L397 340 L335 387 L270 365 L218 320 Z"><title>Centro-Oeste</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M421 255 L477 240 L505 291 L483 354 L430 389 L397 340 Z"><title>Sudeste</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M218 320 L270 365 L335 387 L397 340 L430 389 L398 455 L345 510 L282 535 L231 496 L205 430 Z"><title>Sul</title></path><path class="brazil-country-outline" d="M105 92 L170 55 L255 42 L340 64 L420 82 L482 125 L510 190 L477 240 L505 291 L483 354 L430 389 L398 455 L345 510 L282 535 L231 496 L205 430 L175 370 L119 330 L84 260 L65 190 L84 160 Z"/><g class="brazil-hotspots" aria-label="Hotspots ativos"><circle class="radar-pulse" cx="160" cy="155" r="8"/><circle class="radar-pulse" cx="449" cy="318" r="8"/><circle class="radar-pulse" cx="322" cy="420" r="7"/></g></svg></div><div class="brazil-map-legend"><span><i class="status-dot normal"></i>Normal</span><span><i class="status-dot atencao"></i>Atenção</span><span><i class="status-dot anomalia"></i>Anomalia</span><span><i class="status-dot alerta"></i>Alerta</span></div>`;
+        brazilSection.querySelector(".brazil-map-panel").innerHTML = `<div class="brazil-panel-head"><div><span class="panel-kicker">MAPA INTERATIVO</span><h3>Distribuição territorial dos sinais</h3></div><span id="brazil-region-selection">Todas as regiões</span></div><div class="brazil-map-stage"><svg class="brazil-map" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa horizontal do Brasil dividido em cinco regiões"><path class="brazil-region status-anomalia" data-region="Norte" d="M70 105 L140 55 L245 42 L350 65 L430 105 L455 185 L390 235 L300 245 L220 225 L145 245 L90 205 L55 150 Z"><title>Norte</title></path><path class="brazil-region status-atencao" data-region="Nordeste" d="M430 105 L535 82 L650 100 L755 145 L815 215 L780 275 L675 285 L575 255 L455 185 Z"><title>Nordeste</title></path><path class="brazil-region status-normal" data-region="Centro-Oeste" d="M145 245 L220 225 L300 245 L455 185 L575 255 L545 350 L455 390 L340 370 L245 325 Z"><title>Centro-Oeste</title></path><path class="brazil-region status-alerta" data-region="Sudeste" d="M575 255 L675 285 L735 335 L700 405 L610 425 L545 350 Z"><title>Sudeste</title></path><path class="brazil-region status-atencao" data-region="Sul" d="M245 325 L340 370 L455 390 L545 350 L610 425 L555 465 L445 480 L335 465 L265 420 Z"><title>Sul</title></path><path class="brazil-country-outline" d="M70 105 L140 55 L245 42 L350 65 L430 105 L535 82 L650 100 L755 145 L815 215 L780 275 L735 335 L700 405 L610 425 L555 465 L445 480 L335 465 L265 420 L220 385 L145 350 L90 295 L55 235 L35 165 Z"/><g class="brazil-hotspots" aria-label="Hotspots ativos"><circle class="radar-pulse" cx="245" cy="145" r="8"/><circle class="radar-pulse" cx="650" cy="190" r="8"/><circle class="radar-pulse" cx="405" cy="300" r="8"/><circle class="radar-pulse" cx="640" cy="355" r="8"/><circle class="radar-pulse" cx="430" cy="425" r="8"/></g></svg></div><div class="brazil-map-legend"><span><i class="status-dot normal"></i>Normal</span><span><i class="status-dot atencao"></i>Atenção</span><span><i class="status-dot anomalia"></i>Anomalia</span><span><i class="status-dot alerta"></i>Alerta</span></div>`;
+        brazilSection.querySelector(".brazil-map-panel").innerHTML = `<div class="brazil-panel-head"><div><span class="panel-kicker">PAINEL TÁTICO REGIONAL</span><h3>Distribuição territorial dos sinais</h3></div><span id="brazil-region-selection">Todas as regiões</span></div><div class="brazil-map-stage brazil-tactical-grid"><div class="tactical-zone zone-norte brazil-region status-anomalia" data-region="Norte"><span class="tactical-zone-head"><b>NORTE</b><i class="radar-pulse"></i></span><strong>78/100</strong><small>PRESSÃO DE BIOMAS</small></div><div class="tactical-zone zone-nordeste brazil-region status-atencao" data-region="Nordeste"><span class="tactical-zone-head"><b>NORDESTE</b><i class="radar-pulse"></i></span><strong>69/100</strong><small>VARIÂNCIA TÉRMICA</small></div><div class="tactical-zone zone-centro brazil-region status-normal" data-region="Centro-Oeste"><span class="tactical-zone-head"><b>CENTRO-OESTE</b><i class="radar-pulse"></i></span><strong>44/100</strong><small>LEITURA ESTÁVEL</small></div><div class="tactical-zone zone-sudeste brazil-region status-alerta" data-region="Sudeste"><span class="tactical-zone-head"><b>SUDESTE</b><i class="radar-pulse"></i></span><strong>86/100</strong><small>ESTRESSE HÍDRICO</small></div><div class="tactical-zone zone-sul brazil-region status-atencao" data-region="Sul"><span class="tactical-zone-head"><b>SUL</b><i class="radar-pulse"></i></span><strong>62/100</strong><small>VARIÂNCIA CLIMÁTICA</small></div></div><div class="brazil-map-legend"><span><i class="status-dot normal"></i>Normal</span><span><i class="status-dot atencao"></i>Atenção</span><span><i class="status-dot anomalia"></i>Anomalia</span><span><i class="status-dot alerta"></i>Alerta</span></div>`;
         const alertsPanel = brazilSection.querySelector(".brazil-alerts-panel");
         alertsPanel.querySelector(".brazil-panel-head h3").textContent = "🚨 BOLETIM DE ALERTAS NACIONAIS (TEMPO REAL)";
         alertsPanel.querySelectorAll(".brazil-alert-card").forEach((card, index) => { const time = ["AGORA · 17:40", "AGORA · 17:34", "HOJE · 17:21"][index] || "HOJE · 17:10"; card.insertAdjacentHTML("afterbegin", `<time>${time}</time>`); });
@@ -41,12 +45,40 @@ document.addEventListener("DOMContentLoaded", () => {
         brazilSection.querySelectorAll("[data-region-card]").forEach(card => { const region = card.dataset.regionCard; const d = brazilDomainSignals[region]; card.innerHTML = `<header><h3>${region}</h3><span>${card.classList.contains("status-alerta") ? "Alerta" : card.classList.contains("status-anomalia") ? "Anomalia" : card.classList.contains("status-atencao") ? "Atenção" : "Normal"}</span></header><div class="brazil-stress"><span>NÍVEL DE ESTRESSE DA REGIÃO</span><strong>${d.score}/100</strong><i><em style="width:${d.score}%"></em></i></div><ul class="brazil-signal-list">${d.topics.map(item => `<li>${item}</li>`).join("")}</ul><div class="brazil-card-source">Fontes: ${d.source}</div>`; });
         brazilSection.querySelector(".brazil-region-grid").insertAdjacentHTML("afterend", `<section class="brazil-news-feed" aria-labelledby="brazil-news-title"><div class="brazil-feed-head"><div><span class="panel-kicker">CLIPPING BRASIL · MÍDIA & ALERTAS LOCAIS</span><h3 id="brazil-news-title">Feed de Notícias & Urgências Brasil</h3></div><span class="brazil-feed-live">● AO VIVO · NACIONAL</span></div><div class="brazil-feed-filters"><button class="active" data-brazil-filter="todos">Todos</button><button data-brazil-filter="alerta">🔴 Alerta</button><button data-brazil-filter="anomalia">🟠 Anomalia</button><button data-brazil-filter="atencao">🟡 Atenção</button><button data-brazil-filter="biologia">🧬 Biologia</button><button data-brazil-filter="infra">🤖 Infraestrutura</button></div><div class="brazil-news-list"><article class="brazil-news-item status-alerta" data-news-status="alerta" data-news-domain="infra"><time>AGORA · 17:46</time><span>G1 · Infraestrutura</span><h4>Defesa Civil atualiza protocolo para redes críticas no Sudeste</h4><p>Monitoramento operacional reforçado após oscilações localizadas.</p></article><article class="brazil-news-item status-anomalia" data-news-status="anomalia" data-news-domain="biologia"><time>AGORA · 17:32</time><span>Fiocruz · Biologia</span><h4>Vigilância epidemiológica amplia triagem de síndrome respiratória no Norte</h4><p>Boletim recomenda acompanhamento de sinais e confirmação laboratorial.</p></article><article class="brazil-news-item status-atencao" data-news-status="atencao" data-news-domain="oceanos"><time>HOJE · 17:18</time><span>Agência Brasil · Oceanos</span><h4>Marinha acompanha oscilação marítima na costa Sul</h4><p>Leitura costeira mantém atenção para ressaca localizada.</p></article><article class="brazil-news-item status-anomalia" data-news-status="anomalia" data-news-domain="clima"><time>HOJE · 16:55</time><span>INPE · Território</span><h4>Satélites detectam pressão acima da média em áreas de bioma</h4><p>Dados serão cruzados com observações de campo e focos de calor.</p></article></div></section>`);
         brazilSection.querySelectorAll("[data-brazil-filter]").forEach(button => button.addEventListener("click", () => { brazilSection.querySelectorAll("[data-brazil-filter]").forEach(item => item.classList.toggle("active", item === button)); const filter = button.dataset.brazilFilter; brazilSection.querySelectorAll(".brazil-news-item").forEach(item => { item.hidden = filter !== "todos" && item.dataset.newsStatus !== filter && item.dataset.newsDomain !== filter; }); }));
+        async function carregarNoticiasBrasil() {
+            const list = brazilSection.querySelector(".brazil-news-list");
+            if (!list) return;
+            try {
+                const response = await fetch(`${RENDER_BACKEND_URL}/api/news/google?q=${encodeURIComponent("Brasil ciência ambiente saúde clima")}`, { cache: "no-store" });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const payload = await response.json();
+                const articles = Array.isArray(payload.articles) ? payload.articles.slice(0, 6) : [];
+                if (!articles.length) throw new Error("Nenhuma notícia retornada");
+                list.innerHTML = articles.map((article, index) => {
+                    const status = index === 0 ? "alerta" : index < 3 ? "anomalia" : "atencao";
+                    const description = String(article.description || "Clipping brasileiro agregado pelo Google News.").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+                    return `<article class="brazil-news-item status-${status}" data-news-status="${status}" data-news-domain="todos"><time>${article.date ? new Date(article.date).toLocaleDateString("pt-BR") : "Atual"}</time><span>${escapeHTML(article.sourceName || "Google News")} · Brasil</span><h4>${escapeHTML(article.title)}</h4><p>${escapeHTML(description.slice(0, 220))}</p><a class="brazil-news-link" href="${escapeHTML(article.url)}" target="_blank" rel="noopener noreferrer">Acessar matéria ↗</a></article>`;
+                }).join("");
+            } catch (error) {
+                console.warn("Não foi possível carregar notícias do Brasil:", error.message);
+                list.innerHTML = `<article class="brazil-news-item"><h4>Clipping brasileiro temporariamente indisponível</h4><p>Não foi possível consultar o Google News agora. Tente atualizar a página.</p></article>`;
+            }
+        }
+        carregarNoticiasBrasil();
+
         const regionCards = [...brazilSection.querySelectorAll("[data-region-card]")];
         const selection = brazilSection.querySelector("#brazil-region-selection");
         const setBrazilRegion = (region) => { selection.textContent = region || "Todas as regiões"; regionCards.forEach(card => card.classList.toggle("is-muted", Boolean(region) && card.dataset.regionCard !== region)); };
         brazilSection.querySelectorAll(".brazil-region").forEach(region => { region.addEventListener("mouseenter", () => setBrazilRegion(region.dataset.region)); region.addEventListener("focus", () => setBrazilRegion(region.dataset.region)); region.addEventListener("click", () => setBrazilRegion(region.dataset.region)); });
-        brazilSection.querySelector(".brazil-map").addEventListener("mouseleave", () => setBrazilRegion());
+        brazilSection.querySelector(".brazil-tactical-grid")?.addEventListener("mouseleave", () => setBrazilRegion());
     }
+
+    brazilSection?.querySelectorAll(".tactical-zone").forEach(zone => {
+        zone.addEventListener("mouseenter", () => {
+            brazilSection.querySelectorAll("[data-region-card]").forEach(card => card.classList.toggle("is-selected", card.dataset.regionCard === zone.dataset.region));
+        });
+        zone.addEventListener("mouseleave", () => brazilSection.querySelectorAll("[data-region-card]").forEach(card => card.classList.remove("is-selected")));
+    });
 
     const newsFilterState = { activeDomain: "ALL", activeStatus: "ALL" };
     let newsPage = 1;
@@ -113,12 +145,62 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
     aplicarFiltrosNoticias();
 
+    async function carregarClippingsGoogle() {
+        try {
+            const response = await fetch(`${RENDER_BACKEND_URL}/api/news/google?q=${encodeURIComponent("(anomalia OR alerta) ciência ambiente saúde planeta")}`, { cache: "no-store" });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const payload = await response.json();
+            const artigos = Array.isArray(payload.articles) ? payload.articles : [];
+            const cards = Array.from(document.querySelectorAll("#news-list .news-investigative-card, #news-list-extra .news-investigative-card"));
+            artigos.forEach((article, index) => {
+                const card = cards[index];
+                if (!card) return;
+                const title = card.querySelector("h3");
+                const description = card.querySelector("p");
+                const domain = card.querySelector(".news-domain");
+                const link = card.querySelector("footer a");
+                const cleanDescription = String(article.description || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+                if (title) title.textContent = article.title;
+                if (description) description.textContent = cleanDescription || "Clipping agregado pelo Google News; consulte a matéria original para o contexto completo.";
+                if (domain) domain.textContent = `📰 ${article.sourceName || "Google News"}`;
+                if (link) { link.href = article.url; link.target = "_blank"; link.rel = "noopener noreferrer"; link.textContent = "Acessar matéria ↗"; }
+                const metaDate = card.querySelector(".news-card-meta span:last-child");
+                if (metaDate && article.date) metaDate.textContent = new Date(article.date).toLocaleDateString("pt-BR");
+            });
+            const heroLink = document.querySelector("#news .news-hero-actions a");
+            const hero = document.querySelector("#news .news-hero-card");
+            const destaque = artigos[0];
+            if (hero && destaque) {
+                const heroTitle = hero.querySelector("h3");
+                const heroDomain = hero.querySelector(".news-domain");
+                const heroMeta = hero.querySelector(".news-card-meta span:last-child");
+                const heroAnalysis = hero.querySelector(".news-analysis p:first-of-type");
+                if (heroTitle) heroTitle.textContent = destaque.title;
+                if (heroDomain) heroDomain.textContent = `📰 ${destaque.sourceName || "Google News"}`;
+                if (heroMeta) heroMeta.textContent = destaque.date ? new Date(destaque.date).toLocaleDateString("pt-BR") : "Clipping recente";
+                if (heroAnalysis) heroAnalysis.textContent = "Clipping selecionado como notícia de impacto para acompanhamento editorial.";
+            }
+            if (heroLink && destaque?.url) { heroLink.href = destaque.url; heroLink.target = "_blank"; heroLink.rel = "noopener noreferrer"; }
+        } catch (error) {
+            console.warn("Não foi possível carregar clippings do Google News:", error.message);
+        }
+    }
+    carregarClippingsGoogle();
+
     // =========================================================
     // ELEMENTOS — ESPAÇO
     // =========================================================
 
     const neoList = document.getElementById("neo-list");
     const neoRankingList = document.getElementById("neo-ranking-list");
+    const neoVerifierPanel = document.querySelector(".neo-verifier");
+    const neoRankingPanel = document.querySelector(".neo-ranking");
+    if (neoVerifierPanel && neoRankingPanel) neoRankingPanel.after(neoVerifierPanel);
+    const neoRankingHeading = document.querySelector(".neo-ranking-heading");
+    if (neoRankingHeading) {
+        neoRankingHeading.querySelector("h3")?.replaceChildren(document.createTextNode("PROBABILIDADE DE IMPACTO ORBITAL"));
+        neoRankingHeading.querySelector("p")?.replaceChildren(document.createTextNode("MONITORAMENTO DE COLISÃO CNEOS / NASA · *probabilidade oficial não publicada no feed consultado"));
+    }
     const neoQuery = document.getElementById("neo-query");
     const neoVerify = document.getElementById("neo-verify");
     const neoVerificationResult = document.getElementById("neo-verification-result");
@@ -159,6 +241,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let earthSearchRefresh = null;
 
     const biologySection = document.getElementById("biology");
+    const biologyIcons = { respiratory: "◉", vector: "◇", pathogen: "◆" };
+    document.querySelectorAll("[data-biology-card]").forEach(card => {
+        const icon = card.querySelector(".biology-type-icon");
+        if (icon && biologyIcons[card.dataset.biologyCard]) icon.textContent = biologyIcons[card.dataset.biologyCard];
+    });
     const biologyVerifierPanel = document.querySelector("#biology .biology-verifier");
     if (biologySection && biologyVerifierPanel) {
         biologySection.appendChild(biologyVerifierPanel);
@@ -168,6 +255,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const aiQuery = document.getElementById("ai-query");
     const aiVerify = document.getElementById("ai-verify");
     const aiVerificationResult = document.getElementById("ai-verification-result");
+    const earthQuery = document.getElementById("earth-query");
+    const earthSearchButton = document.getElementById("earth-search-button");
+    const earthNewsCheckResult = document.getElementById("earth-news-check-result");
     const aiPagination = document.getElementById("ai-pagination");
     let aiRecords = [];
     let aiFilter = "all";
@@ -400,6 +490,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function mancheteBiologica(evento, categoria) {
+        if (categoria === "respiratory") {
+            const textoRespiratorio = `${evento?.title || ""} ${evento?.summary || ""}`;
+            if (/middle east respiratory syndrome|mers[- ]?cov|mers coronavirus/i.test(textoRespiratorio)) return "MERS-CoV";
+            if (/influenza|gripe|\bflu\b/i.test(textoRespiratorio)) return "Influenza";
+            if (/respiratory syncytial virus|\bvsr\b|\brsv\b/i.test(textoRespiratorio)) return "VSR (RSV)";
+            if (/covid[- ]?19|sars[- ]?cov[- ]?2|coronavirus/i.test(textoRespiratorio)) return "COVID-19 / SARS-CoV-2";
+            if (/pneumonia/i.test(textoRespiratorio)) return "Pneumonia de etiologia indeterminada";
+            return "Vírus respiratório";
+        }
         const titulo = traduzirTituloBiologico(evento?.title || "");
         if (/ebola|bundibugyo/i.test(titulo)) return "Surto de Ebola Bundibugyo";
         if (/hantavirus|hantavírus/i.test(titulo)) return "Foco de Hantavírus em rotas marítimas";
@@ -415,6 +514,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const obitos = resumo.match(/([\d\s.,]+)\s+(?:confirmed deaths|deaths|óbitos)/i);
         if (casos && obitos) return `${casos[1].trim()} casos confirmados · ${obitos[1].trim()} óbitos registrados`;
         if (casos) return `${casos[1].trim()} casos confirmados no boletim mais recente`;
+        if (/respirat|influenza|gripe|pneumonia|covid|mers|coronavirus/i.test(`${evento?.title || ""} ${resumo}`)) {
+            return "Circulação regional sob monitoramento epidemiológico";
+        }
         if (/outbreak|surto/i.test(resumo)) return "Surto ativo sob acompanhamento internacional";
         return "Atualização epidemiológica no boletim mais recente";
     }
@@ -446,6 +548,13 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("[data-biology-card]").forEach(card => {
             const categoria = card.dataset.biologyCard;
             const descricao = card.querySelector(".biology-impact");
+            const content = card.querySelector(".biology-type-content");
+            if (content && !content.querySelector(".biology-card-topline")) {
+                content.insertAdjacentHTML("afterbegin", `<div class="biology-card-topline"><span class="biology-card-tracking"></span><strong class="biology-card-variance"></strong></div>`);
+                const title = content.querySelector("h3");
+                title?.insertAdjacentHTML("afterend", `<span class="biology-agent-full"></span>`);
+                descricao?.insertAdjacentHTML("afterend", `<div class="biology-card-meta"><span class="biology-card-origin"></span><span class="biology-card-source"></span></div>`);
+            }
             const rotulos = {
                 respiratory: ["VÍRUS RESPIRATÓRIOS", "Influenza / Covid / VSR", "Sinais e eventos respiratórios documentados pela OMS."],
                 vector: ["ARBOVIROSES & VETORES", "Dengue / Chikungunya", "Doenças transmitidas por mosquitos e outros vetores."],
@@ -466,12 +575,35 @@ document.addEventListener("DOMContentLoaded", () => {
                 : categoria === "pathogen" ? "normal" : "sem_evidencia";
             const ultimo = eventos.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))[0];
             const ultimoBoletim = biologyEvents.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))[0];
-            const foco = ultimo || ultimoBoletim;
+            // Só usa um evento quando ele pertence à categoria do card.
+            // Isso evita que o Ebola, por exemplo, apareça em arboviroses.
+            const foco = ultimo;
             const local = card.querySelector(".biology-location") || (() => { const el = document.createElement("span"); el.className = "biology-location"; card.querySelector(".biology-type-content")?.insertBefore(el, card.querySelector("h3")); return el; })();
             if (local) local.textContent = `📍 ${localizarEventoBiologico(foco)} · ${simbolos[nivel]}`;
             const tituloFoco = card.querySelector("h3");
-            if (tituloFoco && foco) tituloFoco.textContent = mancheteBiologica(foco, categoria);
+            const nomeAgente = foco ? mancheteBiologica(foco, categoria) : rotulos?.[1] || "Agente em observação";
+            if (tituloFoco) tituloFoco.textContent = nomeAgente;
+            const agenteCompleto = card.querySelector(".biology-agent-full");
+            if (agenteCompleto) agenteCompleto.textContent = foco?.title || "Evento epidemiológico monitorado";
             if (descricao && foco) descricao.textContent = impactoBiologico(foco);
+            const tracking = card.querySelector(".biology-card-tracking");
+            const variance = card.querySelector(".biology-card-variance");
+            const origin = card.querySelector(".biology-card-origin");
+            const source = card.querySelector(".biology-card-source");
+            const idBase = nomeAgente.replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "").toUpperCase() || "AGENTE";
+            if (tracking) tracking.textContent = foco?.trackingId || `${idBase.slice(0, 14)}-G01`;
+            const metricValue = foco?.variance ?? foco?.deviation ?? foco?.metric;
+            if (variance) {
+                const metricNumber = typeof metricValue === "number"
+                    ? metricValue
+                    : typeof metricValue === "string" && metricValue.trim() && /[-+]?\d+(?:[.,]\d+)?/.test(metricValue)
+                        ? metricValue.trim()
+                        : "";
+                variance.textContent = metricNumber;
+                variance.hidden = !metricNumber;
+            }
+            if (origin) origin.textContent = `ORIGEM · ${foco ? localizarEventoBiologico(foco) : "MONITORAMENTO GLOBAL"}`;
+            if (source) source.textContent = `FONTE · ${foco?.sourceName || "OMS / CDC"}`;
             card.className = card.className.replace(/\bstatus-[^\s]+/g, "").trim();
             card.classList.add(`status-${nivel}`);
             const classificacao = card.querySelector(".biology-classification");
@@ -497,7 +629,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 : ultimoBoletim
                     ? `Nenhum sinal específico · último boletim consultado: ${formatDateBR(ultimoBoletim.date)}`
                     : "Aguardando atualização das bases oficiais";
-            if (dados) dados.textContent = formatDateBR(ultimo?.date || ultimoBoletim?.date || new Date());
+            if (dados) {
+                const dataUTC = ultimo?.date || ultimoBoletim?.date;
+                dados.textContent = dataUTC
+                    ? new Date(dataUTC).toISOString().replace("T", " ").slice(0, 16) + "Z"
+                    : "Data n/d";
+            }
         });
     }
 
@@ -1322,15 +1459,15 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
             const selecionados =
-                objetos.slice(0, 12);
+                objetos.slice(0, 50);
 
             window.__anomaliaNEOs = selecionados;
 
             renderizarNEOs(
-                selecionados
+                selecionados.slice(0, 12)
             );
 
-            renderizarRankingNEOs(selecionados.slice(0, 5));
+            renderizarRankingNEOs(selecionados);
 
             atualizarResumoEspaco(
                 selecionados
@@ -1503,6 +1640,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    function renderizarNEOs(objetos) {
+        if (!neoList) return;
+        if (!objetos.length) {
+            neoList.innerHTML = `<div class="space-empty">Nenhum objeto retornado no intervalo consultado.</div>`;
+            return;
+        }
+        neoList.innerHTML = `<div class="neo-feed-table" role="table" aria-label="Aproximações monitoradas"><div class="neo-feed-header" role="row"><span>ALVO</span><span>APROXIMAÇÃO</span><span>DISTÂNCIA DA TERRA</span><span>DIÂMETRO</span><span>VELOCIDADE</span><span>RISCO</span></div>${objetos.map((objeto, indice) => {
+            const classificacao = classificarNEO(objeto);
+            const label = objeto.perigoso ? "ALERTA · POTENCIALMENTE PERIGOSO" : classificacao.nivel === "atencao" ? "ATENÇÃO · MONITORADO" : "BAIXO RISCO · ÓRBITA SEGURA";
+            return `<div class="neo-feed-row ${sinalizacaoConfig[classificacao.nivel].className}" data-neo-danger="${objeto.perigoso ? "true" : "false"}" role="row"><span class="neo-feed-target"><b>${String(indice + 1).padStart(2, "0")}</b><strong>${escapeHTML(objeto.nome)}</strong></span><span>${formatDateBR(objeto.data)}</span><span class="neo-feed-distance">◉ → <b>${formatNumber(objeto.distancia)} km</b></span><span>${formatDiameter(objeto.diametroMin, objeto.diametroMax)}</span><span>${formatSpeed(objeto.velocidade)}</span><span class="neo-feed-risk"><i class="status-dot"></i>${label}</span></div>`;
+        }).join("")}</div>`;
+    }
+
     function renderizarRankingNEOs(objetos) {
         if (!neoRankingList) return;
         neoRankingList.innerHTML = objetos.length
@@ -1518,6 +1668,85 @@ document.addEventListener("DOMContentLoaded", () => {
             }).join("")
             : `<div class="space-empty">Nenhum objeto disponível para o ranking.</div>`;
     }
+
+    function renderizarRankingNEOs(objetos) {
+        if (!neoRankingList) return;
+        neoRankingList.innerHTML = objetos.length
+            ? objetos.map((objeto, indice) => {
+                const nivel = classificarNEO(objeto).nivel;
+                const percentual = Number.isFinite(Number(objeto.probabilidadeImpacto)) ? Number(objeto.probabilidadeImpacto) : 0;
+                const probabilidade = Number.isFinite(Number(objeto.probabilidadeImpacto)) ? `${percentual.toFixed(2)}%` : "0,00%*";
+                return `<article class="neo-ranking-item ${sinalizacaoConfig[nivel].className}">
+                    <div class="neo-risk-head"><span class="neo-risk-index">${String(indice + 1).padStart(2, "0")}</span><span class="neo-ranking-name">${escapeHTML(objeto.nome)}</span>${badgeStatus(nivel)}</div>
+                    <div class="neo-risk-probability"><strong>${probabilidade}</strong><span>probabilidade de impacto</span></div>
+                    <div class="neo-risk-progress"><i style="width:${Math.max(1, Math.min(100, percentual))}%"></i></div>
+                    <div class="neo-risk-meta"><span>PASSAGEM <b>${formatNumber(objeto.distancia)} km</b></span><span>RISCO <b>${escapeHTML((sinalizacaoConfig[nivel] || sinalizacaoConfig.sem_evidencia).label)}</b></span><span>DIÂMETRO <b>${formatDiameter(objeto.diametroMin, objeto.diametroMax)}</b></span></div>
+                </article>`;
+            }).join("")
+            : `<div class="space-empty">Nenhum objeto disponível para o painel.</div>`;
+    }
+
+    function renderizarRankingNEOs(objetos) {
+        if (!neoRankingList) return;
+        if (!objetos.length) { neoRankingList.innerHTML = `<div class="space-empty">Nenhum asteroide disponível para simulação.</div>`; return; }
+        const selecionado = objetos[0];
+        const renderDiagnostico = objeto => {
+            const risco = classificarNEO(objeto);
+            const diametro = Math.round(((objeto.diametroMin || 0) + (objeto.diametroMax || 0)) / 2) || 0;
+            neoRankingList.querySelector(".neo-sim-diagnostics").innerHTML = `<section class="neo-sim-panel"><span class="panel-kicker">DADOS DO OBJETO</span><h4>${escapeHTML(objeto.nome)}</h4><p>D: <b>${formatDiameter(objeto.diametroMin, objeto.diametroMax)}</b></p><p>V: <b>${formatSpeed(objeto.velocidade)}</b></p></section><section class="neo-sim-panel"><span class="panel-kicker">RESULTADOS DA SIMULAÇÃO</span><div class="neo-sim-risk"><span class="status-badge ${sinalizacaoConfig[risco.nivel].className}">${sinalizacaoConfig[risco.nivel].label}</span><strong>${objeto.probabilidadeImpacto ? `${objeto.probabilidadeImpacto}%` : "RISCO ZERO*"}</strong></div><p>Passagem: <b>${formatDateBR(objeto.data)}</b></p><p>Distância: <b>${formatNumber(objeto.distancia)} km</b></p><small>* Probabilidade oficial não publicada no feed consultado.</small></section><section class="neo-sim-panel"><span class="panel-kicker">CENÁRIO HIPOTÉTICO</span><label>Diâmetro do impacto (m)<output class="neo-sim-diameter-value">${diametro}</output></label><input class="neo-sim-slider" type="range" min="1" max="1000" value="${Math.max(1, Math.min(1000, diametro || 100))}"><button class="neo-action neo-sim-button" type="button">GERAR SIMULAÇÃO HIPOTÉTICA</button><div class="neo-sim-output" aria-live="polite">Ajuste o diâmetro e gere um cenário.</div></section>`;
+            const slider = neoRankingList.querySelector(".neo-sim-slider");
+            const output = neoRankingList.querySelector(".neo-sim-output");
+            const value = neoRankingList.querySelector(".neo-sim-diameter-value");
+            slider?.addEventListener("input", () => { value.textContent = slider.value; });
+            neoRankingList.querySelector(".neo-sim-button")?.addEventListener("click", () => { const d = Number(slider.value); const energia = Math.max(0.01, (d / 20) ** 3 * 0.02).toFixed(2); output.textContent = `Cenário hipotético: objeto de ${d} m · energia estimada ${energia} megatons. Não é previsão de impacto.`; });
+        };
+        neoRankingList.innerHTML = `<div class="neo-sim-selector"><label for="neo-sim-search">SELECIONE UM ASTEROIDE PARA SIMULAR O CENÁRIO DE IMPACTO:</label><input id="neo-sim-search" type="search" placeholder="Digite o nome do objeto (ex: 2015 VH65)..."><div class="neo-sim-options" role="listbox">${objetos.map((objeto, index) => `<button type="button" class="neo-sim-option ${index === 0 ? "active" : ""}" data-neo-index="${index}">${escapeHTML(objeto.nome)} <small>${formatNumber(objeto.distancia)} km</small></button>`).join("")}</div></div><div class="neo-sim-diagnostics"></div>`;
+        const search = neoRankingList.querySelector("#neo-sim-search");
+        const options = [...neoRankingList.querySelectorAll(".neo-sim-option")];
+        const select = objeto => { options.forEach(option => option.classList.toggle("active", option.dataset.neoIndex === String(objetos.indexOf(objeto)))); renderDiagnostico(objeto); };
+        options.forEach(option => option.addEventListener("click", () => select(objetos[Number(option.dataset.neoIndex)])));
+        const normalizarBuscaNEO = valor => String(valor || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
+        search?.addEventListener("input", () => {
+            const term = normalizarBuscaNEO(search.value);
+            let encontrados = 0;
+            options.forEach(option => {
+                const objeto = objetos[Number(option.dataset.neoIndex)];
+                const visivel = !term || normalizarBuscaNEO(objeto?.nome || option.textContent).includes(term);
+                option.hidden = !visivel;
+                if (visivel && term) encontrados += 1;
+            });
+            let aviso = neoRankingList.querySelector(".neo-sim-search-empty");
+            if (term && !encontrados) {
+                if (!aviso) { aviso = document.createElement("p"); aviso.className = "neo-sim-search-empty"; neoRankingList.querySelector(".neo-sim-options")?.appendChild(aviso); }
+                aviso.textContent = "Objeto não encontrado na janela de 50 atual da NASA.";
+                aviso.hidden = false;
+            } else if (aviso) aviso.hidden = true;
+        });
+        search?.addEventListener("keydown", event => {
+            if (event.key !== "Enter") return;
+            event.preventDefault();
+            const term = normalizarBuscaNEO(search.value);
+            const matches = objetos.filter(objeto => normalizarBuscaNEO(objeto.nome).includes(term));
+            if (matches.length === 1) {
+                select(matches[0]);
+                options.forEach(option => { option.hidden = false; });
+            } else if (matches.length > 1) {
+                let aviso = neoRankingList.querySelector(".neo-sim-search-empty");
+                if (!aviso) { aviso = document.createElement("p"); aviso.className = "neo-sim-search-empty"; neoRankingList.querySelector(".neo-sim-options")?.appendChild(aviso); }
+                aviso.textContent = `${matches.length} objetos encontrados. Selecione o alvo correto na lista.`;
+                aviso.hidden = false;
+            } else {
+                search.dispatchEvent(new Event("input"));
+            }
+        });
+        renderDiagnostico(selecionado);
+    }
+
+    document.addEventListener("keydown", event => {
+        if (event.key !== "Enter" || event.target?.id !== "neo-sim-search") return;
+        const visibleOptions = [...document.querySelectorAll("#neo-sim-search ~ .neo-sim-options .neo-sim-option")].filter(option => !option.hidden);
+        if (visibleOptions.length === 1) { event.preventDefault(); visibleOptions[0].click(); }
+    }, true);
 
     function verificarNEO() {
         const texto = (neoQuery?.value || "").trim();
@@ -1691,6 +1920,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             </div>
         `;
+
+        const telemetryCards = spaceSummary.querySelectorAll(".space-stat");
+        const solarCard = telemetryCards[0];
+        const impactCard = telemetryCards[3];
+        if (solarCard) {
+            solarCard.querySelector(".space-stat-top > span").textContent = "VENTO SOLAR";
+            solarCard.querySelector("strong").textContent = "CALMO";
+            solarCard.querySelector("small").textContent = "Escudo magnético estável · risco operacional baixo";
+        }
+        if (impactCard) {
+            impactCard.querySelector(".space-stat-top > span").textContent = "RISCO DE IMPACTO";
+            impactCard.querySelector("strong").textContent = perigosos ? "NÍVEL 1" : "NÍVEL 0";
+            impactCard.querySelector("small").textContent = "Avaliação orbital em tempo real · NASA / CNEOS";
+        }
     }
 
     // =========================================================
@@ -2333,6 +2576,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 )
                 .slice(0, 12);
 
+            atualizarCardVentoSolar(eventos);
             renderizarClimaEspacial(
                 finais
             );
@@ -2357,6 +2601,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 status: "erro",
                 itens: []
             };
+
+            atualizarCardVentoSolar([]);
 
             spaceWeatherList.innerHTML =
                 caixaAlerta(
@@ -2472,6 +2718,40 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         return "sem_evidencia";
+    }
+
+    function avaliarVentoSolar(eventos) {
+        const agora = Date.now();
+        const recentes = eventos.filter(evento => {
+            const data = new Date(evento.data || 0).getTime();
+            return Number.isFinite(data) && agora - data <= 24 * 60 * 60 * 1000;
+        });
+        const flares = recentes.filter(evento => evento.tipo === "FLR");
+        const cmes = recentes.filter(evento => evento.tipo === "CME");
+        const geomagneticos = recentes.filter(evento => evento.tipo === "GST");
+        const flareX = flares.some(evento => /^X/i.test(String(evento.intensidade || "")));
+        const cmeSevera = cmes.some(evento => evento.nivel === "alerta");
+        const cmeForte = cmes.some(evento => evento.nivel === "anomalia");
+        const kpIntenso = geomagneticos.some(evento => evento.nivel === "alerta" || evento.nivel === "anomalia");
+        const variosFlares = flares.length >= 3;
+        const flareModerado = flares.some(evento => /^[MC]/i.test(String(evento.intensidade || "")));
+        if (flareX || cmeSevera) return { nivel: "alerta", principal: "ATIVIDADE INTENSA", detalhe: "Evento solar severo com potencial de impacto em satélites e comunicações." };
+        if (cmeForte || variosFlares || kpIntenso) return { nivel: "anomalia", principal: "PERTURBADO", detalhe: "CME, sequência de flares ou perturbação geomagnética intensa nas últimas 24h." };
+        if (flareModerado || cmes.length) return { nivel: "atencao", principal: "ATIVIDADE MODERADA", detalhe: "Flare ou ejeção de massa coronal moderada em acompanhamento." };
+        return { nivel: "normal", principal: "CALMO", detalhe: "Escudo magnético estável · sem evento solar relevante recente." };
+    }
+
+    function atualizarCardVentoSolar(eventos) {
+        const card = spaceSummary?.querySelector(".space-stat");
+        if (!card) return;
+        const avaliacao = avaliarVentoSolar(eventos);
+        card.className = card.className.replace(/\bstatus-[^\s]+/g, "").trim();
+        card.classList.add(`status-${avaliacao.nivel}`);
+        card.querySelector(".space-stat-top > span").textContent = "VENTO SOLAR";
+        card.querySelector("strong").textContent = avaliacao.principal;
+        card.querySelector("small").textContent = avaliacao.detalhe;
+        const badge = card.querySelector(".status-badge");
+        if (badge) badge.outerHTML = badgeStatus(avaliacao.nivel);
     }
 
     function renderizarClimaEspacial(
@@ -2784,6 +3064,43 @@ document.addEventListener("DOMContentLoaded", () => {
     neoVerify?.addEventListener("click", verificarNEO);
     neoQuery?.addEventListener("keydown", evento => {
         if (evento.key === "Enter") verificarNEO();
+    });
+
+    // Fact-check comum aos cards de Espaço, Biologia e IA.
+    async function verificarNaImprensa(input, output, button) {
+        const query = (input?.value || "").trim();
+        if (!output || !query) {
+            if (output) output.innerHTML = `<p class="news-check-empty">Digite um termo ou uma afirmação para analisar.</p>`;
+            return;
+        }
+        if (button) { button.disabled = true; button.dataset.originalText = button.textContent; button.textContent = "ANALISANDO..."; }
+        output.innerHTML = `<div class="news-check-loading">Analisando redes e imprensa...</div>`;
+        try {
+            const response = await fetch(`${RENDER_BACKEND_URL}/api/check-news?q=${encodeURIComponent(query)}`, { cache: "no-store" });
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.error || `HTTP ${response.status}`);
+            const article = data.articles?.[0];
+            const badgeClass = data.found ? "news-check-confirmed" : "news-check-warning";
+            output.innerHTML = data.found
+                ? `<article class="news-check-result ${badgeClass}"><span class="news-check-badge">CONFIRMADO NA IMPRENSA</span><h4>${escapeHTML(article.title)}</h4><p>${escapeHTML(article.sourceName)} · ${escapeHTML(article.date || "Data não informada")}</p><a href="${escapeHTML(article.url)}" target="_blank" rel="noopener noreferrer">Ler Matéria Completa ↗</a></article>`
+                : `<article class="news-check-result ${badgeClass}"><span class="news-check-badge">SEM REGISTRO OFICIAL</span><h4>NÃO ENCONTRADO / ALERTA DE SENSACIONALISMO</h4><p>Nenhuma matéria correspondente foi encontrada no Google News para “${escapeHTML(query)}”.</p></article>`;
+        } catch (error) {
+            output.innerHTML = `<article class="news-check-result news-check-warning"><span class="news-check-badge">VERIFICAÇÃO INDISPONÍVEL</span><p>Não foi possível consultar o Google News agora. Tente novamente em instantes.</p></article>`;
+        } finally {
+            if (button) { button.disabled = false; button.textContent = button.dataset.originalText || "ANALISAR"; }
+        }
+    }
+
+    [
+        [earthQuery, earthNewsCheckResult, earthSearchButton],
+        [neoQuery, neoVerificationResult, neoVerify],
+        [biologyQuery, biologyVerificationResult, biologyVerify],
+        [aiQuery, aiVerificationResult, aiVerify]
+    ].forEach(([input, output, button]) => {
+        button?.addEventListener("click", () => verificarNaImprensa(input, output, button));
+        input?.addEventListener("keydown", event => {
+            if (event.key === "Enter") { event.preventDefault(); verificarNaImprensa(input, output, button); }
+        });
     });
 
     carregarNEOs();
@@ -3718,7 +4035,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const dados =
                 await response.json();
 
+            try {
+                const indiceResponse = await fetch(`${RENDER_BACKEND_URL}/api/global-index`, { cache: "no-store" });
+                if (indiceResponse.ok) atualizarScorePlanetario(await indiceResponse.json());
+            } catch (indiceError) {
+                console.warn("Índice global indisponível:", indiceError.message);
+            }
+
             aplicarTimestampsMonitoramento(dados);
+            carregarMonitoramentoPlanetario();
 
             atualizarScorePlanetario(dados);
             renderizarAnalisesAvancadas(dados);
@@ -3765,6 +4090,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    async function carregarMonitoramentoPlanetario() {
+        try {
+            const response = await fetch(`${RENDER_BACKEND_URL}/api/earth-monitoring`, { cache: "no-store" });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const payload = await response.json();
+            const updatedAt = payload.updatedAt ? new Date(payload.updatedAt).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" }) : "—";
+            (payload.cards || []).forEach(data => {
+                const card = document.querySelector(`[data-earth-monitoring="${data.key}"]`);
+                if (!card) return;
+                const title = card.querySelector("h3");
+                const signal = card.querySelector(".earth-secondary-signal");
+                const metric = card.querySelector(".earth-secondary-metric");
+                const index = card.querySelector(".earth-secondary-index");
+                const levelClass = data.status === "ALERTA" ? "critical" : data.status === "ANOMALIA" ? "anomaly" : data.status === "ATENÇÃO" ? "attention" : "normal";
+                if (title) title.textContent = data.latestTitle || "Nenhum evento catalogado";
+                if (signal) signal.innerHTML = `<strong class="earth-status ${levelClass}">${data.status}</strong><span>${data.count} evento(s) catalogado(s) no planeta</span><span>Fonte: NASA EONET · ${escapeHTML(data.period || "escopo planetário")}</span>`;
+                if (metric) metric.innerHTML = `<span>${String(data.period || "EVENTOS ABERTOS").toUpperCase()} · PLANETA</span><strong>${data.count} ocorrência(s)</strong><small>Último evento: ${data.latestDate ? new Date(data.latestDate).toLocaleString("pt-BR") : "sem registro"}</small>`;
+                if (index) index.innerHTML = `<span>ÍNDICE DE DESVIO · PLANETÁRIO</span><strong class="earth-score ${levelClass}">${data.score}<small>/100</small></strong><small class="earth-card-updated">Atualizado: ${updatedAt}</small>`;
+                card.classList.remove("status-normal", "status-atencao", "status-anomalia", "status-alerta");
+                card.classList.add(`status-${levelClass === "critical" ? "alerta" : levelClass === "anomaly" ? "anomalia" : levelClass === "attention" ? "atencao" : "normal"}`);
+            });
+        } catch (error) {
+            console.warn("Monitoramento planetário indisponível:", error.message);
+        }
+    }
+
     function aplicarTimestampsMonitoramento(dados) {
         const valor = dados?.meta?.updatedAt;
         const data = valor ? new Date(valor) : new Date();
@@ -3784,6 +4135,22 @@ document.addEventListener("DOMContentLoaded", () => {
     function atualizarScorePlanetario(dados) {
         const element = document.getElementById("planetary-score");
         if (!element) return;
+        if (Number.isFinite(Number(dados?.globalIndex)) && dados.vectors) {
+            const score = Math.max(0, Math.min(100, Number(dados.globalIndex)));
+            const previous = Number(localStorage.getItem("anomalia-planetary-score"));
+            const change = Number.isFinite(previous) && previous > 0 ? ((score - previous) / previous) * 100 : 0;
+            localStorage.setItem("anomalia-planetary-score", String(score));
+            const level = score >= 60 ? "ALERTA" : score >= 30 ? "ATENÇÃO" : "NORMAL";
+            element.querySelector("strong").innerHTML = `${score} <small>/ 100</small>`;
+            element.querySelector("b").textContent = level;
+            element.querySelector(".planetary-score-change").textContent = `Terra: ${dados.vectors.seismic} | Oceanos: ${dados.vectors.oceanic} | Espaço: ${dados.vectors.space} | Biologia: ${dados.vectors.biology} | IA: ${dados.vectors.ai}`;
+            element.dataset.level = level.toLowerCase();
+            element.classList.add("planetary-score-clean");
+            let thermometer = element.querySelector(".planetary-score-thermometer");
+            if (!thermometer) { thermometer = document.createElement("div"); thermometer.className = "planetary-score-thermometer"; element.querySelector(".planetary-score-change").before(thermometer); }
+            thermometer.innerHTML = `<div class="planetary-score-track"><i style="width:${score}%"></i><b style="left:${score}%">${score}</b></div><div class="planetary-score-scale"><span>0</span><span>50</span><span>100</span></div>`;
+            return;
+        }
         const earth = dados.earth?.events || [];
         const ocean = dados.ocean?.sst;
         const biology = dados.biology?.events || [];

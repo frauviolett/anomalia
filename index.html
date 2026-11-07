@@ -64,7 +64,7 @@
 
     <div id="planetary-score" class="planetary-score" aria-live="polite">
       <span class="planetary-score-label">ÍNDICE DE ANOMALIA GLOBAL</span>
-      <strong>— <small>/ 100</small></strong>
+      <strong>—</strong>
       <b>AGUARDANDO DADOS</b>
       <span class="planetary-score-change">Variação de 24h: —</span>
     </div>
@@ -225,9 +225,9 @@
 
   <div class="home-analysis-section critical-feed-card">
     <div class="section-heading"><div><span class="section-kicker">COBERTURA DE MÍDIA &amp; ALERTAS</span><h2>Feed de alertas críticos</h2></div></div>
-    <div class="feed-cta"><strong>Seja o primeiro a saber quando o planeta sai do padrão.</strong><p>Receba notificações via Webhook, Telegram ou e-mail quando uma anomalia ultrapassar o limiar de severidade definido.</p></div>
-    <div class="feed-access"><div><span>ACESSO PÚBLICO / PESQUISA</span><strong>Dados consolidados</strong><small>Delay de até 6h · gratuito</small></div><div><span>TERMINAL DE CRISE / MÍDIA</span><strong>Alertas em tempo real</strong><small>Dados JSON estruturados · acesso profissional</small></div></div>
-    <button class="feed-action" type="button">Conhecer opções de acesso</button>
+    <div class="feed-cta"><strong>Seja o primeiro a saber quando o planeta sai do padrão.</strong><p>Receba notificações no Telegram quando uma anomalia ultrapassar o limiar de severidade definido.</p></div>
+    <div class="feed-access"><div><span>ACESSO PÚBLICO / PESQUISA</span><strong>Dados consolidados</strong><small>Delay de até 6h · gratuito</small></div><div class="feed-terminal"><div class="feed-terminal-head"><span>TERMINAL DE CRISE / MÍDIA</span><em>EM BREVE</em></div><strong>Alertas em tempo real</strong><small>Dados JSON estruturados · acesso profissional</small></div></div>
+    <a class="feed-action" href="https://t.me/+czkpFp174u1mOGVh" target="_blank" rel="noopener noreferrer">🚨 RECEBER ALERTAS NO TELEGRAM</a>
   </div>
 </section>
 
@@ -319,6 +319,7 @@
       <input id="earth-query" type="search" autocomplete="off" placeholder="Ex.: Japão, Califórnia, magnitude 5, terremoto">
       <button id="earth-search-button" type="button">🔍 ANALISAR</button>
     </div>
+    <div id="earth-news-check-result" class="earth-news-check-result" aria-live="polite"></div>
   </div>
 
   <div class="earth-method" aria-labelledby="earth-method-title">
@@ -359,7 +360,7 @@
     </div>
 
     <div class="earth-secondary-monitoring" aria-label="Monitoramento geológico complementar">
-      <article class="earth-secondary-card volcano">
+      <article class="earth-secondary-card volcano" data-earth-monitoring="volcano">
         <div class="earth-secondary-card-head"><span class="earth-secondary-icon">🌋</span><span class="section-kicker">VULCÕES</span></div>
         <h3>Kīlauea · Havaí</h3>
         <div class="earth-secondary-signal"><strong class="earth-status anomaly">🟧 ALERTA LARANJA</strong><span>Pluma estimada: 1.200 m</span><span>Atividade eruptiva recente monitorada</span></div>
@@ -367,7 +368,7 @@
         <div class="earth-secondary-index"><span>ÍNDICE DE DESVIO VULCÂNICO</span><strong class="earth-score anomaly">58<small>/100</small></strong></div>
       </article>
 
-      <article class="earth-secondary-card landslide">
+      <article class="earth-secondary-card landslide" data-earth-monitoring="landslide">
         <div class="earth-secondary-card-head"><span class="earth-secondary-icon">⛰️</span><span class="section-kicker">DESLIZAMENTOS</span></div>
         <h3>Serra do Mar · São Paulo</h3>
         <div class="earth-secondary-signal"><strong class="earth-status attention">🟡 RISCO ALTO DE MOVIMENTO</strong><span>Chuva acumulada: 186 mm</span><span>Volume de massa: estimativa elevada</span></div>
@@ -375,7 +376,7 @@
         <div class="earth-secondary-index"><span>ÍNDICE DE DESVIO GEOLÓGICO</span><strong class="earth-score attention">64<small>/100</small></strong></div>
       </article>
 
-      <article class="earth-secondary-card fire">
+      <article class="earth-secondary-card fire" data-earth-monitoring="fire">
         <div class="earth-secondary-card-head"><span class="earth-secondary-icon">🔥</span><span class="section-kicker">QUEIMADAS &amp; FOCOS</span></div>
         <h3>Amazônia · Pará</h3>
         <div class="earth-secondary-signal"><strong class="earth-status critical">🔴 ALERTA CRÍTICO</strong><span>428 focos de calor detectados</span><span>+72% acima da média histórica</span></div>
@@ -935,7 +936,7 @@
   </div>
 
   <div class="news-radar-filters"><div><span class="panel-kicker">DOMÍNIOS</span><button class="news-filter active" data-filter-group="domain" data-filter-value="ALL">Todos</button><button class="news-filter" data-filter-group="domain" data-filter-value="TERRA">🌍 Terra</button><button class="news-filter" data-filter-group="domain" data-filter-value="OCEANOS">🌊 Oceanos</button><button class="news-filter" data-filter-group="domain" data-filter-value="ESPACO">🌌 Espaço</button><button class="news-filter" data-filter-group="domain" data-filter-value="IA">🤖 IA</button><button class="news-filter" data-filter-group="domain" data-filter-value="BIOLOGIA">🧬 Biologia</button></div><div><span class="panel-kicker">GRAVIDADE</span><button class="news-filter active" data-filter-group="status" data-filter-value="ALL">Todos</button><button class="news-filter" data-filter-group="status" data-filter-value="alerta">🔴 Alerta</button><button class="news-filter" data-filter-group="status" data-filter-value="anomalia">🟧 Anomalia</button><button class="news-filter" data-filter-group="status" data-filter-value="atencao">🟡 Atenção</button><button class="news-filter" data-filter-group="status" data-filter-value="normal">🟢 Normal</button></div></div>
-  <article class="news-hero-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA DE IMPACTO</span><span>Reuters · Há 3 horas</span></div><span class="news-domain">🌍 Geologia</span><h3>Atividade sísmica global entra no radar de observação ampliada</h3><div class="news-analysis"><strong>Análise do ANOMALIA</strong><p>Imprensa: autoridades registram uma sequência incomum de eventos em zonas monitoradas.</p><p>Sensores: o desvio observado permanece acima da linha de base, mas não confirma causalidade única.</p></div><div class="news-hero-actions"><a href="#" target="_blank" rel="noopener">Ver Matéria Original ↗</a><button type="button">Abrir no Radar ➔</button></div></article>
+  <article class="news-hero-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA DE IMPACTO</span><span>Clipping Google News</span></div><span class="news-domain">📰 Aguardando clipping de impacto</span><h3>Carregando notícia de impacto...</h3><div class="news-analysis"><strong>Análise do ANOMALIA</strong><p>Notícia selecionada do clipping real para acompanhamento.</p><p>A classificação como anomalia indica prioridade de leitura, não confirmação causal do evento.</p></div><div class="news-hero-actions"><a href="#" target="_blank" rel="noopener">Ver Matéria Original ↗</a></div></article>
   <div id="news-list" class="news-grid"><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA</span><span>Há 3 horas</span></div><span class="news-domain">🤖 IA Sintética</span><h3>Agentes autônomos ampliam acesso a ferramentas em testes controlados</h3><p>Relatos documentam ações fora do escopo previsto e reacendem o debate sobre supervisão operacional.</p><footer>AIID · Há 3 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity attention">🟡 ATENÇÃO</span><span>Há 5 horas</span></div><span class="news-domain">🌊 Oceanos</span><h3>Anomalia térmica altera projeções para correntes oceânicas</h3><p>O sinal de mídia coincide com uma leitura acima da referência no recorte oceânico monitorado.</p><footer>Reuters · Há 5 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity normal">🟢 NORMAL</span><span>Há 8 horas</span></div><span class="news-domain">🧬 Biologia</span><h3>Boletim internacional atualiza vigilância de patógenos respiratórios</h3><p>A atualização não indica emergência imediata, mas mantém o monitoramento epidemiológico ativo.</p><footer>OMS · Há 8 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity alerta">🔴 ALERTA</span><span>Há 10 horas</span></div><span class="news-domain">🌍 Terra</span><h3>Sismo de alta magnitude mobiliza redes de monitoramento</h3><p>O evento foi confirmado por estações sísmicas e elevou a atenção regional para possíveis réplicas.</p><footer>USGS · Há 10 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA</span><span>Há 12 horas</span></div><span class="news-domain">🌌 Espaço</span><h3>Tempestade geomagnética altera condições do ambiente espacial</h3><p>Dados de observatórios apontam uma perturbação acima do padrão recente no campo magnético.</p><footer>NASA · Há 12 horas <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity attention">🟡 ATENÇÃO</span><span>Ontem</span></div><span class="news-domain">🌍 Terra</span><h3>Focos de calor concentram-se acima da média sazonal</h3><p>O sinal de sensoriamento remoto indica concentração regional que exige verificação de campo.</p><footer>INPE · Ontem <a href="#">Acessar notícia ↗</a></footer></article></div><div id="news-pagination" class="news-pagination"></div>
 
   <div id="news-list-extra" class="news-grid"><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity normal">🟢 NORMAL</span><span>Ontem</span></div><span class="news-domain">🌊 Oceanos</span><h3>Boias oceânicas registram estabilidade nas correntes do Atlântico</h3><p>O conjunto de sensores permanece dentro da faixa esperada para o período analisado.</p><footer>NOAA · Ontem <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA</span><span>Ontem</span></div><span class="news-domain">🌍 Terra</span><h3>Rede internacional acompanha mudança no padrão de tremores</h3><p>Estações sísmicas detectaram alteração localizada que segue em investigação técnica.</p><footer>USGS · Ontem <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity attention">🟡 ATENÇÃO</span><span>Há 1 dia</span></div><span class="news-domain">🤖 IA Sintética</span><h3>Auditoria identifica falhas de supervisão em agentes conectados</h3><p>O relatório recomenda limitar permissões e reforçar registros de ações automatizadas.</p><footer>OECD AI · Há 1 dia <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity alerta">🔴 ALERTA</span><span>Há 1 dia</span></div><span class="news-domain">🌌 Espaço</span><h3>Observatório atualiza alerta para atividade solar intensa</h3><p>O fluxo de partículas pode afetar comunicações e sistemas de navegação em altas latitudes.</p><footer>NOAA SWPC · Há 1 dia <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity normal">🟢 NORMAL</span><span>Há 2 dias</span></div><span class="news-domain">🧬 Biologia</span><h3>Vigilância sanitária não detecta aumento fora da linha de base</h3><p>Boletins consolidados mantêm o cenário sob observação regular e sem alerta extraordinário.</p><footer>OMS · Há 2 dias <a href="#">Acessar notícia ↗</a></footer></article><article class="news-investigative-card"><div class="news-card-meta"><span class="news-severity anomaly">🟧 ANOMALIA</span><span>Há 2 dias</span></div><span class="news-domain">🌍 Terra</span><h3>Satélites apontam concentração incomum de calor em área remota</h3><p>A leitura orbital será cruzada com dados de campo antes de qualquer classificação definitiva.</p><footer>INPE · Há 2 dias <a href="#">Acessar notícia ↗</a></footer></article></div>
